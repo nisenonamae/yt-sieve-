@@ -141,12 +141,23 @@ def main():
     expire_days = defaults.get("expireDays", 14)
 
     added = 0
+    renamed = 0
     for ch in channels.get("channels", []):
         if ch.get("paused"):
             continue
         cid = ch["id"]
         print(f"- {ch.get('name') or cid}")
-        for v in parse_feed(cid):
+        entries = parse_feed(cid)
+
+        # 名前が未設定、またはIDのままなら、RSSの著者名で埋める
+        if entries and ch.get("name", cid) in (cid, "", None):
+            real = entries[0].get("channelName")
+            if real:
+                ch["name"] = real
+                renamed += 1
+                print(f"  -> 名前を取得: {real}")
+
+        for v in entries:
             if v["id"] in videos:
                 continue
             videos[v["id"]] = {
@@ -193,6 +204,8 @@ def main():
 
     stock["updated"] = NOW.isoformat(timespec="seconds")
     save_json(STOCK_PATH, stock)
+    if renamed:
+        save_json(CHANNELS_PATH, channels)
     print(f"\n新着 {added} / 昇格 {promoted} / 減価で落選 {expired} / 在庫 {len(videos)}")
 
 
