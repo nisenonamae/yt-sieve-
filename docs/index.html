@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ふるい</title>
+<style>
+:root{
+  --bg:#edeeea; --surface:#f7f8f5; --ink:#16181a; --muted:#6b7075;
+  --rule:#cbcec7; --pine:#2e5b4e; --clay:#8c5040; --sand:#b8a06a;
+  --jp:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif;
+  --num:ui-monospace,"SF Mono",Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--jp);
+  font-size:15px;line-height:1.65;
+  padding:0 14px calc(env(safe-area-inset-bottom) + 64px);
+  max-width:640px;margin:0 auto;
+}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+a{color:var(--pine)}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+
+/* ── 見出し ─────────────────────── */
+header{padding:20px 0 12px;display:flex;align-items:baseline;gap:12px}
+h1{font-size:19px;font-weight:600;letter-spacing:.14em}
+#stamp{font-size:11px;color:var(--muted);margin-left:auto}
+
+/* ── タブ ───────────────────────── */
+nav{display:flex;gap:2px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+nav button{
+  padding:9px 13px;font-size:13.5px;color:var(--muted);
+  border-bottom:2px solid transparent;margin-bottom:-1px;
+}
+nav button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--pine);font-weight:600}
+nav .badge{font-family:var(--num);font-size:11px;color:var(--muted);margin-left:4px}
+
+/* ── 汎用 ───────────────────────── */
+.empty{padding:48px 8px;color:var(--muted);font-size:14px;line-height:1.9}
+.empty b{display:block;color:var(--ink);font-weight:600;margin-bottom:6px}
+.meta{font-size:12px;color:var(--muted)}
+.pill{
+  display:inline-block;padding:1px 7px;border:1px solid var(--rule);
+  border-radius:2px;font-size:11px;color:var(--muted);
+}
+
+/* ── ふるい台 ───────────────────── */
+.sieve{background:var(--surface);border:1px solid var(--rule);padding:14px}
+.sieve img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--rule);display:block}
+.sieve h2{font-size:16px;font-weight:600;line-height:1.5;margin:12px 0 4px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+.row>span:first-child{font-size:12.5px;color:var(--muted);width:4.2em;flex:none}
+.seg{display:flex;flex:1;border:1px solid var(--rule);background:#fff}
+.seg button{flex:1;padding:8px 0;font-size:13px;color:var(--muted);border-right:1px solid var(--rule)}
+.seg button:last-child{border-right:none}
+.seg button[aria-pressed=true]{background:var(--pine);color:#fff;font-weight:600}
+.verdict{display:flex;gap:8px;margin-top:16px}
+.verdict button{flex:1;padding:12px 0;font-size:14px;font-weight:600;border:1px solid}
+.take{background:var(--pine);color:#fff;border-color:var(--pine)}
+.take[disabled]{opacity:.35}
+.skip{color:var(--clay);border-color:var(--rule)}
+.live{margin-left:auto;font-family:var(--num);font-size:22px;color:var(--pine)}
+
+/* ── ランキング ─────────────────── */
+.filter{display:flex;gap:6px;margin-bottom:14px}
+.filter button{
+  padding:6px 12px;font-size:13px;border:1px solid var(--rule);color:var(--muted);background:#fff;
+}
+.filter button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.item{display:flex;gap:11px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:flex-start}
+.rank{font-family:var(--num);font-size:13px;color:var(--muted);width:2.2em;flex:none;padding-top:2px}
+.item.explore .rank{color:var(--sand)}
+.body{flex:1;min-width:0}
+.body a{display:block;font-size:14.5px;font-weight:600;line-height:1.45;text-decoration:none;color:var(--ink)}
+.acts{display:flex;gap:14px;margin-top:7px}
+.acts button{font-size:12.5px;color:var(--pine);border-bottom:1px solid currentColor;padding-bottom:1px}
+.acts .off{color:var(--clay)}
+.sc{font-family:var(--num);font-size:17px;width:2.6em;text-align:right;flex:none;color:var(--pine)}
+
+/* ── 記録 ───────────────────────── */
+.stat{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.stat span:first-child{font-size:13.5px}
+.stat .v{margin-left:auto;font-family:var(--num);font-size:19px}
+.stat small{display:block;font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+th,td{text-align:left;padding:6px 4px;border-bottom:1px solid var(--rule)}
+th{font-size:11.5px;color:var(--muted);font-weight:400}
+td.n{font-family:var(--num);text-align:right}
+
+/* ── 保存バー ───────────────────── */
+#bar{
+  position:fixed;left:0;right:0;bottom:0;background:var(--surface);
+  border-top:1px solid var(--rule);padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  display:flex;align-items:center;gap:12px;font-size:12.5px;
+}
+#bar .inner{max-width:640px;margin:0 auto;display:flex;align-items:center;gap:12px;width:100%}
+#bar button{padding:7px 14px;border:1px solid var(--pine);color:var(--pine);font-weight:600}
+#bar button.on{background:var(--pine);color:#fff}
+#msg{color:var(--muted);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+dialog{border:1px solid var(--rule);background:var(--surface);padding:20px;max-width:420px;width:90%}
+dialog::backdrop{background:rgba(22,24,26,.4)}
+dialog h3{font-size:15px;margin-bottom:10px}
+dialog p{font-size:12.5px;color:var(--muted);margin-bottom:12px}
+dialog input{width:100%;padding:8px;border:1px solid var(--rule);font:inherit;font-size:13px;margin-bottom:8px;background:#fff}
+@media (prefers-reduced-motion:no-preference){.sieve{animation:in .18s ease-out}}
+@keyframes in{from{opacity:0;transform:translateY(4px)}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ふ る い</h1>
+  <span id="stamp"></span>
+</header>
+
+<nav id="tabs"></nav>
+<main id="view"></main>
+
+<div id="bar"><div class="inner">
+  <span id="msg">読み込み中</span>
+  <button id="cfg">接続</button>
+  <button id="save" class="on">保存</button>
+</div></div>
+
+<dialog id="dlg">
+  <h3>GitHubに保存する</h3>
+  <p>評価の書き戻しにはトークンが要る。Fine-grained PAT を対象リポジトリだけに絞って Contents: Read and write で発行して、ここに入れる。ブラウザのlocalStorageにだけ残る。</p>
+  <input id="repo" placeholder="owner/repo" autocapitalize="off" spellcheck="false">
+  <input id="tok" type="password" placeholder="github_pat_..." autocapitalize="off" spellcheck="false">
+  <div style="display:flex;gap:8px;margin-top:6px">
+    <button onclick="saveCfg()" style="flex:1;padding:9px;border:1px solid var(--pine);background:var(--pine);color:#fff;font-weight:600">つなぐ</button>
+    <button onclick="dlg.close()" style="padding:9px 14px;border:1px solid var(--rule)">閉じる</button>
+  </div>
+</dialog>
+
+<script>
+const $ = s => document.querySelector(s);
+const PATH = "docs/data/stock.json";
+const LS = "yt-sieve";
+
+const TYPES = {focus:"しっかり", ambient:"ながら", serial:"連載"};
+let cfg = {weights:{expect:1,pull:.6,trust:.8,fresh:.5}, defaults:{halfLifeDays:30}, channels:[]};
+let stock = {videos:{}, updated:null};
+let sha = null;
+let tab = "sieve", filter = "focus", dirty = false;
+let draft = {};   // ふるい台の入力中の値
+
+/* ══ スコア ══════════════════════════════════ */
+const ch = id => cfg.channels.find(c => c.id === id) || {};
+
+function trustOf(cid){
+  // そのチャンネルの視聴後評価の平均。件数が少ないうちは 0.6 に引き寄せる
+  const done = Object.values(stock.videos)
+    .filter(v => v.channelId === cid && v.post?.score);
+  const k = 3, prior = 3;
+  const sum = done.reduce((a,v) => a + v.post.score, 0);
+  return ((sum + k*prior) / (done.length + k)) / 5;
+}
+
+function freshOf(v){
+  const hl = ch(v.channelId).halfLifeDays ?? cfg.defaults.halfLifeDays ?? 30;
+  const age = (Date.now() - Date.parse(v.published || v.added)) / 864e5;
+  return Math.pow(2, -age / hl);
+}
+
+function scoreOf(v, pre){
+  pre = pre || v.pre || {};
+  const p = {
+    expect: (pre.expect ?? 3) / 5,
+    pull:   (pre.pull   ?? 3) / 5,
+    trust:  trustOf(v.channelId),
+    fresh:  freshOf(v),
+  };
+  // 重み付き幾何平均 = exp( Σwᵢ·ln pᵢ / Σwᵢ )
+  let s = 0, W = 0;
+  for (const k in cfg.weights){
+    s += cfg.weights[k] * Math.log(Math.max(p[k], .02));
+    W += cfg.weights[k];
+  }
+  return Math.exp(s / W) * 100;
+}
+
+/* ══ 整形 ════════════════════════════════════ */
+const hhmm = s => s == null ? "—"
+  : (s >= 3600 ? Math.floor(s/3600)+":"+String(Math.floor(s%3600/60)).padStart(2,"0")
+               : Math.floor(s/60)) + ":" + String(s%60).padStart(2,"0");
+const ago = iso => { const d = Math.floor((Date.now()-Date.parse(iso))/864e5);
+  return d <= 0 ? "今日" : d + "日前"; };
+const esc = s => (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const list = st => Object.values(stock.videos).filter(v => v.state === st);
+
+/* ══ 描画 ════════════════════════════════════ */
+function render(){
+  const n = {sieve:list("pool").length, rank:list("picked").length};
+  $("#tabs").innerHTML = [
+    ["sieve","ふるい",n.sieve],["rank","ランキング",n.rank],
+    ["serial","連載",""],["log","記録",""]
+  ].map(([k,label,c]) =>
+    `<button aria-selected="${tab===k}" onclick="go('${k}')">${label}${
+      c ? `<span class="badge">${c}</span>` : ""}</button>`).join("");
+
+  $("#stamp").textContent = stock.updated ? "収集 " + stock.updated.slice(5,10) : "";
+  ({sieve:drawSieve, rank:drawRank, serial:drawSerial, log:drawLog}[tab])();
+}
+function go(k){ tab = k; render(); window.scrollTo(0,0); }
+
+/* ── ふるい台:1本ずつ裁く ─────────────── */
+function drawSieve(){
+  const pool = list("pool").sort((a,b) => Date.parse(a.added) - Date.parse(b.added));
+  if (!pool.length){
+    const fresh = list("fresh").length;
+    return $("#view").innerHTML = `<div class="empty"><b>裁くものがない</b>
+      寝かせ中が${fresh}本。期間が明けたらここに出てくる。<br>
+      在庫が空なら channels.json にチャンネルを足す。</div>`;
+  }
+  const v = pool[0];
+  const d = draft[v.id] || (draft[v.id] = {type: v.type || null, expect: null, pull: null});
+  const ready = d.type && d.expect && d.pull;
+  const seg = (key, n, labels) => `<div class="seg">` + Array.from({length:n}, (_,i) => {
+    const val = labels ? Object.keys(TYPES)[i] : i+1;
+    return `<button aria-pressed="${d[key]===val}" onclick="pick('${v.id}','${key}',${
+      labels ? `'${val}'` : val})">${labels ? Object.values(TYPES)[i] : i+1}</button>`;
+  }).join("") + `</div>`;
+
+  $("#view").innerHTML = `
+    <div class="sieve">
+      <img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="" loading="lazy">
+      <h2>${esc(v.title)}</h2>
+      <p class="meta">${esc(v.channelName)} ・ ${hhmm(v.duration)} ・ 公開${ago(v.published)}
+        ・ 在庫${ago(v.added)}</p>
+      <div class="row"><span>型</span>${seg("type",3,true)}</div>
+      <div class="row"><span>期待</span>${seg("expect",5)}</div>
+      <div class="row"><span>引き</span>${seg("pull",5)}</div>
+      <div class="row"><span>見込み</span>
+        <span class="live num">${ready ? scoreOf(v,d).toFixed(0) : "––"}</span></div>
+      <div class="verdict">
+        <button class="skip" onclick="verdict('${v.id}',false)">見送る</button>
+        <button class="take" ${ready?"":"disabled"} onclick="verdict('${v.id}',true)">採用</button>
+      </div>
+      <p class="meta" style="margin-top:10px">残り ${pool.length} 本</p>
+    </div>`;
+}
+function pick(id, key, val){ draft[id][key] = val; drawSieve(); }
+
+function verdict(id, take){
+  const v = stock.videos[id], d = draft[id];
+  v.touched = true;
+  if (take){
+    v.type = d.type; v.pre = {expect:d.expect, pull:d.pull};
+    v.score = scoreOf(v); v.state = "picked";
+    v.pickedAt = new Date().toISOString();
+  } else {
+    v.state = "dropped"; v.dropReason = "skipped";
+  }
+  delete draft[id]; touch(); render();
+}
+
+/* ── ランキング ────────────────────────── */
+function drawRank(){
+  let all = list("picked").filter(v => v.type === filter);
+  all.forEach(v => v.score = scoreOf(v));        // 鮮度と信頼度は毎回引き直す
+  all.sort((a,b) => b.score - a.score);
+
+  // 探索枠:5本に1本、下位からランダムに引き上げる
+  const shown = [];
+  const rest = all.slice();
+  while (rest.length){
+    if (shown.length && shown.length % 5 === 4 && rest.length > 2){
+      const i = Math.floor(rest.length/2 + Math.random()*rest.length/2);
+      const pickd = rest.splice(i,1)[0]; pickd.explore = true; shown.push(pickd);
+    } else { const t = rest.shift(); t.explore = false; shown.push(t); }
+  }
+
+  const tabs = Object.entries(TYPES).filter(([k]) => k !== "serial")
+    .map(([k,l]) => `<button aria-pressed="${filter===k}" onclick="filter='${k}';render()">${l}</button>`).join("");
+
+  $("#view").innerHTML = `<div class="filter">${tabs}</div>` + (shown.length
+    ? shown.map((v,i) => `
+      <div class="item ${v.explore?"explore":""}">
+        <span class="rank">${v.explore ? "探" : i+1}</span>
+        <div class="body">
+          <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">${esc(v.title)}</a>
+          <p class="meta">${esc(v.channelName)} ・ ${hhmm(v.duration)}</p>
+          <div class="acts">
+            <button onclick="rate('${v.id}')">見た</button>
+            <button class="off" onclick="drop('${v.id}')">やめる</button>
+          </div>
+        </div>
+        <span class="sc">${v.score.toFixed(0)}</span>
+      </div>`).join("")
+    : `<div class="empty"><b>この型の在庫が空</b>
+        ふるいで${TYPES[filter]}に振った動画がまだない。<br>
+        合うものがないときは、見ないのが正しい。</div>`);
+}
+
+function rate(id){
+  const s = prompt("見終わった。1〜5でどうだった?\n(5 = 全部が有効時間だった)");
+  const n = parseInt(s, 10);
+  if (!(n >= 1 && n <= 5)) return;
+  const v = stock.videos[id];
+  v.post = {score:n}; v.state = "watched";
+  v.watchedAt = new Date().toISOString(); v.touched = true;
+  touch(); render();
+}
+function drop(id){
+  const v = stock.videos[id];
+  v.state = "dropped"; v.dropReason = "gaveup"; v.touched = true;
+  touch(); render();
+}
+
+/* ── 連載 ──────────────────────────────── */
+function drawSerial(){
+  const s = Object.values(stock.videos)
+    .filter(v => v.type === "serial" && v.state !== "dropped" && v.state !== "watched");
+  $("#view").innerHTML = s.length
+    ? s.map(v => `<div class="item">
+        <span class="rank">◷</span>
+        <div class="body">
+          <a href="https://www.youtube.com/watch?v=${v.id}&t=${v.progress||0}" target="_blank" rel="noopener">${esc(v.title)}</a>
+          <p class="meta">${hhmm(v.duration)} 中 ${hhmm(v.progress||0)} まで
+            ${v.duration ? `・ ${Math.round((v.progress||0)/v.duration*100)}%` : ""}</p>
+          <div class="acts">
+            <button onclick="prog('${v.id}')">続きを記録</button>
+            <button onclick="rate('${v.id}')">見終わった</button>
+          </div>
+        </div></div>`).join("")
+    : `<div class="empty"><b>連載が空</b>
+        毎日少しずつ見るものをふるいで「連載」に振ると、ここで進捗が残る。<br>
+        ランキングとは競合させない。新着のほうが必ず引きが強いから。</div>`;
+}
+function prog(id){
+  const s = prompt("何分まで見た?");
+  const m = parseFloat(s);
+  if (isNaN(m)) return;
+  stock.videos[id].progress = Math.round(m*60);
+  stock.videos[id].touched = true;
+  touch(); render();
+}
+
+/* ── 記録 ──────────────────────────────── */
+function drawLog(){
+  const w = list("watched").filter(v => v.post?.score);
+  const dropped = list("dropped");
+  const expired = dropped.filter(v => v.dropReason === "expired");
+  const judged = w.length + dropped.length;
+
+  const mean = a => a.reduce((x,y)=>x+y,0) / (a.length||1);
+  const pre = w.map(v => v.score ?? 0), post = w.map(v => v.post.score);
+  let r = NaN;
+  if (w.length >= 5){
+    const mp = mean(pre), mq = mean(post);
+    const cov = mean(pre.map((x,i)=>(x-mp)*(post[i]-mq)));
+    const sp = Math.sqrt(mean(pre.map(x=>(x-mp)**2)));
+    const sq = Math.sqrt(mean(post.map(x=>(x-mq)**2)));
+    r = (sp && sq) ? cov/(sp*sq) : NaN;
+  }
+  const ex = w.filter(v => v.explore);
+
+  const stat = (label, val, note) =>
+    `<div class="stat"><span>${label}<small>${note}</small></span><span class="v">${val}</span></div>`;
+
+  // チャンネル別
+  const by = {};
+  for (const v of w) (by[v.channelName] ||= []).push(v.post.score);
+  const rows = Object.entries(by).sort((a,b)=>mean(b[1])-mean(a[1]))
+    .map(([n,a]) => `<tr><td>${esc(n)}</td><td class="n">${a.length}</td>
+      <td class="n">${mean(a).toFixed(1)}</td></tr>`).join("");
+
+  $("#view").innerHTML =
+    stat("視聴後の平均", w.length ? mean(post).toFixed(2) : "—",
+         `${w.length}本。結果を映すだけの数字。厳しくすれば上がるので、目標にはしない`) +
+    stat("予測との相関", isNaN(r) ? "—" : r.toFixed(2),
+         "視聴前スコアが満足度を当てられているか。5本以上で出る。低いなら重みが間違っている") +
+    stat("通過率", judged ? Math.round(w.length/judged*100)+"%" : "—",
+         "裁いたうちの採用。下がってきたら登録チャンネルが劣化している") +
+    stat("予測ズレ率", judged ? Math.round(expired.length/judged*100)+"%" : "—",
+         "採用したのに期限切れで落ちた割合。見たい気がしただけの分") +
+    stat("探索枠の平均", ex.length ? mean(ex.map(v=>v.post.score)).toFixed(2) : "—",
+         `${ex.length}本。上位平均を超えるなら、ランキングが取りこぼしている`) +
+    (rows ? `<h3 style="margin:22px 0 0;font-size:14px">チャンネル別</h3>
+      <table><tr><th>チャンネル</th><th style="text-align:right">本数</th>
+      <th style="text-align:right">平均</th></tr>${rows}</table>` : "");
+}
+
+/* ══ 保存 ════════════════════════════════════ */
+function touch(){ dirty = true; localStorage.setItem(LS+":stock", JSON.stringify(stock)); flag(); }
+function flag(){ $("#msg").textContent = dirty ? "未保存の変更あり" : "保存済み"; }
+
+const b64enc = s => { const b = new TextEncoder().encode(s); let o = "";
+  for (let i=0;i<b.length;i+=0x8000) o += String.fromCharCode(...b.subarray(i,i+0x8000));
+  return btoa(o); };
+const b64dec = s => new TextDecoder().decode(
+  Uint8Array.from(atob(s.replace(/\s/g,"")), c => c.charCodeAt(0)));
+
+const conn = () => JSON.parse(localStorage.getItem(LS+":conn") || "null");
+
+async function api(path, opt={}){
+  const c = conn();
+  const r = await fetch(`https://api.github.com/repos/${c.repo}/contents/${path}`, {
+    ...opt, headers:{Authorization:`Bearer ${c.token}`, Accept:"application/vnd.github+json", ...opt.headers}
+  });
+  if (!r.ok) throw new Error(`${r.status} ${(await r.json()).message || ""}`);
+  return r.json();
+}
+
+function mergeLocal(remote){
+  const local = JSON.parse(localStorage.getItem(LS+":stock") || "null");
+  if (!local) return remote;
+  for (const [id, lv] of Object.entries(local.videos || {})){
+    if (!lv.touched) continue;
+    if (!remote.videos[id]) { remote.videos[id] = lv; continue; }
+    Object.assign(remote.videos[id], {
+      type:lv.type, pre:lv.pre, score:lv.score, post:lv.post, state:lv.state,
+      watchedAt:lv.watchedAt, pickedAt:lv.pickedAt, progress:lv.progress,
+      dropReason:lv.dropReason, explore:lv.explore, touched:true
+    });
+  }
+  return remote;
+}
+
+async function boot(){
+  try { cfg = {...cfg, ...await (await fetch("data/channels.json?t="+Date.now())).json()}; } catch {}
+  let remote = null;
+  if (conn()){
+    try { const f = await api(PATH); sha = f.sha; remote = JSON.parse(b64dec(f.content)); }
+    catch(e){ $("#msg").textContent = "接続失敗: " + e.message; }
+  }
+  if (!remote){
+    try { remote = await (await fetch("data/stock.json?t="+Date.now())).json(); } catch {}
+  }
+  stock = mergeLocal(remote || JSON.parse(localStorage.getItem(LS+":stock") || '{"videos":{}}'));
+  dirty = Object.values(stock.videos).some(v => v.touched);
+  flag(); render();
+}
+
+$("#save").onclick = async () => {
+  if (!conn()) return $("#dlg").showModal();
+  $("#msg").textContent = "保存中";
+  try {
+    // 収集ジョブと衝突しないよう、直前に最新を取り直してから重ねる
+    const f = await api(PATH); sha = f.sha;
+    stock = mergeLocal(JSON.parse(b64dec(f.content)));
+    const body = {
+      message: "sieve: " + new Date().toISOString().slice(0,10),
+      content: b64enc(JSON.stringify(stock, null, 1)), sha
+    };
+    const res = await api(PATH, {method:"PUT", body:JSON.stringify(body)});
+    sha = res.content.sha; dirty = false;
+    for (const v of Object.values(stock.videos)) delete v.touched;
+    localStorage.setItem(LS+":stock", JSON.stringify(stock));
+    flag(); render();
+  } catch(e){ $("#msg").textContent = "保存できず: " + e.message; }
+};
+
+$("#cfg").onclick = () => {
+  const c = conn(); if (c){ $("#repo").value = c.repo; $("#tok").value = c.token; }
+  $("#dlg").showModal();
+};
+function saveCfg(){
+  localStorage.setItem(LS+":conn", JSON.stringify({repo:$("#repo").value.trim(), token:$("#tok").value.trim()}));
+  $("#dlg").close(); boot();
+}
+
+boot();
+</script>
+</body>
+</html>
