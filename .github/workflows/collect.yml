@@ -1,0 +1,38 @@
+name: collect
+
+on:
+  schedule:
+    # 毎日 JST 5:00 (UTC 20:00)
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stock-write
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 在庫を更新
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/collect.py
+
+      - name: コミット
+        run: |
+          git config user.name  "yt-sieve"
+          git config user.email "actions@github.com"
+          git add docs/data/stock.json
+          git diff --staged --quiet || git commit -m "collect: $(date -u +%F)"
+          git pull --rebase --autostash || true
+          git push
