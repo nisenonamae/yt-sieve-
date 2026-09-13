@@ -1,29 +1,20 @@
 {
-  "defaults": {
-    "coolDays": 3,
-    "expireDays": 14,
-    "halfLifeDays": 30
-  },
-  "weights": {
-    "expect": 1.0,
-    "pull": 0.6,
-    "trust": 0.8,
-    "fresh": 0.5
-  },
-  "channels": [
-    {
-      "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-      "name": "Google for Developers",
-      "defaultType": "focus",
-      "halfLifeDays": 14,
-      "coolDays": 3,
-      "expireDays": 14
-    },
-    {
-      "id": "UCsBjURrPoezykLs9EqgamOA",
-      "name": "Fireship",
-      "defaultType": "ambient",
-      "halfLifeDays": 7
-    }
-  ]
+ "weights": {
+  "expect": 1,
+  "pull": 0.6,
+  "trust": 0.8,
+  "fresh": 0.5
+ },
+ "defaults": {
+  "coolDays": 3,
+  "expireDays": 14,
+  "halfLifeDays": 30
+ },
+ "channels": [
+  {
+   "id": "UCoQhX2O93MVTWfgIz-8wOmg",
+   "name": "UCoQhX2O93MVTWfgIz-8wOmg",
+   "defaultType": "focus"
+  }
+ ]
 }
