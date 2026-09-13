@@ -87,6 +87,8 @@ nav .badge{font-family:var(--num);font-size:11px;color:var(--muted);margin-left:
 .chrow{padding:14px 0;border-bottom:1px solid var(--rule)}
 .chhead{display:flex;align-items:baseline;gap:10px}
 .chhead b{font-size:15px;font-weight:600}
+.chhead .rename{font-size:15px;font-weight:600;text-align:left;
+  border-bottom:1px dashed var(--rule);padding-bottom:1px}
 .chrow .del{margin-left:auto;font-size:12px;color:var(--clay)}
 .chrow .meta .num{font-size:10.5px}
 .chrow .row{margin:10px 0 0}
@@ -364,7 +366,7 @@ function drawChans(){
       `<button aria-pressed="${c.defaultType===k}" onclick="setCh(${i},'defaultType','${k}')">${l}</button>`).join("");
     return `<div class="chrow">
       <div class="chhead">
-        <b>${esc(c.name || c.id)}</b>
+        <button class="rename" onclick="renameCh(${i})">${esc(c.name || c.id)}</button>
         <button class="del" onclick="delCh(${i})" aria-label="削除">削除</button>
       </div>
       <p class="meta">在庫${stocked}本 ・ <span class="num">${c.id}</span></p>
@@ -403,6 +405,13 @@ function drawChans(){
 }
 
 function setCh(i, key, val){ cfg.channels[i][key] = val; chTouch(); render(); }
+function renameCh(i){
+  const c = cfg.channels[i];
+  const n = prompt("チャンネル名", c.name === c.id ? "" : c.name);
+  if (n === null) return;
+  c.name = n.trim() || c.id;
+  chTouch(); render();
+}
 function delCh(i){
   if (!confirm(`${cfg.channels[i].name || cfg.channels[i].id} を外す?\n集めた在庫は残る。`)) return;
   cfg.channels.splice(i,1); chTouch(); render();
@@ -587,6 +596,8 @@ $("#save").onclick = async () => {
       dirty = false;
     }
     if (chDirty){
+      // 収集側も名前を書き戻すので、直前に最新のshaを取り直す
+      const g = await api(CHPATH); chSha = g.sha;
       chSha = await put(CHPATH, cfg, chSha);
       chDirty = false;
     }
