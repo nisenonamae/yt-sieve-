@@ -14,7 +14,14 @@
   {
    "id": "UCoQhX2O93MVTWfgIz-8wOmg",
    "name": "KUNの50人クラフト",
-   "defaultType": "focus"
+   "defaultType": "ambient",
+   "halfLifeDays": 14
+  },
+  {
+   "id": "UCt8snO2Po2uCqteBvqBglTw",
+   "name": "はりーし熱血切り抜き",
+   "defaultType": "focus",
+   "halfLifeDays": 7
   }
  ]
 }
