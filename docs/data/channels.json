@@ -6,7 +6,7 @@
   "fresh": 0.5
  },
  "defaults": {
-  "coolDays": 3,
+  "coolDays": 0,
   "expireDays": 14,
   "halfLifeDays": 30
  },
