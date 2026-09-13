@@ -13,11 +13,13 @@
    "pre": null,
    "published": "2026-08-28T07:30:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "居酒屋おつん実は借金で破産口座残高3万円でやばい",
    "type": "focus",
    "views": 722651,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0Tk2LGtiPEE": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -31,11 +33,13 @@
    "pre": null,
    "published": "2026-08-16T08:04:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "チート騒動の結果がやばすぎる",
    "type": "focus",
    "views": 412011,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0e0b3asWg7A": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -49,11 +53,13 @@
    "pre": null,
    "published": "2026-09-05T15:00:36Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "最強の参加勢３選",
    "type": "focus",
    "views": 264286,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "17pZBm7nDt8": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -67,11 +73,13 @@
    "pre": null,
    "published": "2026-08-01T15:39:58Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【参加型】メンシ鯖観光！！ -50人クラフトメンバーシップ- らいむ",
    "type": "focus",
    "views": 15873,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "1CLB4MS2950": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -82,14 +90,19 @@
    "explore": false,
    "id": "1CLB4MS2950",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
    "published": "2026-09-03T07:00:27Z",
-   "score": null,
-   "state": "pool",
+   "score": 73.83360827976293,
+   "state": "picked",
    "title": "タレットを使って50人ボスラッシュ防衛線 - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 331032,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:52:12.682Z",
+   "touched": true
   },
   "3N265G5QcTg": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -100,14 +113,19 @@
    "explore": false,
    "id": "3N265G5QcTg",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 1
+   },
    "published": "2026-08-19T07:00:20Z",
-   "score": null,
-   "state": "pool",
+   "score": 47.277695619685986,
+   "state": "picked",
    "title": "無限に村が続く世界で50人全員集合 - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 347422,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:56:00.968Z",
+   "touched": true
   },
   "4LYhYtSt5CU": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -121,11 +139,13 @@
    "pre": null,
    "published": "2026-08-30T07:30:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "キモすぎて炎上したキモ参加勢",
    "type": "focus",
    "views": 302954,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "5DJ_UcdDScQ": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -139,11 +159,13 @@
    "pre": null,
    "published": "2026-08-30T07:00:36Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "気まずいペアで3人1組建築選手権 あまりに地獄の空気過ぎた - マインクラフト【KUN】",
    "type": "focus",
    "views": 296837,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "7VlK01LCDgw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -157,11 +179,13 @@
    "pre": null,
    "published": "2026-08-28T07:00:13Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "学校に現れたテロリストｖｓ５０人 - マインクラフト【KUN】",
    "type": "focus",
    "views": 340735,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8MMIjG9lQDw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -175,11 +199,13 @@
    "pre": null,
    "published": "2026-09-01T03:15:07Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "KUNを見ている痛い視聴者3選",
    "type": "focus",
    "views": 346031,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8dL-lEeDICA": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -190,14 +216,19 @@
    "explore": false,
    "id": "8dL-lEeDICA",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 1
+   },
    "published": "2026-08-02T07:00:06Z",
-   "score": null,
-   "state": "pool",
+   "score": 38.41702753382644,
+   "state": "picked",
    "title": "50人でチームに分かれて進捗解除の速度を競う 進捗解除バトル - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 189972,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:56:08.992Z",
+   "touched": true
   },
   "Aoib1UD4wn0": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -211,11 +242,13 @@
    "pre": null,
    "published": "2026-09-12T01:30:30Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "参加勢に愛されている参加勢",
    "type": "focus",
    "views": 156069,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "D1Ymj2wv5Q0": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -226,14 +259,19 @@
    "explore": false,
    "id": "D1Ymj2wv5Q0",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 1,
+    "pull": 3
+   },
    "published": "2026-08-06T09:00:18Z",
-   "score": null,
-   "state": "pool",
+   "score": 38.5921925236987,
+   "state": "picked",
    "title": "50人全員エンドラリレー 収録時間6時間越えの超地獄企画 - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 238969,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:56:21.142Z",
+   "touched": true
   },
   "DtJEKIiiycc": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -247,11 +285,13 @@
    "pre": null,
    "published": "2026-09-02T03:30:39Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ガチ目に視聴者がそろそろ忘れてそうな参加勢4選",
    "type": "focus",
    "views": 431467,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "GDSoYtGfU5M": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -265,11 +305,13 @@
    "pre": null,
    "published": "2026-09-09T03:00:32Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "地獄のノンストップ企画 24時間対抗ADHDアスレチック - マインクラフト【KUN】",
    "type": "focus",
    "views": 219655,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IlvjuXf9ww8": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -280,14 +322,19 @@
    "explore": false,
    "id": "IlvjuXf9ww8",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 2
+   },
    "published": "2026-09-11T07:00:39Z",
-   "score": null,
-   "state": "pool",
+   "score": 52.0007105651249,
+   "state": "picked",
    "title": "完全再現 渋谷の街でマンハント ５０人から逃げ切り集合せよ - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 143397,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:53:31.511Z",
+   "touched": true
   },
   "KGaHVnGoJm4": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -301,11 +348,13 @@
    "pre": null,
    "published": "2026-08-27T08:00:00Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "KUNが30分睡眠のショートスリーパーだった件",
    "type": "focus",
    "views": 670759,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "KW5ehYUQvbA": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -319,11 +368,13 @@
    "pre": null,
    "published": "2026-09-04T03:45:16Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "参加型の下級国民２選",
    "type": "focus",
    "views": 213847,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "NgBZhkIauSg": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -334,14 +385,19 @@
    "explore": false,
    "id": "NgBZhkIauSg",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
    "published": "2026-09-01T07:00:33Z",
-   "score": null,
-   "state": "pool",
+   "score": 69.0151926417095,
+   "state": "picked",
    "title": "雑魚が最強で最強が雑魚になる逆転50人戦争 - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 227937,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:53:43.691Z",
+   "touched": true
   },
   "PS0S4D0_QgY": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -355,11 +411,13 @@
    "pre": null,
    "published": "2026-08-09T07:00:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゲートを早く抜けたチームが勝利 ゲート早抜け戦争 - マインクラフト【KUN】",
    "type": "focus",
    "views": 154429,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Q-V8ZZdWGO8": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -373,11 +431,13 @@
    "pre": null,
    "published": "2026-09-03T00:33:41Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ＢＡＮから復活した参加勢",
    "type": "focus",
    "views": 264755,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "QwQAHalIFaA": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -391,11 +451,13 @@
    "pre": null,
    "published": "2026-08-29T07:30:23Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "50人でマインクラフトをすると起こること3選",
    "type": "focus",
    "views": 130864,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Ryh-LnndJ20": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -409,11 +471,13 @@
    "pre": null,
    "published": "2026-08-11T07:00:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "死んだら終わり 世界一周ハードコアデスラン - マインクラフト【KUN】",
    "type": "focus",
    "views": 299988,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "SKQkajgTHXo": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -427,11 +491,13 @@
    "pre": null,
    "published": "2026-08-04T07:00:28Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "50人でラジコンヘリのレース会場作ってレースしてみた - マインクラフト【KUN】",
    "type": "focus",
    "views": 156314,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "UuWmAlTtvQo": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -445,11 +511,13 @@
    "pre": null,
    "published": "2026-08-19T13:50:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "クン５０re",
    "type": "focus",
    "views": 493369,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Yh0jQMiGxsk": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -460,14 +528,19 @@
    "explore": false,
    "id": "Yh0jQMiGxsk",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
    "published": "2026-09-08T07:00:21Z",
-   "score": null,
-   "state": "pool",
+   "score": 70.96674178249508,
+   "state": "picked",
    "title": "投票で最後の一人になるまで戦う多数決バトルロワイアル - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 257893,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:54:47.869Z",
+   "touched": true
   },
   "c126f5iw9fk": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -481,11 +554,13 @@
    "pre": null,
    "published": "2026-08-07T07:00:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "床がバグってしまった世界で50人参加勢全員集合 - マインクラフト【KUN】",
    "type": "focus",
    "views": 232082,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "c65EjE_yyQw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -496,14 +571,19 @@
    "explore": false,
    "id": "c65EjE_yyQw",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 2
+   },
    "published": "2026-08-27T07:00:02Z",
-   "score": null,
-   "state": "pool",
+   "score": 48.98438676914756,
+   "state": "picked",
    "title": "ウォーデンに浸食された世界から脱出 - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 307532,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:54:53.788Z",
+   "touched": true
   },
   "cct1RrxQL9Y": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -517,11 +597,13 @@
    "pre": null,
    "published": "2026-08-23T07:00:23Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "市場を導入して金を稼げ　金策サバイバル - マインクラフト【KUN】",
    "type": "focus",
    "views": 223532,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "da1qkRu1MHo": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -535,11 +617,13 @@
    "pre": null,
    "published": "2026-09-01T14:30:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "24時間ADHDアスレ完走おめでとう",
    "type": "focus",
    "views": 337872,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "g93uOxd4RtE": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -547,17 +631,22 @@
    "channelName": "KUNの50人クラフト",
    "desc": "🔳 50人クラフトグッズの購入はこちらから\nhttps://clear-lab.jp/kun50craft-goods/\n\n🔳 使用アドオン一覧（Add-ons used）\nhttps://teamkun.github.io/ModPacks/ \n\n🔳 50人クラフトグッズ【公式】Xアカウントはこちらから\nhttps://x.com/KUN_50craft\n\n🔳 50人クラフトメンバーシップはこちらから\nhttps://www.youtube.com/channel/UCoQhX2O93MVTWfgIz-8wOmg/join\n\n🔳【マインクラフト単発企画】新50人クラフト\nhttps://ww",
    "duration": 2826,
-   "explore": false,
+   "explore": true,
    "id": "g93uOxd4RtE",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 1,
+    "pull": 1
+   },
    "published": "2026-09-04T07:00:30Z",
-   "score": null,
-   "state": "pool",
+   "score": 34.499530187383996,
+   "state": "picked",
    "title": "50人でウオーデンに支配された世界からの脱出 - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 202328,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:55:01.131Z",
+   "touched": true
   },
   "hI3GY2CIfR4": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -571,11 +660,13 @@
    "pre": null,
    "published": "2026-07-29T13:39:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【参加型】低学歴vs高学歴攻城戦！！ -50人クラフトメンバーシップ- ながつき",
    "type": "focus",
    "views": 13146,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "hhfnHiBlfGE": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -589,11 +680,13 @@
    "pre": null,
    "published": "2026-08-26T12:03:56Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "KUNコンテンツの裏側を支配する人物３選",
    "type": "focus",
    "views": 859097,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "iBNY1tFF6P4": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -607,11 +700,13 @@
    "pre": null,
    "published": "2026-09-10T07:00:11Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "50人の参加勢で野生動物を調教して動物園をつくってみた - マインクラフト【KUN】",
    "type": "focus",
    "views": 191453,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "iiZDEwrCHF4": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -622,14 +717,19 @@
    "explore": false,
    "id": "iiZDEwrCHF4",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 2
+   },
    "published": "2026-08-16T07:00:24Z",
-   "score": null,
-   "state": "pool",
+   "score": 53.91968029108662,
+   "state": "picked",
    "title": "恐竜だらけの世界で50人でサバイバル - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 274807,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:56:49.293Z",
+   "touched": true
   },
   "jCRyh-y3HMs": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -643,11 +743,13 @@
    "pre": null,
    "published": "2026-09-11T09:55:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "10年以上前にKUN界隈にいた伝説",
    "type": "focus",
    "views": 338505,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "kEqEIxJaUDE": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -661,11 +763,13 @@
    "pre": null,
    "published": "2026-07-29T15:39:34Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【参加型】低学歴vs高学歴攻城戦！！ -50人クラフトメンバーシップ- ながつき",
    "type": "focus",
    "views": 16661,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "lTYsAXzeWZw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -679,11 +783,13 @@
    "pre": null,
    "published": "2026-09-02T07:00:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "50人が１人１コースつくったデスランがあまりに地獄すぎた - マインクラフト【KUN】",
    "type": "focus",
    "views": 275532,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "n-WBEcvxcHI": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -694,14 +800,19 @@
    "explore": false,
    "id": "n-WBEcvxcHI",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
    "published": "2026-07-30T07:00:08Z",
-   "score": null,
-   "state": "pool",
+   "score": 54.79844821678825,
+   "state": "picked",
    "title": "50人クラフト最強の勢力を決めるなんでもあり、勢力バトルロワイヤル",
-   "type": "focus",
+   "type": "ambient",
    "views": 222032,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:57:10.541Z",
+   "touched": true
   },
   "nx3x0gC1pyU": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -715,11 +826,13 @@
    "pre": null,
    "published": "2026-08-15T07:00:00Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "全員が妨害し合う賞金首バトルロワイヤル  - マインクラフト【KUN】",
    "type": "focus",
    "views": 161866,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "oIlpqLSfR_Q": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -733,11 +846,13 @@
    "pre": null,
    "published": "2026-08-24T08:18:39Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "INMU KING  #50人クラフト",
    "type": "focus",
    "views": 320222,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "pN1t99fTjG4": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -751,11 +866,13 @@
    "pre": null,
    "published": "2026-09-05T01:00:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "参加勢が声出しＮＧとなったきっかけ",
    "type": "focus",
    "views": 365780,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "q_2rrUXd1Tg": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -769,11 +886,13 @@
    "pre": null,
    "published": "2026-08-26T07:00:30Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "50人の中に１人だけ逆向きにスキンを着ている参加勢をあてろゲーム - マインクラフト【KUN】",
    "type": "focus",
    "views": 201578,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "tYm_ffDJU1A": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -787,11 +906,13 @@
    "pre": null,
    "published": "2026-09-06T07:00:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "理想の島を50人で作ってみた - マインクラフト【KUN】",
    "type": "focus",
    "views": 260819,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "u932pzyhNiw": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -805,11 +926,13 @@
    "pre": null,
    "published": "2026-08-24T07:00:32Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "デブが全てを食いつく世界でサバイバル - マインクラフト【KUN】",
    "type": "focus",
    "views": 214680,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "vXFU3fYeYeA": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -823,11 +946,13 @@
    "pre": null,
    "published": "2026-08-13T07:00:05Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "300時間かけて作ったマップでめっちゃカメレオンMODで遊んでみた結果鬼難易度になった - マインクラフト【KUN】",
    "type": "focus",
    "views": 205547,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "vcSvQdMN4PM": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -841,11 +966,13 @@
    "pre": null,
    "published": "2026-08-31T08:00:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "KUNに気に入られている参加勢3選",
    "type": "focus",
    "views": 527129,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "waZ-MOx-TRU": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -859,11 +986,13 @@
    "pre": null,
    "published": "2026-08-22T07:00:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "日本列島縦断ハードコアデスラン 死んだら終わり - マインクラフト【KUN】",
    "type": "focus",
    "views": 179855,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "x5rpk50zjFo": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -874,14 +1003,19 @@
    "explore": false,
    "id": "x5rpk50zjFo",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 1
+   },
    "published": "2026-09-12T07:00:32Z",
-   "score": null,
-   "state": "pool",
+   "score": 45.23318068350177,
+   "state": "picked",
    "title": "ただの白い箱に50人いれてどうなるか検証してみた  - マインクラフト【KUN】",
-   "type": "focus",
+   "type": "ambient",
    "views": 194818,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-13T03:55:25.565Z",
+   "touched": true
   },
   "zHlHlUy875c": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -895,11 +1029,13 @@
    "pre": null,
    "published": "2026-08-18T05:51:35Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "なんかやばい喧嘩おきてた #50人クラフト",
    "type": "focus",
    "views": 138468,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   }
  }
 }
