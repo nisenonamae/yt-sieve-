@@ -61,7 +61,7 @@
   {
    "id": "UCZetZElUvdElPrcstRjl9DA",
    "name": "加藤純一ロードショー",
-   "defaultType": "focus"
+   "defaultType": "ambient"
   },
   {
    "id": "UCx1nAvtVDIsaGmCMSe8ofsQ",
@@ -86,6 +86,11 @@
   {
    "id": "UCqRV_ZIQhVKfxG1_WkNiRbg",
    "name": "Fラン大学就職",
+   "defaultType": "focus"
+  },
+  {
+   "id": "UCTrckUWmmrRZcNrfu1mZDOg",
+   "name": "たいじ",
    "defaultType": "focus"
   }
  ]
