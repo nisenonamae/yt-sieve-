@@ -468,11 +468,13 @@
    "pre": null,
    "published": "2026-08-30T08:20:37Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリメ2】最強スナイプ対策で遂にAランクに到達する布団ちゃん【2026/8/30】",
    "type": "focus",
    "views": 356650,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "1EkJMo5ZJpU": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -529,11 +531,13 @@
    "pre": null,
    "published": "2026-08-16T15:29:24Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一のニコニコ老人会RUSTダイジェスト最終回 withキズナアイ•恭一郎•布団ちゃん【2026/08/09後編】",
    "type": "focus",
    "views": 146167,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "1XdqP4z7h1Y": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -547,11 +551,13 @@
    "pre": null,
    "published": "2026-06-05T04:00:25Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダークソウル3』実況プレイPart2",
    "type": "focus",
    "views": 60445,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "1bwhEmf8nkw": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -585,11 +591,13 @@
    "pre": null,
    "published": "2026-07-21T12:01:38Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "石田誕生日おめでとう！会計はじゃん負けが全部払うよ！",
    "type": "focus",
    "views": 352765,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "1hbgoKASSGw": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -620,14 +628,19 @@
    "explore": false,
    "id": "1oSxjdNUgQY",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
    "published": "2026-09-15T11:53:07Z",
-   "score": null,
-   "state": "pool",
+   "score": 64.81564658253446,
+   "state": "picked",
    "title": "たったの2秒睡眠でシレンのダンジョンを1発クリアする男【2026/09/15】",
-   "type": "focus",
+   "type": "ambient",
    "views": 170269,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:22:45.121Z",
+   "touched": true
   },
   "2FcXy_43JZg": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -678,14 +691,19 @@
    "explore": false,
    "id": "2g4pD-YZX_A",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 1,
+    "pull": 3
+   },
    "published": "2026-09-17T21:00:31Z",
-   "score": null,
-   "state": "pool",
+   "score": 44.79947216776567,
+   "state": "picked",
    "title": "ゆゆうた、指のケガに気付かず1時間ピアノを弾いてしまう【2026/09/17】",
-   "type": "focus",
+   "type": "ambient",
    "views": 11208,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:22:53.465Z",
+   "touched": true
   },
   "2tnPHBT8Cdg": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -699,11 +717,13 @@
    "pre": null,
    "published": "2026-07-31T12:01:31Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "完売必至の『カレーみそきん』総面積8万㎢超えの北海道なら普通に売れ残ってる説。",
    "type": "focus",
    "views": 466403,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "2yxTbhEINVE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -717,11 +737,13 @@
    "pre": null,
    "published": "2026-09-11T12:01:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "プロスピ最新作で『野球最強』を決めてみた。【プロ野球スピリッツ2026】",
    "type": "focus",
    "views": 220446,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "32Y1iC7RXjA": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -732,14 +754,19 @@
    "explore": false,
    "id": "32Y1iC7RXjA",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 3
+   },
    "published": "2026-07-14T08:00:37Z",
-   "score": null,
-   "state": "pool",
+   "score": 43.82128026923515,
+   "state": "picked",
    "title": "人間の口コミサイト",
    "type": "focus",
    "views": 235983,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:23:21.131Z",
+   "touched": true
   },
   "35iWkXLQm9o": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -753,11 +780,13 @@
    "pre": null,
    "published": "2026-09-16T15:08:46Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "新メンバーの宣材写真",
    "type": "focus",
    "views": 74633,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "3LLrwfoZB40": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -768,14 +797,19 @@
    "explore": false,
    "id": "3LLrwfoZB40",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 1
+   },
    "published": "2026-06-02T08:00:29Z",
-   "score": null,
-   "state": "pool",
+   "score": 29.532995890622033,
+   "state": "picked",
    "title": "来年こそ早期選考やめよ？",
    "type": "focus",
    "views": 226902,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:23:33.184Z",
+   "touched": true
   },
   "3N265G5QcTg": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -810,14 +844,19 @@
    "explore": false,
    "id": "3NpYqk41ORg",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
    "published": "2026-08-25T14:54:40Z",
-   "score": null,
-   "state": "pool",
+   "score": 65.86397549264463,
+   "state": "picked",
    "title": "ビールが運ばれ次第、即イッキして何杯も飲み干しちゃう女子【ジェラードン】",
    "type": "focus",
    "views": 320574,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:23:42.703Z",
+   "touched": true
   },
   "3Rgj3_BF5_E": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -831,11 +870,13 @@
    "pre": null,
    "published": "2026-05-13T02:58:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダレカレ』実況プレイ",
    "type": "focus",
    "views": 101532,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "3VN2_kckCq4": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -849,11 +890,13 @@
    "pre": null,
    "published": "2026-09-17T02:42:37Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "こめおの食中毒事件は異次元にヤバい",
    "type": "focus",
    "views": 166420,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "3foAF0ScDYY": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -867,11 +910,13 @@
    "pre": null,
    "published": "2026-08-31T18:18:16Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリメ2】A(エリート)帯の強さを前に大連敗してしまう布団ちゃん【2026/8/31】",
    "type": "focus",
    "views": 315859,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "3iYG4Ht_yAQ": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -922,14 +967,19 @@
    "explore": false,
    "id": "3r-oNNvV7N0",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 4
+   },
    "published": "2026-08-17T22:00:37Z",
-   "score": null,
-   "state": "pool",
+   "score": 53.37831253033829,
+   "state": "picked",
    "title": "加藤純一 雑談ダイジェスト【2026/08/14,16】「体調悪すぎ内/ついに生活サイクルがかみ合った男」",
-   "type": "focus",
+   "type": "ambient",
    "views": 237956,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:23:59.516Z",
+   "touched": true
   },
   "3w1449omnU8": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -940,14 +990,19 @@
    "explore": false,
    "id": "3w1449omnU8",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 1,
+    "pull": 1
+   },
    "published": "2026-01-30T12:01:58Z",
-   "score": null,
-   "state": "pool",
+   "score": 18.206893801583018,
+   "state": "picked",
    "title": "『1週間住むと呪われるマンション』に住む幼馴染に会いに行ってみた。【事故物件】",
-   "type": "focus",
+   "type": "ambient",
    "views": 289059,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:24:16.224Z",
+   "touched": true
   },
   "3wFgRJJURuo": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -958,14 +1013,19 @@
    "explore": false,
    "id": "3wFgRJJURuo",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 2
+   },
    "published": "2026-08-25T08:00:39Z",
-   "score": null,
-   "state": "pool",
+   "score": 47.63361356848953,
+   "state": "picked",
    "title": "就活アドバイザーを使って地球に優しい新時代のコンピューターを作る",
    "type": "focus",
    "views": 137017,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:24:26.605Z",
+   "touched": true
   },
   "3xReXVwyKtU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -979,11 +1039,13 @@
    "pre": null,
    "published": "2026-02-04T00:03:42Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "うんこちゃんのスーパーダンガンロンパ2 さよなら絶望学園 実況プレイPart8",
    "type": "focus",
    "views": 711525,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "3xyZm-Ea8I0": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -994,14 +1056,19 @@
    "explore": false,
    "id": "3xyZm-Ea8I0",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 2
+   },
    "published": "2026-09-13T14:25:55Z",
-   "score": null,
-   "state": "pool",
+   "score": 59.151856647171854,
+   "state": "picked",
    "title": "ヘアスタイル診断シートを見るゆゆうた【2026/09/13】",
-   "type": "focus",
+   "type": "ambient",
    "views": 110610,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:24:38.296Z",
+   "touched": true
   },
   "452mHIInxVM": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1012,14 +1079,19 @@
    "explore": false,
    "id": "452mHIInxVM",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 3
+   },
    "published": "2026-07-24T08:00:22Z",
-   "score": null,
-   "state": "pool",
+   "score": 45.6019775030166,
+   "state": "picked",
    "title": "彼氏ポートフォリオ",
    "type": "focus",
    "views": 157428,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:24:44.018Z",
+   "touched": true
   },
   "478UxDMdsg0": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1030,14 +1102,19 @@
    "explore": false,
    "id": "478UxDMdsg0",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 1
+   },
    "published": "2026-08-29T16:09:39Z",
-   "score": null,
-   "state": "pool",
+   "score": 48.290278333729006,
+   "state": "picked",
    "title": "加藤純一 雑談ダイジェスト【2026/08/25,26】「雑談/椅子を新しくしマスタ」",
-   "type": "focus",
+   "type": "ambient",
    "views": 322207,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:24:56.804Z",
+   "touched": true
   },
   "4DsZ6SnqgB0": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -1091,11 +1168,13 @@
    "pre": null,
    "published": "2026-05-31T12:00:03Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "あの『100m現役トップ選手』がたくやの専属コーチになりました。【100m11秒台への道#5】",
    "type": "focus",
    "views": 518303,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "4dq52fYfgg4": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1109,11 +1188,13 @@
    "pre": null,
    "published": "2026-09-13T14:25:52Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゆゆうたのすべらない話【2026/09/13】",
    "type": "focus",
    "views": 53459,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "4uML6m_gUMA": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1127,11 +1208,13 @@
    "pre": null,
    "published": "2025-08-05T04:00:08Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ぼくのなつやすみ3』3日目（8月13日～19日）",
    "type": "focus",
    "views": 74140,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "52nforB5KiE": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1205,14 +1288,19 @@
    "explore": false,
    "id": "5G434U0Kujw",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
    "published": "2026-01-23T12:02:01Z",
-   "score": null,
-   "state": "pool",
+   "score": 36.860183672108136,
+   "state": "picked",
    "title": "『人間以外のバケモノを家に入れたら終了』のホラゲーをやります。【No, I'm not a Human】",
-   "type": "focus",
+   "type": "ambient",
    "views": 599407,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:25:27.177Z",
+   "touched": true
   },
   "5LcnY6bpPcA": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1226,11 +1314,13 @@
    "pre": null,
    "published": "2026-09-15T18:00:19Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゆゆうたの「PORTAL」【2026/09/15 】",
    "type": "focus",
    "views": 74555,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "5PgCmSqfvLk": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1244,11 +1334,13 @@
    "pre": null,
    "published": "2026-05-12T02:51:26Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【デスバーガー】パロディ多めのアクションホラーゲーム",
    "type": "focus",
    "views": 106499,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "5zU5yVe98-I": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1259,14 +1351,19 @@
    "explore": false,
    "id": "5zU5yVe98-I",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 2
+   },
    "published": "2025-12-29T20:09:04Z",
-   "score": null,
-   "state": "pool",
+   "score": 30.693223208879104,
+   "state": "picked",
    "title": "うんこちゃんの龍が如く 極2 実況プレイ最終回※ネタバレ注意",
-   "type": "focus",
+   "type": "serial",
    "views": 184974,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:25:53.584Z",
+   "touched": true
   },
   "632H9mJZK9k": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1280,11 +1377,13 @@
    "pre": null,
    "published": "2026-05-20T03:26:05Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『バニーガーデン2』実況プレイPart3 FINAL",
    "type": "focus",
    "views": 53186,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "65XHWzf0bhE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1298,11 +1397,13 @@
    "pre": null,
    "published": "2026-09-01T14:48:39Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "放送作家が聞き下手すぎて、盛り上がりに欠ける芸人の半生の動画【ジェラードン】",
    "type": "focus",
    "views": 203895,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "6C2tKmxtADs": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1316,11 +1417,13 @@
    "pre": null,
    "published": "2026-03-31T09:00:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一の、社会科見学【nosh編】",
    "type": "focus",
    "views": 388751,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "6CQjP8Py_I8": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1334,11 +1437,13 @@
    "pre": null,
    "published": "2026-09-01T17:24:25Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリメ2】スナイプブロック作戦で勝率が上がるもエリート帯の純粋な力に気圧される布団ちゃん【2026/9/1】",
    "type": "focus",
    "views": 193742,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "6DlqSLTvm9A": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1352,11 +1457,13 @@
    "pre": null,
    "published": "2026-02-04T11:00:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "全国穴掘り大会3!!!",
    "type": "focus",
    "views": 771010,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "6cOqrumVTyY": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -1390,11 +1497,13 @@
    "pre": null,
    "published": "2026-09-16T22:00:04Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一のトルネコの大冒険 不思議のダンジョン ちょっとステキなリマスター  ダイジェスト【2026/09/12,14】",
    "type": "focus",
    "views": 316690,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "6rNKkCZZRZc": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1408,11 +1517,13 @@
    "pre": null,
    "published": "2026-09-02T15:14:45Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリメ2】『ミノル』と『もこう』が作ったコースに挑戦する布団ちゃん【2026/9/2】",
    "type": "focus",
    "views": 225083,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "6sJSpi_OknA": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1423,14 +1534,19 @@
    "explore": false,
    "id": "6sJSpi_OknA",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
    "published": "2026-09-10T09:30:27Z",
-   "score": null,
-   "state": "pool",
+   "score": 70.13520567762134,
+   "state": "picked",
    "title": "いねぇよ",
-   "type": "focus",
+   "type": "ambient",
    "views": 56663,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:26:25.597Z",
+   "touched": true
   },
   "75M3B1Vvv6A": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1444,11 +1560,13 @@
    "pre": null,
    "published": "2026-08-28T08:23:50Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一のPoppy Playtime 実況プレイPart1",
    "type": "focus",
    "views": 695129,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "7CWWvuli0WU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1459,14 +1577,19 @@
    "explore": false,
    "id": "7CWWvuli0WU",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 1
+   },
    "published": "2026-08-07T08:00:39Z",
-   "score": null,
-   "state": "pool",
+   "score": 38.41384445961516,
+   "state": "picked",
    "title": "泥の城【2/2】",
    "type": "focus",
    "views": 175834,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:26:39.118Z",
+   "touched": true
   },
   "7VlK01LCDgw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1540,11 +1663,13 @@
    "pre": null,
    "published": "2026-05-19T03:13:44Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『バニーガーデン2』実況プレイPart2",
    "type": "focus",
    "views": 74652,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8MMIjG9lQDw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1602,11 +1727,13 @@
    "pre": null,
    "published": "2026-09-04T21:00:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一のポケットモンスター シャイニングパール 実況プレイPart3",
    "type": "focus",
    "views": 547141,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8mR7lX0ACgo": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1620,11 +1747,13 @@
    "pre": null,
    "published": "2026-08-08T14:53:04Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【作業用】ナオキマンショーシリーズ【ジェラードン】",
    "type": "focus",
    "views": 92123,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8uXn65eC5hs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1698,11 +1827,13 @@
    "pre": null,
    "published": "2026-09-08T03:00:09Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "搾乳をはじめます - マインクラフト【KUN】",
    "type": "focus",
    "views": 152109,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "9-sJXTxbPIs": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1716,11 +1847,13 @@
    "pre": null,
    "published": "2026-09-01T11:15:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "何も知らない相手にタメ口を使う大会 #shorts",
    "type": "focus",
    "views": 52877,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "9F4emFDtXlg": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1734,11 +1867,13 @@
    "pre": null,
    "published": "2026-08-06T15:02:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一のニコニコ老人会RUSTダイジェスト 顔合わせ編 withキズナアイ•恭一郎•布団ちゃん【2026/08/05】",
    "type": "focus",
    "views": 399474,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "9JWkXpEyF5Q": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1752,11 +1887,13 @@
    "pre": null,
    "published": "2026-08-29T18:19:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリメ2】勝てないストレスがスナイプ軍団によって爆発させられる布団ちゃん【2026/8/29】",
    "type": "focus",
    "views": 343706,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "9ityJTCLtcA": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1770,11 +1907,13 @@
    "pre": null,
    "published": "2026-09-04T03:00:08Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ずきん、ついに顔出しする - マインクラフト【KUN】",
    "type": "focus",
    "views": 222888,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "9odhFqufITs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1808,11 +1947,13 @@
    "pre": null,
    "published": "2026-07-31T10:00:08Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "地獄の４桁ビンゴ -2- #shorts",
    "type": "focus",
    "views": 130259,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "AAQxEs6hR2s": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -1866,11 +2007,13 @@
    "pre": null,
    "published": "2026-08-27T14:58:57Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "深夜食堂の風情で、強気な値段設定の店【ジェラードン】",
    "type": "focus",
    "views": 596188,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "AIwCNn_YJFI": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1884,11 +2027,13 @@
    "pre": null,
    "published": "2026-02-05T12:02:00Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "『高熱の時に見る夢』みたいな色んな意味でヤバすぎるホラゲーやってみた。【だる絡み背後霊】",
    "type": "focus",
    "views": 180749,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "ANbqbOOmz70": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1902,11 +2047,13 @@
    "pre": null,
    "published": "2026-05-01T12:02:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "『マックスむらい』の凄さがわかる動画。一応僕達はエルモアさんに挑んでます。",
    "type": "focus",
    "views": 278707,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "AQUMVNv8T_s": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1920,11 +2067,13 @@
    "pre": null,
    "published": "2025-08-04T04:00:10Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ぼくのなつやすみ3』2日目（8月7日～12日）",
    "type": "focus",
    "views": 87064,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "AVZdNj_G3qA": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1938,11 +2087,13 @@
    "pre": null,
    "published": "2026-09-01T12:01:05Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "日本一遠慮しない男に「好きな物買っていいよ」と言ってみた",
    "type": "focus",
    "views": 644340,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "AVvjE-t-iiI": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1956,11 +2107,13 @@
    "pre": null,
    "published": "2026-09-09T07:00:12Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ちぴたぱについて",
    "type": "focus",
    "views": 228902,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "AffJbBsaXYQ": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1974,11 +2127,13 @@
    "pre": null,
    "published": "2026-09-17T21:00:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゆゆうた、すももんからポゴハラメッセージが届く【2026/09/17】",
    "type": "focus",
    "views": 25149,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "AmTVM2S43Fk": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1992,11 +2147,13 @@
    "pre": null,
    "published": "2026-07-10T12:01:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "後頭部に容赦なく膝蹴りを入れる奴がいた。【UFC6】",
    "type": "focus",
    "views": 249183,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Aoib1UD4wn0": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -2030,11 +2187,13 @@
    "pre": null,
    "published": "2026-07-04T12:01:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "あみかとアマリザが破局しました。",
    "type": "focus",
    "views": 860869,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "B98fgVjGDgI": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2045,14 +2204,19 @@
    "explore": false,
    "id": "B98fgVjGDgI",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 1,
+    "pull": 1
+   },
    "published": "2026-06-19T08:00:29Z",
-   "score": null,
-   "state": "pool",
+   "score": 24.883432312535238,
+   "state": "picked",
    "title": "もしかして就活の『普通』を知らない感じ？",
-   "type": "focus",
+   "type": "ambient",
    "views": 217034,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:27:30.398Z",
+   "touched": true
   },
   "BA-WuoF-OhU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2066,11 +2230,13 @@
    "pre": null,
    "published": "2026-04-11T12:01:48Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "活動休止中に大学陸上部の練習参加してた『元10秒台』に100m計測させてみた。【100m11秒台への道#4】",
    "type": "focus",
    "views": 518439,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "BEsbtr9XExg": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2081,14 +2247,19 @@
    "explore": false,
    "id": "BEsbtr9XExg",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 2
+   },
    "published": "2026-08-03T09:30:31Z",
-   "score": null,
-   "state": "pool",
+   "score": 43.64718940224713,
+   "state": "picked",
    "title": "殺し合い2026、序章",
-   "type": "focus",
+   "type": "ambient",
    "views": 69242,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:27:43.894Z",
+   "touched": true
   },
   "BRCrhKp-BJE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2102,11 +2273,13 @@
    "pre": null,
    "published": "2026-08-19T02:34:48Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "声の可愛い隣の患者がおじさんだった【ジェラードン】 #コント",
    "type": "focus",
    "views": 117188,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "BefBSWUfks4": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2120,11 +2293,13 @@
    "pre": null,
    "published": "2026-09-10T14:27:24Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "自主ラジオが好評で収益化してる熟年夫婦【ジェラードン】",
    "type": "focus",
    "views": 225960,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "BqK8tl3uvTE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2138,11 +2313,13 @@
    "pre": null,
    "published": "2026-09-12T03:00:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "DRKS パチスロ王決定戦 〜L青ブタ編〜 supported by パチマガスロマガ ゆゆうた視点ダイジェスト【2026/09/12】",
    "type": "focus",
    "views": 91318,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "BvWi1l-oNjM": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2156,11 +2333,13 @@
    "pre": null,
    "published": "2026-09-03T09:32:58Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ダークホースドッキリ",
    "type": "focus",
    "views": 71717,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "C0YHOxlj9oE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2171,14 +2350,19 @@
    "explore": false,
    "id": "C0YHOxlj9oE",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 3
+   },
    "published": "2026-08-02T12:01:17Z",
-   "score": null,
-   "state": "pool",
+   "score": 47.29764409945535,
+   "state": "picked",
    "title": "16歳にDMを晒された『友人』のタケヤキ翔について。",
-   "type": "focus",
+   "type": "ambient",
    "views": 680411,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:28:10.183Z",
+   "touched": true
   },
   "CNONCysDRQY": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2189,14 +2373,19 @@
    "explore": false,
    "id": "CNONCysDRQY",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
    "published": "2026-07-28T14:49:01Z",
-   "score": null,
-   "state": "pool",
+   "score": 58.91068300455594,
+   "state": "picked",
    "title": "映画の応援上映で、隣の客の掛け声が個性的すぎて全く集中できない【ジェラードン】",
    "type": "focus",
    "views": 112839,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:28:16.691Z",
+   "touched": true
   },
   "CU421W8eXMg": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2210,11 +2399,13 @@
    "pre": null,
    "published": "2026-09-06T15:44:16Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「まずカレーうどんを食う枠 」【2026/9/6】",
    "type": "focus",
    "views": 95637,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "CVccRRa0mvw": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2228,11 +2419,13 @@
    "pre": null,
    "published": "2026-09-12T07:36:36Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一のデスゲームの報告書 ダイジェスト後編【2026/09/11】",
    "type": "focus",
    "views": 114333,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Ca_NSNIa6R0": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2246,11 +2439,13 @@
    "pre": null,
    "published": "2026-03-27T12:01:26Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "プライドが高すぎる男達の『みんなのGOLF』対決！",
    "type": "focus",
    "views": 219790,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "D-CdoLIwGXM": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2264,11 +2459,13 @@
    "pre": null,
    "published": "2026-08-18T12:12:19Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "HYG Direct(ハイゲダイレクト) #2",
    "type": "focus",
    "views": 271215,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "D1Ymj2wv5Q0": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -2323,14 +2520,19 @@
    "explore": false,
    "id": "DnDdLPskmXo",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
    "published": "2026-09-15T08:38:18Z",
-   "score": null,
-   "state": "pool",
+   "score": 71.53539236342375,
+   "state": "picked",
    "title": "5時間かけて全クリしてトイレ行ってる間にエンディング終わりかける【2026/09/14】",
-   "type": "focus",
+   "type": "ambient",
    "views": 140414,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:28:42.638Z",
+   "touched": true
   },
   "DsF98ht18-I": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -2384,11 +2586,13 @@
    "pre": null,
    "published": "2026-08-19T05:20:42Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一の7Days to Dieノーデスチャレンジダイジェストwithこく兄,UK,布団ちゃん,蛇足【2026/08/17前編】",
    "type": "focus",
    "views": 343556,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "E2ATkmUnnuw": {
    "added": "2026-09-17T20:12:57+00:00",
@@ -2422,11 +2626,13 @@
    "pre": null,
    "published": "2026-09-02T15:14:42Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「禁煙マリオメーカー２【幾日経ったかはもう知らぬ】」【2026/9/2】",
    "type": "focus",
    "views": 157131,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "ESD6CBcfkH0": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2440,11 +2646,13 @@
    "pre": null,
    "published": "2026-09-13T21:00:23Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一軍団VSマタギスナイパーズ　ゆゆうた視点ダイジェスト【2026/09/13】",
    "type": "focus",
    "views": 31637,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "F5791heqxjk": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2458,11 +2666,13 @@
    "pre": null,
    "published": "2026-09-03T09:15:47Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一 雑談ダイジェスト【2026/09/03】「おはよう」",
    "type": "focus",
    "views": 273555,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "F6h-BSvdVLg": {
    "added": "2026-09-16T20:13:06+00:00",
@@ -2496,11 +2706,13 @@
    "pre": null,
    "published": "2026-08-06T12:01:17Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "フランス代表に勝てるまで終われません。【FC26】",
    "type": "focus",
    "views": 278998,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "FNdOClm4VmE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2514,11 +2726,13 @@
    "pre": null,
    "published": "2026-08-15T00:00:22Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一のニコニコ老人会RUSTダイジェスト withキズナアイ•恭一郎•布団ちゃん【2026/08/09前編】",
    "type": "focus",
    "views": 155560,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "FPewvXdSDyA": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2532,11 +2746,13 @@
    "pre": null,
    "published": "2026-08-28T12:01:32Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "事故物件を監視するだけの仕事をする事になりました【日本事故物件監視協会3】",
    "type": "focus",
    "views": 438119,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "FkruDcM0BPs": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2550,11 +2766,13 @@
    "pre": null,
    "published": "2026-08-11T12:23:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一のニコニコ老人会RUSTダイジェスト withキズナアイ•恭一郎•布団ちゃん【2026/08/08前編】",
    "type": "focus",
    "views": 241534,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "FsXZ9Ba6l3M": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2568,11 +2786,13 @@
    "pre": null,
    "published": "2026-06-28T12:01:09Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "元100m10秒台が5年ぶりに大会出場してみた。【100m11秒台への道#最終回】",
    "type": "focus",
    "views": 747496,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "G1anJ1d_nmk": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2586,11 +2806,13 @@
    "pre": null,
    "published": "2026-05-26T12:01:03Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "サイコパスをかっこいいと思ってる男達のサイコパス診断",
    "type": "focus",
    "views": 624286,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "G47uH9Ninbw": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2601,14 +2823,19 @@
    "explore": false,
    "id": "G47uH9Ninbw",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 2
+   },
    "published": "2026-08-20T14:06:22Z",
-   "score": null,
-   "state": "pool",
+   "score": 53.75488941165833,
+   "state": "picked",
    "title": "生まれ変わるなら「ラクダ」か「猫」かのディベートして、お互い無しになって別れたカップル【ジェラードン】",
-   "type": "focus",
+   "type": "ambient",
    "views": 84143,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:29:15.034Z",
+   "touched": true
   },
   "G7-LG-XgyN0": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2622,11 +2849,13 @@
    "pre": null,
    "published": "2026-03-06T01:46:31Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "うんこちゃんのポケモンファイアレッド 野生のポケモン倒すの禁止 実況プレイPart1",
    "type": "focus",
    "views": 1001824,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "GDSoYtGfU5M": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -2700,11 +2929,13 @@
    "pre": null,
    "published": "2026-07-29T09:21:22Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一 雑談ダイジェスト【2026/07/26,27】「ちょっと話して何かやる男/体調が良い男」",
    "type": "focus",
    "views": 228863,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "GezuvzU6LyM": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2715,14 +2946,19 @@
    "explore": false,
    "id": "GezuvzU6LyM",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 1,
+    "pull": 1
+   },
    "published": "2026-06-09T08:00:34Z",
-   "score": null,
-   "state": "pool",
+   "score": 23.91153771946651,
+   "state": "picked",
    "title": "就活ギャンブラーの頭の中",
-   "type": "focus",
+   "type": "ambient",
    "views": 260559,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:29:25.490Z",
+   "touched": true
   },
   "Gg5z2ITgDak": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2733,14 +2969,19 @@
    "explore": false,
    "id": "Gg5z2ITgDak",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
    "published": "2026-02-13T12:01:45Z",
-   "score": null,
-   "state": "pool",
+   "score": 33.3791422225473,
+   "state": "picked",
    "title": "『覗きをしたら、○人現場を目撃してしまい犯人に狙われる』ホラゲーをやる。状況カオスすぎだろ。",
-   "type": "focus",
+   "type": "ambient",
    "views": 420582,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:29:34.772Z",
+   "touched": true
   },
   "GmjEKs_WC_M": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2751,14 +2992,19 @@
    "explore": false,
    "id": "GmjEKs_WC_M",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 1
+   },
    "published": "2026-09-13T14:26:04Z",
-   "score": null,
-   "state": "pool",
+   "score": 44.56144125297349,
+   "state": "picked",
    "title": "INMU KINGをうろ覚えで弾くゆゆうた【2026/09/13】",
-   "type": "focus",
+   "type": "ambient",
    "views": 374365,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:29:44.944Z",
+   "touched": true
   },
   "Gv4Jpyj_PZ8": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2772,11 +3018,13 @@
    "pre": null,
    "published": "2026-05-29T12:01:26Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "『覆面をした連続○人鬼』がいるマンションに引っ越してしまいました【悪意/Dread Neighbor】",
    "type": "focus",
    "views": 257306,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "GxT0TaaGw_4": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -2870,11 +3118,13 @@
    "pre": null,
    "published": "2026-08-18T12:01:22Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【速報】シルクが40℃の高熱に気づかずスカイピースをスマブラでボコった件。",
    "type": "focus",
    "views": 698531,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "HgI6htuYLZg": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2888,11 +3138,13 @@
    "pre": null,
    "published": "2026-09-06T12:01:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "wakatte.TVの炎上で国が声明を出す事態に。",
    "type": "focus",
    "views": 878915,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Hp-mLQBVlbk": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2906,11 +3158,13 @@
    "pre": null,
    "published": "2026-07-24T12:01:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "新しいリズム天国で『リズム王』を決める男達。【リズム天国ミラクルスターズ】",
    "type": "focus",
    "views": 308914,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "I0g5e9pHjno": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2924,11 +3178,13 @@
    "pre": null,
    "published": "2026-09-14T12:38:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "大阪ナオミ、毎日4時間OW古参勢だった",
    "type": "focus",
    "views": 149222,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IGneP4J_MLs": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -2959,14 +3215,19 @@
    "explore": false,
    "id": "IGzRDS4opgo",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
    "published": "2026-09-08T08:00:16Z",
-   "score": null,
-   "state": "pool",
+   "score": 62.991160439175495,
+   "state": "picked",
    "title": "僕の両親はインフルエンサーです",
    "type": "focus",
    "views": 402798,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:31:09.214Z",
+   "touched": true
   },
   "IJifMvloqtI": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2980,11 +3241,13 @@
    "pre": null,
    "published": "2026-08-20T15:40:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一の7Days to Dieノーデスチャレンジダイジェストwithこく兄,UK,布団ちゃん,蛇足【2026/08/17後編】",
    "type": "focus",
    "views": 205785,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IQQmWt3Zc1M": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -3018,11 +3281,13 @@
    "pre": null,
    "published": "2026-02-08T18:19:39Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "うんこちゃんのスーパーダンガンロンパ2 さよなら絶望学園 実況プレイ最終回Part11",
    "type": "focus",
    "views": 728737,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IY3lrhq5G1k": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -3053,14 +3318,19 @@
    "explore": false,
    "id": "IYvfYsXiLaE",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
    "published": "2026-06-23T08:00:14Z",
-   "score": null,
-   "state": "pool",
+   "score": 46.35162490675421,
+   "state": "picked",
    "title": "おさるの実験場【1/2】",
-   "type": "focus",
+   "type": "ambient",
    "views": 225575,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:31:18.317Z",
+   "touched": true
   },
   "If8K1Lt45G0": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -3074,11 +3344,13 @@
    "pre": null,
    "published": "2026-09-14T09:11:39Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "配信で70時間起きてた経験者が語る、短眠の危険性【2026/09/14】",
    "type": "focus",
    "views": 785179,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IgxM4AbAsHA": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -3112,11 +3384,13 @@
    "pre": null,
    "published": "2026-08-23T13:41:28Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "親に角刈りにされて絶望する小学生 #ジェラードン #コント",
    "type": "focus",
    "views": 418096,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IjAzpOi8Fqw": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -3174,11 +3448,13 @@
    "pre": null,
    "published": "2026-09-16T12:30:37Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゆゆうた、ハイパーゲーム大会のゆゆうたとこくのグッズが譲られまくってることを知る【2026/09/16】",
    "type": "focus",
    "views": 83028,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Iq4Gpsle9Sc": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -3192,11 +3468,13 @@
    "pre": null,
    "published": "2026-09-16T10:34:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "キャバ嬢がコ〇イン所持で逮捕 キャバ嬢もYoutuberも捕まり始めてる話",
    "type": "focus",
    "views": 58678,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "J5E1nH_BK_c": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -3207,14 +3485,19 @@
    "explore": false,
    "id": "J5E1nH_BK_c",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
    "published": "2026-08-18T08:00:10Z",
-   "score": null,
-   "state": "pool",
+   "score": 63.97792623026041,
+   "state": "picked",
    "title": "息子がFラン大学就職チャンネルに出演してる",
-   "type": "focus",
+   "type": "ambient",
    "views": 186525,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:31:31.524Z",
+   "touched": true
   },
   "JGzWh7V-X3g": {
    "added": "2026-09-18T05:19:08+00:00",
