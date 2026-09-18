@@ -10,14 +10,19 @@
    "explore": false,
    "id": "-8sG_9h0dg4",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 2
+   },
    "published": "2026-07-19T12:01:27Z",
-   "score": null,
-   "state": "pool",
+   "score": 47.30590479402208,
+   "state": "picked",
    "title": "日本最北端のミスド『ミスタードーナツ稚内ショップ』なら並ばずにもっちゅりん食える説",
-   "type": "focus",
+   "type": "ambient",
    "views": 427199,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:21:30.715Z",
+   "touched": true
   },
   "-FdbKqZM_iA": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -75,11 +80,13 @@
    "pre": null,
    "published": "2026-08-15T09:15:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "\"\"島の終わりは近い\"\"",
    "type": "focus",
    "views": 86915,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "-PNawjiUgOo": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -130,14 +137,19 @@
    "explore": false,
    "id": "-c5EoTlKafA",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 2
+   },
    "published": "2026-08-07T12:01:13Z",
-   "score": null,
-   "state": "pool",
+   "score": 44.36748154139778,
+   "state": "picked",
    "title": "僕達が呼ばれなかったCDFを『購入』してフルで見てみた。",
-   "type": "focus",
+   "type": "ambient",
    "views": 503284,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:21:43.872Z",
+   "touched": true
   },
   "-eJ4kkKzcYo": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -211,11 +223,13 @@
    "pre": null,
    "published": "2026-09-17T21:00:23Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゆゆうた、またしても闇バイトから狙われてしまう？【2026/09/17】",
    "type": "focus",
    "views": 56486,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0K4z4bhvhHw": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -249,11 +263,13 @@
    "pre": null,
    "published": "2026-09-12T03:00:15Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "コメ欄が大炎上した件について",
    "type": "focus",
    "views": 163056,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0Tk2LGtiPEE": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -287,11 +303,13 @@
    "pre": null,
    "published": "2026-09-16T16:22:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "DRKS定期集会トークシーンまとめ【2026/09/16】",
    "type": "focus",
    "views": 233522,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0e0b3asWg7A": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -325,11 +343,13 @@
    "pre": null,
    "published": "2026-08-15T13:27:28Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "シークレットブーツ脱ぎたくなくて、座敷に上がらずやり過ごそうとする男【ジェラードン】",
    "type": "focus",
    "views": 188435,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0pS2-DJgTCU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -343,11 +363,13 @@
    "pre": null,
    "published": "2026-08-22T13:24:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "小料理屋の店主が、フリースタイルで捲し立てるように料理説明してくる【ジェラードン】",
    "type": "focus",
    "views": 129728,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "10dbcfklFU8": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -361,11 +383,13 @@
    "pre": null,
    "published": "2026-09-17T21:00:31Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゆゆうたのジャイアンモノマネ【2026/09/17】",
    "type": "focus",
    "views": 8625,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "17pZBm7nDt8": {
    "added": "2026-09-13T03:49:16+00:00",
