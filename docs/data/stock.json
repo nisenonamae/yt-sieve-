@@ -13,11 +13,13 @@
    "pre": null,
    "published": "2026-08-30T07:00:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】G疑惑があり次の試合で圧倒的実力を魅せるはりーシ【2026/08/29】",
    "type": "focus",
    "views": 19372,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "-Wmi5BSuxwI": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -51,11 +53,13 @@
    "pre": null,
    "published": "2026-09-05T08:00:12Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】12人村実装後の初狼で高レベル試合をするはりーシ【2026/09/02】",
    "type": "focus",
    "views": 24337,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "-rz2Gheuq4A": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -69,11 +73,13 @@
    "pre": null,
    "published": "2026-08-19T08:00:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】尾崎に人狼の「頂」について聞かれるはりーシ【2026/08/19】",
    "type": "focus",
    "views": 14702,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0K4z4bhvhHw": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -188,11 +194,13 @@
    "pre": null,
    "published": "2026-09-13T03:00:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【雑談】はりーシの教育方針で悩む尾崎を観戦するはりーシ【2026/09/12】",
    "type": "focus",
    "views": 29478,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "2FcXy_43JZg": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -303,11 +311,13 @@
    "pre": null,
    "published": "2026-09-01T08:30:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】良い試合の後に尾崎とポケモン雑談を皆でするはりーシ【2026/09/01】",
    "type": "focus",
    "views": 15209,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "5DJ_UcdDScQ": {
    "added": "2026-09-13T03:46:40+00:00",
