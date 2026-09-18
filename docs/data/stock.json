@@ -10,14 +10,20 @@
    "explore": false,
    "id": "-FdbKqZM_iA",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 2
+   },
    "published": "2026-09-08T17:58:55Z",
-   "score": null,
-   "state": "pool",
+   "score": 58.0222996820521,
+   "state": "dropped",
    "title": "【マリメ2】スナイプ軍団に苦しめられながらも遂にSランクへ到達する布団ちゃん【2026/9/8】",
-   "type": "focus",
+   "type": "ambient",
    "views": 299811,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:04:02.896Z",
+   "dropReason": "gaveup",
+   "touched": true
   },
   "-HY5ptj9F5E": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -31,11 +37,13 @@
    "pre": null,
    "published": "2026-06-06T03:57:40Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダークソウル3』実況プレイPart3",
    "type": "focus",
    "views": 60981,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "-PNawjiUgOo": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -109,11 +117,13 @@
    "pre": null,
    "published": "2026-09-16T03:57:26Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『たろうくんはいってきました』実況プレイ",
    "type": "focus",
    "views": 188918,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "-rz2Gheuq4A": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -252,11 +262,13 @@
    "pre": null,
    "published": "2026-06-19T02:30:17Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダークソウル3』実況プレイPart9 FINAL",
    "type": "focus",
    "views": 21169,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "1EkJMo5ZJpU": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -270,11 +282,13 @@
    "pre": null,
    "published": "2026-09-17T09:41:47Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリカ】暑さ攻撃とスナイプ攻撃に調子を狂わされて発狂する布団ちゃん【2026/9/17】",
    "type": "focus",
    "views": 169580,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "1FZhBPSbTBo": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -285,14 +299,19 @@
    "explore": false,
    "id": "1FZhBPSbTBo",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 2
+   },
    "published": "2026-07-18T01:00:01Z",
-   "score": null,
-   "state": "pool",
+   "score": 40.896551712259686,
+   "state": "picked",
    "title": "布団ちゃんの『醤油ラーメンFOREVER』実況プレイ",
-   "type": "focus",
+   "type": "ambient",
    "views": 122014,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:04:34.855Z",
+   "touched": true
   },
   "1bwhEmf8nkw": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -326,11 +345,13 @@
    "pre": null,
    "published": "2026-07-26T04:15:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "#2布団ちゃんの『シャインポスト Be Your アイドル！』実況プレイ",
    "type": "focus",
    "views": 125504,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "2FcXy_43JZg": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -408,11 +429,13 @@
    "pre": null,
    "published": "2026-08-17T03:00:19Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【雪葬】チラズの雪を掘りまくるドパホラゲー",
    "type": "focus",
    "views": 171782,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "3mkqWt8QkzU": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -446,11 +469,13 @@
    "pre": null,
    "published": "2026-09-03T04:10:59Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ファイナルファンタジーXVI』実況プレイDay7 Final",
    "type": "focus",
    "views": 81007,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "4LYhYtSt5CU": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -521,14 +546,19 @@
    "explore": false,
    "id": "5EMxy_KqBes",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3,
+    "pull": 2
+   },
    "published": "2026-06-26T02:00:35Z",
-   "score": null,
-   "state": "pool",
+   "score": 43.094249080745584,
+   "state": "picked",
    "title": "布団ちゃんの『Don't Play This』実況プレイ",
-   "type": "focus",
+   "type": "ambient",
    "views": 107242,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:05:02.864Z",
+   "touched": true
   },
   "6cOqrumVTyY": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -542,11 +572,13 @@
    "pre": null,
    "published": "2026-08-30T08:00:54Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ファイナルファンタジーXVI』実況プレイDay4",
    "type": "focus",
    "views": 82825,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "7VlK01LCDgw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -580,11 +612,13 @@
    "pre": null,
    "published": "2026-09-12T14:31:17Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "バトラが顔出しした件について語る布団ちゃん【2026/9/12】",
    "type": "focus",
    "views": 251953,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8C5b5zl1dlU": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -598,11 +632,13 @@
    "pre": null,
    "published": "2026-09-01T01:30:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ファイナルファンタジーXVI』実況プレイDay5",
    "type": "focus",
    "views": 59740,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8MMIjG9lQDw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -680,11 +716,13 @@
    "pre": null,
    "published": "2026-08-16T03:00:22Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ぼくのなつやすみ1』3日目（8月22日～31日）",
    "type": "focus",
    "views": 74747,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8zgJ74IZp3A": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -738,11 +776,13 @@
    "pre": null,
    "published": "2026-09-10T21:00:15Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "「トルネコ」と「布団ちゃん」の命が一心同体のシーン【2026/9/10】",
    "type": "focus",
    "views": 83374,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "ADiwfCcKQGs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -820,11 +860,13 @@
    "pre": null,
    "published": "2026-08-27T02:49:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ファイナルファンタジーXVI』実況プレイDay1",
    "type": "focus",
    "views": 147276,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "DsF98ht18-I": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -838,11 +880,13 @@
    "pre": null,
    "published": "2026-09-07T18:12:10Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「遅くなり申した 」【2026/9/7】",
    "type": "focus",
    "views": 162635,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "DtJEKIiiycc": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -936,11 +980,13 @@
    "pre": null,
    "published": "2026-09-11T11:54:44Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリカ】いきなり大発狂＆イライラしながらマリカーの練習を始める初心者布団ちゃん【2026/9/11】",
    "type": "focus",
    "views": 241035,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "GKXS2gBEdKw": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -954,11 +1000,13 @@
    "pre": null,
    "published": "2026-08-29T06:49:54Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ファイナルファンタジーXVI』実況プレイDay3",
    "type": "focus",
    "views": 95175,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "GxT0TaaGw_4": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -972,11 +1020,13 @@
    "pre": null,
    "published": "2026-09-15T19:03:04Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【Meadow】平和すぎる動物MMOで心を浄化する布団ちゃん【2026/9/15】",
    "type": "focus",
    "views": 104486,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "H8Vuf6TSSZo": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -990,11 +1040,13 @@
    "pre": null,
    "published": "2026-09-08T15:51:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「今日こそS帯突入！？禁煙マリオメーカー！」【2026/9/8】",
    "type": "focus",
    "views": 121391,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "HTRhaIoiDi4": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1028,11 +1080,13 @@
    "pre": null,
    "published": "2026-06-10T07:36:39Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダークソウル3』実況プレイPart7",
    "type": "focus",
    "views": 48611,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IGneP4J_MLs": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -1046,11 +1100,13 @@
    "pre": null,
    "published": "2026-09-06T18:17:47Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【12時間マリメ後編】B帯降格の危機を迎えながらもS帯目指してランクを盛りまくる布団ちゃん【2026/9/6】",
    "type": "focus",
    "views": 157075,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IQQmWt3Zc1M": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -1064,11 +1120,13 @@
    "pre": null,
    "published": "2026-09-17T08:49:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「メシを食らい、マリ〇をする」【2026/9/17】",
    "type": "focus",
    "views": 86403,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IY3lrhq5G1k": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1102,11 +1160,13 @@
    "pre": null,
    "published": "2026-09-18T04:35:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「おはようございます。納豆炒飯を食べながら」【2026/9/18】",
    "type": "focus",
    "views": 1878,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IjAzpOi8Fqw": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1164,11 +1224,13 @@
    "pre": null,
    "published": "2026-06-18T01:00:08Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダークソウル3』実況プレイPart8",
    "type": "focus",
    "views": 32662,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "KGaHVnGoJm4": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1242,11 +1304,13 @@
    "pre": null,
    "published": "2026-09-07T18:54:45Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【AIドット絵バトル】配信者最強決定戦に現れた『ヴェイルフェイス』にツボりまくる布団ちゃん【2026/9/7】",
    "type": "focus",
    "views": 409614,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "NgBZhkIauSg": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1304,11 +1368,13 @@
    "pre": null,
    "published": "2026-09-12T14:59:58Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリカ】マリカ2日目にして危険な状態に陥ってしまう布団ちゃん【2026/9/12】",
    "type": "focus",
    "views": 229178,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "PS0S4D0_QgY": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1382,11 +1448,13 @@
    "pre": null,
    "published": "2026-09-07T18:54:42Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【AIドット絵バトル】持ち前の画力を活かしたこだわりのモンスターで戦う布団ちゃん【2026/9/7】",
    "type": "focus",
    "views": 141692,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Qd_W6JTL6QU": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -1400,11 +1468,13 @@
    "pre": null,
    "published": "2026-08-28T08:11:36Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ファイナルファンタジーXVI』実況プレイDay2",
    "type": "focus",
    "views": 92212,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "QwQAHalIFaA": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1478,11 +1548,13 @@
    "pre": null,
    "published": "2026-07-25T01:00:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ディノクライシス』実況プレイ",
    "type": "focus",
    "views": 93587,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Ryh-LnndJ20": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1616,11 +1688,13 @@
    "pre": null,
    "published": "2026-07-07T02:56:55Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『Paranormal HK』実況プレイ",
    "type": "focus",
    "views": 118462,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "UhQQS-c1Wsc": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -1634,11 +1708,13 @@
    "pre": null,
    "published": "2026-06-08T02:08:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダークソウル3』実況プレイPart5",
    "type": "focus",
    "views": 47236,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "UuWmAlTtvQo": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1672,11 +1748,13 @@
    "pre": null,
    "published": "2026-08-14T03:00:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ぼくのなつやすみ1』1日目（8月1日～11日）",
    "type": "focus",
    "views": 208679,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "WwNSDDaePhM": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1710,11 +1788,13 @@
    "pre": null,
    "published": "2026-08-17T09:00:13Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『日本事故物件監視協会』実況プレイ",
    "type": "focus",
    "views": 236067,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "XkXYcOwvU-E": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1852,11 +1932,13 @@
    "pre": null,
    "published": "2026-09-06T16:15:17Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【12時間マリメ前編】絶望の30連敗で危険な状態へ突入する布団ちゃん【2026/9/6】",
    "type": "focus",
    "views": 217603,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "aWSy-L-ywoU": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1994,11 +2076,13 @@
    "pre": null,
    "published": "2026-08-20T00:30:36Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『My Little Puppy (マイリトルパピー)』実況プレイPart2",
    "type": "focus",
    "views": 18700,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "dP0rEJIyGGU": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -2052,11 +2136,13 @@
    "pre": null,
    "published": "2026-09-11T11:22:55Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「20時あたりまでのらりくらり！放送！」【2026/9/11】",
    "type": "focus",
    "views": 142653,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "emEKG-vX06w": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -2134,11 +2220,13 @@
    "pre": null,
    "published": "2026-07-25T04:00:36Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "#1布団ちゃんの『シャインポスト Be Your アイドル！』実況プレイ",
    "type": "focus",
    "views": 237872,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "gmrvzDoO5fg": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -2152,11 +2240,13 @@
    "pre": null,
    "published": "2026-09-15T19:03:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "騙すカスに「堀大輔のモザイク無し版」を見たか問い詰める布団ちゃん【ダマスカス】【2026/9/15】",
    "type": "focus",
    "views": 178480,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "gsunwAxkF_0": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -2210,11 +2300,13 @@
    "pre": null,
    "published": "2026-06-09T04:54:34Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダークソウル3』実況プレイPart6",
    "type": "focus",
    "views": 41075,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "h1A84EHew4I": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -2268,11 +2360,13 @@
    "pre": null,
    "published": "2026-09-10T21:00:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「先生、トルネコがしたいです...！」【2026/9/10】",
    "type": "focus",
    "views": 132405,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "hhfnHiBlfGE": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -2306,11 +2400,13 @@
    "pre": null,
    "published": "2026-09-14T15:57:13Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "シャインポストBSF2026に行ってきた感想を熱く語りまくる布団ちゃん【2026/9/14】",
    "type": "focus",
    "views": 149297,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "iBNY1tFF6P4": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -2364,11 +2460,13 @@
    "pre": null,
    "published": "2026-07-27T09:00:09Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "#3 布団ちゃんの『シャインポスト Be Your アイドル！』実況プレイ最終回",
    "type": "focus",
    "views": 122686,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "iiZDEwrCHF4": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -2406,11 +2504,13 @@
    "pre": null,
    "published": "2026-09-17T08:43:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "『老害松ジュニア』＋『ヴェイルフェイスVS布団ちゃん』を見る布団ちゃん【2026/9/17】",
    "type": "focus",
    "views": 188594,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "j6IRnswOr6M": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -2424,11 +2524,13 @@
    "pre": null,
    "published": "2026-06-07T04:00:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ダークソウル3』実況プレイPart4",
    "type": "focus",
    "views": 55006,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "jCRyh-y3HMs": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -2522,11 +2624,13 @@
    "pre": null,
    "published": "2026-09-16T11:42:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「漏電し、エアコン使えない男 今日は２０時まで」【2026/9/16】",
    "type": "focus",
    "views": 129265,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "lTYsAXzeWZw": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -2560,11 +2664,13 @@
    "pre": null,
    "published": "2026-09-11T11:45:39Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "Googleマップで全国の気になる場所を見てみる布団ちゃん【2026/9/11】",
    "type": "focus",
    "views": 104083,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "n-WBEcvxcHI": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -2602,11 +2708,13 @@
    "pre": null,
    "published": "2026-09-02T02:00:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ファイナルファンタジーXVI』実況プレイDay6",
    "type": "focus",
    "views": 52391,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "nmkwSsRVh7E": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -2700,11 +2808,13 @@
    "pre": null,
    "published": "2026-08-19T05:00:15Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『My Little Puppy (マイリトルパピー)』実況プレイPart1",
    "type": "focus",
    "views": 58566,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "p5QbOrmoOcI": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -2775,14 +2885,19 @@
    "explore": false,
    "id": "qc16mqxSh48",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 2,
+    "pull": 2
+   },
    "published": "2026-07-31T03:00:24Z",
-   "score": null,
-   "state": "pool",
+   "score": 43.08460044670175,
+   "state": "picked",
    "title": "布団ちゃんの『八尺様がいた夏休み』実況プレイ",
-   "type": "focus",
+   "type": "ambient",
    "views": 204670,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:06:52.556Z",
+   "touched": true
   },
   "rMQWObWctu4": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -2816,11 +2931,13 @@
    "pre": null,
    "published": "2026-09-12T02:15:45Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【DRKSパチスロ王決定戦】講釈とヤジが止まらない布団ちゃん【2026/9/12】",
    "type": "focus",
    "views": 154873,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "roVHGiXAQHA": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -2854,11 +2971,13 @@
    "pre": null,
    "published": "2026-08-15T03:00:23Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの『ぼくのなつやすみ1』2日目（8月12日～21日）",
    "type": "focus",
    "views": 109014,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "sIBfqZ_VO8c": {
    "added": "2026-09-16T20:13:06+00:00",
@@ -2952,11 +3071,13 @@
    "pre": null,
    "published": "2026-09-16T11:35:17Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "今週行く仙台をGoogleマップで探検する布団ちゃん【2026/9/16】",
    "type": "focus",
    "views": 93040,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "vXFU3fYeYeA": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -3050,11 +3171,13 @@
    "pre": null,
    "published": "2026-09-17T08:46:11Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ロマサガ3リメイクのプレイ映像を見て早口講釈が止まらない布団ちゃん【2026/9/17】",
    "type": "focus",
    "views": 96325,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "x5rpk50zjFo": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -3092,11 +3215,13 @@
    "pre": null,
    "published": "2026-09-08T15:51:22Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【ネタバレ注意】マリメでVIVANTのネタバレを喰らい訴えることができるか「騙すカス」に相談したら、騙すカスにネタバレしてしまう布団ちゃん【ダマスカス】【2026/9/8】",
    "type": "focus",
    "views": 204273,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "xH3pMXky-8w": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -3130,11 +3255,13 @@
    "pre": null,
    "published": "2026-09-06T15:44:19Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリメ2】宿敵トンパにやっと勝利して煽りまくる布団ちゃん【2026/9/6】",
    "type": "focus",
    "views": 263727,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "xfj0q8YGM7s": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -3148,11 +3275,13 @@
    "pre": null,
    "published": "2026-09-10T21:00:07Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【トルネコの大冒険】視聴者参加モードで不幸追い込もうとする視聴者に苦しめられる布団ちゃん【2026/9/10】",
    "type": "focus",
    "views": 260690,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "yMov03i7lxs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -3206,11 +3335,13 @@
    "pre": null,
    "published": "2026-09-15T19:03:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ハイゲガチャを10連回したら”とある人物”を引きまくってしまう布団ちゃん【2026/9/15】",
    "type": "focus",
    "views": 145700,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "yoPUebEBLkw": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -3224,11 +3355,13 @@
    "pre": null,
    "published": "2026-09-14T16:57:08Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリカ】組織による激しい攻撃に苦しみながらも着実に成長していく布団ちゃん【2026/9/14】",
    "type": "focus",
    "views": 267968,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "yskEYLWFWhs": {
    "added": "2026-09-14T20:13:03+00:00",
