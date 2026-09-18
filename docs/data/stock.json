@@ -93,11 +93,13 @@
    "pre": null,
    "published": "2026-08-11T09:51:08Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ニコニコ老人会RUSTのクリップ鑑賞会をするはりーシ【2026/08/11】",
    "type": "focus",
    "views": 244092,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0Tk2LGtiPEE": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -168,19 +170,21 @@
    "explore": false,
    "id": "1CLB4MS2950",
    "pickedAt": "2026-09-13T03:52:12.682Z",
-   "post": null,
+   "post": {
+    "score": 2
+   },
    "pre": {
     "expect": 4,
     "pull": 4
    },
    "published": "2026-09-03T07:00:27Z",
-   "score": 73.83360827976293,
-   "state": "picked",
+   "score": 67.61957934976118,
+   "state": "watched",
    "title": "タレットを使って50人ボスラッシュ防衛線 - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 331032,
-   "watchedAt": null
+   "watchedAt": "2026-09-18T04:45:11.689Z"
   },
   "1bwhEmf8nkw": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -214,11 +218,13 @@
    "pre": null,
    "published": "2026-08-14T08:00:12Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】人選に厳しい尾崎と雑談するはりーシ【2026/08/13】",
    "type": "focus",
    "views": 16159,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "2N3maWCL9cE": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -232,11 +238,13 @@
    "pre": null,
    "published": "2026-08-06T08:00:32Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【爆弾魔には気をつけろよ】サイコパスコンビでマップ各所を一斉爆破させるボマーはりーシ【2026/08/05】",
    "type": "focus",
    "views": 83461,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "3N265G5QcTg": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -253,13 +261,14 @@
     "pull": 1
    },
    "published": "2026-08-19T07:00:20Z",
-   "score": 47.277695619685986,
-   "state": "picked",
+   "score": 39.480471065790816,
+   "state": "dropped",
    "title": "無限に村が続く世界で50人全員集合 - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 347422,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "3mkqWt8QkzU": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -273,11 +282,13 @@
    "pre": null,
    "published": "2026-08-13T08:00:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】YouTubeの中継にキレる尾崎と久々に人狼するはりーシ【2026/08/13】",
    "type": "focus",
    "views": 25731,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "4LYhYtSt5CU": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -394,13 +405,14 @@
     "pull": 1
    },
    "published": "2026-08-02T07:00:06Z",
-   "score": 38.41702753382644,
-   "state": "picked",
+   "score": 29.69180525537582,
+   "state": "dropped",
    "title": "50人でチームに分かれて進捗解除の速度を競う 進捗解除バトル - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 189972,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "8uXn65eC5hs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -414,11 +426,13 @@
    "pre": null,
    "published": "2026-09-12T03:00:08Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】おえちゃんの人狼講習を受けるはりーシ【2026/09/11】",
    "type": "focus",
    "views": 30274,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8zgJ74IZp3A": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -432,11 +446,13 @@
    "pre": null,
    "published": "2026-08-18T08:00:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】相方狂人アピ戦法が成功して喜ぶはりーシ【2026/08/15】",
    "type": "focus",
    "views": 8103,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "9odhFqufITs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -450,11 +466,13 @@
    "pre": null,
    "published": "2026-09-13T07:00:11Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "最強の10人 vs 50人のクソ雑魚参加勢 - マインクラフト【KUN】",
    "type": "ambient",
    "views": 113764,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "ADiwfCcKQGs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -468,11 +486,13 @@
    "pre": null,
    "published": "2026-09-09T08:00:16Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】尾崎と二人きりのポケモン雑談でドン引きさせるはりーシ【2026/09/07】",
    "type": "focus",
    "views": 44718,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Aoib1UD4wn0": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -509,13 +529,14 @@
     "pull": 3
    },
    "published": "2026-08-06T09:00:18Z",
-   "score": 38.5921925236987,
-   "state": "picked",
+   "score": 30.386904070309516,
+   "state": "dropped",
    "title": "50人全員エンドラリレー 収録時間6時間越えの超地獄企画 - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 238969,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "DtJEKIiiycc": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -549,11 +570,13 @@
    "pre": null,
    "published": "2026-09-17T07:00:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "偽企画中に江ッ戸い写真を隠し撮り 参加勢エドい写真コンテスト - マインクラフト【KUN】",
    "type": "ambient",
    "views": 168895,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "F6h-BSvdVLg": {
    "added": "2026-09-16T20:13:06+00:00",
@@ -567,11 +590,13 @@
    "pre": null,
    "published": "2026-09-16T08:00:35Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】豪傑点呼から始まる豪傑試合をするはりーシ【2026/09/15】",
    "type": "focus",
    "views": 16500,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "GDSoYtGfU5M": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -605,11 +630,13 @@
    "pre": null,
    "published": "2026-09-04T08:00:30Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】豪傑村で新ルール初戦から神試合するはりーシ【2026/09/02】",
    "type": "focus",
    "views": 22132,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IY3lrhq5G1k": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -623,11 +650,13 @@
    "pre": null,
    "published": "2026-08-09T18:02:43Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST最終日】坂本拠点レイド編 ミサイル座標ヘリ特攻するはりーシ【2026/08/09】",
    "type": "focus",
    "views": 52131,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IjAzpOi8Fqw": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -641,11 +670,13 @@
    "pre": null,
    "published": "2026-08-08T02:45:16Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST本番】たいじをガチ泣きさせるライナーはりーシ【2026/08/08】",
    "type": "focus",
    "views": 250517,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "IlvjuXf9ww8": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -662,13 +693,14 @@
     "pull": 2
    },
    "published": "2026-09-11T07:00:39Z",
-   "score": 52.0007105651249,
-   "state": "picked",
+   "score": 48.218470079545554,
+   "state": "dropped",
    "title": "完全再現 渋谷の街でマンハント ５０人から逃げ切り集合せよ - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 143397,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "KGaHVnGoJm4": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -722,11 +754,13 @@
    "pre": null,
    "published": "2026-08-27T08:00:39Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】尾崎×はりーシ雑談部分まとめ【切り抜き】",
    "type": "focus",
    "views": 54844,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "NgBZhkIauSg": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -743,13 +777,14 @@
     "pull": 3
    },
    "published": "2026-09-01T07:00:33Z",
-   "score": 69.0151926417095,
-   "state": "picked",
+   "score": 61.14741518289423,
+   "state": "dropped",
    "title": "雑魚が最強で最強が雑魚になる逆転50人戦争 - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 227937,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "O6J5F-DJz9I": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -763,11 +798,13 @@
    "pre": null,
    "published": "2026-09-06T08:00:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】交通法違反おじさんと喧嘩した後に神プレイするはりーシ【2026/09/05】",
    "type": "focus",
    "views": 13973,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "PS0S4D0_QgY": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -801,11 +838,13 @@
    "pre": null,
    "published": "2026-09-14T10:00:17Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ピグリン要塞vsネザー要塞 攻城戦 - マインクラフト【KUN】",
    "type": "ambient",
    "views": 83363,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Q-V8ZZdWGO8": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -859,11 +898,13 @@
    "pre": null,
    "published": "2026-08-26T09:00:28Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】ダブスタすぎる姫と大喧嘩する村とはりーシ【2026/08/26】",
    "type": "focus",
    "views": 17829,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "RucN_kg46nc": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -877,11 +918,13 @@
    "pre": null,
    "published": "2026-09-10T08:00:23Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【雑談】とんでもない会話で尾崎を困らせる高田健志とはりーシ【2026/09/09】",
    "type": "focus",
    "views": 47585,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Ryh-LnndJ20": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -935,11 +978,13 @@
    "pre": null,
    "published": "2026-08-15T08:00:24Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】メンヘラ姫を慰める男達とアドバイスをするはりーシ【2026/08/15】",
    "type": "focus",
    "views": 14289,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "T3PIs2McOKE": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -953,11 +998,13 @@
    "pre": null,
    "published": "2026-09-13T08:00:38Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】超高レベルたくま村でガッツリ気を遣われるはりーシ【2026/09/12】",
    "type": "focus",
    "views": 11265,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "TMKkUAOpbvo": {
    "added": "2026-09-15T20:12:52+00:00",
@@ -971,11 +1018,13 @@
    "pre": null,
    "published": "2026-09-15T03:00:13Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【雑談まとめ】声真似がうまい尾崎に笑ってしまうはりーシ【2026/09/13～15】",
    "type": "focus",
    "views": 27833,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Tk5p87N7rq0": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -989,11 +1038,13 @@
    "pre": null,
    "published": "2026-09-14T08:00:25Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】豪傑村でここ最近のベストゲームをするはりーシ【2026/09/13】",
    "type": "focus",
    "views": 19770,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "UuWmAlTtvQo": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1027,11 +1078,13 @@
    "pre": null,
    "published": "2026-09-02T08:30:32Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】豪傑村で喧嘩まで発展した熱い試合と感想戦をするはりーシ【2026/09/01】",
    "type": "focus",
    "views": 17119,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "XkXYcOwvU-E": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1045,11 +1098,13 @@
    "pre": null,
    "published": "2026-08-20T08:00:13Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】尾崎とクイヤについて話すはりーシ【2026/08/20】",
    "type": "focus",
    "views": 19303,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "YIf9EM1ESHE": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1063,11 +1118,13 @@
    "pre": null,
    "published": "2026-08-22T08:00:26Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】再びおえちゃんと人狼ネオコラボするはりーシ【2026/08/22】",
    "type": "focus",
    "views": 41516,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Yh0jQMiGxsk": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1084,13 +1141,14 @@
     "pull": 3
    },
    "published": "2026-09-08T07:00:21Z",
-   "score": 70.96674178249508,
-   "state": "picked",
+   "score": 64.91277750293246,
+   "state": "dropped",
    "title": "投票で最後の一人になるまで戦う多数決バトルロワイアル - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 257893,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "Z0T4lOtF_UY": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1104,11 +1162,13 @@
    "pre": null,
    "published": "2026-08-10T11:00:28Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【視聴者MVP】第三回ニコニコ老人会RUSTでMVPになるはりーシ【2026/08/09】",
    "type": "focus",
    "views": 59141,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "ZA8zxKtObEM": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1122,11 +1182,13 @@
    "pre": null,
    "published": "2026-09-11T08:00:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】ブチギレ音割れ尾崎に爆笑するはりーシ【2026/09/09】",
    "type": "focus",
    "views": 18692,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "ZQMeFwogoU4": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1140,11 +1202,13 @@
    "pre": null,
    "published": "2026-08-10T06:30:30Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST最終日】うんこちゃん拠点防衛～釈迦拠点レイド編　救世主はりーシ【2026/08/09】",
    "type": "focus",
    "views": 47787,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "aWSy-L-ywoU": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1158,11 +1222,13 @@
    "pre": null,
    "published": "2026-08-07T15:25:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST本番】キズナアイに全裸カードを使用しうんこちゃんに５６されるはりーシ【2026/08/07】",
    "type": "focus",
    "views": 41075,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "agbS0SlUBvI": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1176,11 +1242,13 @@
    "pre": null,
    "published": "2026-08-08T18:00:32Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST本番】サトウキビさんとう〇こデートするはりーシ【2026/08/08】",
    "type": "focus",
    "views": 64662,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "bUo0djPyGL8": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1194,11 +1262,13 @@
    "pre": null,
    "published": "2026-08-19T03:00:03Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【マリメ2】初マリメ配信がスナイプ大喜利大会になってしまうはりーシ【2026/08/18】",
    "type": "focus",
    "views": 25825,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "c126f5iw9fk": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1235,13 +1305,14 @@
     "pull": 2
    },
    "published": "2026-08-27T07:00:02Z",
-   "score": 48.98438676914756,
-   "state": "picked",
+   "score": 42.42312479145347,
+   "state": "dropped",
    "title": "ウォーデンに浸食された世界から脱出 - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 307532,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "cct1RrxQL9Y": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1275,11 +1346,13 @@
    "pre": null,
    "published": "2026-09-13T07:45:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "かわいいだけじゃだめですか？",
    "type": "ambient",
    "views": 104024,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "da1qkRu1MHo": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1313,11 +1386,13 @@
    "pre": null,
    "published": "2026-09-03T08:00:15Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "尾崎に配信について聞かれて中継者学級裁判になってしまうはりーシ【2026/09/02】",
    "type": "focus",
    "views": 45448,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "fZ3eYcxvJTs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1331,11 +1406,13 @@
    "pre": null,
    "published": "2026-08-21T08:00:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】始まるまでが長い尾崎とゲーム雑談するはりーシ【2026/08/20】",
    "type": "focus",
    "views": 12152,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "g93uOxd4RtE": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1343,7 +1420,7 @@
    "channelName": "KUNの50人クラフト",
    "desc": "🔳 50人クラフトグッズの購入はこちらから\nhttps://clear-lab.jp/kun50craft-goods/\n\n🔳 使用アドオン一覧（Add-ons used）\nhttps://teamkun.github.io/ModPacks/ \n\n🔳 50人クラフトグッズ【公式】Xアカウントはこちらから\nhttps://x.com/KUN_50craft\n\n🔳 50人クラフトメンバーシップはこちらから\nhttps://www.youtube.com/channel/UCoQhX2O93MVTWfgIz-8wOmg/join\n\n🔳【マインクラフト単発企画】新50人クラフト\nhttps://ww",
    "duration": 2826,
-   "explore": true,
+   "explore": false,
    "id": "g93uOxd4RtE",
    "pickedAt": "2026-09-13T03:55:01.131Z",
    "post": null,
@@ -1352,13 +1429,14 @@
     "pull": 1
    },
    "published": "2026-09-04T07:00:30Z",
-   "score": 34.499530187383996,
-   "state": "picked",
+   "score": 30.986631444448964,
+   "state": "dropped",
    "title": "50人でウオーデンに支配された世界からの脱出 - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 202328,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "gsunwAxkF_0": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1372,11 +1450,13 @@
    "pre": null,
    "published": "2026-08-16T08:00:31Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】姫に責められて泣いたマリを慰めるはりーシ【2026/08/15】",
    "type": "focus",
    "views": 11819,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "h-Ik1qjOXNc": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1390,11 +1470,13 @@
    "pre": null,
    "published": "2026-08-25T08:00:13Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】狂人発言で尾崎をビビらせるはりーシ【2026/08/24】",
    "type": "focus",
    "views": 28352,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "h1A84EHew4I": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1408,11 +1490,13 @@
    "pre": null,
    "published": "2026-08-08T16:00:10Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST本番】2年連続コ〇コレを敗走させるはりーシ【2026/08/08】",
    "type": "focus",
    "views": 250978,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "hI3GY2CIfR4": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1486,11 +1570,13 @@
    "pre": null,
    "published": "2026-09-08T03:30:18Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】高田健志さんと人狼をする夢が叶うはりーシ【2026/09/07】",
    "type": "focus",
    "views": 48481,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "iiZDEwrCHF4": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1507,13 +1593,14 @@
     "pull": 2
    },
    "published": "2026-08-16T07:00:24Z",
-   "score": 53.91968029108662,
-   "state": "picked",
+   "score": 44.416551420030345,
+   "state": "dropped",
    "title": "恐竜だらけの世界で50人でサバイバル - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 274807,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "jCRyh-y3HMs": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1547,11 +1634,13 @@
    "pre": null,
    "published": "2026-08-12T08:00:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST本番】キズナアイのチン騎士になるはりーシ【2026/08/09】",
    "type": "focus",
    "views": 19876,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "kBHe0xNn0ps": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1565,11 +1654,13 @@
    "pre": null,
    "published": "2026-09-07T08:30:31Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】雄叫びを上げる尾崎に笑ってしまうはりーシ【2026/09/06】",
    "type": "focus",
    "views": 18965,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "kEqEIxJaUDE": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1626,13 +1717,14 @@
     "pull": 3
    },
    "published": "2026-07-30T07:00:08Z",
-   "score": 54.79844821678825,
-   "state": "picked",
+   "score": 41.77853020545647,
+   "state": "dropped",
    "title": "50人クラフト最強の勢力を決めるなんでもあり、勢力バトルロワイヤル",
    "touched": true,
    "type": "ambient",
    "views": 222032,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "nmkwSsRVh7E": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1646,11 +1738,13 @@
    "pre": null,
    "published": "2026-08-29T08:00:03Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】尾崎を煽る反逆者に爆笑するはりーシ【2026/08/29】",
    "type": "focus",
    "views": 32113,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "nx3x0gC1pyU": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1704,11 +1798,13 @@
    "pre": null,
    "published": "2026-08-07T13:55:37Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST本番】ついに本番開始！初日からギアを上げていくはりーシ【2026/08/07】",
    "type": "focus",
    "views": 21445,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "p5QbOrmoOcI": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1722,11 +1818,13 @@
    "pre": null,
    "published": "2026-08-23T08:00:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】がーどまんに泣かされた姫に笑ってしまうはりーシ【2026/08/22】",
    "type": "focus",
    "views": 22467,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "pN1t99fTjG4": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1780,11 +1878,13 @@
    "pre": null,
    "published": "2026-08-10T08:35:12Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST最終日】最終決戦編　台無しにした作戦をリベンジするはりーシ【2026/08/09】",
    "type": "focus",
    "views": 30845,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "roVHGiXAQHA": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1798,11 +1898,13 @@
    "pre": null,
    "published": "2026-08-09T01:29:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST本番】うんこちゃんとのレイドに失敗して大号泣するはりーシ【2026/08/08】",
    "type": "focus",
    "views": 185360,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "sIBfqZ_VO8c": {
    "added": "2026-09-16T20:13:06+00:00",
@@ -1816,11 +1918,13 @@
    "pre": null,
    "published": "2026-09-16T07:00:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "777歩歩いたら爆死する世界でサバイバル - マインクラフト【KUN】",
    "type": "ambient",
    "views": 132305,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "sS4WCk0oT7s": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -1834,11 +1938,13 @@
    "pre": null,
    "published": "2026-08-24T08:00:04Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】尾崎に出禁にされたマリが認められ笑ってしまうはりーシ【2026/08/24】",
    "type": "focus",
    "views": 16647,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "tYm_ffDJU1A": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -1932,11 +2038,13 @@
    "pre": null,
    "published": "2026-08-31T09:00:07Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】永遠に喧嘩する姫を諭すはりーシ【2026/08/29】",
    "type": "focus",
    "views": 19754,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "waZ-MOx-TRU": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1973,13 +2081,14 @@
     "pull": 1
    },
    "published": "2026-09-12T07:00:32Z",
-   "score": 45.23318068350177,
-   "state": "picked",
+   "score": 42.13452328456543,
+   "state": "dropped",
    "title": "ただの白い箱に50人いれてどうなるか検証してみた  - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 194818,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "xH3pMXky-8w": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -1993,11 +2102,13 @@
    "pre": null,
    "published": "2026-08-17T08:00:35Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】相方のミスを庇う為に突発真狼狼で勝ちに行くはりーシ【2026/08/17】",
    "type": "focus",
    "views": 8384,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "yMov03i7lxs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -2011,11 +2122,13 @@
    "pre": null,
    "published": "2026-09-10T03:10:02Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】高田健志さん再降臨！2試合全力で挑むはりーシ【2026/09/09】",
    "type": "focus",
    "views": 42622,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "yQLJnpneNGw": {
    "added": "2026-09-17T20:12:57+00:00",
@@ -2029,11 +2142,13 @@
    "pre": null,
    "published": "2026-09-17T08:00:24Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】焼肉屋で人狼していた女の村に潜入するはりーシ【2026/09/16】",
    "type": "focus",
    "views": 12347,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "yskEYLWFWhs": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -2047,11 +2162,13 @@
    "pre": null,
    "published": "2026-08-07T20:15:10Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【老人会RUST本番】バトラさんのクイズの答えに爆笑するはりーシ【2026/08/07】",
    "type": "focus",
    "views": 66908,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "zHlHlUy875c": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -2085,11 +2202,13 @@
    "pre": null,
    "published": "2026-08-22T03:00:00Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】念願のミノルさんと人狼コラボするはりーシ【2026/08/22】",
    "type": "focus",
    "views": 48133,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   }
  }
 }
