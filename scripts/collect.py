@@ -276,12 +276,28 @@ def main():
             v["dropReason"] = "expired"
             expired += 1
 
+    # 却下・既視聴は1日経ったら、集計に要る分だけ残して切り詰める
+    #   -> 通過率・予測ズレ率・チャンネル別の統計はこれで計算できる
+    compact_days = defaults.get("compactDays", 1)
+    compacted = 0
+    KEEP = ("channelId", "state", "score", "dropReason", "added", "type", "slim")
+    for vid, v in videos.items():
+        if v.get("slim") or v["state"] not in ("dropped", "seen"):
+            continue
+        if days_since(v.get("pickedAt") or v.get("added")) < compact_days:
+            continue
+        slim = {k: v[k] for k in KEEP if k in v}
+        slim["slim"] = True
+        videos[vid] = slim
+        compacted += 1
+
     stock["updated"] = NOW.isoformat(timespec="seconds")
     save_json(STOCK_PATH, stock)
     if renamed:
         save_json(CHANNELS_PATH, channels)
 
-    print(f"\n新着 {added} / 昇格 {promoted} / 減価で落選 {expired} / 在庫 {len(videos)}")
+    print(f"\n新着 {added} / 昇格 {promoted} / 減価で落選 {expired} / 切り詰め {compacted}")
+    print(f"在庫 {len(videos)} (うち切り詰め済み {sum(1 for v in videos.values() if v.get('slim'))})")
     print(f"使ったクォータ: 約{units}ユニット (1日の枠は10,000)")
 
 
