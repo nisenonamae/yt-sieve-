@@ -6,113 +6,32 @@
   "fresh": 0.5
  },
  "defaults": {
-  "capacityHours": { "focus": 6, "ambient": 12, "serial": 0 }
-  "coolDays": 0,
+  "capacityHours": { "focus": 6, "ambient": 12, "serial": 0 },
+  "coolDays": 3,
   "expireDays": 14,
-  "halfLifeDays": 30
+  "halfLifeDays": 30,
+  "backfill": 10
  },
  "channels": [
-  {
-   "id": "UCoQhX2O93MVTWfgIz-8wOmg",
-   "name": "KUNの50人クラフト",
-   "defaultType": "ambient",
-   "halfLifeDays": 14
-  },
-  {
-   "id": "UCt8snO2Po2uCqteBvqBglTw",
-   "name": "はりーし熱血切り抜き",
-   "defaultType": "focus",
-   "halfLifeDays": 7
-  },
-  {
-   "id": "UC1xFkkJgjzVUm9oZIHQ10yQ",
-   "name": "布団ちゃん",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCfTfI2-PkGYgcQHoVk85tCA",
-   "name": "布団MAX",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCGjV4bsC43On-YuiLZcfL0w",
-   "name": "KUN",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCusnpkgavQhPV_8e_zEh_jw",
-   "name": "ステゴロパンチャーズ",
-   "defaultType": "ambient"
-  },
-  {
-   "id": "UCKd4yNs1CvdCYIkJdARgBsw",
-   "name": "ステパンゲームch",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCrup_SUKUSAWxB4ygfs5Rbg",
-   "name": "ステパン企画ch",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCarvAHwttb_r2hYihGX8aXA",
-   "name": "ゆゆうたパワー系切り抜き",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCZetZElUvdElPrcstRjl9DA",
-   "name": "加藤純一ロードショー",
-   "defaultType": "ambient"
-  },
-  {
-   "id": "UCx1nAvtVDIsaGmCMSe8ofsQ",
-   "name": "加藤純一",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCH-lygWpHodDff3iQurnWnQ",
-   "name": "加藤純一ピンク切り抜き",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCRaaCxSF8nEpfG3ZHesXKxw",
-   "name": "ジェラードン",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCNKGn1rULbYWrQaGY-4nZDA",
-   "name": "りょうぼー",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "name": "Fラン大学就職",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCTrckUWmmrRZcNrfu1mZDOg",
-   "name": "たいじ",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCHVbV2U9ZLucK0m7b864_0g",
-   "name": "斜め270度",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCC0FNUII8Zp2OAc7IaetICg",
-   "name": "天才おにや",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCHyYUv384bv9eMOC1UoG9PQ",
-   "name": "からすまa",
-   "defaultType": "focus"
-  },
-  {
-   "id": "UCoie3ytrtgUCfDVN3PqxIDQ",
-   "name": "ホッカイロレン",
-   "defaultType": "focus"
-  }
+  { "id": "UCoQhX2O93MVTWfgIz-8wOmg", "name": "KUNの50人クラフト", "defaultType": "ambient", "halfLifeDays": 14 },
+  { "id": "UCt8snO2Po2uCqteBvqBglTw", "name": "はりーし熱血切り抜き", "defaultType": "focus", "halfLifeDays": 7 },
+  { "id": "UC1xFkkJgjzVUm9oZIHQ10yQ", "name": "布団ちゃん", "defaultType": "focus" },
+  { "id": "UCfTfI2-PkGYgcQHoVk85tCA", "name": "布団MAX", "defaultType": "focus" },
+  { "id": "UCGjV4bsC43On-YuiLZcfL0w", "name": "KUN", "defaultType": "focus" },
+  { "id": "UCusnpkgavQhPV_8e_zEh_jw", "name": "ステゴロパンチャーズ", "defaultType": "ambient" },
+  { "id": "UCKd4yNs1CvdCYIkJdARgBsw", "name": "ステパンゲームch", "defaultType": "focus" },
+  { "id": "UCrup_SUKUSAWxB4ygfs5Rbg", "name": "ステパン企画ch", "defaultType": "focus" },
+  { "id": "UCarvAHwttb_r2hYihGX8aXA", "name": "ゆゆうたパワー系切り抜き", "defaultType": "focus" },
+  { "id": "UCZetZElUvdElPrcstRjl9DA", "name": "加藤純一ロードショー", "defaultType": "ambient" },
+  { "id": "UCx1nAvtVDIsaGmCMSe8ofsQ", "name": "加藤純一", "defaultType": "focus" },
+  { "id": "UCH-lygWpHodDff3iQurnWnQ", "name": "加藤純一ピンク切り抜き", "defaultType": "focus" },
+  { "id": "UCRaaCxSF8nEpfG3ZHesXKxw", "name": "ジェラードン", "defaultType": "focus" },
+  { "id": "UCNKGn1rULbYWrQaGY-4nZDA", "name": "りょうぼー", "defaultType": "focus" },
+  { "id": "UCqRV_ZIQhVKfxG1_WkNiRbg", "name": "Fラン大学就職", "defaultType": "focus" },
+  { "id": "UCTrckUWmmrRZcNrfu1mZDOg", "name": "たいじ", "defaultType": "focus" },
+  { "id": "UCHVbV2U9ZLucK0m7b864_0g", "name": "斜め270度", "defaultType": "focus" },
+  { "id": "UCC0FNUII8Zp2OAc7IaetICg", "name": "天才おにや", "defaultType": "focus" },
+  { "id": "UCHyYUv384bv9eMOC1UoG9PQ", "name": "からすまa", "defaultType": "focus" },
+  { "id": "UCoie3ytrtgUCfDVN3PqxIDQ", "name": "ホッカイロレン", "defaultType": "focus" }
  ]
 }
