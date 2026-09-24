@@ -663,13 +663,30 @@ const b64dec = s => new TextDecoder().decode(
 
 const conn = () => JSON.parse(localStorage.getItem(LS+":conn") || "null");
 
+const safeParse = (s, fb) => { try { return JSON.parse(s ?? ""); } catch { return fb; } };
+
 async function api(path, opt={}){
   const c = conn();
-  const r = await fetch(`https://api.github.com/repos/${c.repo}/contents/${path}`, {
-    ...opt, headers:{Authorization:`Bearer ${c.token}`, Accept:"application/vnd.github+json", ...opt.headers}
-  });
-  if (!r.ok) throw new Error(`${r.status} ${(await r.json()).message || ""}`);
-  return r.json();
+  if (!c || !c.repo || !c.token) throw new Error("リポジトリ名かトークンが空");
+  if (!/^[\w.-]+\/[\w.-]+$/.test(c.repo)) throw new Error(`リポジトリ名の形式が変: "${c.repo}"`);
+
+  let r;
+  try {
+    r = await fetch(`https://api.github.com/repos/${c.repo}/contents/${path}`, {
+      ...opt, headers:{Authorization:`Bearer ${c.token}`,
+                       Accept:"application/vnd.github+json", ...opt.headers}
+    });
+  } catch(e){ throw new Error("通信できず(ネットワークかURL): " + e.message); }
+
+  const body = await r.text();                 // 空でも落ちないよう先に文字列で受ける
+  if (!r.ok){
+    const detail = body ? (safeParse(body, {}).message || body.slice(0,120)) : "(本文なし)";
+    const hint = {401:"トークンが無効か期限切れ",
+                  403:"権限不足。Contents が Read and write か確認",
+                  404:"リポジトリ名かファイルのパスが違う、またはトークンがこのリポジトリを見られない"}[r.status] || "";
+    throw new Error(`${r.status} ${hint} / ${detail}`);
+  }
+  return body ? JSON.parse(body) : {};
 }
 
 function mergeLocal(remote){
@@ -687,7 +704,6 @@ function mergeLocal(remote){
   return remote;
 }
 
-const safeParse = (s, fb) => { try { return JSON.parse(s ?? ""); } catch { return fb; } };
 
 async function boot(){
   try {
