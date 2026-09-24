@@ -56,11 +56,21 @@ nav .badge{font-family:var(--num);font-size:11px;color:var(--muted);margin-left:
 .seg button{flex:1;padding:8px 0;font-size:13px;color:var(--muted);border-right:1px solid var(--rule)}
 .seg button:last-child{border-right:none}
 .seg button[aria-pressed=true]{background:var(--pine);color:#fff;font-weight:600}
-.verdict{display:flex;gap:8px;margin-top:16px}
-.verdict button{flex:1;padding:12px 0;font-size:14px;font-weight:600;border:1px solid}
+.verdict{display:flex;gap:6px;margin-top:16px}
+.verdict button{flex:1;padding:12px 2px;font-size:13.5px;font-weight:600;border:1px solid}
 .take{background:var(--pine);color:#fff;border-color:var(--pine)}
 .take[disabled]{opacity:.35}
 .skip{color:var(--clay);border-color:var(--rule)}
+.seen{color:var(--muted);border-color:var(--rule)}
+.foot{display:flex;align-items:center;gap:10px;margin-top:12px}
+.foot .undo{font-size:12px;color:var(--pine);border-bottom:1px solid currentColor;padding-bottom:1px}
+.foot .undo[disabled]{color:var(--rule);border-color:transparent}
+.foot .meta{margin-left:auto;text-align:right}
+.cap{display:flex;align-items:center;gap:9px;margin:0 0 14px;cursor:pointer}
+.capbar{flex:1;height:5px;background:var(--rule);overflow:hidden}
+.capbar i{display:block;height:100%;background:var(--pine)}
+.cap .num{font-size:11.5px;color:var(--muted);flex:none}
+.soon{color:var(--clay)}
 .live{margin-left:auto;font-family:var(--num);font-size:22px;color:var(--pine)}
 
 /* ── ランキング ─────────────────── */
@@ -165,6 +175,7 @@ let stock = {videos:{}, updated:null};
 let sha = null, chSha = null;
 let tab = "sieve", filter = "focus", dirty = false, chDirty = false;
 let draft = {};   // ふるい台の入力中の値
+let undo = null;  // 直前の裁きを1回だけ巻き戻すための控え
 
 /* ══ スコア ══════════════════════════════════ */
 const ch = id => cfg.channels.find(c => c.id === id) || {};
@@ -256,23 +267,98 @@ function drawSieve(){
         <span class="live num">${ready ? scoreOf(v,d).toFixed(0) : "––"}</span></div>
       <div class="verdict">
         <button class="skip" onclick="verdict('${v.id}',false)">見送る</button>
+        <button class="seen" onclick="verdict('${v.id}','seen')">もう見た</button>
         <button class="take" ${ready?"":"disabled"} onclick="verdict('${v.id}',true)">採用</button>
       </div>
-      <p class="meta" style="margin-top:10px">残り ${pool.length} 本</p>
+      <div class="foot">
+        <button class="undo" ${undo?"":"disabled"} onclick="rewind()">← 1本戻す</button>
+        <span class="meta">残り ${pool.length} 本 ・ ${gauge(d.type)}</span>
+      </div>
     </div>`;
+}
+
+function gauge(type){
+  if (!type) return "";
+  const cap = capOf(type);
+  if (!cap) return `${TYPES[type]}: 無制限`;
+  const used = pickedOf(type).reduce((a,x) => a + (x.duration||0), 0);
+  return `${TYPES[type]}枠 ${(used/3600).toFixed(1)}/${(cap/3600).toFixed(0)}時間`;
 }
 function pick(id, key, val){ draft[id][key] = val; drawSieve(); }
 
+const capOf = t => (cfg.defaults.capacityHours?.[t] || 0) * 3600;
+const pickedOf = t => list("picked").filter(v => v.type === t);
+
+function snap(...vids){
+  undo = {snaps: vids.map(v => [v.id, JSON.stringify(v)]), draft: null};
+}
+
+function rewind(){
+  if (!undo) return;
+  for (const [id, json] of undo.snaps) stock.videos[id] = JSON.parse(json);
+  if (undo.draft) draft[undo.draft[0]] = undo.draft[1];
+  undo = null; touch(); render();
+}
+
 function verdict(id, take){
   const v = stock.videos[id], d = draft[id];
-  v.touched = true;
-  if (take){
-    v.type = d.type; v.pre = {expect:d.expect, pull:d.pull};
-    v.score = scoreOf(v); v.state = "picked";
-    v.pickedAt = new Date().toISOString();
-  } else {
-    v.state = "dropped"; v.dropReason = "skipped";
+
+  if (take === "seen"){
+    snap(v);
+    undo.draft = [id, d];
+    v.state = "seen"; v.touched = true;
+    delete draft[id]; touch(); render(); return;
   }
+  if (take === false){
+    snap(v);
+    undo.draft = [id, d];
+    v.state = "dropped"; v.dropReason = "skipped"; v.touched = true;
+    delete draft[id]; touch(); render(); return;
+  }
+
+  // ── 採用。枠を超えるなら入れ替えを迫る ──
+  const score = scoreOf(v, d);
+  const cap = capOf(d.type);
+  const dur = v.duration || 0;
+  let evict = [];
+
+  if (cap){
+    const cur = pickedOf(d.type);
+    cur.forEach(x => x.score = scoreOf(x));
+    cur.sort((a,b) => a.score - b.score);
+    let used = cur.reduce((a,x) => a + (x.duration||0), 0);
+
+    let i = 0;
+    while (used + dur > cap && i < cur.length && cur[i].score < score){
+      used -= (cur[i].duration || 0);
+      evict.push(cur[i]); i++;
+    }
+    if (used + dur > cap){
+      alert(`${TYPES[d.type]}の枠が埋まっている。\n` +
+            `今ある在庫はどれもこの動画より評価が高いので、これは見送りになる。\n\n` +
+            `枠を広げたければ、ランキングタブの枠表示から変えられる。`);
+      snap(v); undo.draft = [id, d];
+      v.state = "dropped"; v.dropReason = "full"; v.touched = true;
+      delete draft[id]; touch(); render(); return;
+    }
+    if (evict.length){
+      const msg = evict.map(x => `・${x.title}(${x.score.toFixed(0)}点)`).join("\n");
+      if (!confirm(`枠が足りない。この動画(${score.toFixed(0)}点)を入れるなら、` +
+                   `下の${evict.length}本が落ちる。\n\n${msg}\n\n入れ替える?`)) return;
+    }
+  }
+
+  snap(v, ...evict);
+  undo.draft = [id, d];
+  for (const x of evict){
+    x.state = "dropped"; x.dropReason = "pushed"; x.touched = true;
+  }
+  v.type = d.type;
+  v.pre = {expect:d.expect, pull:d.pull};
+  v.score = score;
+  v.state = "picked";
+  v.pickedAt = new Date().toISOString();
+  v.touched = true;
   delete draft[id]; touch(); render();
 }
 
@@ -295,23 +381,50 @@ function drawRank(){
   const tabs = Object.entries(TYPES).filter(([k]) => k !== "serial")
     .map(([k,l]) => `<button aria-pressed="${filter===k}" onclick="filter='${k}';render()">${l}</button>`).join("");
 
-  $("#view").innerHTML = `<div class="filter">${tabs}</div>` + (shown.length
-    ? shown.map((v,i) => `
+  const cap = capOf(filter);
+  const used = all.reduce((a,x) => a + (x.duration||0), 0);
+  const pct = cap ? Math.min(100, used/cap*100) : 0;
+  const bar = cap ? `<div class="cap" onclick="setCap()">
+      <div class="capbar"><i style="width:${pct}%;${pct>=100?"background:var(--clay)":""}"></i></div>
+      <span class="num">${(used/3600).toFixed(1)} / ${(cap/3600).toFixed(0)} 時間</span>
+    </div>` : "";
+
+  $("#view").innerHTML = `<div class="filter">${tabs}</div>${bar}` + (shown.length
+    ? shown.map((v,i) => {
+      const left = expireIn(v);
+      return `
       <div class="item ${v.explore?"explore":""}">
         <span class="rank">${v.explore ? "探" : i+1}</span>
         <div class="body">
           <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">${esc(v.title)}</a>
-          <p class="meta">${esc(v.channelName)} ・ ${hhmm(v.duration)}</p>
+          <p class="meta">${esc(v.channelName)} ・ ${hhmm(v.duration)}
+            ・ <span class="${left<=3?"soon":""}">あと${left}日</span></p>
           <div class="acts">
             <button onclick="rate('${v.id}')">見た</button>
             <button class="off" onclick="drop('${v.id}')">やめる</button>
           </div>
         </div>
         <span class="sc">${v.score.toFixed(0)}</span>
-      </div>`).join("")
+      </div>`;}).join("")
     : `<div class="empty"><b>この型の在庫が空</b>
         ふるいで${TYPES[filter]}に振った動画がまだない。<br>
         合うものがないときは、見ないのが正しい。</div>`);
+}
+
+function expireIn(v){
+  const c = ch(v.channelId);
+  const ed = c.expireDays ?? cfg.defaults.expireDays ?? 14;
+  return Math.max(0, Math.ceil(ed - (Date.now() - Date.parse(v.pickedAt||v.added))/864e5));
+}
+
+function setCap(){
+  const now = (capOf(filter)/3600).toFixed(0);
+  const h = prompt(`${TYPES[filter]}の枠を何時間にする?\n\n` +
+    `今の設定: ${now}時間。\n枠を広げるほど溜まりやすくなる。`, now);
+  const n = parseFloat(h);
+  if (isNaN(n) || n < 0) return;
+  (cfg.defaults.capacityHours ||= {})[filter] = n;
+  chTouch(); render();
 }
 
 function rate(id){
@@ -353,271 +466,4 @@ function prog(id){
   const s = prompt("何分まで見た?");
   const m = parseFloat(s);
   if (isNaN(m)) return;
-  stock.videos[id].progress = Math.round(m*60);
-  stock.videos[id].touched = true;
-  touch(); render();
-}
-
-/* ── チャンネル ────────────────────────── */
-function drawChans(){
-  const rows = cfg.channels.map((c,i) => {
-    const stocked = Object.values(stock.videos).filter(v => v.channelId === c.id).length;
-    const seg = Object.entries(TYPES).map(([k,l]) =>
-      `<button aria-pressed="${c.defaultType===k}" onclick="setCh(${i},'defaultType','${k}')">${l}</button>`).join("");
-    return `<div class="chrow">
-      <div class="chhead">
-        <button class="rename" onclick="renameCh(${i})">${esc(c.name || c.id)}</button>
-        <button class="del" onclick="delCh(${i})" aria-label="削除">削除</button>
-      </div>
-      <p class="meta">在庫${stocked}本 ・ <span class="num">${c.id}</span></p>
-      <div class="row"><span>既定の型</span><div class="seg">${seg}</div></div>
-      <div class="row"><span>鮮度半減期</span>
-        <div class="seg">${[3,7,14,30,365].map(d =>
-          `<button aria-pressed="${(c.halfLifeDays??cfg.defaults.halfLifeDays)===d}"
-            onclick="setCh(${i},'halfLifeDays',${d})">${d===365?"∞":d+"日"}</button>`).join("")}</div>
-      </div>
-    </div>`;
-  }).join("");
-
-  $("#view").innerHTML = `
-    <div class="add">
-      <input id="q" placeholder="チャンネルURL / @ハンドル / 動画URL" autocapitalize="off" spellcheck="false">
-      <button onclick="addCh()">追加</button>
-    </div>
-    <p class="meta" id="addmsg" style="margin:-4px 0 16px">
-      YouTubeの登録チャンネル一覧を丸ごと入れるなら、Takeoutの
-      <b>subscriptions.csv</b> をこの枠にドロップ。</p>
-    ${rows || `<div class="empty"><b>チャンネルが空</b>
-      上の欄にチャンネルのURLを貼って追加する。<br>
-      10個くらいから始めて、裁くのが作業に感じたら減らす。</div>`}
-    ${cfg.channels.length ? `<p class="meta" style="margin-top:18px">
-      追加したチャンネルは、次の朝の収集から在庫に入る。
-      すぐ試すならActionsタブから collect を手動実行。</p>` : ""}`;
-
-  const box = $(".add");
-  box.ondragover = e => { e.preventDefault(); box.classList.add("over"); };
-  box.ondragleave = () => box.classList.remove("over");
-  box.ondrop = async e => {
-    e.preventDefault(); box.classList.remove("over");
-    const f = e.dataTransfer.files[0];
-    if (f) importCsv(await f.text());
-  };
-}
-
-function setCh(i, key, val){ cfg.channels[i][key] = val; chTouch(); render(); }
-function renameCh(i){
-  const c = cfg.channels[i];
-  const n = prompt("チャンネル名", c.name === c.id ? "" : c.name);
-  if (n === null) return;
-  c.name = n.trim() || c.id;
-  chTouch(); render();
-}
-function delCh(i){
-  if (!confirm(`${cfg.channels[i].name || cfg.channels[i].id} を外す?\n集めた在庫は残る。`)) return;
-  cfg.channels.splice(i,1); chTouch(); render();
-}
-
-async function resolve(q){
-  q = q.trim();
-  const direct = q.match(/(UC[\w-]{22})/);
-  if (direct) return {id:direct[1]};
-
-  const key = localStorage.getItem(LS+":ytkey");
-  if (!key) throw new Error("UC…形式のIDを貼るか、接続画面でAPIキーを入れる");
-
-  const vid = q.match(/(?:v=|youtu\.be\/|shorts\/)([\w-]{11})/);
-  const url = vid
-    ? `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${vid[1]}&key=${key}`
-    : `https://www.googleapis.com/youtube/v3/channels?part=snippet&forHandle=@${
-        (q.match(/@([\w.\-]+)/) || [,q.replace(/^@/,"")])[1]}&key=${key}`;
-
-  const d = await (await fetch(url)).json();
-  if (d.error) throw new Error(d.error.message);
-  const it = d.items?.[0];
-  if (!it) throw new Error("見つからない");
-  return vid
-    ? {id:it.snippet.channelId, name:it.snippet.channelTitle}
-    : {id:it.id, name:it.snippet.title};
-}
-
-async function addCh(){
-  const q = $("#q").value;
-  if (!q.trim()) return;
-  $("#addmsg").textContent = "調べている";
-  try {
-    const c = await resolve(q);
-    if (cfg.channels.some(x => x.id === c.id)) throw new Error("もう入っている");
-    cfg.channels.push({id:c.id, name:c.name || c.id, defaultType:"focus"});
-    chTouch(); render();
-  } catch(e){ $("#addmsg").textContent = "追加できず: " + e.message; }
-}
-
-function importCsv(text){
-  let n = 0;
-  for (const line of text.split(/\r?\n/).slice(1)){
-    const m = line.match(/(UC[\w-]{22})/);
-    if (!m || cfg.channels.some(c => c.id === m[1])) continue;
-    const cols = line.split(",");
-    cfg.channels.push({id:m[1], name:(cols[2] || m[1]).trim(), defaultType:"focus"});
-    n++;
-  }
-  chTouch(); render();
-  $("#addmsg").textContent = `${n}件を追加した。型と半減期は後から直せる。`;
-}
-
-/* ── 記録 ──────────────────────────────── */
-function drawLog(){
-  const w = list("watched").filter(v => v.post?.score);
-  const dropped = list("dropped");
-  const expired = dropped.filter(v => v.dropReason === "expired");
-  const judged = w.length + dropped.length;
-
-  const mean = a => a.reduce((x,y)=>x+y,0) / (a.length||1);
-  const pre = w.map(v => v.score ?? 0), post = w.map(v => v.post.score);
-  let r = NaN;
-  if (w.length >= 5){
-    const mp = mean(pre), mq = mean(post);
-    const cov = mean(pre.map((x,i)=>(x-mp)*(post[i]-mq)));
-    const sp = Math.sqrt(mean(pre.map(x=>(x-mp)**2)));
-    const sq = Math.sqrt(mean(post.map(x=>(x-mq)**2)));
-    r = (sp && sq) ? cov/(sp*sq) : NaN;
-  }
-  const ex = w.filter(v => v.explore);
-
-  const stat = (label, val, note) =>
-    `<div class="stat"><span>${label}<small>${note}</small></span><span class="v">${val}</span></div>`;
-
-  // チャンネル別
-  const by = {};
-  for (const v of w) (by[v.channelName] ||= []).push(v.post.score);
-  const rows = Object.entries(by).sort((a,b)=>mean(b[1])-mean(a[1]))
-    .map(([n,a]) => `<tr><td>${esc(n)}</td><td class="n">${a.length}</td>
-      <td class="n">${mean(a).toFixed(1)}</td></tr>`).join("");
-
-  $("#view").innerHTML =
-    stat("視聴後の平均", w.length ? mean(post).toFixed(2) : "—",
-         `${w.length}本。結果を映すだけの数字。厳しくすれば上がるので、目標にはしない`) +
-    stat("予測との相関", isNaN(r) ? "—" : r.toFixed(2),
-         "視聴前スコアが満足度を当てられているか。5本以上で出る。低いなら重みが間違っている") +
-    stat("通過率", judged ? Math.round(w.length/judged*100)+"%" : "—",
-         "裁いたうちの採用。下がってきたら登録チャンネルが劣化している") +
-    stat("予測ズレ率", judged ? Math.round(expired.length/judged*100)+"%" : "—",
-         "採用したのに期限切れで落ちた割合。見たい気がしただけの分") +
-    stat("探索枠の平均", ex.length ? mean(ex.map(v=>v.post.score)).toFixed(2) : "—",
-         `${ex.length}本。上位平均を超えるなら、ランキングが取りこぼしている`) +
-    (rows ? `<h3 style="margin:22px 0 0;font-size:14px">チャンネル別</h3>
-      <table><tr><th>チャンネル</th><th style="text-align:right">本数</th>
-      <th style="text-align:right">平均</th></tr>${rows}</table>` : "");
-}
-
-/* ══ 保存 ════════════════════════════════════ */
-function touch(){ dirty = true; localStorage.setItem(LS+":stock", JSON.stringify(stock)); flag(); }
-function chTouch(){ chDirty = true; localStorage.setItem(LS+":cfg", JSON.stringify(cfg)); flag(); }
-function flag(){ $("#msg").textContent = (dirty || chDirty) ? "未保存の変更あり" : "保存済み"; }
-
-const b64enc = s => { const b = new TextEncoder().encode(s); let o = "";
-  for (let i=0;i<b.length;i+=0x8000) o += String.fromCharCode(...b.subarray(i,i+0x8000));
-  return btoa(o); };
-const b64dec = s => new TextDecoder().decode(
-  Uint8Array.from(atob(s.replace(/\s/g,"")), c => c.charCodeAt(0)));
-
-const conn = () => JSON.parse(localStorage.getItem(LS+":conn") || "null");
-
-async function api(path, opt={}){
-  const c = conn();
-  const r = await fetch(`https://api.github.com/repos/${c.repo}/contents/${path}`, {
-    ...opt, headers:{Authorization:`Bearer ${c.token}`, Accept:"application/vnd.github+json", ...opt.headers}
-  });
-  if (!r.ok) throw new Error(`${r.status} ${(await r.json()).message || ""}`);
-  return r.json();
-}
-
-function mergeLocal(remote){
-  const local = JSON.parse(localStorage.getItem(LS+":stock") || "null");
-  if (!local) return remote;
-  for (const [id, lv] of Object.entries(local.videos || {})){
-    if (!lv.touched) continue;
-    if (!remote.videos[id]) { remote.videos[id] = lv; continue; }
-    Object.assign(remote.videos[id], {
-      type:lv.type, pre:lv.pre, score:lv.score, post:lv.post, state:lv.state,
-      watchedAt:lv.watchedAt, pickedAt:lv.pickedAt, progress:lv.progress,
-      dropReason:lv.dropReason, explore:lv.explore, touched:true
-    });
-  }
-  return remote;
-}
-
-async function boot(){
-  let loaded = null;
-  if (conn()){
-    try { const g = await api(CHPATH); chSha = g.sha; loaded = JSON.parse(b64dec(g.content)); }
-    catch(e){ $("#msg").textContent = "接続失敗: " + e.message; }
-  }
-  if (!loaded){
-    try { loaded = await (await fetch("data/channels.json?t="+Date.now())).json(); } catch {}
-  }
-  cfg = {...cfg, ...(loaded || {})};
-  // 未保存のチャンネル編集があれば、そちらを優先して残す
-  const localCfg = JSON.parse(localStorage.getItem(LS+":cfg") || "null");
-  if (localCfg && chDirty) cfg = localCfg;
-
-  let remote = null;
-  if (conn()){
-    try { const f = await api(PATH); sha = f.sha; remote = JSON.parse(b64dec(f.content)); }
-    catch(e){ $("#msg").textContent = "接続失敗: " + e.message; }
-  }
-  if (!remote){
-    try { remote = await (await fetch("data/stock.json?t="+Date.now())).json(); } catch {}
-  }
-  stock = mergeLocal(remote || JSON.parse(localStorage.getItem(LS+":stock") || '{"videos":{}}'));
-  dirty = Object.values(stock.videos).some(v => v.touched);
-  flag(); render();
-}
-
-async function put(path, obj, curSha){
-  const res = await api(path, {method:"PUT", body:JSON.stringify({
-    message: "sieve: " + new Date().toISOString().slice(0,10),
-    content: b64enc(JSON.stringify(obj, null, 1)), sha: curSha
-  })});
-  return res.content.sha;
-}
-
-$("#save").onclick = async () => {
-  if (!conn()) return $("#dlg").showModal();
-  $("#msg").textContent = "保存中";
-  try {
-    if (dirty){
-      // 収集ジョブと衝突しないよう、直前に最新を取り直してから重ねる
-      const f = await api(PATH); sha = f.sha;
-      stock = mergeLocal(JSON.parse(b64dec(f.content)));
-      sha = await put(PATH, stock, sha);
-      for (const v of Object.values(stock.videos)) delete v.touched;
-      localStorage.setItem(LS+":stock", JSON.stringify(stock));
-      dirty = false;
-    }
-    if (chDirty){
-      // 収集側も名前を書き戻すので、直前に最新のshaを取り直す
-      const g = await api(CHPATH); chSha = g.sha;
-      chSha = await put(CHPATH, cfg, chSha);
-      chDirty = false;
-    }
-    flag(); render();
-  } catch(e){ $("#msg").textContent = "保存できず: " + e.message; }
-};
-
-$("#cfg").onclick = () => {
-  const c = conn(); if (c){ $("#repo").value = c.repo; $("#tok").value = c.token; }
-  $("#ytk").value = localStorage.getItem(LS+":ytkey") || "";
-  $("#dlg").showModal();
-};
-function saveCfg(){
-  localStorage.setItem(LS+":conn", JSON.stringify({repo:$("#repo").value.trim(), token:$("#tok").value.trim()}));
-  const k = $("#ytk").value.trim();
-  k ? localStorage.setItem(LS+":ytkey", k) : localStorage.removeItem(LS+":ytkey");
-  $("#dlg").close(); boot();
-}
-
-boot();
-</script>
-</body>
-</html>
+  stock.videos[id].progress = M
