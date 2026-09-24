@@ -180,13 +180,22 @@ let undo = null;  // 直前の裁きを1回だけ巻き戻すための控え
 /* ══ スコア ══════════════════════════════════ */
 const ch = id => cfg.channels.find(c => c.id === id) || {};
 
+let trustCache = null;
 function trustOf(cid){
-  // そのチャンネルの視聴後評価の平均。件数が少ないうちは 0.6 に引き寄せる
-  const done = Object.values(stock.videos)
-    .filter(v => v.channelId === cid && v.post?.score);
-  const k = 3, prior = 3;
-  const sum = done.reduce((a,v) => a + v.post.score, 0);
-  return ((sum + k*prior) / (done.length + k)) / 5;
+  if (!trustCache){
+    // 1回の描画で全チャンネルぶんをまとめて作る(毎回全在庫を走査しないため)
+    const acc = {};
+    for (const v of Object.values(stock.videos)){
+      if (!v.post?.score) continue;
+      (acc[v.channelId] ||= []).push(v.post.score);
+    }
+    trustCache = {};
+    for (const k in acc){
+      const a = acc[k];
+      trustCache[k] = ((a.reduce((x,y)=>x+y,0) + 3*3) / (a.length + 3)) / 5;
+    }
+  }
+  return trustCache[cid] ?? 0.6;   // 実績なしは prior のまま
 }
 
 function freshOf(v){
@@ -223,6 +232,16 @@ const list = st => Object.values(stock.videos).filter(v => v.state === st);
 
 /* ══ 描画 ════════════════════════════════════ */
 function render(){
+  trustCache = null;
+  try { draw(); }
+  catch(e){
+    console.error(e);
+    $("#view").innerHTML = `<div class="empty"><b>描画でエラー</b>${esc(e.message)}<br>
+      <span class="num" style="font-size:11px">${esc((e.stack||"").split("\n")[1]||"")}</span></div>`;
+  }
+}
+
+function draw(){
   const n = {sieve:list("pool").length, rank:list("picked").length};
   $("#tabs").innerHTML = [
     ["sieve","ふるい",n.sieve],["rank","ランキング",n.rank],
@@ -466,4 +485,290 @@ function prog(id){
   const s = prompt("何分まで見た?");
   const m = parseFloat(s);
   if (isNaN(m)) return;
-  stock.videos[id].progress = M
+  stock.videos[id].progress = Math.round(m*60);
+  stock.videos[id].touched = true;
+  touch(); render();
+}
+
+/* ── チャンネル ────────────────────────── */
+function drawChans(){
+  const rows = cfg.channels.map((c,i) => {
+    const stocked = Object.values(stock.videos).filter(v => v.channelId === c.id).length;
+    const seg = Object.entries(TYPES).map(([k,l]) =>
+      `<button aria-pressed="${c.defaultType===k}" onclick="setCh(${i},'defaultType','${k}')">${l}</button>`).join("");
+    return `<div class="chrow">
+      <div class="chhead">
+        <button class="rename" onclick="renameCh(${i})">${esc(c.name || c.id)}</button>
+        <button class="del" onclick="delCh(${i})" aria-label="削除">削除</button>
+      </div>
+      <p class="meta">在庫${stocked}本 ・ <span class="num">${c.id}</span></p>
+      <div class="row"><span>既定の型</span><div class="seg">${seg}</div></div>
+      <div class="row"><span>鮮度半減期</span>
+        <div class="seg">${[3,7,14,30,365].map(d =>
+          `<button aria-pressed="${(c.halfLifeDays??cfg.defaults.halfLifeDays)===d}"
+            onclick="setCh(${i},'halfLifeDays',${d})">${d===365?"∞":d+"日"}</button>`).join("")}</div>
+      </div>
+    </div>`;
+  }).join("");
+
+  $("#view").innerHTML = `
+    <div class="add">
+      <input id="q" placeholder="チャンネルURL / @ハンドル / 動画URL" autocapitalize="off" spellcheck="false">
+      <button onclick="addCh()">追加</button>
+    </div>
+    <p class="meta" id="addmsg" style="margin:-4px 0 16px">
+      YouTubeの登録チャンネル一覧を丸ごと入れるなら、Takeoutの
+      <b>subscriptions.csv</b> をこの枠にドロップ。</p>
+    ${rows || `<div class="empty"><b>チャンネルが空</b>
+      上の欄にチャンネルのURLを貼って追加する。<br>
+      10個くらいから始めて、裁くのが作業に感じたら減らす。</div>`}
+    ${cfg.channels.length ? `<p class="meta" style="margin-top:18px">
+      追加したチャンネルは、次の朝の収集から在庫に入る。
+      すぐ試すならActionsタブから collect を手動実行。</p>` : ""}`;
+
+  const box = $(".add");
+  box.ondragover = e => { e.preventDefault(); box.classList.add("over"); };
+  box.ondragleave = () => box.classList.remove("over");
+  box.ondrop = async e => {
+    e.preventDefault(); box.classList.remove("over");
+    const f = e.dataTransfer.files[0];
+    if (f) importCsv(await f.text());
+  };
+}
+
+function setCh(i, key, val){ cfg.channels[i][key] = val; chTouch(); render(); }
+function renameCh(i){
+  const c = cfg.channels[i];
+  const n = prompt("チャンネル名", c.name === c.id ? "" : c.name);
+  if (n === null) return;
+  c.name = n.trim() || c.id;
+  chTouch(); render();
+}
+function delCh(i){
+  if (!confirm(`${cfg.channels[i].name || cfg.channels[i].id} を外す?\n集めた在庫は残る。`)) return;
+  cfg.channels.splice(i,1); chTouch(); render();
+}
+
+async function resolve(q){
+  q = q.trim();
+  const direct = q.match(/(UC[\w-]{22})/);
+  if (direct) return {id:direct[1]};
+
+  const key = localStorage.getItem(LS+":ytkey");
+  if (!key) throw new Error("UC…形式のIDを貼るか、接続画面でAPIキーを入れる");
+
+  const vid = q.match(/(?:v=|youtu\.be\/|shorts\/)([\w-]{11})/);
+  const url = vid
+    ? `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${vid[1]}&key=${key}`
+    : `https://www.googleapis.com/youtube/v3/channels?part=snippet&forHandle=@${
+        (q.match(/@([\w.\-]+)/) || [,q.replace(/^@/,"")])[1]}&key=${key}`;
+
+  const d = await (await fetch(url)).json();
+  if (d.error) throw new Error(d.error.message);
+  const it = d.items?.[0];
+  if (!it) throw new Error("見つからない");
+  return vid
+    ? {id:it.snippet.channelId, name:it.snippet.channelTitle}
+    : {id:it.id, name:it.snippet.title};
+}
+
+async function addCh(){
+  const q = $("#q").value;
+  if (!q.trim()) return;
+  $("#addmsg").textContent = "調べている";
+  try {
+    const c = await resolve(q);
+    if (cfg.channels.some(x => x.id === c.id)) throw new Error("もう入っている");
+    cfg.channels.push({id:c.id, name:c.name || c.id, defaultType:"focus"});
+    chTouch(); render();
+  } catch(e){ $("#addmsg").textContent = "追加できず: " + e.message; }
+}
+
+function importCsv(text){
+  let n = 0;
+  for (const line of text.split(/\r?\n/).slice(1)){
+    const m = line.match(/(UC[\w-]{22})/);
+    if (!m || cfg.channels.some(c => c.id === m[1])) continue;
+    const cols = line.split(",");
+    cfg.channels.push({id:m[1], name:(cols[2] || m[1]).trim(), defaultType:"focus"});
+    n++;
+  }
+  chTouch(); render();
+  $("#addmsg").textContent = `${n}件を追加した。型と半減期は後から直せる。`;
+}
+
+/* ── 記録 ──────────────────────────────── */
+function drawLog(){
+  const w = list("watched").filter(v => v.post?.score);
+  const dropped = list("dropped");
+  const expired = dropped.filter(v => v.dropReason === "expired");
+  const judged = w.length + dropped.length;
+
+  const mean = a => a.reduce((x,y)=>x+y,0) / (a.length||1);
+  const pre = w.map(v => v.score ?? 0), post = w.map(v => v.post.score);
+  let r = NaN;
+  if (w.length >= 5){
+    const mp = mean(pre), mq = mean(post);
+    const cov = mean(pre.map((x,i)=>(x-mp)*(post[i]-mq)));
+    const sp = Math.sqrt(mean(pre.map(x=>(x-mp)**2)));
+    const sq = Math.sqrt(mean(post.map(x=>(x-mq)**2)));
+    r = (sp && sq) ? cov/(sp*sq) : NaN;
+  }
+  const ex = w.filter(v => v.explore);
+
+  const stat = (label, val, note) =>
+    `<div class="stat"><span>${label}<small>${note}</small></span><span class="v">${val}</span></div>`;
+
+  // チャンネル別
+  const by = {};
+  for (const v of w) (by[v.channelName] ||= []).push(v.post.score);
+  const rows = Object.entries(by).sort((a,b)=>mean(b[1])-mean(a[1]))
+    .map(([n,a]) => `<tr><td>${esc(n)}</td><td class="n">${a.length}</td>
+      <td class="n">${mean(a).toFixed(1)}</td></tr>`).join("");
+
+  $("#view").innerHTML =
+    stat("視聴後の平均", w.length ? mean(post).toFixed(2) : "—",
+         `${w.length}本。結果を映すだけの数字。厳しくすれば上がるので、目標にはしない`) +
+    stat("予測との相関", isNaN(r) ? "—" : r.toFixed(2),
+         "視聴前スコアが満足度を当てられているか。5本以上で出る。低いなら重みが間違っている") +
+    stat("通過率", judged ? Math.round(w.length/judged*100)+"%" : "—",
+         "裁いたうちの採用。下がってきたら登録チャンネルが劣化している") +
+    stat("予測ズレ率", judged ? Math.round(expired.length/judged*100)+"%" : "—",
+         "採用したのに期限切れで落ちた割合。見たい気がしただけの分") +
+    stat("探索枠の平均", ex.length ? mean(ex.map(v=>v.post.score)).toFixed(2) : "—",
+         `${ex.length}本。上位平均を超えるなら、ランキングが取りこぼしている`) +
+    (rows ? `<h3 style="margin:22px 0 0;font-size:14px">チャンネル別</h3>
+      <table><tr><th>チャンネル</th><th style="text-align:right">本数</th>
+      <th style="text-align:right">平均</th></tr>${rows}</table>` : "");
+}
+
+/* ══ 保存 ════════════════════════════════════ */
+function cache(key, obj){
+  try { localStorage.setItem(LS+":"+key, JSON.stringify(obj)); }
+  catch(e){ console.warn("localStorage:", e.message); }   // 容量超過でも動作は続ける
+}
+function touch(){ dirty = true; cache("stock", stock); flag(); }
+function chTouch(){ chDirty = true; cache("cfg", cfg); flag(); }
+function flag(){
+  const m = $("#msg");
+  if (/エラー|失敗/.test(m.textContent)) return;   // 出ているエラーは消さない
+  m.textContent = (dirty || chDirty) ? "未保存の変更あり" : "保存済み";
+}
+
+const b64enc = s => { const b = new TextEncoder().encode(s); let o = "";
+  for (let i=0;i<b.length;i+=0x8000) o += String.fromCharCode(...b.subarray(i,i+0x8000));
+  return btoa(o); };
+const b64dec = s => new TextDecoder().decode(
+  Uint8Array.from(atob(s.replace(/\s/g,"")), c => c.charCodeAt(0)));
+
+const conn = () => JSON.parse(localStorage.getItem(LS+":conn") || "null");
+
+async function api(path, opt={}){
+  const c = conn();
+  const r = await fetch(`https://api.github.com/repos/${c.repo}/contents/${path}`, {
+    ...opt, headers:{Authorization:`Bearer ${c.token}`, Accept:"application/vnd.github+json", ...opt.headers}
+  });
+  if (!r.ok) throw new Error(`${r.status} ${(await r.json()).message || ""}`);
+  return r.json();
+}
+
+function mergeLocal(remote){
+  const local = JSON.parse(localStorage.getItem(LS+":stock") || "null");
+  if (!local) return remote;
+  for (const [id, lv] of Object.entries(local.videos || {})){
+    if (!lv.touched) continue;
+    if (!remote.videos[id]) { remote.videos[id] = lv; continue; }
+    Object.assign(remote.videos[id], {
+      type:lv.type, pre:lv.pre, score:lv.score, post:lv.post, state:lv.state,
+      watchedAt:lv.watchedAt, pickedAt:lv.pickedAt, progress:lv.progress,
+      dropReason:lv.dropReason, explore:lv.explore, touched:true
+    });
+  }
+  return remote;
+}
+
+const safeParse = (s, fb) => { try { return JSON.parse(s ?? ""); } catch { return fb; } };
+
+async function boot(){
+  try {
+    let loaded = null;
+    if (conn()){
+      try { const g = await api(CHPATH); chSha = g.sha; loaded = JSON.parse(b64dec(g.content)); }
+      catch(e){ console.warn(e); $("#msg").textContent = "接続失敗: " + e.message; }
+    }
+    if (!loaded){
+      try { loaded = await (await fetch("data/channels.json?t="+Date.now())).json(); }
+      catch(e){ console.warn("channels.json", e); }
+    }
+    cfg = {...cfg, ...(loaded || {})};
+    cfg.channels ||= [];
+    cfg.defaults ||= {};
+    const localCfg = safeParse(localStorage.getItem(LS+":cfg"), null);
+    if (localCfg && chDirty) cfg = localCfg;
+
+    let remote = null;
+    if (conn()){
+      try { const f = await api(PATH); sha = f.sha; remote = JSON.parse(b64dec(f.content)); }
+      catch(e){ console.warn(e); $("#msg").textContent = "接続失敗: " + e.message; }
+    }
+    if (!remote){
+      try { remote = await (await fetch("data/stock.json?t="+Date.now())).json(); }
+      catch(e){ console.warn("stock.json", e); }
+    }
+    stock = mergeLocal(remote || safeParse(localStorage.getItem(LS+":stock"), {videos:{}}));
+    stock.videos ||= {};
+    dirty = Object.values(stock.videos).some(v => v.touched);
+  } catch(e){
+    console.error(e);
+    $("#msg").textContent = "起動でエラー: " + e.message;
+    stock.videos ||= {};
+  }
+  flag(); render();
+}
+
+async function put(path, obj, curSha){
+  const res = await api(path, {method:"PUT", body:JSON.stringify({
+    message: "sieve: " + new Date().toISOString().slice(0,10),
+    content: b64enc(JSON.stringify(obj, null, 1)), sha: curSha
+  })});
+  return res.content.sha;
+}
+
+$("#save").onclick = async () => {
+  if (!conn()) return $("#dlg").showModal();
+  $("#msg").textContent = "保存中";
+  try {
+    if (dirty){
+      // 収集ジョブと衝突しないよう、直前に最新を取り直してから重ねる
+      const f = await api(PATH); sha = f.sha;
+      stock = mergeLocal(JSON.parse(b64dec(f.content)));
+      sha = await put(PATH, stock, sha);
+      for (const v of Object.values(stock.videos)) delete v.touched;
+      cache("stock", stock);
+      dirty = false;    }
+    if (chDirty){
+      // 収集側も名前を書き戻すので、直前に最新のshaを取り直す
+      const g = await api(CHPATH); chSha = g.sha;
+      chSha = await put(CHPATH, cfg, chSha);
+      chDirty = false;
+    }
+    flag(); render();
+  } catch(e){ $("#msg").textContent = "保存できず: " + e.message; }
+};
+
+$("#cfg").onclick = () => {
+  const c = conn(); if (c){ $("#repo").value = c.repo; $("#tok").value = c.token; }
+  $("#ytk").value = localStorage.getItem(LS+":ytkey") || "";
+  $("#dlg").showModal();
+};
+function saveCfg(){
+  localStorage.setItem(LS+":conn", JSON.stringify({repo:$("#repo").value.trim(), token:$("#tok").value.trim()}));
+  const k = $("#ytk").value.trim();
+  k ? localStorage.setItem(LS+":ytkey", k) : localStorage.removeItem(LS+":ytkey");
+  $("#dlg").close(); boot();
+}
+
+boot();
+</script>
+</body>
+</html>
