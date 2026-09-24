@@ -6,6 +6,7 @@
   "fresh": 0.5
  },
  "defaults": {
+  "capacityHours": { "focus": 6, "ambient": 12, "serial": 0 }
   "coolDays": 0,
   "expireDays": 14,
   "halfLifeDays": 30
