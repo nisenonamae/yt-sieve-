@@ -689,8 +689,24 @@ async function api(path, opt={}){
   return body ? JSON.parse(body) : {};
 }
 
+/* Contents API は約1MBを超えるとメタ情報だけ返し content を空にする。
+   その場合は raw で本体だけ取り直す(sha は先の応答のものを使う)。 */
+async function readJson(path){
+  const f = await api(path);
+  if (f.content) return {sha:f.sha, data:JSON.parse(b64dec(f.content))};
+
+  const c = conn();
+  const r = await fetch(`https://api.github.com/repos/${c.repo}/contents/${path}`, {
+    headers:{Authorization:`Bearer ${c.token}`, Accept:"application/vnd.github.raw"}
+  });
+  if (!r.ok) throw new Error(`raw取得に失敗 ${r.status}`);
+  const text = await r.text();
+  if (!text) throw new Error(`${path} が空で返ってきた`);
+  return {sha:f.sha, data:JSON.parse(text)};
+}
+
 function mergeLocal(remote){
-  const local = JSON.parse(localStorage.getItem(LS+":stock") || "null");
+  const local = safeParse(localStorage.getItem(LS+":stock"), null);
   if (!local) return remote;
   for (const [id, lv] of Object.entries(local.videos || {})){
     if (!lv.touched) continue;
@@ -709,8 +725,8 @@ async function boot(){
   try {
     let loaded = null;
     if (conn()){
-      try { const g = await api(CHPATH); chSha = g.sha; loaded = JSON.parse(b64dec(g.content)); }
-      catch(e){ console.warn(e); $("#msg").textContent = "接続失敗: " + e.message; }
+      try { const g = await readJson(CHPATH); chSha = g.sha; loaded = g.data; }
+      catch(e){ console.warn(e); $("#msg").textContent = "接続失敗(設定): " + e.message; }
     }
     if (!loaded){
       try { loaded = await (await fetch("data/channels.json?t="+Date.now())).json(); }
@@ -724,8 +740,8 @@ async function boot(){
 
     let remote = null;
     if (conn()){
-      try { const f = await api(PATH); sha = f.sha; remote = JSON.parse(b64dec(f.content)); }
-      catch(e){ console.warn(e); $("#msg").textContent = "接続失敗: " + e.message; }
+      try { const f = await readJson(PATH); sha = f.sha; remote = f.data; }
+      catch(e){ console.warn(e); $("#msg").textContent = "接続失敗(在庫): " + e.message; }
     }
     if (!remote){
       try { remote = await (await fetch("data/stock.json?t="+Date.now())).json(); }
@@ -756,15 +772,16 @@ $("#save").onclick = async () => {
   try {
     if (dirty){
       // 収集ジョブと衝突しないよう、直前に最新を取り直してから重ねる
-      const f = await api(PATH); sha = f.sha;
-      stock = mergeLocal(JSON.parse(b64dec(f.content)));
+      const f = await readJson(PATH); sha = f.sha;
+      stock = mergeLocal(f.data);
       sha = await put(PATH, stock, sha);
       for (const v of Object.values(stock.videos)) delete v.touched;
       cache("stock", stock);
-      dirty = false;    }
+      dirty = false;
+    }
     if (chDirty){
       // 収集側も名前を書き戻すので、直前に最新のshaを取り直す
-      const g = await api(CHPATH); chSha = g.sha;
+      const g = await readJson(CHPATH); chSha = g.sha;
       chSha = await put(CHPATH, cfg, chSha);
       chDirty = false;
     }
