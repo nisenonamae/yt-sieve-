@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ふるい</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2e5b4e">
+<link rel="icon" href="icon-192.png">
 <style>
 :root{
   --bg:#edeeea; --surface:#f7f8f5; --ink:#16181a; --muted:#6b7075;
@@ -29,6 +32,8 @@ h1{font-size:19px;font-weight:600;letter-spacing:.14em}
 #stamp{font-size:11px;color:var(--muted);margin-left:auto}
 
 /* ── タブ ───────────────────────── */
+#warn:not(:empty){background:#f6ece6;border:1px solid var(--clay);color:var(--clay);
+  padding:9px 11px;font-size:12.5px;line-height:1.6;margin-bottom:10px}
 nav{display:flex;gap:2px;border-bottom:1px solid var(--rule);margin-bottom:18px}
 nav button{
   padding:9px 13px;font-size:13.5px;color:var(--muted);
@@ -141,6 +146,7 @@ dialog input{width:100%;padding:8px;border:1px solid var(--rule);font:inherit;fo
   <span id="stamp"></span>
 </header>
 
+<div id="warn"></div>
 <nav id="tabs"></nav>
 <main id="view"></main>
 
@@ -176,6 +182,7 @@ let sha = null, chSha = null;
 let tab = "sieve", filter = "focus", dirty = false, chDirty = false;
 let draft = {};   // ふるい台の入力中の値
 let undo = null;  // 直前の裁きを1回だけ巻き戻すための控え
+let cfgOK = true; // channels.json を読めたか(読めないと枠が効かない)
 
 /* ══ スコア ══════════════════════════════════ */
 const ch = id => cfg.channels.find(c => c.id === id) || {};
@@ -242,6 +249,9 @@ function render(){
 }
 
 function draw(){
+  $("#warn").innerHTML = cfgOK ? "" :
+    `チャンネル設定を読めていない。時間枠も既定の型も効いていない状態。
+     読み込みが終わるまで裁かないほうがいい。`;
   const n = {sieve:list("pool").length, rank:list("picked").length};
   $("#tabs").innerHTML = [
     ["sieve","ふるい",n.sieve],["rank","ランキング",n.rank],
@@ -257,12 +267,17 @@ function go(k){ tab = k; render(); window.scrollTo(0,0); }
 
 /* ── ふるい台:1本ずつ裁く ─────────────── */
 function drawSieve(){
+  const box = `<div class="add" style="margin-bottom:12px">
+      <input id="vq" placeholder="動画URLを貼って在庫に足す" autocapitalize="off" spellcheck="false">
+      <button onclick="addFromBox()">足す</button>
+    </div><p class="meta" id="vmsg" style="margin:-6px 0 14px"></p>`;
+
   const pool = list("pool").sort((a,b) => Date.parse(a.added) - Date.parse(b.added));
   if (!pool.length){
     const fresh = list("fresh").length;
-    return $("#view").innerHTML = `<div class="empty"><b>裁くものがない</b>
+    return $("#view").innerHTML = box + `<div class="empty"><b>裁くものがない</b>
       寝かせ中が${fresh}本。期間が明けたらここに出てくる。<br>
-      在庫が空なら channels.json にチャンネルを足す。</div>`;
+      見つけた動画は上の欄、またはYouTubeの共有から足せる。</div>`;
   }
   const v = pool[0];
   const d = draft[v.id] || (draft[v.id] = {type: v.type || null, expect: null, pull: null});
@@ -273,12 +288,12 @@ function drawSieve(){
       labels ? `'${val}'` : val})">${labels ? Object.values(TYPES)[i] : i+1}</button>`;
   }).join("") + `</div>`;
 
-  $("#view").innerHTML = `
+  $("#view").innerHTML = box + `
     <div class="sieve">
       <img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="" loading="lazy">
       <h2>${esc(v.title)}</h2>
-      <p class="meta">${esc(v.channelName)} ・ ${hhmm(v.duration)} ・ 公開${ago(v.published)}
-        ・ 在庫${ago(v.added)}</p>
+      <p class="meta">${v.manual ? "<span class=\"pill\">自分で追加</span> ・ " : ""}${esc(v.channelName)}
+        ・ ${hhmm(v.duration)} ・ 公開${ago(v.published)} ・ 在庫${ago(v.added)}</p>
       <div class="row"><span>型</span>${seg("type",3,true)}</div>
       <div class="row"><span>期待</span>${seg("expect",5)}</div>
       <div class="row"><span>引き</span>${seg("pull",5)}</div>
@@ -642,6 +657,106 @@ function drawLog(){
       <th style="text-align:right">平均</th></tr>${rows}</table>` : "");
 }
 
+/* ══ 動画を手で拾う ════════════════════════════
+   YouTubeアプリの共有シート、または貼り付け欄から1本ずつ足す。
+   新着の流れとは別で、見つけた瞬間の「これ見たい」を在庫に入れる口。 */
+
+const VID = /(?:youtu\.be\/|v=|shorts\/|live\/|embed\/)([\w-]{11})/;
+
+function videoIdFrom(s){
+  const m = (s || "").match(VID);
+  if (m) return m[1];
+  const bare = (s || "").trim();
+  return /^[\w-]{11}$/.test(bare) ? bare : null;
+}
+
+async function addVideo(raw, fallbackTitle){
+  const id = videoIdFrom(raw);
+  if (!id) throw new Error("動画URLが読み取れない");
+  if (stock.videos[id]){
+    const v = stock.videos[id];
+    const where = {fresh:"寝かせ中", pool:"ふるい待ち", picked:"ランキング",
+                   watched:"視聴済み", seen:"既視聴", dropped:"却下済み"}[v.state] || v.state;
+    throw new Error(`もう在庫にある(${where})`);
+  }
+
+  let meta = {title: fallbackTitle || id, channelName: "", channelId: "",
+              published: new Date().toISOString(), duration: null};
+
+  const key = localStorage.getItem(LS+":ytkey");
+  if (key){
+    try {
+      const d = await (await fetch(
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails`
+        + `&id=${id}&key=${key}`)).json();
+      const it = d.items?.[0];
+      if (it){
+        meta = {
+          title: it.snippet.title,
+          channelName: it.snippet.channelTitle,
+          channelId: it.snippet.channelId,
+          published: it.snippet.publishedAt,
+          duration: isoSec(it.contentDetails.duration),
+        };
+      }
+    } catch(e){ console.warn("メタ取得できず", e); }
+  }
+
+  stock.videos[id] = {
+    id, ...meta, desc: "",
+    added: new Date().toISOString(),
+    state: "pool",              // 自分で選んだものは寝かせず、すぐふるいに出す
+    type: ch(meta.channelId).defaultType || null,
+    pre: null, score: null, post: null,
+    watchedAt: null, explore: false, manual: true, touched: true,
+  };
+  touch();
+  return stock.videos[id];
+}
+
+function isoSec(s){
+  const m = (s||"").match(/P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+  if (!m) return null;
+  const [d,h,mi,se] = m.slice(1).map(x => +x || 0);
+  return d*86400 + h*3600 + mi*60 + se;
+}
+
+/* 共有シートから来たとき。manifest の share_target が
+   ?title=...&text=...&url=... を付けてここに飛ばしてくる。 */
+async function handleShare(){
+  const q = new URLSearchParams(location.search);
+  const raw = q.get("url") || q.get("text") || "";
+  if (!videoIdFrom(raw)) return false;
+
+  history.replaceState(null, "", location.pathname);   // URLを戻して再読み込み事故を防ぐ
+  try {
+    const v = await addVideo(raw, q.get("title"));
+    $("#msg").textContent = `追加: ${v.title.slice(0,24)}`;
+    if (conn()) await $("#save").onclick();            // 取りこぼさないよう即保存
+    tab = "sieve";
+  } catch(e){
+    $("#msg").textContent = e.message;
+  }
+  return true;
+}
+
+async function addFromBox(){
+  const el = $("#vq");
+  const raw = el.value.trim();
+  if (!raw) return;
+  $("#vmsg").textContent = "調べている";
+  try {
+    const v = await addVideo(raw);
+    el.value = "";
+    $("#vmsg").textContent = `追加した: ${v.title}`;
+    render();
+  } catch(e){ $("#vmsg").textContent = e.message; }
+}
+
+if ("serviceWorker" in navigator){
+  addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(()=>{}));
+}
+
 /* ══ 保存 ════════════════════════════════════ */
 function cache(key, obj){
   try { localStorage.setItem(LS+":"+key, JSON.stringify(obj)); }
@@ -735,6 +850,7 @@ async function boot(){
     cfg = {...cfg, ...(loaded || {})};
     cfg.channels ||= [];
     cfg.defaults ||= {};
+    cfgOK = !!loaded;
     const localCfg = safeParse(localStorage.getItem(LS+":cfg"), null);
     if (localCfg && chDirty) cfg = localCfg;
 
@@ -755,7 +871,9 @@ async function boot(){
     $("#msg").textContent = "起動でエラー: " + e.message;
     stock.videos ||= {};
   }
-  flag(); render();
+  flag();
+  try { await handleShare(); } catch(e){ console.warn(e); }
+  render();
 }
 
 async function put(path, obj, curSha){
