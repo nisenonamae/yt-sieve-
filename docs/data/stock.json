@@ -20762,15 +20762,17 @@
    "duration": null,
    "desc": "",
    "added": "2026-09-29T12:14:03.800Z",
-   "state": "picked",
+   "state": "watched",
    "type": "focus",
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "score": 76.79197994882682,
-   "post": null,
-   "watchedAt": null,
+   "score": 76.78858385828306,
+   "post": {
+    "score": 4
+   },
+   "watchedAt": "2026-09-29T12:44:15.365Z",
    "explore": false,
    "manual": true,
    "touched": true,
@@ -20785,6 +20787,29 @@
    "duration": null,
    "desc": "",
    "added": "2026-09-29T12:43:11.881Z",
+   "state": "picked",
+   "type": "focus",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "score": 76.79477313531305,
+   "post": null,
+   "watchedAt": null,
+   "explore": false,
+   "manual": true,
+   "touched": true,
+   "pickedAt": "2026-09-29T12:43:29.600Z"
+  },
+  "4dNmWSsBE4w": {
+   "id": "4dNmWSsBE4w",
+   "title": "虫ポケモンに対して〝キモい〟と感じない理由【キャラデザ考察】",
+   "channelName": "",
+   "channelId": "",
+   "published": "2026-09-29T12:48:28.227Z",
+   "duration": null,
+   "desc": "",
+   "added": "2026-09-29T12:48:28.233Z",
    "state": "pool",
    "type": null,
    "pre": null,
