@@ -20760,15 +20760,19 @@
    "duration": null,
    "desc": "",
    "added": "2026-09-29T12:14:03.800Z",
-   "state": "pool",
-   "type": null,
-   "pre": null,
-   "score": null,
+   "state": "picked",
+   "type": "focus",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "score": 76.79485604534374,
    "post": null,
    "watchedAt": null,
    "explore": false,
    "manual": true,
-   "touched": true
+   "touched": true,
+   "pickedAt": "2026-09-29T12:14:34.798Z"
   }
  }
 }
