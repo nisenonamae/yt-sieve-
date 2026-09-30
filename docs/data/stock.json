@@ -1377,7 +1377,7 @@
     "pull": 3
    },
    "published": "2026-07-14T08:00:37Z",
-   "score": 41.788779355742314,
+   "score": 43.58140990215373,
    "state": "picked",
    "title": "人間の口コミサイト",
    "touched": true,
@@ -1455,7 +1455,7 @@
     "pull": 1
    },
    "published": "2026-06-02T08:00:29Z",
-   "score": 28.1632240602757,
+   "score": 29.371353527425153,
    "state": "picked",
    "title": "来年こそ早期選考やめよ？",
    "touched": true,
@@ -1790,19 +1790,21 @@
    "explore": false,
    "id": "3wFgRJJURuo",
    "pickedAt": "2026-09-18T05:24:26.605Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 2,
     "pull": 2
    },
    "published": "2026-08-25T08:00:39Z",
-   "score": 45.42442767646969,
-   "state": "picked",
+   "score": 47.373018132125246,
+   "state": "watched",
    "title": "就活アドバイザーを使って地球に優しい新時代のコンピューターを作る",
    "touched": true,
    "type": "focus",
    "views": 137017,
-   "watchedAt": null
+   "watchedAt": "2026-09-30T06:39:19.062Z"
   },
   "3xReXVwyKtU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1869,7 +1871,7 @@
     "pull": 3
    },
    "published": "2026-07-24T08:00:22Z",
-   "score": 43.48705120119622,
+   "score": 45.352533217145776,
    "state": "picked",
    "title": "彼氏ポートフォリオ",
    "touched": true,
@@ -2858,7 +2860,7 @@
     "pull": 1
    },
    "published": "2026-08-07T08:00:39Z",
-   "score": 36.63248344661448,
+   "score": 38.20392223544063,
    "state": "picked",
    "title": "泥の城【2/2】",
    "touched": true,
@@ -3511,7 +3513,7 @@
     "pull": 4
    },
    "published": "2026-04-23T10:48:44Z",
-   "score": 40.648993424310866,
+   "score": 40.62780003516514,
    "state": "picked",
    "title": "クッソ面白かったのにレビューする気にならなかった映画【５選】",
    "touched": true,
@@ -6909,7 +6911,7 @@
     "pull": 1
    },
    "published": "2026-04-10T08:00:16Z",
-   "score": 29.365861934513767,
+   "score": 30.641557212926724,
    "state": "picked",
    "title": "承認欲求が抑えきれなくて。",
    "touched": true,
@@ -11665,7 +11667,7 @@
     "pull": 1
    },
    "published": "2026-08-28T08:00:05Z",
-   "score": 39.82876935337415,
+   "score": 41.537320540309494,
    "state": "picked",
    "title": "エース闇バイター",
    "touched": true,
@@ -12411,7 +12413,7 @@
     "pull": 4
    },
    "published": "2026-03-31T08:00:00Z",
-   "score": 39.120724462604855,
+   "score": 40.82018499934411,
    "state": "picked",
    "title": "まさか自分が入社式に遅刻するタイプの人種とは思わなかったよね。",
    "touched": true,
@@ -12509,7 +12511,7 @@
     "pull": 4
    },
    "published": "2026-04-24T08:00:01Z",
-   "score": 40.79220224426139,
+   "score": 42.54208221222876,
    "state": "picked",
    "title": "現実の視力検査",
    "touched": true,
@@ -14222,7 +14224,7 @@
     "pull": 1
    },
    "published": "2026-08-04T08:00:23Z",
-   "score": 28.5018088102146,
+   "score": 29.72446268874716,
    "state": "picked",
    "title": "泥の城【1/2】",
    "touched": true,
@@ -14994,13 +14996,14 @@
     "pull": 4
    },
    "published": "2026-05-28T13:00:33Z",
-   "score": 53.8887446385767,
-   "state": "picked",
+   "score": 53.86240016030154,
+   "state": "dropped",
    "title": "【疑問】『好きなことで、生きていく』バイリンガールだけ知らなかったよな。当時のキッズに衝撃だったあのCMを振り返ろう",
    "touched": true,
    "type": "focus",
    "views": 249637,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "hbHQnJMh3dg": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -15168,7 +15171,7 @@
     "pull": 2
    },
    "published": "2026-08-06T13:00:31Z",
-   "score": 44.98826939885761,
+   "score": 44.964813619617566,
    "state": "picked",
    "title": "【炎上】『ヒカルVALU事件』当時よく分かってなかったので、大人になった今ちゃんと学ぼうよ。ヒカルは悪くないのかもしれない。",
    "touched": true,
@@ -15207,7 +15210,7 @@
     "pull": 3
    },
    "published": "2026-05-26T08:00:19Z",
-   "score": 39.53735699688966,
+   "score": 41.23340734937989,
    "state": "picked",
    "title": "幸福トリミング",
    "touched": true,
@@ -16626,7 +16629,7 @@
    "channelName": "りょうぼー【ゲーム企画】",
    "desc": "▶武村(ﾌﾞｿﾝ)  https://www.youtube.com/@武村さん\n▶浜田イタチ  https://www.youtube.com/@special-boandku\n▶ハンマー https://www.youtube.com/@UCLSo5-jFVsVPFGiBZSccuQQ \n▶やえさん　https://youtube.com/@やえさんこんにちは\n▶てゃおる　https://www.youtube.com/channel/UCbpR5MLe0idpvshhSX3xuZA\n\n\n▶︎生放送サブチャンネル\nhttps://youtube.com/channel/UCEZ1GJT-f",
    "duration": 603,
-   "explore": true,
+   "explore": false,
    "id": "lkqjTvYx1Rs",
    "pickedAt": "2026-09-19T02:27:03.057Z",
    "post": null,
@@ -16635,7 +16638,7 @@
     "pull": 2
    },
    "published": "2026-06-16T09:30:21Z",
-   "score": 34.37899770831544,
+   "score": 34.36107334288606,
    "state": "picked",
    "title": "女子サッカーしませんか？",
    "touched": true,
@@ -20699,7 +20702,7 @@
     "pull": 4
    },
    "published": "2026-06-05T08:00:13Z",
-   "score": 43.66741486637764,
+   "score": 45.54063401914708,
    "state": "picked",
    "title": "新入社員の処世術　～ハードル下げ～",
    "touched": true,
