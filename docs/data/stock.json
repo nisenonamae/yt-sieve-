@@ -5082,19 +5082,21 @@
    "explore": false,
    "id": "DnDdLPskmXo",
    "pickedAt": "2026-09-18T05:28:42.638Z",
-   "post": null,
+   "post": {
+    "score": 4
+   },
    "pre": {
     "expect": 4,
     "pull": 3
    },
    "published": "2026-09-15T08:38:18Z",
-   "score": 70.7657888914592,
-   "state": "picked",
+   "score": 70.76575593101272,
+   "state": "watched",
    "title": "5時間かけて全クリしてトイレ行ってる間にエンディング終わりかける【2026/09/14】",
    "touched": true,
    "type": "ambient",
    "views": 140414,
-   "watchedAt": null
+   "watchedAt": "2026-09-30T12:29:42.273Z"
   },
   "Dprsy1OhHkM": {
    "added": "2026-09-18T20:11:50+00:00",
