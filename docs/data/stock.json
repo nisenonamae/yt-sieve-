@@ -332,11 +332,13 @@
    "pre": null,
    "published": "2026-09-25T11:00:29Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "おにや、先日発表したグッズの売れ行き状況について語る【o-228 おにや/株/雑談】【放送日 2026/9/25】",
    "type": "focus",
    "views": 66073,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "09Ae7L13HXc": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -618,11 +620,13 @@
    "pre": null,
    "published": "2026-09-24T21:00:34Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "「ガラクタロード」を聴くゆゆうた【2026/09/24】",
    "type": "focus",
    "views": 102273,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "0m9SLieSJuc": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -666,19 +670,21 @@
    "id": "0pq5FEXGCso",
    "manual": true,
    "pickedAt": "2026-09-29T12:43:29.600Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 4,
     "pull": 4
    },
    "published": "2026-09-29T12:43:11.871Z",
-   "score": 76.79477313531305,
-   "state": "picked",
+   "score": 78.34890207499326,
+   "state": "watched",
    "title": "史実を元にした神ゲ－「炎上裁判」にハマる加藤純一【2022/01/03】",
    "touched": true,
    "type": "focus",
    "views": 1235307,
-   "watchedAt": null
+   "watchedAt": "2026-09-30T01:46:30.665Z"
   },
   "0tmiKuqu_R8": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -1371,7 +1377,7 @@
     "pull": 3
    },
    "published": "2026-07-14T08:00:37Z",
-   "score": 41.89325483625506,
+   "score": 41.8058062314486,
    "state": "picked",
    "title": "人間の口コミサイト",
    "touched": true,
@@ -1440,7 +1446,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 690,
-   "explore": false,
+   "explore": true,
    "id": "3LLrwfoZB40",
    "pickedAt": "2026-09-18T05:23:33.184Z",
    "post": null,
@@ -1449,7 +1455,7 @@
     "pull": 1
    },
    "published": "2026-06-02T08:00:29Z",
-   "score": 28.233634502175338,
+   "score": 28.17469919252987,
    "state": "picked",
    "title": "来年こそ早期選考やめよ？",
    "touched": true,
@@ -1790,7 +1796,7 @@
     "pull": 2
    },
    "published": "2026-08-25T08:00:39Z",
-   "score": 45.53799258718065,
+   "score": 45.44293590244701,
    "state": "picked",
    "title": "就活アドバイザーを使って地球に優しい新時代のコンピューターを作る",
    "touched": true,
@@ -1863,7 +1869,7 @@
     "pull": 3
    },
    "published": "2026-07-24T08:00:22Z",
-   "score": 43.5957725068761,
+   "score": 43.504770039292254,
    "state": "picked",
    "title": "彼氏ポートフォリオ",
    "touched": true,
@@ -2036,7 +2042,7 @@
     "pull": 5
    },
    "published": "2026-09-29T12:48:28.227Z",
-   "score": 88.79524539128259,
+   "score": 88.61491861463044,
    "state": "picked",
    "title": "虫ポケモンに対して〝キモい〟と感じない理由【キャラデザ考察】",
    "touched": true,
@@ -2841,7 +2847,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 1060,
-   "explore": false,
+   "explore": true,
    "id": "7CWWvuli0WU",
    "pickedAt": "2026-09-18T05:26:39.118Z",
    "post": null,
@@ -2850,7 +2856,7 @@
     "pull": 1
    },
    "published": "2026-08-07T08:00:39Z",
-   "score": 36.72406775322074,
+   "score": 36.64740938491835,
    "state": "picked",
    "title": "泥の城【2/2】",
    "touched": true,
@@ -3255,11 +3261,13 @@
    "pre": null,
    "published": "2026-09-25T12:01:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "警備員がいきなり警棒で襲いかかってくるやばいゲーム【巡怪警備】",
    "type": "focus",
    "views": 77917,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "8dL-lEeDICA": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -3501,7 +3509,7 @@
     "pull": 4
    },
    "published": "2026-04-23T10:48:44Z",
-   "score": 40.75061934553549,
+   "score": 40.665555893215,
    "state": "picked",
    "title": "クッソ面白かったのにレビューする気にならなかった映画【５選】",
    "touched": true,
@@ -3722,11 +3730,13 @@
    "pre": null,
    "published": "2026-09-25T16:48:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "無敵の関優太、なんでもあり",
    "type": "focus",
    "views": 29106,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "9th37h-31Bg": {
    "added": "2026-09-23T20:13:06+00:00",
@@ -3856,11 +3866,13 @@
    "pre": null,
    "published": "2026-09-24T21:00:24Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゆゆうたの「学園アイドルマスター」十王星南プロデュース編【2026/09/24】",
    "type": "focus",
    "views": 39737,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "AHtIQITIHUk": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -4653,7 +4665,7 @@
     "pull": 3
    },
    "published": "2026-07-28T14:49:01Z",
-   "score": 57.57693796308138,
+   "score": 57.45675100161084,
    "state": "picked",
    "title": "映画の応援上映で、隣の客の掛け声が個性的すぎて全く集中できない【ジェラードン】",
    "touched": true,
@@ -5258,11 +5270,13 @@
    "pre": null,
    "published": "2026-09-26T04:30:36Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "講師が天才すぎて参考にならないドッキリ #shorts",
    "type": "focus",
    "views": 109477,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "EatZi5tV8y8": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -5639,11 +5653,13 @@
    "pre": null,
    "published": "2026-09-26T08:00:34Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】オ〇マと仲良く喧嘩するはりーシ【2026/09/25】",
    "type": "focus",
    "views": 5377,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "G7-LG-XgyN0": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -6412,7 +6428,7 @@
     "pull": 3
    },
    "published": "2026-09-08T08:00:16Z",
-   "score": 60.22100845164311,
+   "score": 60.095302217887934,
    "state": "picked",
    "title": "僕の両親はインフルエンサーです",
    "touched": true,
@@ -7634,14 +7650,19 @@
    "explore": false,
    "id": "LswzsHmo4vk",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
    "published": "2026-09-26T12:01:21Z",
-   "score": null,
-   "state": "pool",
+   "score": 77.4091797135701,
+   "state": "picked",
    "title": "スカイピースの『シャルル歌ってみた』が7年の時を超えバズったらしいので聞きます。",
-   "type": "ambient",
+   "type": "focus",
    "views": 294701,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-09-30T00:26:17.082Z",
+   "touched": true
   },
   "M47CYljwjsU": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -7923,7 +7944,7 @@
     "pull": 3
    },
    "published": "2026-07-25T13:05:26Z",
-   "score": 56.87664155607058,
+   "score": 56.757916403794226,
    "state": "picked",
    "title": "病院の待合室で、院長の自主制作ラジオが流れてる【ジェラードン】",
    "touched": true,
@@ -8887,11 +8908,13 @@
    "pre": null,
    "published": "2026-09-25T05:00:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "このゲームのせいで深夜にコインランドリーに行けなくなりました - 開かない。ランドリー",
    "type": "focus",
    "views": 35889,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "QOZ7cZdoCmg": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -9489,11 +9512,13 @@
    "pre": null,
    "published": "2026-09-25T09:00:33Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【人狼】キャラが濃い人が集まる豪尻村！狂人で村を掻き回すはりーシ【2026/09/24】",
    "type": "focus",
    "views": 15633,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "S-LKurnKLEU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -10716,11 +10741,13 @@
    "pre": null,
    "published": "2026-09-25T03:00:35Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "ドーパミンが出まくる最新HUB鯖建築選手権 - マインクラフト【KUN】",
    "type": "focus",
    "views": 166396,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "W-G4ObByU7c": {
    "added": "2026-09-26T20:11:19+00:00",
@@ -11628,7 +11655,7 @@
     "pull": 1
    },
    "published": "2026-08-28T08:00:05Z",
-   "score": 39.92834464505552,
+   "score": 39.844997621243394,
    "state": "picked",
    "title": "エース闇バイター",
    "touched": true,
@@ -12028,11 +12055,13 @@
    "pre": null,
    "published": "2026-09-25T13:55:41Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "強制的に魔法少女に変身させられるおっさん【ジェラードン】",
    "type": "focus",
    "views": 30038,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "Zr9BKimdKqk": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -12470,7 +12499,7 @@
     "pull": 4
    },
    "published": "2026-04-24T08:00:01Z",
-   "score": 40.89418620153246,
+   "score": 40.80882306560946,
    "state": "picked",
    "title": "現実の視力検査",
    "touched": true,
@@ -12785,11 +12814,13 @@
    "pre": null,
    "published": "2026-09-25T10:56:01Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "原作が神ゲーなのに賛否分かれるどころか炎上しちゃった映画『SEKIRO: NO DEFEAT』",
    "type": "focus",
    "views": 344362,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "bLcYjXNdsmE": {
    "added": "2026-09-28T20:11:21+00:00",
@@ -14181,7 +14212,7 @@
     "pull": 1
    },
    "published": "2026-08-04T08:00:23Z",
-   "score": 28.57306574394042,
+   "score": 28.51342189914505,
    "state": "picked",
    "title": "泥の城【1/2】",
    "touched": true,
@@ -14240,11 +14271,13 @@
    "pre": null,
    "published": "2026-09-24T21:00:36Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "「MY STAGE」「Yellow Big Bang!」「コントラスト」のライブ映像を見るゆゆうた【2026/09/24】",
    "type": "focus",
    "views": 62067,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "fZ3eYcxvJTs": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -14951,7 +14984,7 @@
     "pull": 4
    },
    "published": "2026-05-28T13:00:33Z",
-   "score": 54.02347106000658,
+   "score": 53.910701658497985,
    "state": "picked",
    "title": "【疑問】『好きなことで、生きていく』バイリンガールだけ知らなかったよな。当時のキッズに衝撃だったあのCMを振り返ろう",
    "touched": true,
@@ -15125,7 +15158,7 @@
     "pull": 2
    },
    "published": "2026-08-06T13:00:31Z",
-   "score": 45.10074387906831,
+   "score": 45.00659991173261,
    "state": "picked",
    "title": "【炎上】『ヒカルVALU事件』当時よく分かってなかったので、大人になった今ちゃんと学ぼうよ。ヒカルは悪くないのかもしれない。",
    "touched": true,
@@ -15155,7 +15188,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 399,
-   "explore": true,
+   "explore": false,
    "id": "i7kH8R8Wt5M",
    "pickedAt": "2026-09-19T02:26:01.271Z",
    "post": null,
@@ -15164,7 +15197,7 @@
     "pull": 3
    },
    "published": "2026-05-26T08:00:19Z",
-   "score": 39.63620373486272,
+   "score": 39.55346653035603,
    "state": "picked",
    "title": "幸福トリミング",
    "touched": true,
@@ -16438,11 +16471,13 @@
    "pre": null,
    "published": "2026-09-25T17:02:17Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "PADアンチに感度ビンビン関",
    "type": "focus",
    "views": 10040,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "lLmpBJOGIgM": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -16590,7 +16625,7 @@
     "pull": 2
    },
    "published": "2026-06-16T09:30:21Z",
-   "score": 34.46494811158892,
+   "score": 34.39300546341565,
    "state": "picked",
    "title": "女子サッカーしませんか？",
    "touched": true,
@@ -16619,11 +16654,13 @@
    "pre": null,
    "published": "2026-09-25T07:00:38Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "空飛ぶ飛行船 動く超巨大要塞 最新技術が発展した世界でクリエイトMODサバイバル - マインクラフト【KUN】",
    "type": "ambient",
    "views": 120721,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "lxk0LH2wbJI": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -19116,11 +19153,13 @@
    "pre": null,
    "published": "2026-09-25T06:30:10Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "おにや、3カ月塩漬けしていた『イビデン』を遂に利確、魂のシルバーウィーク持ち越しにより週給600万【o-228 おにや/株/雑談】【放送日 2026/9/25】",
    "type": "focus",
    "views": 91375,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "tM3I8__3uLw": {
    "added": "2026-09-21T20:12:05+00:00",
@@ -20650,7 +20689,7 @@
     "pull": 4
    },
    "published": "2026-06-05T08:00:13Z",
-   "score": 43.77658709849213,
+   "score": 43.685207195825335,
    "state": "picked",
    "title": "新入社員の処世術　～ハードル下げ～",
    "touched": true,
