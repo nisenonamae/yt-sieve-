@@ -6426,19 +6426,21 @@
    "explore": false,
    "id": "IGzRDS4opgo",
    "pickedAt": "2026-09-18T05:31:09.214Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 3,
     "pull": 3
    },
    "published": "2026-09-08T08:00:16Z",
-   "score": 60.07082630572085,
-   "state": "picked",
+   "score": 60.070796783948175,
+   "state": "watched",
    "title": "僕の両親はインフルエンサーです",
    "touched": true,
    "type": "focus",
    "views": 402798,
-   "watchedAt": null
+   "watchedAt": "2026-09-30T03:45:10.796Z"
   },
   "IJifMvloqtI": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -7944,19 +7946,21 @@
    "explore": false,
    "id": "N2--dXUjn80",
    "pickedAt": "2026-09-18T05:42:32.218Z",
-   "post": null,
+   "post": {
+    "score": 2
+   },
    "pre": {
     "expect": 4,
     "pull": 3
    },
    "published": "2026-07-25T13:05:26Z",
-   "score": 56.49266223923246,
-   "state": "picked",
+   "score": 56.49040313793776,
+   "state": "watched",
    "title": "病院の待合室で、院長の自主制作ラジオが流れてる【ジェラードン】",
    "touched": true,
    "type": "focus",
    "views": 186208,
-   "watchedAt": null
+   "watchedAt": "2026-09-30T03:48:11.475Z"
   },
   "N33B6uDnXPQ": {
    "added": "2026-09-28T20:11:21+00:00",
