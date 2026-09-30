@@ -1377,7 +1377,7 @@
     "pull": 3
    },
    "published": "2026-07-14T08:00:37Z",
-   "score": 41.8058062314486,
+   "score": 41.788779355742314,
    "state": "picked",
    "title": "人間の口コミサイト",
    "touched": true,
@@ -1455,7 +1455,7 @@
     "pull": 1
    },
    "published": "2026-06-02T08:00:29Z",
-   "score": 28.17469919252987,
+   "score": 28.1632240602757,
    "state": "picked",
    "title": "来年こそ早期選考やめよ？",
    "touched": true,
@@ -1796,7 +1796,7 @@
     "pull": 2
    },
    "published": "2026-08-25T08:00:39Z",
-   "score": 45.44293590244701,
+   "score": 45.42442767646969,
    "state": "picked",
    "title": "就活アドバイザーを使って地球に優しい新時代のコンピューターを作る",
    "touched": true,
@@ -1869,7 +1869,7 @@
     "pull": 3
    },
    "published": "2026-07-24T08:00:22Z",
-   "score": 43.504770039292254,
+   "score": 43.48705120119622,
    "state": "picked",
    "title": "彼氏ポートフォリオ",
    "touched": true,
@@ -2036,19 +2036,21 @@
    "id": "4dNmWSsBE4w",
    "manual": true,
    "pickedAt": "2026-09-29T12:48:37.206Z",
-   "post": null,
+   "post": {
+    "score": 4
+   },
    "pre": {
     "expect": 5,
     "pull": 5
    },
    "published": "2026-09-29T12:48:28.227Z",
-   "score": 88.61491861463044,
-   "state": "picked",
+   "score": 91.13234284044486,
+   "state": "watched",
    "title": "虫ポケモンに対して〝キモい〟と感じない理由【キャラデザ考察】",
    "touched": true,
    "type": "focus",
    "views": 135128,
-   "watchedAt": null
+   "watchedAt": "2026-09-30T02:16:41.426Z"
   },
   "4dq52fYfgg4": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2847,7 +2849,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 1060,
-   "explore": true,
+   "explore": false,
    "id": "7CWWvuli0WU",
    "pickedAt": "2026-09-18T05:26:39.118Z",
    "post": null,
@@ -2856,7 +2858,7 @@
     "pull": 1
    },
    "published": "2026-08-07T08:00:39Z",
-   "score": 36.64740938491835,
+   "score": 36.63248344661448,
    "state": "picked",
    "title": "泥の城【2/2】",
    "touched": true,
@@ -3509,7 +3511,7 @@
     "pull": 4
    },
    "published": "2026-04-23T10:48:44Z",
-   "score": 40.665555893215,
+   "score": 40.648993424310866,
    "state": "picked",
    "title": "クッソ面白かったのにレビューする気にならなかった映画【５選】",
    "touched": true,
@@ -4659,19 +4661,21 @@
    "explore": false,
    "id": "CNONCysDRQY",
    "pickedAt": "2026-09-18T05:28:16.691Z",
-   "post": null,
+   "post": {
+    "score": 3
+   },
    "pre": {
     "expect": 4,
     "pull": 3
    },
    "published": "2026-07-28T14:49:01Z",
-   "score": 57.45675100161084,
-   "state": "picked",
+   "score": 57.445113681508055,
+   "state": "watched",
    "title": "映画の応援上映で、隣の客の掛け声が個性的すぎて全く集中できない【ジェラードン】",
    "touched": true,
    "type": "focus",
    "views": 112839,
-   "watchedAt": null
+   "watchedAt": "2026-09-30T02:23:15.888Z"
   },
   "CU421W8eXMg": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -6428,7 +6432,7 @@
     "pull": 3
    },
    "published": "2026-09-08T08:00:16Z",
-   "score": 60.095302217887934,
+   "score": 60.07082630572085,
    "state": "picked",
    "title": "僕の両親はインフルエンサーです",
    "touched": true,
@@ -6894,7 +6898,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 409,
-   "explore": true,
+   "explore": false,
    "id": "JfnjCqMfLdQ",
    "pickedAt": "2026-09-19T02:16:03.386Z",
    "post": null,
@@ -7649,18 +7653,20 @@
    "duration": 1458,
    "explore": false,
    "id": "LswzsHmo4vk",
-   "post": null,
+   "post": {
+    "score": 4
+   },
    "pre": {
     "expect": 4,
     "pull": 4
    },
    "published": "2026-09-26T12:01:21Z",
-   "score": 77.4091797135701,
-   "state": "picked",
+   "score": 77.37765211967056,
+   "state": "watched",
    "title": "スカイピースの『シャルル歌ってみた』が7年の時を超えバズったらしいので聞きます。",
    "type": "focus",
    "views": 294701,
-   "watchedAt": null,
+   "watchedAt": "2026-09-30T03:30:48.051Z",
    "pickedAt": "2026-09-30T00:26:17.082Z",
    "touched": true
   },
@@ -7944,7 +7950,7 @@
     "pull": 3
    },
    "published": "2026-07-25T13:05:26Z",
-   "score": 56.757916403794226,
+   "score": 56.49266223923246,
    "state": "picked",
    "title": "病院の待合室で、院長の自主制作ラジオが流れてる【ジェラードン】",
    "touched": true,
@@ -11655,7 +11661,7 @@
     "pull": 1
    },
    "published": "2026-08-28T08:00:05Z",
-   "score": 39.844997621243394,
+   "score": 39.82876935337415,
    "state": "picked",
    "title": "エース闇バイター",
    "touched": true,
@@ -12499,7 +12505,7 @@
     "pull": 4
    },
    "published": "2026-04-24T08:00:01Z",
-   "score": 40.80882306560946,
+   "score": 40.79220224426139,
    "state": "picked",
    "title": "現実の視力検査",
    "touched": true,
@@ -14203,7 +14209,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 772,
-   "explore": false,
+   "explore": true,
    "id": "fQVpQxkyQVE",
    "pickedAt": "2026-09-18T05:49:11.221Z",
    "post": null,
@@ -14212,7 +14218,7 @@
     "pull": 1
    },
    "published": "2026-08-04T08:00:23Z",
-   "score": 28.51342189914505,
+   "score": 28.5018088102146,
    "state": "picked",
    "title": "泥の城【1/2】",
    "touched": true,
@@ -14984,7 +14990,7 @@
     "pull": 4
    },
    "published": "2026-05-28T13:00:33Z",
-   "score": 53.910701658497985,
+   "score": 53.8887446385767,
    "state": "picked",
    "title": "【疑問】『好きなことで、生きていく』バイリンガールだけ知らなかったよな。当時のキッズに衝撃だったあのCMを振り返ろう",
    "touched": true,
@@ -15158,7 +15164,7 @@
     "pull": 2
    },
    "published": "2026-08-06T13:00:31Z",
-   "score": 45.00659991173261,
+   "score": 44.98826939885761,
    "state": "picked",
    "title": "【炎上】『ヒカルVALU事件』当時よく分かってなかったので、大人になった今ちゃんと学ぼうよ。ヒカルは悪くないのかもしれない。",
    "touched": true,
@@ -15197,7 +15203,7 @@
     "pull": 3
    },
    "published": "2026-05-26T08:00:19Z",
-   "score": 39.55346653035603,
+   "score": 39.53735699688966,
    "state": "picked",
    "title": "幸福トリミング",
    "touched": true,
@@ -16625,7 +16631,7 @@
     "pull": 2
    },
    "published": "2026-06-16T09:30:21Z",
-   "score": 34.39300546341565,
+   "score": 34.37899770831544,
    "state": "picked",
    "title": "女子サッカーしませんか？",
    "touched": true,
@@ -20689,7 +20695,7 @@
     "pull": 4
    },
    "published": "2026-06-05T08:00:13Z",
-   "score": 43.685207195825335,
+   "score": 43.66741486637764,
    "state": "picked",
    "title": "新入社員の処世術　～ハードル下げ～",
    "touched": true,
