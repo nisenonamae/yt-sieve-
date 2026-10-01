@@ -18957,19 +18957,21 @@
    "explore": false,
    "id": "rPY31fsYhP8",
    "pickedAt": "2026-09-18T06:02:02.946Z",
-   "post": null,
+   "post": {
+    "score": 4
+   },
    "pre": {
     "expect": 4,
     "pull": 4
    },
    "published": "2026-08-18T09:42:02Z",
-   "score": 64.49880122010268,
-   "state": "picked",
+   "score": 64.49667236866419,
+   "state": "watched",
    "title": "完全にやらかしました",
    "touched": true,
    "type": "ambient",
    "views": 83309,
-   "watchedAt": null
+   "watchedAt": "2026-10-01T05:17:17.415Z"
   },
   "rSsY9-Y1NmQ": {
    "added": "2026-09-18T20:11:50+00:00",
