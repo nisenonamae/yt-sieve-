@@ -10231,19 +10231,21 @@
    "explore": false,
    "id": "TmzXk7W2Uzk",
    "pickedAt": "2026-09-18T05:44:22.748Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 3,
     "pull": 3
    },
    "published": "2026-09-15T08:00:30Z",
-   "score": 66.58944695014952,
-   "state": "picked",
+   "score": 66.58939686892631,
+   "state": "watched",
    "title": "死亡者バイアス",
    "touched": true,
    "type": "ambient",
    "views": 348724,
-   "watchedAt": null
+   "watchedAt": "2026-10-01T05:09:40.030Z"
   },
   "ToRnSn4ks1Y": {
    "added": "2026-09-18T05:19:08+00:00",
