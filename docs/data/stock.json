@@ -1256,13 +1256,14 @@
     "pull": 4
    },
    "published": "2026-08-31T11:16:23Z",
-   "score": 66.3332557799868,
-   "state": "picked",
+   "score": 66.32963596680817,
+   "state": "dropped",
    "title": "【全て新録】ソウルライク・クソゲー４連発【ドパガキも安心】",
    "touched": true,
    "type": "ambient",
    "views": 1349811,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "2j4esW25d1g": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -1818,13 +1819,14 @@
     "pull": 4
    },
    "published": "2026-08-25T11:27:12Z",
-   "score": 64.76851872011838,
-   "state": "picked",
+   "score": 64.7649761696685,
+   "state": "dropped",
    "title": "ショートスリーパーにプレイさせたい眠くなったクソゲーTOP10",
    "touched": true,
    "type": "ambient",
    "views": 781550,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "3w1449omnU8": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -3116,13 +3118,14 @@
     "pull": 4
    },
    "published": "2026-07-30T11:29:20Z",
-   "score": 64.59913617183136,
-   "state": "picked",
+   "score": 64.59405685871243,
+   "state": "dropped",
    "title": "怖すぎて全年齢とは思えない子供向けアニメ『映画ちいかわ 人魚の島のひみつ』",
    "touched": true,
    "type": "ambient",
    "views": 1006576,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "7bexcgh3lHY": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -6933,19 +6936,21 @@
    "explore": false,
    "id": "J5E1nH_BK_c",
    "pickedAt": "2026-09-18T05:31:31.524Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 4,
     "pull": 3
    },
    "published": "2026-08-18T08:00:10Z",
-   "score": 65.77270783443322,
-   "state": "picked",
+   "score": 66.40885500311418,
+   "state": "watched",
    "title": "息子がFラン大学就職チャンネルに出演してる",
    "touched": true,
    "type": "ambient",
    "views": 186525,
-   "watchedAt": null
+   "watchedAt": "2026-10-01T05:26:16.730Z"
   },
   "JB-ykSH5Euk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -8625,13 +8630,14 @@
     "pull": 3
    },
    "published": "2026-09-22T12:01:00Z",
-   "score": 66.40906537611639,
-   "state": "picked",
+   "score": 66.40547629599143,
+   "state": "dropped",
    "title": "堀の堀が出てしまった件について。",
    "touched": true,
    "type": "ambient",
    "views": 330771,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "Op4pBtrz2ck": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -10421,13 +10427,14 @@
     "pull": 4
    },
    "published": "2026-08-20T11:55:22Z",
-   "score": 63.49616819254646,
-   "state": "picked",
+   "score": 63.49006954926904,
+   "state": "dropped",
    "title": "2000万本売れたゲームのパクリゲーはめっちゃクソゲーなのか？【変態カメレオン】",
    "touched": true,
    "type": "ambient",
    "views": 797214,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "UIgIELdK2hM": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -18643,13 +18650,14 @@
     "pull": 5
    },
    "published": "2026-08-04T15:05:22Z",
-   "score": 63.939560702582796,
-   "state": "picked",
+   "score": 63.93343180892573,
+   "state": "dropped",
    "title": "上司に出したコーヒーが不味いと言われ、本格的に淹れて見返すOL【ジェラードン】",
    "touched": true,
    "type": "ambient",
    "views": 97798,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "qYXSgNKfGEE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -19571,13 +19579,14 @@
     "pull": 3
    },
    "published": "2026-09-13T09:38:50Z",
-   "score": 63.689179661510344,
-   "state": "picked",
+   "score": 63.45382563158889,
+   "state": "dropped",
    "title": "パニックみのる、意味不明な発言を繰り返す【2026/09/13】",
    "touched": true,
    "type": "ambient",
    "views": 106749,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "t6mZjxoLwuU": {
    "added": "2026-09-18T05:19:08+00:00",
