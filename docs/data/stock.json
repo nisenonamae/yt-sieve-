@@ -17685,19 +17685,21 @@
    "explore": false,
    "id": "nL4Cz_J0eXo",
    "pickedAt": "2026-09-18T06:00:40.471Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 4,
     "pull": 4
    },
    "published": "2026-08-09T09:30:05Z",
-   "score": 63.33215309035079,
-   "state": "picked",
+   "score": 63.33207828224806,
+   "state": "watched",
    "title": "俺は悪くない",
    "touched": true,
    "type": "ambient",
    "views": 53004,
-   "watchedAt": null
+   "watchedAt": "2026-10-01T06:06:47.619Z"
   },
   "nWm9hW1Qmx8": {
    "added": "2026-09-18T20:11:50+00:00",
