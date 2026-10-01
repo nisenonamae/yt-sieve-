@@ -1053,13 +1053,14 @@
     "pull": 4
    },
    "published": "2026-09-06T11:26:45Z",
-   "score": 67.97160497454534,
-   "state": "picked",
+   "score": 67.97081152009235,
+   "state": "dropped",
    "title": "【助けて】退屈で失神しそうになる恐竜クソゲー【jurassic: The Hunted】",
    "touched": true,
    "type": "ambient",
    "views": 1254052,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "1yjINwtIFkQ": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -13699,13 +13700,14 @@
     "pull": 3
    },
    "published": "2026-09-19T19:00:08Z",
-   "score": 68.35879747488586,
-   "state": "picked",
+   "score": 68.35808724854888,
+   "state": "dropped",
    "title": "ゆゆうたと見る「学園アイドルマスター1章 はじめまして初星学園 」【2026/09/19】",
    "touched": true,
    "type": "ambient",
    "views": 2140,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "ctXMKnbkj34": {
    "added": "2026-09-18T20:11:50+00:00",
