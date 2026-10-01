@@ -19641,13 +19641,14 @@
     "pull": 5
    },
    "published": "2026-09-20T07:00:11Z",
-   "score": 67.60887736865358,
-   "state": "picked",
+   "score": 67.60654948671679,
+   "state": "dropped",
    "title": "参加勢50人ｖｓマイクラプロハンター100人の世界で全員集合 - マインクラフト【KUN】",
    "touched": true,
    "type": "ambient",
    "views": 113107,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "tYm_ffDJU1A": {
    "added": "2026-09-13T03:46:40+00:00",
