@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T23:44:03+00:00",
+ "updated": "2026-10-02T23:35:38+00:00",
  "videos": {
   "-0i9GggynE4": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -76,25 +76,11 @@
   "-8sG_9h0dg4": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCrup_SUKUSAWxB4ygfs5Rbg",
-   "channelName": "ステパンTV",
-   "desc": "企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreomado\n石田\nhttps://www.instagram.com/stpn_isd?igsh=MWNhcjRpZHM1M243M",
-   "duration": 1536,
-   "explore": false,
-   "id": "-8sG_9h0dg4",
-   "pickedAt": "2026-09-18T05:21:30.715Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 2
-   },
-   "published": "2026-07-19T12:01:27Z",
+   "dropReason": "expired",
    "score": 44.76403695195777,
-   "state": "picked",
-   "title": "日本最北端のミスド『ミスタードーナツ稚内ショップ』なら並ばずにもっちゅりん食える説",
-   "touched": true,
-   "type": "ambient",
-   "views": 427199,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "-CZQ13eNaZA": {
    "added": "2026-09-24T20:13:16+00:00",
@@ -256,25 +242,11 @@
   "-c5EoTlKafA": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
-   "channelName": "ステゴロパンチャーズ",
-   "desc": "企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreomado\n石田\nhttps://www.instagram.com/stpn_isd?igsh=MWNhcjRpZHM1M243M",
-   "duration": 1984,
-   "explore": false,
-   "id": "-c5EoTlKafA",
-   "pickedAt": "2026-09-18T05:21:43.872Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 2
-   },
-   "published": "2026-08-07T12:01:13Z",
+   "dropReason": "expired",
    "score": 44.05218006148634,
-   "state": "picked",
-   "title": "僕達が呼ばれなかったCDFを『購入』してフルで見てみた。",
-   "touched": true,
-   "type": "ambient",
-   "views": 503284,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "-eJ4kkKzcYo": {
    "added": "2026-09-13T20:11:59+00:00",
@@ -862,25 +834,11 @@
   "1FZhBPSbTBo": {
    "added": "2026-09-18T05:01:21+00:00",
    "channelId": "UC1xFkkJgjzVUm9oZIHQ10yQ",
-   "channelName": "布団ちゃん【魔神の戯れ】",
-   "desc": "元配信\nhttps://www.twitch.tv/videos/2820528774\nX　\nhttps://twitter.com/indegnasen210\nTwitch\nhttps://twitch.tv/indegnasen0706\n\n00:00　ツトムの6日間\n41:24　すすむの回想\n01:13:58　決戦\n01:56:33　ピロートーク",
-   "duration": 7139,
-   "explore": false,
-   "id": "1FZhBPSbTBo",
-   "pickedAt": "2026-09-18T05:04:34.855Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 2
-   },
-   "published": "2026-07-18T01:00:01Z",
+   "dropReason": "expired",
    "score": 38.69754369270324,
-   "state": "picked",
-   "title": "布団ちゃんの『醤油ラーメンFOREVER』実況プレイ",
-   "touched": true,
-   "type": "ambient",
-   "views": 122014,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "1GZlIsBtsP8": {
    "added": "2026-09-23T20:13:06+00:00",
@@ -1066,19 +1024,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
    "dropReason": "gaveup",
-   "score": 67.97081152009235,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 963,
+   "explore": false,
+   "pickedAt": "2026-09-20T05:42:18.285Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-20T05:42:18.285Z",
-   "explore": false,
-   "touched": true
+   "score": 67.97081152009235,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 1377161,
+   "watchedAt": null
   },
   "1yjINwtIFkQ": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -1221,25 +1181,11 @@
   "2g4pD-YZX_A": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002916\n利用許諾協力：#クリエイターサポートプログラム\nCSP（クリエイターサポートプログ",
-   "duration": 4597,
-   "explore": false,
-   "id": "2g4pD-YZX_A",
-   "pickedAt": "2026-09-18T05:22:53.465Z",
-   "post": null,
-   "pre": {
-    "expect": 1,
-    "pull": 3
-   },
-   "published": "2026-09-17T21:00:31Z",
+   "dropReason": "expired",
    "score": 46.41357262489737,
-   "state": "picked",
-   "title": "ゆゆうた、指のケガに気付かず1時間ピアノを弾いてしまう【2026/09/17】",
-   "touched": true,
-   "type": "ambient",
-   "views": 11208,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "2gXwlnni1MY": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -1261,19 +1207,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
    "dropReason": "gaveup",
-   "score": 66.32963596680817,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1010,
+   "explore": false,
+   "pickedAt": "2026-09-20T05:42:24.159Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-20T05:42:24.159Z",
-   "explore": false,
-   "touched": true
+   "score": 66.32963596680817,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 1439517,
+   "watchedAt": null
   },
   "2j4Bl-0IaE8": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -1437,25 +1385,11 @@
   "32Y1iC7RXjA": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 824,
-   "explore": false,
-   "id": "32Y1iC7RXjA",
-   "pickedAt": "2026-09-18T05:23:21.131Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 3
-   },
-   "published": "2026-07-14T08:00:37Z",
+   "dropReason": "expired",
    "score": 46.087865787568376,
-   "state": "picked",
-   "title": "人間の口コミサイト",
-   "touched": true,
-   "type": "focus",
-   "views": 235983,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "focus"
   },
   "35iWkXLQm9o": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1477,19 +1411,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
    "dropReason": "gaveup",
-   "score": 68.81571077355436,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 830,
+   "explore": false,
+   "pickedAt": "2026-09-20T05:42:29.782Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-20T05:42:29.782Z",
-   "explore": false,
-   "touched": true
+   "score": 68.81571077355436,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 699678,
+   "watchedAt": null
   },
   "3FmpSgHAhBU": {
    "added": "2026-09-30T23:31:46+00:00",
@@ -1528,25 +1464,11 @@
   "3LLrwfoZB40": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 690,
-   "explore": true,
-   "id": "3LLrwfoZB40",
-   "pickedAt": "2026-09-18T05:23:33.184Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 1
-   },
-   "published": "2026-06-02T08:00:29Z",
+   "dropReason": "expired",
    "score": 31.060560050956443,
-   "state": "picked",
-   "title": "来年こそ早期選考やめよ？",
-   "touched": true,
-   "type": "focus",
-   "views": 226902,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "focus"
   },
   "3N265G5QcTg": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -1621,7 +1543,7 @@
    "pre": null,
    "published": "2026-09-29T05:23:58Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "兄妹の合言葉「ケニアナンバーワン！」で3時間かけてクリア【2026/09/28】",
    "type": "focus",
    "views": 228251,
@@ -1824,61 +1746,51 @@
   "3r-oNNvV7N0": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCZetZElUvdElPrcstRjl9DA",
-   "channelName": "加藤純一ロードショー",
-   "desc": "雑談ダイジェスト再生リスト\nhttps://www.youtube.com/playlist?list=PLc8yg_50-ooSC6YTUdxGY6qJLxQY7Oanz\n\n#加藤純一#雑談\n\n00:00 OP\n00:32 壊れた体\n02:30 逆堀大輔\n06:57 逆広瀬すず\n07:39 戦争生還者\n08:58 カトハラ\n10:45 ちいさい悩み\n16:55 真の姿\n18:22 金持ちの道楽\n21:13 石洗いの洗礼\n23:06 VCRとVCC\n25:23 土井&カト\n26:31 野球選手IQ問題\n30:53 若梅原\n32:44 みゃこの人柄\n35:19 ハイゲのギャラ\n37:25 豪快な",
-   "duration": 9579,
-   "explore": false,
-   "id": "3r-oNNvV7N0",
-   "pickedAt": "2026-09-18T05:23:59.516Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 4
-   },
-   "published": "2026-08-17T22:00:37Z",
+   "dropReason": "expired",
    "score": 50.51050514816422,
-   "state": "picked",
-   "title": "加藤純一 雑談ダイジェスト【2026/08/14,16】「体調悪すぎ内/ついに生活サイクルがかみ合った男」",
-   "touched": true,
-   "type": "ambient",
-   "views": 237956,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "3tUqsbGuM9s": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
    "dropReason": "gaveup",
-   "score": 64.7649761696685,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1042,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:41:16.346Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:41:16.346Z",
-   "explore": false,
-   "touched": true
+   "score": 64.7649761696685,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 843315,
+   "watchedAt": null
   },
   "3w1449omnU8": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCKd4yNs1CvdCYIkJdARgBsw",
    "dropReason": "gaveup",
-   "score": 18.206893801583018,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 2408,
+   "explore": true,
+   "pickedAt": "2026-09-18T05:24:16.224Z",
+   "post": null,
    "pre": {
     "expect": 1,
     "pull": 1
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-18T05:24:16.224Z",
-   "explore": true,
-   "touched": true
+   "score": 18.206893801583018,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 298247,
+   "watchedAt": null
   },
   "3wFgRJJURuo": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1960,48 +1872,20 @@
   "452mHIInxVM": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 496,
-   "explore": false,
-   "id": "452mHIInxVM",
-   "pickedAt": "2026-09-18T05:24:44.018Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 3
-   },
-   "published": "2026-07-24T08:00:22Z",
+   "dropReason": "expired",
    "score": 47.96085002139311,
-   "state": "picked",
-   "title": "彼氏ポートフォリオ",
-   "touched": true,
-   "type": "focus",
-   "views": 157428,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "focus"
   },
   "478UxDMdsg0": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCZetZElUvdElPrcstRjl9DA",
-   "channelName": "加藤純一ロードショー",
-   "desc": "雑談ダイジェスト再生リスト\nhttps://www.youtube.com/playlist?list=PLc8yg_50-ooSC6YTUdxGY6qJLxQY7Oanz\n\n#加藤純一#雑談\n\n00:00 OP\n0:32 期待のゲーム(8/25)\n2:57 硬派ギャルゲー\n06:08 昨今のギャルゲー\n11:14 ポリゴン恋愛\n15:55 偉大なキャプ翼\n19:07 ゼルダ解禁条件\n20:56 思い出のゲーム\n31:42 裏パワプロ\n34:07 ニンテンドーストア\n39:21 みんゴルバグ問題\n42:43 キモオタ歓喜\n45:24 ゲーム決定\n46:25 加藤目撃情報(8/26)\n59:51",
-   "duration": 9878,
-   "explore": false,
-   "id": "478UxDMdsg0",
-   "pickedAt": "2026-09-18T05:24:56.804Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 1
-   },
-   "published": "2026-08-29T16:09:39Z",
+   "dropReason": "expired",
    "score": 45.69595177463559,
-   "state": "picked",
-   "title": "加藤純一 雑談ダイジェスト【2026/08/25,26】「雑談/椅子を新しくしマスタ」",
-   "touched": true,
-   "type": "ambient",
-   "views": 322207,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "47cbcQo-R6k": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -2071,43 +1955,30 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
    "dropReason": "gaveup",
-   "score": 67.14208904107882,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 690,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:41:59.100Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:41:59.100Z",
-   "explore": false,
-   "touched": true
+   "score": 67.14208904107882,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 1261640,
+   "watchedAt": null
   },
   "4TGMQlRsMus": {
    "added": "2026-09-18T20:11:50+00:00",
    "channelId": "UCHVbV2U9ZLucK0m7b864_0g",
-   "channelName": "斜め270度考察",
-   "desc": "✅斜め270度考察OfficialShopはこちら\nhttps://suzuri.jp/Ooki-Inoue\n\n\nサブチャンネルはこちら\nhttps://www.youtube.com/@%E6%96%9C%E3%82%81270%E5%BA%A6%E3%82%B5%E3%82%A6%E3%83%8A\n\n\n\n\n\n放送作家/ディレクターとして活動している『井上』が思いついた新雑学を中学の同級生である『小林』にぶつけるPodcast番組です。\n毎週木曜22:00に更新予定\n\nバックグラウンドで聴きたい人はポッドキャストで聞いてみて！\nそれかYouTubeプレミアムに入るか！\n\n井上のX\nhttps",
-   "duration": 1189,
-   "explore": false,
-   "id": "4TGMQlRsMus",
-   "pickedAt": "2026-09-19T02:12:21.043Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 3
-   },
-   "published": "2026-07-30T13:00:17Z",
+   "dropReason": "gaveup",
    "score": 60.21151835509075,
+   "slim": true,
    "state": "dropped",
-   "title": "【文句】メタルファイトベイブレード 1番下のパーツで性能が決まりすぎでは？カスタマイズ性が高いと見せかけてただのボトムの着せ替えゲームになってたじゃねぇか",
-   "touched": true,
-   "type": "ambient",
-   "views": 198868,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "4W_pp1dxW4k": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -2317,25 +2188,11 @@
   "5EMxy_KqBes": {
    "added": "2026-09-18T05:01:21+00:00",
    "channelId": "UC1xFkkJgjzVUm9oZIHQ10yQ",
-   "channelName": "布団ちゃん【魔神の戯れ】",
-   "desc": "元配信\nhttps://www.twitch.tv/videos/2804913916\n\nX　\nhttps://twitter.com/indegnasen210\n\nOPENREC　\nhttps://www.openrec.tv/user/indegnasen\n\nTwitch\nhttps://twitch.tv/indegnasen0706",
-   "duration": 4353,
-   "explore": false,
-   "id": "5EMxy_KqBes",
-   "pickedAt": "2026-09-18T05:05:02.864Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 2
-   },
-   "published": "2026-06-26T02:00:35Z",
+   "dropReason": "expired",
    "score": 40.777070852244094,
-   "state": "picked",
-   "title": "布団ちゃんの『Don't Play This』実況プレイ",
-   "touched": true,
-   "type": "ambient",
-   "views": 107242,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "5FNUjezzaVs": {
    "added": "2026-09-24T07:57:42+00:00",
@@ -2351,25 +2208,11 @@
   "5G434U0Kujw": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCKd4yNs1CvdCYIkJdARgBsw",
-   "channelName": "ステパンかゆいとこゲームズ",
-   "desc": "企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nメインch↓\nhttps://youtube.com/@sutegoropanch?si=iMkgLBZslakouFf3\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreoma",
-   "duration": 8966,
-   "explore": true,
-   "id": "5G434U0Kujw",
-   "pickedAt": "2026-09-18T05:25:27.177Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 3
-   },
-   "published": "2026-01-23T12:02:01Z",
+   "dropReason": "expired",
    "score": 36.860183672108136,
-   "state": "picked",
-   "title": "『人間以外のバケモノを家に入れたら終了』のホラゲーをやります。【No, I'm not a Human】",
-   "touched": true,
-   "type": "ambient",
-   "views": 599407,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "5IDLOdmTTso": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -2471,7 +2314,7 @@
    "pre": null,
    "published": "2026-09-29T00:29:18Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "左右盲妹に効かされ過ぎて切断する加藤純一【2026/09/28】",
    "type": "focus",
    "views": 184920,
@@ -2661,25 +2504,11 @@
   "5zU5yVe98-I": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCx1nAvtVDIsaGmCMSe8ofsQ",
-   "channelName": "加藤純一【jun channel】",
-   "desc": "▼うんこちゃん/加藤純一X(Twitter)\nhttps://twitter.com/unkochan1234567",
-   "duration": 7854,
-   "explore": false,
-   "id": "5zU5yVe98-I",
-   "pickedAt": "2026-09-18T05:25:53.584Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 2
-   },
-   "published": "2025-12-29T20:09:04Z",
+   "dropReason": "expired",
    "score": 30.693223208879104,
-   "state": "picked",
-   "title": "うんこちゃんの龍が如く 極2 実況プレイ最終回※ネタバレ注意",
-   "touched": true,
-   "type": "serial",
-   "views": 184974,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "serial"
   },
   "632H9mJZK9k": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -2867,19 +2696,21 @@
    "added": "2026-09-21T20:12:05+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
    "dropReason": "gaveup",
-   "score": 68.87107601740928,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 132,
+   "explore": false,
+   "pickedAt": "2026-09-24T04:11:36.621Z",
+   "post": null,
    "pre": {
     "expect": 3,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-24T04:11:36.621Z",
-   "explore": false,
-   "touched": true
+   "score": 68.87107601740928,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 196108,
+   "watchedAt": null
   },
   "6cOqrumVTyY": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -3003,19 +2834,21 @@
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCNKGn1rULbYWrQaGY-4nZDA",
    "dropReason": "gaveup",
-   "score": 66.6107265763265,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 589,
+   "explore": false,
+   "pickedAt": "2026-09-18T05:26:25.597Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-18T05:26:25.597Z",
-   "explore": false,
-   "touched": true
+   "score": 66.6107265763265,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 64528,
+   "watchedAt": null
   },
   "6tChKo98hEU": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -3047,25 +2880,11 @@
   "7CWWvuli0WU": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 1060,
-   "explore": false,
-   "id": "7CWWvuli0WU",
-   "pickedAt": "2026-09-18T05:26:39.118Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 1
-   },
-   "published": "2026-08-07T08:00:39Z",
+   "dropReason": "expired",
    "score": 40.401107823238966,
-   "state": "picked",
-   "title": "泥の城【2/2】",
-   "touched": true,
-   "type": "focus",
-   "views": 175834,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "focus"
   },
   "7FX1vEJNWKU": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -3246,19 +3065,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
    "dropReason": "gaveup",
-   "score": 64.59405685871243,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 863,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:42:46.962Z",
+   "post": null,
    "pre": {
     "expect": 5,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:42:46.962Z",
-   "explore": false,
-   "touched": true
+   "score": 64.59405685871243,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 1061441,
+   "watchedAt": null
   },
   "7bexcgh3lHY": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -3333,7 +3154,7 @@
    "pre": null,
    "published": "2026-09-29T08:00:05Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "サラリーモンスター　～オワハラで弱らせてゲットだぜ！～",
    "type": "focus",
    "views": 116896,
@@ -3351,7 +3172,7 @@
    "pre": null,
    "published": "2026-09-29T15:00:31Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "【閲覧注意】ゆゆうた少年が口にしたことがある物【2026/09/29】",
    "type": "focus",
    "views": 20540,
@@ -3530,6 +3351,24 @@
    "type": "focus",
    "views": 251157
   },
+  "8bMA2Y0YFQk": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
+   "channelName": "ゆゆうたパワー系切り抜き",
+   "desc": "https://www.youtube.com/watch?v=Kf00Ba9tzFg\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002",
+   "duration": 393,
+   "explore": false,
+   "id": "8bMA2Y0YFQk",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T16:40:05Z",
+   "score": null,
+   "state": "fresh",
+   "title": "ゲスの極み乙女「キラーボール」おとラジBandを見るゆゆうた【2026/10/02】",
+   "type": "focus",
+   "views": 13140,
+   "watchedAt": null
+  },
   "8dL-lEeDICA": {
    "added": "2026-09-13T03:49:16+00:00",
    "channelId": "UCoQhX2O93MVTWfgIz-8wOmg",
@@ -3569,26 +3408,11 @@
   "8gmKLExjE8E": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCC0FNUII8Zp2OAc7IaetICg",
-   "channelName": "天才おにや",
-   "desc": "00:00 OP\n00:04 くら寿司\n04:37 グッズ欲しい勢\n07:18 信用するな\n\n\n【元配信】2026/09/07\n半導体やべぇえええええ！にょわあああ！ここから見れるか反撃の日経平均！半導体の底力を拝見させてもらおうか。夏枯れ最終日のレイバーデイにて勝負の朝の寄り付き株ライブ生放送！！\nhttps://www.youtube.com/live/XJzjNhZHoL4?si=86R6BbAXFYGLsjYK\n\n\n当チャンネルはゲーム実況者\"o-228おにや\"の公式サブチャンネルとして生放送の名シーン・迷シーンをまとめています。\n\no-228おにや【メインチャンネル】\nhttps:/",
-   "duration": 740,
-   "explore": false,
-   "id": "8gmKLExjE8E",
-   "pickedAt": "2026-09-21T04:42:51.285Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 3
-   },
-   "published": "2026-09-07T13:30:29Z",
+   "dropReason": "gaveup",
    "score": 60.941701556625596,
+   "slim": true,
    "state": "dropped",
-   "title": "おにや、ちいかわコラボで従業員による景品横領が発覚した『くら寿司』について語る【o-228 おにや/株/雑談】【放送日 2026/9/7】",
-   "touched": true,
-   "type": "ambient",
-   "views": 85478,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "8mR7lX0ACgo": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -3861,6 +3685,24 @@
    "touched": true,
    "type": "ambient",
    "views": 849442,
+   "watchedAt": null
+  },
+  "9RDLIi446To": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
+   "channelName": "ホッカイロレン",
+   "desc": "ちな好きなSCPは「SCP-2399」です\n\n監督のyoutube「Kane Pixels」\nhttps://www.youtube.com/@kanepixels\nテレ東のインタビュー\nhttps://www.youtube.com/watch?v=KQ4GlYZo32Y\n\nひろゆきAIボイス\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n※リクエストは受け付けてません\n\n■お仕事の依頼↓\nplagabu@gmail.",
+   "duration": 758,
+   "explore": false,
+   "id": "9RDLIi446To",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T10:45:06Z",
+   "score": null,
+   "state": "fresh",
+   "title": "【前代未聞】史上最年少の監督が世界一有名な都市伝説を実写化したヤバすぎる映画『バックルームズ』",
+   "type": "focus",
+   "views": 296205,
    "watchedAt": null
   },
   "9WmP__OlMHM": {
@@ -4439,19 +4281,21 @@
    "added": "2026-09-21T20:12:05+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
    "dropReason": "gaveup",
-   "score": 68.87106078181026,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 143,
+   "explore": false,
+   "pickedAt": "2026-09-24T04:11:54.147Z",
+   "post": null,
    "pre": {
     "expect": 3,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-24T04:11:54.147Z",
-   "explore": false,
-   "touched": true
+   "score": 68.87106078181026,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 63612,
+   "watchedAt": null
   },
   "Aoib1UD4wn0": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -4488,26 +4332,11 @@
   "B0vTCrHGH5U": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002916\n利用許諾協力：#クリエイターサポートプログラム\nCSP（クリエイターサポートプログ",
-   "duration": 323,
-   "explore": false,
-   "id": "B0vTCrHGH5U",
-   "pickedAt": "2026-09-21T04:43:26.877Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 3
-   },
-   "published": "2026-09-19T16:15:27Z",
+   "dropReason": "gaveup",
    "score": 59.37328198830548,
+   "slim": true,
    "state": "dropped",
-   "title": "GATSBYで髪をセットするゆゆうた【2026/09/19】",
-   "touched": true,
-   "type": "ambient",
-   "views": 10537,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "B43VGaWfT9c": {
    "added": "2026-09-23T20:13:06+00:00",
@@ -4550,25 +4379,11 @@
   "B98fgVjGDgI": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 505,
-   "explore": true,
-   "id": "B98fgVjGDgI",
-   "pickedAt": "2026-09-18T05:27:30.398Z",
-   "post": null,
-   "pre": {
-    "expect": 1,
-    "pull": 1
-   },
-   "published": "2026-06-19T08:00:29Z",
+   "dropReason": "expired",
    "score": 26.11088958039702,
-   "state": "picked",
-   "title": "もしかして就活の『普通』を知らない感じ？",
-   "touched": true,
-   "type": "ambient",
-   "views": 217034,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "BA-WuoF-OhU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -4589,49 +4404,20 @@
   "BD_TpZvJXJE": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
-   "channelName": "ホッカイロレン",
-   "desc": "親愛なる隣人の映画だった...\n\nひろゆきAIボイス\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n※リクエストは受け付けてません\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
-   "duration": 672,
-   "explore": false,
-   "id": "BD_TpZvJXJE",
-   "pickedAt": "2026-09-21T04:43:35.410Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-08-07T10:59:42Z",
+   "dropReason": "gaveup",
    "score": 61.726272200910415,
+   "slim": true,
    "state": "dropped",
-   "title": "たった３日で世界記録を塗り替えちゃったヤバイ映画『スパイダーマン：ブランド・ニュー・デイ』",
-   "touched": true,
-   "type": "ambient",
-   "views": 518031,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "BEsbtr9XExg": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCNKGn1rULbYWrQaGY-4nZDA",
-   "channelName": "りょうぼー【ゲーム企画】",
-   "desc": "※戦い以外の死を避けるために難易度はピースフルです\n\n▶︎当日はこのチャンネルで配信します！21:00～\nhttps://youtube.com/channel/UCEZ1GJT-fGtt76rI9j3Mmqg\n\n【この日の参加者】\n\n▶ルイア https://www.youtube.com/@ルイア7game\n▶武村 https://www.youtube.com/@武村さん\n▶こにかん　https://www.youtube.com/channel/UCyCrm-2RKMtmAgAAAtNSqqA\n▶サク　https://www.youtube.com/@saku-gamezikkyou\n",
-   "duration": 1775,
-   "explore": false,
-   "id": "BEsbtr9XExg",
-   "pickedAt": "2026-09-18T05:27:43.894Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 2
-   },
-   "published": "2026-08-03T09:30:31Z",
+   "dropReason": "expired",
    "score": 43.33772611573502,
-   "state": "picked",
-   "title": "殺し合い2026、序章",
-   "touched": true,
-   "type": "ambient",
-   "views": 69242,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "BFP0PtqWuNo": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -4713,26 +4499,11 @@
   "BedDfiukedA": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
-   "channelName": "ホッカイロレン",
-   "desc": "ちいかわ我慢して人魚(SIREN)つながりで視聴しました。\n\nサイレン FORBIDDEN SIREN\nhttps://amzn.to/4wnk6HE\n\nBGM　おどろどおり／もみじばミュージック\nhttps://music.storyinvention.com/odoro-doori/\n\nひろゆきAIボイス\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n※リクエストは受け付けてません\n\n■お仕事の依頼↓\nplagabu",
-   "duration": 677,
-   "explore": false,
-   "id": "BedDfiukedA",
-   "pickedAt": "2026-09-21T04:43:45.383Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-07-24T10:45:14Z",
+   "dropReason": "gaveup",
    "score": 58.19059602531994,
+   "slim": true,
    "state": "dropped",
-   "title": "【原作崩壊】ファンが絶望した伝説のホラーゲームの実写映画『サイレン FORBIDDEN SIREN』",
-   "touched": true,
-   "type": "ambient",
-   "views": 461420,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "BefBSWUfks4": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -4834,25 +4605,11 @@
   "C0YHOxlj9oE": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
-   "channelName": "ステゴロパンチャーズ",
-   "desc": "企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreomado\n石田\nhttps://www.instagram.com/stpn_isd?igsh=MWNhcjRpZHM1M243M",
-   "duration": 1615,
-   "explore": false,
-   "id": "C0YHOxlj9oE",
-   "pickedAt": "2026-09-18T05:28:10.183Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 3
-   },
-   "published": "2026-08-02T12:01:17Z",
+   "dropReason": "expired",
    "score": 46.96235561769734,
-   "state": "picked",
-   "title": "16歳にDMを晒された『友人』のタケヤキ翔について。",
-   "touched": true,
-   "type": "ambient",
-   "views": 680411,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "C1po-7K5O88": {
    "added": "2026-09-29T20:13:34+00:00",
@@ -4866,7 +4623,7 @@
    "pre": null,
    "published": "2026-09-29T04:31:45Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "明日はマイクロン決算。いよいよ来るんですね？最高の爆上げ大相場が！！日経平均8万円への反撃の狼煙はここから上がる！さぁ来い朝の寄り付きデイトレ株ライブ生放送！！",
    "type": "focus",
    "views": 0,
@@ -4911,6 +4668,24 @@
    "touched": true,
    "type": "ambient",
    "views": 285982,
+   "watchedAt": null
+  },
+  "CD_onpktbvs": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCfTfI2-PkGYgcQHoVk85tCA",
+   "channelName": "布団ちゃん切り抜きMAX",
+   "desc": "布団ちゃんのSNS\nTwitter　https://twitter.com/indegnasen210\nYouTube　https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw\n\n00:00　賭け投票\n00:52　1戦目\n01:39　2戦目\n07:51　3戦目",
+   "duration": 910,
+   "explore": false,
+   "id": "CD_onpktbvs",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T18:06:51Z",
+   "score": null,
+   "state": "fresh",
+   "title": "チャネポで『賭けPUBG』を始めたら各組織に狙われてしまう布団ちゃん【2026/10/2】",
+   "type": "focus",
+   "views": 16015,
    "watchedAt": null
   },
   "CEKuVnqHb5U": {
@@ -5104,26 +4879,11 @@
   "Cg0_kioovI8": {
    "added": "2026-09-18T20:11:50+00:00",
    "channelId": "UCRaaCxSF8nEpfG3ZHesXKxw",
-   "channelName": "ジェラードンチャンネル",
-   "desc": "映像コントです！\n\n⭐︎ジェラードン公式チャンネル\nコント動画を週３日更新！\n火・木・土（大体20時以降）\nに最新動画公開しています！\nチャンネル登録、高評価よろしくお願いいたします！\n\n\n⭐︎サブチャンネル開設しました！\nhttps://www.youtube.com/channel/UC_W2yKzQsIFJz674iPXAuLA\nこちらでは企画やトーク、プライベートなど幅広く公開していきます！\nチャンネル登録よろしくお願いいたします！\n\n\nかみちぃ\nTwitter：https://twitter.com/kamicigerrardon\nInstagram：https://www.inst",
-   "duration": 551,
-   "explore": false,
-   "id": "Cg0_kioovI8",
-   "pickedAt": "2026-09-19T02:14:40.401Z",
-   "post": null,
-   "pre": {
-    "expect": 5,
-    "pull": 3
-   },
-   "published": "2026-07-08T13:52:00Z",
+   "dropReason": "gaveup",
    "score": 55.58577622614839,
+   "slim": true,
    "state": "dropped",
-   "title": "冷たい食べ物を人生で初めて食べて、初めて頭キーンってなった人【ジェラードン】",
-   "touched": true,
-   "type": "ambient",
-   "views": 119871,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "CgRfo7k_rBw": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -5228,7 +4988,7 @@
    "pre": null,
    "published": "2026-09-29T15:00:01Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "視聴者の強すぎる言葉に笑うゆゆうた【2026/09/29】",
    "type": "focus",
    "views": 11394,
@@ -5313,26 +5073,11 @@
   "DKyNFrp87rg": {
    "added": "2026-09-18T20:11:50+00:00",
    "channelId": "UCRaaCxSF8nEpfG3ZHesXKxw",
-   "channelName": "ジェラードンチャンネル",
-   "desc": "映像コントです！\n\n⭐︎ジェラードン公式チャンネル\nコント動画を週３日更新！\n火・木・土（大体20時以降）\nに最新動画公開しています！\nチャンネル登録、高評価よろしくお願いいたします！\n\n\n⭐︎サブチャンネル開設しました！\nhttps://www.youtube.com/channel/UC_W2yKzQsIFJz674iPXAuLA\nこちらでは企画やトーク、プライベートなど幅広く公開していきます！\nチャンネル登録よろしくお願いいたします！\n\n\nかみちぃ\nTwitter：https://twitter.com/kamicigerrardon\nInstagram：https://www.inst",
-   "duration": 624,
-   "explore": false,
-   "id": "DKyNFrp87rg",
-   "pickedAt": "2026-09-19T02:14:53.858Z",
-   "post": null,
-   "pre": {
-    "expect": 5,
-    "pull": 4
-   },
-   "published": "2026-07-11T14:47:25Z",
+   "dropReason": "gaveup",
    "score": 59.71657186932512,
+   "slim": true,
    "state": "dropped",
-   "title": "せっかく有給取ったのに、寂しくなって会社に顔出しに来る、ムードメーカーOL【ジェラードン】【ジェラードン】",
-   "touched": true,
-   "type": "ambient",
-   "views": 139018,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "DT_ZKHu5OEY": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -5584,10 +5329,28 @@
    "pre": null,
    "published": "2026-09-29T13:30:26Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "天才テクニカルトレーダーおにや、日経平均の未来を完全予測してしまう【o-228 おにや/株/雑談】【放送日 2026/9/29】",
    "type": "focus",
    "views": 21953,
+   "watchedAt": null
+  },
+  "ERp_WQKfgYY": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCH-lygWpHodDff3iQurnWnQ",
+   "channelName": "加藤純一切り抜き集",
+   "desc": "●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト\n→https://www.youtube.com/watch?v=RW_c2OB4i0g&list=PL_L-C2xtKNSP-lEQcaJw-K34YdjIO-aEJ\n◆2026年切り抜き再生リスト\nhttps://www.youtube.com/watch?v=acAo1zTAB5M&list=PL_L-C2xtKNSNetTL6i5wikqCh8NfDaPLg\n◆2025年切り抜き再生リスト\n→https://www.youtube.com",
+   "duration": 36,
+   "explore": false,
+   "id": "ERp_WQKfgYY",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T14:06:55Z",
+   "score": null,
+   "state": "fresh",
+   "title": "加藤純一離席中に終わってる会話する3人",
+   "type": "focus",
+   "views": 171862,
    "watchedAt": null
   },
   "ESD6CBcfkH0": {
@@ -5914,7 +5677,7 @@
    "pre": null,
    "published": "2026-09-29T15:00:27Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ジョジョ7部エンディング「死ぬか生きるか」の歌詞で笑ってしまうゆゆうた【2026/09/29】",
    "type": "focus",
    "views": 31340,
@@ -5982,25 +5745,11 @@
   "G47uH9Ninbw": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCRaaCxSF8nEpfG3ZHesXKxw",
-   "channelName": "ジェラードンチャンネル",
-   "desc": "映像コントです！\n\n⭐︎ジェラードン公式チャンネル\nコント動画を週３日更新！\n火・木・土（大体20時以降）\nに最新動画公開しています！\nチャンネル登録、高評価よろしくお願いいたします！\n\n\n⭐︎サブチャンネル開設しました！\nhttps://www.youtube.com/channel/UC_W2yKzQsIFJz674iPXAuLA\nこちらでは企画やトーク、プライベートなど幅広く公開していきます！\nチャンネル登録よろしくお願いいたします！\n\n\nかみちぃ\nTwitter：https://twitter.com/kamicigerrardon\nInstagram：https://www.inst",
-   "duration": 1152,
-   "explore": false,
-   "id": "G47uH9Ninbw",
-   "pickedAt": "2026-09-18T05:29:15.034Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 2
-   },
-   "published": "2026-08-20T14:06:22Z",
+   "dropReason": "expired",
    "score": 50.867590020825794,
-   "state": "picked",
-   "title": "生まれ変わるなら「ラクダ」か「猫」かのディベートして、お互い無しになって別れたカップル【ジェラードン】",
-   "touched": true,
-   "type": "ambient",
-   "views": 84143,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "G4Kz4UPgIkc": {
    "added": "2026-09-26T20:11:19+00:00",
@@ -6032,26 +5781,11 @@
   "G92ss8DiNJw": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCC0FNUII8Zp2OAc7IaetICg",
-   "channelName": "天才おにや",
-   "desc": "00:00 OP\n00:04 ドル円がヤバい\n02:23 デイトレ\n\n\n【元配信】2026/09/08\n爆上げの翌日。ここが問題の日。世界各国で米国債を大量売却したとの噂。ドル円の為替が時間外乱高下。為替もヤバいし、アメリカも開場。どうなるんだ日経平均。朝の寄り付き株ライブ生放送！！\nhttps://www.youtube.com/live/Otyik_E2J2A?si=bLYyxwdbFnyWMP61\n\n当チャンネルはゲーム実況者\"o-228おにや\"の公式サブチャンネルとして生放送の名シーン・迷シーンをまとめています。\n\no-228おにや【メインチャンネル】\nhttps://www.yout",
-   "duration": 796,
-   "explore": false,
-   "id": "G92ss8DiNJw",
-   "pickedAt": "2026-09-21T04:45:11.538Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 2
-   },
-   "published": "2026-09-08T06:30:34Z",
+   "dropReason": "gaveup",
    "score": 56.02143186791643,
+   "slim": true,
    "state": "dropped",
-   "title": "デイトレ最強の男おにや、前場だけで数十回取引を繰り返し15万を稼ぎ抜く【o-228 おにや/株/雑談】【放送日 2026/9/8】",
-   "touched": true,
-   "type": "ambient",
-   "views": 53871,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "GDSoYtGfU5M": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -6178,6 +5912,24 @@
    "views": 158973,
    "watchedAt": null
   },
+  "GU80cqbxIC8": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
+   "channelName": "ゆゆうたパワー系切り抜き",
+   "desc": "0:00 神ゲー\n0:58 エピソード1：サナギ\n1:42:10 エピソード2：時間切れ\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A00000000000",
+   "duration": 12029,
+   "explore": false,
+   "id": "GU80cqbxIC8",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T21:00:16Z",
+   "score": null,
+   "state": "fresh",
+   "title": "ゆゆうたの「ライフ イズ ストレンジ」＃1【2026/10/02】",
+   "type": "focus",
+   "views": 1418,
+   "watchedAt": null
+  },
   "GVxySKYYFQ4": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCZetZElUvdElPrcstRjl9DA",
@@ -6215,25 +5967,11 @@
   "GezuvzU6LyM": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 786,
-   "explore": true,
-   "id": "GezuvzU6LyM",
-   "pickedAt": "2026-09-18T05:29:25.490Z",
-   "post": null,
-   "pre": {
-    "expect": 1,
-    "pull": 1
-   },
-   "published": "2026-06-09T08:00:34Z",
+   "dropReason": "expired",
    "score": 25.091186230840833,
-   "state": "picked",
-   "title": "就活ギャンブラーの頭の中",
-   "touched": true,
-   "type": "ambient",
-   "views": 260559,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "Gg5IpinT_oY": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -6254,25 +5992,11 @@
   "Gg5z2ITgDak": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCKd4yNs1CvdCYIkJdARgBsw",
-   "channelName": "ステパンかゆいとこゲームズ",
-   "desc": "",
-   "duration": 2261,
-   "explore": false,
-   "id": "Gg5z2ITgDak",
-   "pickedAt": "2026-09-18T05:29:34.772Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 3
-   },
-   "published": "2026-02-13T12:01:45Z",
+   "dropReason": "expired",
    "score": 33.3791422225473,
-   "state": "picked",
-   "title": "『覗きをしたら、○人現場を目撃してしまい犯人に狙われる』ホラゲーをやる。状況カオスすぎだろ。",
-   "touched": true,
-   "type": "ambient",
-   "views": 420582,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "GgjteHYWn64": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -6304,25 +6028,11 @@
   "GmjEKs_WC_M": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002916\n利用許諾協力：#クリエイターサポートプログラム\nCSP（クリエイターサポートプログ",
-   "duration": 197,
-   "explore": false,
-   "id": "GmjEKs_WC_M",
-   "pickedAt": "2026-09-18T05:29:44.944Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 1
-   },
-   "published": "2026-09-13T14:26:04Z",
+   "dropReason": "expired",
    "score": 46.16784146854298,
-   "state": "picked",
-   "title": "INMU KINGをうろ覚えで弾くゆゆうた【2026/09/13】",
-   "touched": true,
-   "type": "ambient",
-   "views": 374365,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "GnB6shMNO6k": {
    "added": "2026-09-28T20:11:21+00:00",
@@ -6667,6 +6377,24 @@
    "views": 713811,
    "watchedAt": null
   },
+  "HaZE20FlsLE": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
+   "channelName": "ゆゆうたパワー系切り抜き",
+   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002916\n利用許諾協力：#クリエイターサポートプログラム\nCSP（クリエイターサポートプログ",
+   "duration": 322,
+   "explore": false,
+   "id": "HaZE20FlsLE",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T16:40:07Z",
+   "score": null,
+   "state": "fresh",
+   "title": "シャニマスのオンラインくじを引くゆゆうた【2026/10/02】",
+   "type": "focus",
+   "views": 20400,
+   "watchedAt": null
+  },
   "HcYdoNqN3yI": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCTrckUWmmrRZcNrfu1mZDOg",
@@ -6755,19 +6483,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
    "dropReason": "gaveup",
-   "score": 69.91556857042471,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1086,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:45:56.459Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:45:56.459Z",
-   "explore": false,
-   "touched": true
+   "score": 69.91556857042471,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 1204106,
+   "watchedAt": null
   },
   "I0g5e9pHjno": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -6954,25 +6684,11 @@
   "IYvfYsXiLaE": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 924,
-   "explore": false,
-   "id": "IYvfYsXiLaE",
-   "pickedAt": "2026-09-18T05:31:18.317Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 3
-   },
-   "published": "2026-06-23T08:00:14Z",
+   "dropReason": "expired",
    "score": 48.638582611692,
-   "state": "picked",
-   "title": "おさるの実験場【1/2】",
-   "touched": true,
-   "type": "ambient",
-   "views": 225575,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "IZ0CGrLnIpY": {
    "added": "2026-09-28T20:11:21+00:00",
@@ -6990,6 +6706,24 @@
    "title": "【APEX】野良で出会った可愛いクソガキと遊ぶはりーシ【2026/09/26】",
    "type": "focus",
    "views": 11768,
+   "watchedAt": null
+  },
+  "IcGwdcGULZ0": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCGjV4bsC43On-YuiLZcfL0w",
+   "channelName": "KUN",
+   "desc": "🔳LINEスタンプと絵文字描いてみました！ぜひ使ってください\n\nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990526/ja \nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990526/ja \n\n🔳 50人クラフトグッズの購入はこちらから\nhttps://clear-lab.jp/kun50craft-goods/\n\n🔳 使用アドオン一覧（Add-ons used）\nhttp",
+   "duration": 1236,
+   "explore": false,
+   "id": "IcGwdcGULZ0",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T10:00:00Z",
+   "score": null,
+   "state": "fresh",
+   "title": "理想のエンドポータル建築選手権 - マインクラフト【KUN】",
+   "type": "focus",
+   "views": 87042,
    "watchedAt": null
   },
   "Ie8gggSdR1c": {
@@ -7246,26 +6980,11 @@
   "JCnI0wmxSYo": {
    "added": "2026-09-20T20:11:07+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
-   "channelName": "からすまAチャンネル",
-   "desc": "サスケェ！お前はオレにとっての新たなクソゲだ！\n\nどうも、クソ投稿者こと「からすま」です。\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n\n主にクソゲーの動画、バカゲー動画をアップロードしています。\n\n配信は収録配信、雑談がメイン　趣味ゲーは不定期\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n音声合成ソフトウェア\n・かんたんAITalk3\nhttps://pcshop.vector.co.jp/service/catalogue/aitalk/\n・VOICEVOX\nhttps://voicevox.hiroshiba.jp\n\n\n・ネット活動歴\n\n　2012～2017ニコ生",
-   "duration": 946,
-   "explore": false,
-   "id": "JCnI0wmxSYo",
-   "pickedAt": "2026-09-21T04:56:48.382Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-08-05T11:06:26Z",
+   "dropReason": "gaveup",
    "score": 59.59901819912403,
+   "slim": true,
    "state": "dropped",
-   "title": "〇〇分でクリアできる忍術がなさすぎる原作無視のクソゲー【NARUTO -ナルト- 忍列伝】",
-   "touched": true,
-   "type": "ambient",
-   "views": 852237,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "JGzWh7V-X3g": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -7384,7 +7103,7 @@
    "pre": null,
    "published": "2026-09-29T11:44:27Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "エー〇コンバッ〇やります。",
    "type": "focus",
    "views": 84854,
@@ -7438,25 +7157,11 @@
   "JpWreTr5eZo": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UC1xFkkJgjzVUm9oZIHQ10yQ",
-   "channelName": "布団ちゃん【魔神の戯れ】",
-   "desc": "00:00　ハジマリノ島\n10:48　キミョウナ高校\n25:37　アクオンモール\n40:15　アヤシゲナドーム\n54:31　オソロシ駅\n01:12:08　ナゾメイタ都市\n01:35:11　最後の島\n01:45:17　エンディング\n01:53:53　考察\n\n元配信\nhttps://www.openrec.tv/live/nqr6n1nvv86\n\nTwitter　\nhttps://twitter.com/indegnasen210\n\nOPENREC　\nhttps://www.openrec.tv/user/indegnasen\n\nTwitch\nhttps://twitch.tv/indegnase",
-   "duration": 7079,
-   "explore": false,
-   "id": "JpWreTr5eZo",
-   "pickedAt": "2026-09-18T05:41:23.411Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 3
-   },
-   "published": "2026-05-12T08:34:40Z",
+   "dropReason": "expired",
    "score": 39.213156583527606,
-   "state": "picked",
-   "title": "【ウミガリ】不気味な魚を捕まえる精神的ホラーゲーム",
-   "touched": true,
-   "type": "serial",
-   "views": 160888,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "serial"
   },
   "JpuBRBiJFiM": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -7607,7 +7312,7 @@
    "pre": null,
    "published": "2026-09-29T15:00:08Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "もこうのDRKS批判がヘラクレスンに切り抜かれて炎上してる件について【2026/09/29】",
    "type": "focus",
    "views": 63915,
@@ -7643,26 +7348,11 @@
   "KJtB2WjKeIA": {
    "added": "2026-09-18T20:11:50+00:00",
    "channelId": "UCRaaCxSF8nEpfG3ZHesXKxw",
-   "channelName": "ジェラードンチャンネル",
-   "desc": "今回、冒頭蛍光灯がチカチカしてしまっています！すみません！\n\n映像コントです！\n\n⭐︎ジェラードン公式チャンネル\nコント動画を週３日更新！\n火・木・土（大体20時以降）\nに最新動画公開しています！\nチャンネル登録、高評価よろしくお願いいたします！\n\n\n⭐︎サブチャンネル開設しました！\nhttps://www.youtube.com/channel/UC_W2yKzQsIFJz674iPXAuLA\nこちらでは企画やトーク、プライベートなど幅広く公開していきます！\nチャンネル登録よろしくお願いいたします！\n\n\nかみちぃ\nTwitter：https://twitter.com/kamicigerra",
-   "duration": 257,
-   "explore": false,
-   "id": "KJtB2WjKeIA",
-   "pickedAt": "2026-09-19T02:16:13.773Z",
-   "post": null,
-   "pre": {
-    "expect": 5,
-    "pull": 4
-   },
-   "published": "2026-06-27T14:45:32Z",
+   "dropReason": "gaveup",
    "score": 56.47378172410088,
+   "slim": true,
    "state": "dropped",
-   "title": "ライバル店のコンビニ店員が店舗拡大を目的に、体1つの力技で乗っ取りに来た【ジェラードン】",
-   "touched": true,
-   "type": "ambient",
-   "views": 124394,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "KMlI8QmvxRc": {
    "added": "2026-09-30T13:09:02.178Z",
@@ -7737,7 +7427,7 @@
    "pre": null,
    "published": "2026-09-29T18:15:27Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ゆゆうたの「HEAVY RAIN 心の軋むとき」＃2【2026/09/29】",
    "type": "focus",
    "views": 648,
@@ -8061,7 +7751,7 @@
    "pre": null,
    "published": "2026-09-29T07:41:21Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "加藤純一の妹に運転を教える ダイジェスト【2026/09/28】",
    "type": "ambient",
    "views": 326922,
@@ -8294,6 +7984,24 @@
    "views": 1535,
    "watchedAt": "2026-09-21T06:40:40.088Z"
   },
+  "MXeLeUi-q3A": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCC0FNUII8Zp2OAc7IaetICg",
+   "channelName": "天才おにや",
+   "desc": "👇グッズ販売中👇\nhttps://orizum.world/collections/oniya2\n\n本配信は、特定の銘柄・金融商品・投資手法を推奨または勧誘するものではありません。\n動画内で紹介している内容は、あくまで個人的な見解・情報共有を目的としたものであり、投資判断は必ずご自身の責任において行ってください。\n本動画の内容をもとに生じたいかなる損失についても、当チャンネルは一切の責任を負いかねます。\n\no-228おにや【メインチャンネル】\nhttps://www.youtube.com/channel/UCLiQ--EXgzUV03q5jKQYWcw\n『Twitch』普段はこちらで配信をし",
+   "duration": 8821,
+   "explore": false,
+   "id": "MXeLeUi-q3A",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T14:27:58Z",
+   "score": null,
+   "state": "fresh",
+   "title": "【アメリカ時間ライブ】くるぞアメリカ雇用統計。大荒れの発表が！！どうなる金利！どうなる為替！どうなる半導体大相場！やっと含み損が1500万になったんだ。救ってくれ！アメリカ相場の寄り付き見届け生放送！",
+   "type": "focus",
+   "views": 156810,
+   "watchedAt": null
+  },
   "MYNj77Au4_8": {
    "added": "2026-09-29T20:13:34+00:00",
    "channelId": "UCH-lygWpHodDff3iQurnWnQ",
@@ -8306,7 +8014,7 @@
    "pre": null,
    "published": "2026-09-28T21:58:56Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ケニアナンバーワン！",
    "type": "focus",
    "views": 240620,
@@ -8372,25 +8080,11 @@
   "MmzQ26pTUzQ": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCNKGn1rULbYWrQaGY-4nZDA",
-   "channelName": "りょうぼー【ゲーム企画】",
-   "desc": "＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n【基本ルール】\n\n・勝ち負けは「最後まで生き残った順」\n\n・1回でも死ねば終了、死後も観戦配信ができる\n\n・通話を円滑にするため、各々個人通話部屋に居てもらう\n（通話は好きなようにやってOK）\n\n・生存者と死者の通話は禁止\n\n・ソロプレイから開始で同盟、裏切りなど自由\n\n・最終日23:00まで生存者がいれば一か所に集めて強制デスマッチ\n\n・強制デスマッチではその時点で持っているアイテムはすべて使える\n　（持っていきたいアイテムを準備する時間を与えます）\n\n・ワールドからの入退出は基本自由\n（殺される直前にわざと退出は禁止）\n\n・何らかの都合でゲームを途中",
-   "duration": 3034,
-   "explore": false,
-   "id": "MmzQ26pTUzQ",
-   "pickedAt": "2026-09-18T05:42:13.303Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 3
-   },
-   "published": "2026-08-22T09:30:03Z",
+   "dropReason": "expired",
    "score": 58.879376609856216,
-   "state": "picked",
-   "title": "\"\"こんなはずじゃなかった\"\"",
-   "touched": true,
-   "type": "serial",
-   "views": 49962,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "serial"
   },
   "Mo3-jdqkSqU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -8444,19 +8138,21 @@
    "added": "2026-09-18T20:11:50+00:00",
    "channelId": "UCHVbV2U9ZLucK0m7b864_0g",
    "dropReason": "gaveup",
-   "score": 64.53774976020243,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1095,
+   "explore": false,
+   "pickedAt": "2026-09-19T02:16:46.779Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-19T02:16:46.779Z",
-   "explore": false,
-   "touched": true
+   "score": 64.53774976020243,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 231533,
+   "watchedAt": null
   },
   "N-SIi8yGk5U": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -8711,7 +8407,7 @@
    "pre": null,
    "published": "2026-09-29T03:00:30Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ゆゆうた、みけねこにピアノを褒められる【2026/09/28】",
    "type": "focus",
    "views": 79242,
@@ -9029,19 +8725,21 @@
    "added": "2026-09-22T20:11:42+00:00",
    "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
    "dropReason": "gaveup",
-   "score": 66.40547629599143,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1479,
+   "explore": false,
+   "pickedAt": "2026-09-24T04:14:18.433Z",
+   "post": null,
    "pre": {
     "expect": 3,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-24T04:14:18.433Z",
-   "explore": false,
-   "touched": true
+   "score": 66.40547629599143,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 890555,
+   "watchedAt": null
   },
   "Op4pBtrz2ck": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -9125,7 +8823,7 @@
    "pre": null,
    "published": "2026-09-29T04:58:48Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "あの神ゲー「黒神話」のパクリクソゲーやります②",
    "type": "focus",
    "views": 55495,
@@ -9257,19 +8955,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
    "dropReason": "gaveup",
-   "score": 71.05618439177242,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 851,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:47:24.078Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:47:24.078Z",
-   "explore": false,
-   "touched": true
+   "score": 71.05618439177242,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 805322,
+   "watchedAt": null
   },
   "PRXdqDNpBEY": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -9508,19 +9208,21 @@
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
    "dropReason": "gaveup",
-   "score": 66.9089837168279,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1803,
+   "explore": false,
+   "pickedAt": "2026-09-18T05:43:30.713Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-18T05:43:30.713Z",
-   "explore": false,
-   "touched": true
+   "score": 66.9089837168279,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 654258,
+   "watchedAt": null
   },
   "QALD-fv7xNo": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -9702,7 +9404,7 @@
    "pre": null,
    "published": "2026-09-29T01:00:16Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "布団ちゃんの『狂い咲き』実況プレイ",
    "type": "focus",
    "views": 67339,
@@ -10567,7 +10269,7 @@
    "pre": null,
    "published": "2026-09-29T18:00:03Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ゆゆうた、自分に似ているスト６プロゲーマー「Nephew」の経歴に驚愕【2026/09/29】",
    "type": "focus",
    "views": 2737,
@@ -10664,7 +10366,7 @@
    "pre": null,
    "published": "2026-09-29T13:15:28Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "加藤純一、たいじすももを救う",
    "type": "focus",
    "views": 106449,
@@ -10732,6 +10434,24 @@
    "touched": true,
    "type": "focus",
    "views": 28417,
+   "watchedAt": null
+  },
+  "TkcGuex8pGE": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCfTfI2-PkGYgcQHoVk85tCA",
+   "channelName": "布団ちゃん切り抜きMAX",
+   "desc": "布団ちゃんのSNS\nTwitter　https://twitter.com/indegnasen210\nYouTube　https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw\nTwitch　https://twitch.tv/indegnasen0706\n\n00:00　本日やりたい事\n01:11　真紅石\n01:47　ハードでやりたい\n02:20　キズナからのダンス依頼\n03:28　ピーマンの肉詰めのオススメ\n06:06　琥珀の幼虫\n06:46　寝なくていい体になりたい\n08:32　米が大好き\n10:54　ぬりぬり床錬金\n12:21　自動",
+   "duration": 4706,
+   "explore": false,
+   "id": "TkcGuex8pGE",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T21:00:39Z",
+   "score": null,
+   "state": "fresh",
+   "title": "【コアキーパー3日目】自動化＆レアドロでドパりながら装備を整えまくる布団ちゃん【Core Keeper】【2026/10/2】",
+   "type": "focus",
+   "views": 4632,
    "watchedAt": null
   },
   "TlMjBzttJtk": {
@@ -10940,19 +10660,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
    "dropReason": "gaveup",
-   "score": 63.49006954926904,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 912,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:48:52.193Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:48:52.193Z",
-   "explore": false,
-   "touched": true
+   "score": 63.49006954926904,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 874106,
+   "watchedAt": null
   },
   "UIgIELdK2hM": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -11007,26 +10729,11 @@
   "UVUh7lS9Fk4": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
-   "channelName": "からすまAチャンネル",
-   "desc": "イノシシシシシッシシシｓ\n\nどうも、クソ投稿者こと「からすま」です。\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n\n主にクソゲーの動画、バカゲー動画をアップロードしています。\n\n配信は収録配信、雑談がメイン　趣味ゲーは不定期\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n音声合成ソフトウェア\n・かんたんAITalk3\nhttps://pcshop.vector.co.jp/service/catalogue/aitalk/\n・VOICEVOX\nhttps://voicevox.hiroshiba.jp\n\n\n・ネット活動歴\n\n　2012～2017ニコ生、ニコニコ動画\n　20",
-   "duration": 856,
-   "explore": false,
-   "id": "UVUh7lS9Fk4",
-   "pickedAt": "2026-09-21T04:48:59.582Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-08-16T03:25:30Z",
+   "dropReason": "gaveup",
    "score": 62.38547958399834,
+   "slim": true,
    "state": "dropped",
-   "title": "「ネタバレ注意」ソードイノシシオフライン デスゲーム編 X回目【Echoes of Aincrad】",
-   "touched": true,
-   "type": "ambient",
-   "views": 44550,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "UYYl5gHk91w": {
    "added": "2026-09-24T06:32:57+00:00",
@@ -11038,6 +10745,24 @@
    "state": "dropped",
    "type": "focus",
    "views": 93191
+  },
+  "UcK5AyYpwBM": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCKd4yNs1CvdCYIkJdARgBsw",
+   "channelName": "ステパンかゆいとこゲームズ",
+   "desc": "企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nメインch↓\nhttps://youtube.com/@sutegoropanch?si=iMkgLBZslakouFf3\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreoma",
+   "duration": 4251,
+   "explore": false,
+   "id": "UcK5AyYpwBM",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T12:01:34Z",
+   "score": null,
+   "state": "fresh",
+   "title": "素人がスマブラVIPに勝てるまで帰れませんやってみた。",
+   "type": "focus",
+   "views": 103047,
+   "watchedAt": null
   },
   "UdHWmTuqhpg": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -11200,7 +10925,7 @@
    "pre": null,
    "published": "2026-09-29T03:00:26Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "おにや、350円の神ホラゲー『The Deadseat』をプレイする【o-228 おにや】",
    "type": "focus",
    "views": 20314,
@@ -11388,6 +11113,24 @@
    "views": 54580,
    "watchedAt": null
   },
+  "VWyZN9ieVmE": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCTrckUWmmrRZcNrfu1mZDOg",
+   "channelName": "たいじ/たいちゃんねる",
+   "desc": "次→\n前→https://youtu.be/gs0CUtIMAPI\n\nこの動画で利用している株式会社スクウェア・エニックスを代表とする共同著作者が権利を所有する著作物及びスギヤマ工房有限会社が権利を所有する楽曲の転載・配布は禁止いたします。\n© ARMOR PROJECT/BIRD STUDIO/SQUARE ENIX\n© SUGIYAMA KOBO\n℗ SUGIYAMA KOBO\n\n00:00 前回のあらすじ\n00:33 新たな石版の世界へ\n01:04 ドラゴン・強\n03:12 コスタール\n19:17 ドワーフ族の洞くつ\n22:33 ガマデウス戦\n25:02 魔物になった子供\n26:52 話",
+   "duration": 10528,
+   "explore": false,
+   "id": "VWyZN9ieVmE",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T00:19:46Z",
+   "score": null,
+   "state": "fresh",
+   "title": "たいじの『ドラゴンクエストVII Reimagined』ダイジェスト Part8【コスタール～魔空間の神殿編】",
+   "type": "focus",
+   "views": 44746,
+   "watchedAt": null
+  },
   "VWzncbJRoRk": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
@@ -11477,7 +11220,7 @@
    "pre": null,
    "published": "2026-09-29T06:30:28Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "おにや、キオクシアが2万割れ、世界恐慌寸前かもしれない件について語る【o-228 おにや/株/雑談】【放送日 2026/9/29】",
    "type": "focus",
    "views": 74354,
@@ -11543,7 +11286,7 @@
    "pre": null,
    "published": "2026-09-29T03:00:38Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "Steamのおすすめが「変態」だらけで戸惑うゆゆうた【2026/09/28】",
    "type": "focus",
    "views": 39046,
@@ -11615,50 +11358,20 @@
   "W4eZu-9HoLY": {
    "added": "2026-09-20T20:11:07+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
-   "channelName": "からすまAチャンネル",
-   "desc": "縁日の達人！？\n\nどうも、クソ投稿者こと「からすま」です。\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n\n主にクソゲーの動画、バカゲー動画をアップロードしています。\n\n配信は収録配信、雑談がメイン　趣味ゲーは不定期\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n音声合成ソフトウェア\n・かんたんAITalk3\nhttps://pcshop.vector.co.jp/service/catalogue/aitalk/\n・VOICEVOX\nhttps://voicevox.hiroshiba.jp\n\n\n・ネット活動歴\n\n　2012～2017ニコ生、ニコニコ動画\n　2017～現在",
-   "duration": 7828,
-   "explore": false,
-   "id": "W4eZu-9HoLY",
-   "pickedAt": "2026-09-21T04:57:53.124Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-08-07T13:46:52Z",
+   "dropReason": "gaveup",
    "score": 60.10244071549779,
+   "slim": true,
    "state": "dropped",
-   "title": "邪悪な気配を感じるゲームをやる【もしかして？おばけの射的屋 for Nintendo Switch 2】",
-   "touched": true,
-   "type": "ambient",
-   "views": 42416,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "WAoKs0UCbvU": {
    "added": "2026-09-20T20:11:07+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
-   "channelName": "からすまAチャンネル",
-   "desc": "ガイザレスは未だにトラウマです。\n\n\nどうも、クソ投稿者こと「からすま」です。\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n\n主にクソゲーの動画、バカゲー動画をアップロードしています。\n\n配信は収録配信、雑談がメイン　趣味ゲーは不定期\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n音声合成ソフトウェア\n・かんたんAITalk3\nhttps://pcshop.vector.co.jp/service/catalogue/aitalk/\n・VOICEVOX\nhttps://voicevox.hiroshiba.jp\n\n\n・ネット活動歴\n\n　2012～2017ニコ生、ニコニコ動",
-   "duration": 1025,
-   "explore": false,
-   "id": "WAoKs0UCbvU",
-   "pickedAt": "2026-09-21T04:57:56.897Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-07-25T11:07:38Z",
+   "dropReason": "gaveup",
    "score": 57.04075935468915,
+   "slim": true,
    "state": "dropped",
-   "title": "課金圧が強すぎて「剣投資」と呼ばれた強欲なクソゲー【グラディエーターバーサス】【クソゲーオブザイヤー】",
-   "touched": true,
-   "type": "ambient",
-   "views": 778784,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "WEdX157m-nQ": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -11773,19 +11486,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
    "dropReason": "gaveup",
-   "score": 66.96163571497642,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1109,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:49:11.446Z",
+   "post": null,
    "pre": {
     "expect": 5,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:49:11.446Z",
-   "explore": false,
-   "touched": true
+   "score": 66.96163571497642,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 830018,
+   "watchedAt": null
   },
   "WZY5gYQVei8": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -12549,25 +12264,11 @@
   "Z-zXB5Eg0-Y": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 633,
-   "explore": false,
-   "id": "Z-zXB5Eg0-Y",
-   "pickedAt": "2026-09-18T05:45:38.994Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 1
-   },
-   "published": "2026-08-28T08:00:05Z",
+   "dropReason": "expired",
    "score": 43.92621667208583,
-   "state": "picked",
-   "title": "エース闇バイター",
-   "touched": true,
-   "type": "focus",
-   "views": 309892,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "focus"
   },
   "Z0T4lOtF_UY": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -13202,7 +12903,7 @@
    "pre": null,
    "published": "2026-09-29T12:37:03Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "スマホ失くして探してたら夜になってたOL【ジェラードン】",
    "type": "focus",
    "views": 52168,
@@ -13294,19 +12995,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
    "dropReason": "gaveup",
-   "score": 63.47938136749111,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 724,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:51:15.083Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:51:15.083Z",
-   "explore": false,
-   "touched": true
+   "score": 63.47938136749111,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 335343,
+   "watchedAt": null
   },
   "_xwWlAUCxSg": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -13767,26 +13470,11 @@
   "azxC9t_Ix8Y": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCC0FNUII8Zp2OAc7IaetICg",
-   "channelName": "天才おにや",
-   "desc": "00:00 OP\n00:04 ロボット運動会\n08:21 任天堂\n17:13 フルレバ戦士おにやくん\n\n【元配信】2026/09/03\n日経平均ヨコヨコに悶絶な男。ブロートコム決算も然程の影響は無く、イラン情勢、金利もこの辺が様子見相場か。おはよう朝の前場寄り付き配信！！！\nhttps://www.youtube.com/live/8DT9hi4KSo8?si=6HwdS_NzJPTkcM2G\n\n当チャンネルはゲーム実況者\"o-228おにや\"の公式サブチャンネルとして生放送の名シーン・迷シーンをまとめています。\n\no-228おにや【メインチャンネル】\nhttps://www.youtube.c",
-   "duration": 1128,
-   "explore": false,
-   "id": "azxC9t_Ix8Y",
-   "pickedAt": "2026-09-21T04:51:25.303Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 3
-   },
-   "published": "2026-09-03T11:00:29Z",
+   "dropReason": "gaveup",
    "score": 59.77037118840811,
+   "slim": true,
    "state": "dropped",
-   "title": "おにや、中国で開催された『ロボット運動会』が凄すぎる件について語る【o-228 おにや/株/雑談】【放送日 2026/9/3】",
-   "touched": true,
-   "type": "ambient",
-   "views": 118948,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "b4g-8u3s9EU": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -13831,6 +13519,24 @@
    "title": "ララチューンLINEスタンプが発売した！",
    "type": "focus",
    "views": 297136,
+   "watchedAt": null
+  },
+  "bG5Fs4eyan0": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
+   "channelName": "ゆゆうたパワー系切り抜き",
+   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002916\n利用許諾協力：#クリエイターサポートプログラム\nCSP（クリエイターサポートプログ",
+   "duration": 466,
+   "explore": false,
+   "id": "bG5Fs4eyan0",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T16:40:12Z",
+   "score": null,
+   "state": "fresh",
+   "title": "ﾎﾛﾗｲﾌﾞと学マスがコラボして炎上した件を知るホロ戦士鈴木P【2026/10/02】",
+   "type": "focus",
+   "views": 32092,
    "watchedAt": null
   },
   "bIWwrDC0jWw": {
@@ -13983,25 +13689,11 @@
   "bZykRkKkEiU": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 661,
-   "explore": false,
-   "id": "bZykRkKkEiU",
-   "pickedAt": "2026-09-18T05:47:30.572Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 2
-   },
-   "published": "2026-07-07T08:00:28Z",
+   "dropReason": "expired",
    "score": 47.29000074604816,
-   "state": "picked",
-   "title": "迎合型AIのオッパイでも吸ってろよ",
-   "touched": true,
-   "type": "ambient",
-   "views": 179498,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "bkDbWk4BsNI": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -14337,7 +14029,7 @@
    "pre": null,
    "published": "2026-09-29T03:00:01Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ジョジョ7部のエンディング「死ぬか生きるか」を聴いたゆゆうたの感想",
    "type": "focus",
    "views": 253075,
@@ -14499,19 +14191,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
    "dropReason": "gaveup",
-   "score": 68.35808724854888,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 3206,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:51:43.902Z",
+   "post": null,
    "pre": {
     "expect": 3,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:51:43.902Z",
-   "explore": false,
-   "touched": true
+   "score": 68.35808724854888,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 248631,
+   "watchedAt": null
   },
   "ctXMKnbkj34": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -14648,25 +14342,11 @@
   "dBBzGZ_P_ko": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
-   "channelName": "ステゴロパンチャーズ",
-   "desc": "企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nメインch↓\nhttps://youtube.com/@sutegoropanch?si=iMkgLBZslakouFf3\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreoma",
-   "duration": 2054,
-   "explore": false,
-   "id": "dBBzGZ_P_ko",
-   "pickedAt": "2026-09-18T05:47:59.651Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-06-25T12:01:12Z",
+   "dropReason": "expired",
    "score": 54.40770791399822,
-   "state": "picked",
-   "title": "試合前「ガンガン煽ってください！盛り上げましょう👍」→試合後「謝れ！負けを認めろよ！」…え！",
-   "touched": true,
-   "type": "ambient",
-   "views": 555162,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "dCeZtkcauHw": {
    "added": "2026-09-26T20:11:19+00:00",
@@ -15249,25 +14929,11 @@
   "f0YVYwHsxYQ": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 497,
-   "explore": true,
-   "id": "f0YVYwHsxYQ",
-   "pickedAt": "2026-09-18T05:48:55.354Z",
-   "post": null,
-   "pre": {
-    "expect": 1,
-    "pull": 1
-   },
-   "published": "2026-06-12T08:00:09Z",
+   "dropReason": "expired",
    "score": 25.392815992658345,
-   "state": "picked",
-   "title": "板に映る蜃気楼",
-   "touched": true,
-   "type": "ambient",
-   "views": 138698,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "f5RAc38yImM": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -15349,25 +15015,11 @@
   "fQVpQxkyQVE": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 772,
-   "explore": true,
-   "id": "fQVpQxkyQVE",
-   "pickedAt": "2026-09-18T05:49:11.221Z",
-   "post": null,
-   "pre": {
-    "expect": 1,
-    "pull": 1
-   },
-   "published": "2026-08-04T08:00:23Z",
+   "dropReason": "expired",
    "score": 31.4339772412655,
-   "state": "picked",
-   "title": "泥の城【1/2】",
-   "touched": true,
-   "type": "focus",
-   "views": 229873,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "focus"
   },
   "fRunj1J7ipk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -15618,26 +15270,11 @@
   "fw7z9EEiyNA": {
    "added": "2026-09-20T20:11:07+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
-   "channelName": "からすまAチャンネル",
-   "desc": "©Nippon Ichi Software, Inc.\n\nこの動画には多少のネタバレが含まれます。視聴の際は注意してください。\n\n呪われる......\n\nどうも、クソ投稿者こと「からすま」です。\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n\n主にクソゲーの動画、バカゲー動画をアップロードしています。\n\n配信は収録配信、雑談がメイン　趣味ゲーは不定期\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n音声合成ソフトウェア\n・かんたんAITalk3\nhttps://pcshop.vector.co.jp/service/catalogue/aitalk/\n・VOICEVOX\nht",
-   "duration": 1269,
-   "explore": false,
-   "id": "fw7z9EEiyNA",
-   "pickedAt": "2026-09-21T04:58:18.949Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-08-01T11:19:17Z",
+   "dropReason": "gaveup",
    "score": 58.655653215028394,
+   "slim": true,
    "state": "dropped",
-   "title": "【今年一酷評】8000円払って呪われるクソゲー【Curse Warrior（カースウォリアー）】",
-   "touched": true,
-   "type": "ambient",
-   "views": 775345,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "g-LDoRj7ACw": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -15816,26 +15453,11 @@
   "gQYYRG1pngo": {
    "added": "2026-09-18T20:11:50+00:00",
    "channelId": "UCRaaCxSF8nEpfG3ZHesXKxw",
-   "channelName": "ジェラードンチャンネル",
-   "desc": "映像コントです！\n\n⭐︎ジェラードン公式チャンネル\nコント動画を週３日更新！\n火・木・土（大体20時以降）\nに最新動画公開しています！\nチャンネル登録、高評価よろしくお願いいたします！\n\n\n⭐︎サブチャンネル開設しました！\nhttps://www.youtube.com/channel/UC_W2yKzQsIFJz674iPXAuLA\nこちらでは企画やトーク、プライベートなど幅広く公開していきます！\nチャンネル登録よろしくお願いいたします！\n\n\nかみちぃ\nTwitter：https://twitter.com/kamicigerrardon\nInstagram：https://www.inst",
-   "duration": 662,
-   "explore": false,
-   "id": "gQYYRG1pngo",
-   "pickedAt": "2026-09-19T02:25:13.763Z",
-   "post": null,
-   "pre": {
-    "expect": 5,
-    "pull": 4
-   },
-   "published": "2026-07-14T15:11:20Z",
+   "dropReason": "gaveup",
    "score": 60.43855873656021,
+   "slim": true,
    "state": "dropped",
-   "title": "メニューに無い、聞いたことない商品ばかりを注文して、通ぶってくる海外かぶれマダム【ジェラードン】",
-   "touched": true,
-   "type": "ambient",
-   "views": 177324,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "gWOoYHWr1Qk": {
    "added": "2026-09-21T20:12:05+00:00",
@@ -15931,26 +15553,11 @@
   "gfxOtJwveq8": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
-   "channelName": "ホッカイロレン",
-   "desc": "設定が意味不明だったので詳しい人コメントで教えてください\n\n『アズワン AS ONE』\nhttps://amzn.to/456rfQn\n\nひろゆきAIボイス\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n※リクエストは受け付けてません\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0D",
-   "duration": 833,
-   "explore": false,
-   "id": "gfxOtJwveq8",
-   "pickedAt": "2026-09-21T04:52:10.860Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-07-17T11:51:11Z",
+   "dropReason": "gaveup",
    "score": 56.600641367385876,
+   "slim": true,
    "state": "dropped",
-   "title": "コナンとエヴァとガンダムのスタッフが作ったのに駄作になった映画『アズワン AS ONE』",
-   "touched": true,
-   "type": "ambient",
-   "views": 302885,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "ggsGQlVz6lE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -16261,6 +15868,24 @@
    "views": 98569,
    "watchedAt": null
   },
+  "hjV7cGZvD_Y": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCTrckUWmmrRZcNrfu1mZDOg",
+   "channelName": "たいじ/たいちゃんねる",
+   "desc": "00:00 CRカップスクリム1日目\n00:16 チームメンバー合流\n01:29 スクリム1戦目\n06:24 スクリム2戦目\n11:50 スクリム3戦目\n16:11 スクリム4戦目\n22:11 スクリム5戦目\n24:40 スクリム終了\n25:42 ED\nアーカイブ→https://www.twitch.tv/videos/2888821325\nツイッター→https://twitter.com/taijich0324\n生放送はココ→https://www.openrec.tv/user/Yaritaiji\nニコニコ→http://www.nicovideo.jp/user/11786087\n#",
+   "duration": 1558,
+   "explore": false,
+   "id": "hjV7cGZvD_Y",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T10:45:37Z",
+   "score": null,
+   "state": "fresh",
+   "title": "猛者だらけのCRカップスクリム1日目で確かな手応えを感じるたいじたち【Apex Legends/たいじ/加藤純一/すもも】",
+   "type": "focus",
+   "views": 86680,
+   "watchedAt": null
+  },
   "hnEN44J6A-4": {
    "added": "2026-09-18T05:01:21+00:00",
    "channelId": "UCfTfI2-PkGYgcQHoVk85tCA",
@@ -16346,6 +15971,24 @@
    "touched": true,
    "type": "focus",
    "views": 137345,
+   "watchedAt": null
+  },
+  "i-c5mkEOBsA": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCHVbV2U9ZLucK0m7b864_0g",
+   "channelName": "斜め270度考察",
+   "desc": "✅斜め270度考察OfficialShopはこちら\nhttps://suzuri.jp/Ooki-Inoue\n\n\nサブチャンネルはこちら\nhttps://www.youtube.com/@%E6%96%9C%E3%82%81270%E5%BA%A6%E3%82%B5%E3%82%A6%E3%83%8A\n\n\n\n\n\n放送作家/ディレクターとして活動している『井上』が思いついた新雑学を中学の同級生である『小林』にぶつけるPodcast番組です。\n毎週木曜22:00に更新予定\n\nバックグラウンドで聴きたい人はポッドキャストで聞いてみて！\nそれかYouTubeプレミアムに入るか！\n\n井上のX\nhttps",
+   "duration": 0,
+   "explore": false,
+   "id": "i-c5mkEOBsA",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T08:48:37Z",
+   "score": null,
+   "state": "fresh",
+   "title": "【初見配信】セミまる強くね、、？小学生の時バカにしていた妖怪ウォッチをやる#2",
+   "type": "focus",
+   "views": 0,
    "watchedAt": null
   },
   "i-jHrtNFn6M": {
@@ -16638,26 +16281,11 @@
   "iWT_NZkNfuc": {
    "added": "2026-09-20T20:11:07+00:00",
    "channelId": "UCHyYUv384bv9eMOC1UoG9PQ",
-   "channelName": "からすまAチャンネル",
-   "desc": "へ？\n\nどうも、クソ投稿者こと「からすま」です。\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n\n主にクソゲーの動画、バカゲー動画をアップロードしています。\n\n配信は収録配信、雑談がメイン　趣味ゲーは不定期\n\nーーーーーーーーーーーーーーーーーーーーーーーーーー\n音声合成ソフトウェア\n・かんたんAITalk3\nhttps://pcshop.vector.co.jp/service/catalogue/aitalk/\n・VOICEVOX\nhttps://voicevox.hiroshiba.jp\n\n\n・ネット活動歴\n\n　2012～2017ニコ生、ニコニコ動画\n　2017～現在youtu",
-   "duration": 9806,
-   "explore": false,
-   "id": "iWT_NZkNfuc",
-   "pickedAt": "2026-09-21T04:58:27.655Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-08-02T14:37:52Z",
+   "dropReason": "gaveup",
    "score": 58.92215519046366,
+   "slim": true,
    "state": "dropped",
-   "title": "超速で終わるらしいナルトのクソゲーやります【NARUTO-ナルト- 忍列伝】",
-   "touched": true,
-   "type": "ambient",
-   "views": 72565,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "iWw2xZH3wNk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -16710,26 +16338,11 @@
   "ie1BxErsxkk": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
-   "channelName": "ステゴロパンチャーズ",
-   "desc": "けものもプロデュース\nhttps://youtube.com/@kemonomoPD?si=W0xnvrH8bx9Ndgsh\n\n企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreom",
-   "duration": 2116,
-   "explore": false,
-   "id": "ie1BxErsxkk",
-   "pickedAt": "2026-09-18T05:58:52.856Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-07-12T12:01:28Z",
+   "dropReason": "gaveup",
    "score": 58.22000043461442,
+   "slim": true,
    "state": "dropped",
-   "title": "視聴者から「絶対に見ろ」とリンクが多数送られてきた動画を見ます",
-   "touched": true,
-   "type": "ambient",
-   "views": 460260,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "iiZDEwrCHF4": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -16904,7 +16517,7 @@
    "pre": null,
    "published": "2026-09-29T10:00:43Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ニートルズは解散します",
    "type": "focus",
    "views": 92808,
@@ -17028,6 +16641,24 @@
    "views": 95146,
    "watchedAt": "2026-09-30T10:06:03.251Z"
   },
+  "jWDrH1JFjF4": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCGjV4bsC43On-YuiLZcfL0w",
+   "channelName": "KUN",
+   "desc": "🔳LINEスタンプと絵文字描いてみました！ぜひ使ってください\n\nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990526/ja \nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990526/ja \n\n🔳 50人クラフトグッズの購入はこちらから\nhttps://clear-lab.jp/kun50craft-goods/\n\n🔳 使用アドオン一覧（Add-ons used）\nhttp",
+   "duration": 2713,
+   "explore": false,
+   "id": "jWDrH1JFjF4",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T03:00:00Z",
+   "score": null,
+   "state": "fresh",
+   "title": "全体オフで起こった事件について - マインクラフト【KUN】",
+   "type": "focus",
+   "views": 139183,
+   "watchedAt": null
+  },
   "j_vGMe-6hyo": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCx1nAvtVDIsaGmCMSe8ofsQ",
@@ -17104,7 +16735,7 @@
    "pre": null,
    "published": "2026-09-29T02:30:02Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "人生について",
    "type": "focus",
    "views": 71924,
@@ -17132,19 +16763,21 @@
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
    "dropReason": "gaveup",
-   "score": 69.65892793069483,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 2740,
+   "explore": false,
+   "pickedAt": "2026-09-18T05:59:20.059Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-18T05:59:20.059Z",
-   "explore": false,
-   "touched": true
+   "score": 69.65892793069483,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 539806,
+   "watchedAt": null
   },
   "jwMFD5EHW5A": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -17409,6 +17042,24 @@
    "title": "『妹に運転を教えるゲーム』でイライラしすぎてギャルゲーを始める布団ちゃん【2026/9/27】",
    "type": "focus",
    "views": 58994,
+   "watchedAt": null
+  },
+  "kM_t29LLVPA": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCfTfI2-PkGYgcQHoVk85tCA",
+   "channelName": "布団ちゃん切り抜きMAX",
+   "desc": "https://www.youtube.com/playlist?list=PL9c1ophFsdEOKlZB7Z1KfXynV-gK0-DQS\n\n布団ちゃんのSNS\nTwitter　https://twitter.com/indegnasen210\nYouTube　https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw\nTwitch　https://twitch.tv/indegnasen0706\n\n00:00　スタート\n01:22　元気なテリー君\n03:43　今日作った料理\n04:45　余った油揚げの使い道\n05:37　7年付き合っ",
+   "duration": 3130,
+   "explore": false,
+   "id": "kM_t29LLVPA",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T18:07:06Z",
+   "score": null,
+   "state": "fresh",
+   "title": "布団ちゃんの雑談ダイジェスト「こんにちは！冷えてきましたね！まずは与太話でも！放送！」【2026/10/2】",
+   "type": "focus",
+   "views": 23372,
    "watchedAt": null
   },
   "kR7UUNNhlk8": {
@@ -17826,6 +17477,24 @@
    "views": 126939,
    "watchedAt": null
   },
+  "lWt6wI97Q0Q": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
+   "channelName": "ゆゆうたパワー系切り抜き",
+   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002916\n利用許諾協力：#クリエイターサポートプログラム\nCSP（クリエイターサポートプログ",
+   "duration": 230,
+   "explore": false,
+   "id": "lWt6wI97Q0Q",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T16:40:10Z",
+   "score": null,
+   "state": "fresh",
+   "title": "ゆゆうた少年の「To LOVEる」の思い出【2026/10/02】",
+   "type": "focus",
+   "views": 9478,
+   "watchedAt": null
+  },
   "laFQA27HqAU": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
@@ -18005,26 +17674,11 @@
   "mE9wYtxOW40": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCRaaCxSF8nEpfG3ZHesXKxw",
-   "channelName": "ジェラードンチャンネル",
-   "desc": "映像コントです！",
-   "duration": 476,
-   "explore": false,
-   "id": "mE9wYtxOW40",
-   "pickedAt": "2026-09-18T05:59:51.136Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-07-23T14:49:05Z",
+   "dropReason": "gaveup",
    "score": 57.99834116872068,
+   "slim": true,
    "state": "dropped",
-   "title": "坐薬を絶対に跳ね返しちゃう患者と、あの手この手でどうにか坐薬入れこみたい医者【ジェラードン】",
-   "touched": true,
-   "type": "ambient",
-   "views": 40695,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "mEx2DIs0eCQ": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -18132,19 +17786,21 @@
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCHVbV2U9ZLucK0m7b864_0g",
    "dropReason": "gaveup",
-   "score": 45.73935046328575,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1045,
+   "explore": true,
+   "pickedAt": "2026-09-21T04:52:45.448Z",
+   "post": null,
    "pre": {
     "expect": 5,
     "pull": 4
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:52:45.448Z",
-   "explore": true,
-   "touched": true
+   "score": 45.73935046328575,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 296778,
+   "watchedAt": null
   },
   "mPkqbsHxsFI": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -18214,19 +17870,21 @@
    "added": "2026-09-22T20:11:42+00:00",
    "channelId": "UCGjV4bsC43On-YuiLZcfL0w",
    "dropReason": "gaveup",
-   "score": 67.46589244012509,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 2581,
+   "explore": false,
+   "pickedAt": "2026-09-24T04:14:49.345Z",
+   "post": null,
    "pre": {
     "expect": 3,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-24T04:14:49.345Z",
-   "explore": false,
-   "touched": true
+   "score": 67.46589244012509,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 178192,
+   "watchedAt": null
   },
   "mXqXTOUBSjk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -18296,19 +17954,21 @@
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCrup_SUKUSAWxB4ygfs5Rbg",
    "dropReason": "gaveup",
-   "score": 66.63858603042875,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 1455,
+   "explore": false,
+   "pickedAt": "2026-09-18T06:00:14.973Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-18T06:00:14.973Z",
-   "explore": false,
-   "touched": true
+   "score": 66.63858603042875,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 690775,
+   "watchedAt": null
   },
   "mfIiJDX-AP8": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -18460,26 +18120,11 @@
   "mt7AIFOB-HQ": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCNKGn1rULbYWrQaGY-4nZDA",
-   "channelName": "りょうぼー【ゲーム企画】",
-   "desc": "▶︎生放送サブチャンネル\nhttps://youtube.com/channel/UCEZ1GJT-fGtt76rI9j3Mmqg\n\n\n▶ルイア https://www.youtube.com/@ルイア7game\n▶武村 https://www.youtube.com/@武村さん\n▶こにかん　https://www.youtube.com/channel/UCyCrm-2RKMtmAgAAAtNSqqA\n▶サク　https://www.youtube.com/@saku-gamezikkyou\n\n\n■オススメ■\n\n▶︎ 個人的・面白企画ベスト15\nhttps://www.youtube.com",
-   "duration": 1314,
-   "explore": false,
-   "id": "mt7AIFOB-HQ",
-   "pickedAt": "2026-09-18T06:00:34.271Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 5
-   },
-   "published": "2026-07-26T09:30:31Z",
+   "dropReason": "gaveup",
    "score": 64.28859858174866,
+   "slim": true,
    "state": "dropped",
-   "title": "やらせてくれ",
-   "touched": true,
-   "type": "ambient",
-   "views": 143071,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "muLfrlKHmys": {
    "added": "2026-09-29T20:13:34+00:00",
@@ -18493,7 +18138,7 @@
    "pre": null,
    "published": "2026-09-29T10:27:31Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "たいじの『ドラゴンクエストVII Reimagined』ダイジェスト Part6【ハーメリア～マーディラス編】",
    "type": "focus",
    "views": 40291,
@@ -19158,7 +18803,7 @@
    "pre": null,
    "published": "2026-09-29T07:30:32Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "食っていいか同意を求める捕食者怖い説 #shorts",
    "type": "focus",
    "views": 216267,
@@ -19237,6 +18882,24 @@
    "touched": true,
    "type": "ambient",
    "views": 589151,
+   "watchedAt": null
+  },
+  "p_qzIRpZyD8": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCH-lygWpHodDff3iQurnWnQ",
+   "channelName": "加藤純一切り抜き集",
+   "desc": "●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト\n→https://www.youtube.com/watch?v=RW_c2OB4i0g&list=PL_L-C2xtKNSP-lEQcaJw-K34YdjIO-aEJ\n◆2026年切り抜き再生リスト\nhttps://www.youtube.com/watch?v=acAo1zTAB5M&list=PL_L-C2xtKNSNetTL6i5wikqCh8NfDaPLg\n◆2025年切り抜き再生リスト\n→https://www.youtube.com",
+   "duration": 37,
+   "explore": false,
+   "id": "p_qzIRpZyD8",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T16:35:14Z",
+   "score": null,
+   "state": "fresh",
+   "title": "最終円で龍になるたいじ",
+   "type": "focus",
+   "views": 111631,
    "watchedAt": null
   },
   "pb1ooOLLKJg": {
@@ -19482,7 +19145,7 @@
    "pre": null,
    "published": "2026-09-28T22:48:02Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ヒステリック妹vsモラハラ兄【2026/09/28】",
    "type": "focus",
    "views": 250795,
@@ -19583,19 +19246,21 @@
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCRaaCxSF8nEpfG3ZHesXKxw",
    "dropReason": "gaveup",
-   "score": 63.93343180892573,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 395,
+   "explore": false,
+   "pickedAt": "2026-09-18T06:01:43.093Z",
+   "post": null,
    "pre": {
     "expect": 4,
     "pull": 5
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-18T06:01:43.093Z",
-   "explore": false,
-   "touched": true
+   "score": 63.93343180892573,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 100366,
+   "watchedAt": null
   },
   "qYXSgNKfGEE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -19652,25 +19317,11 @@
   "qc16mqxSh48": {
    "added": "2026-09-18T05:01:21+00:00",
    "channelId": "UC1xFkkJgjzVUm9oZIHQ10yQ",
-   "channelName": "布団ちゃん【魔神の戯れ】",
-   "desc": "元配信\nhttps://www.twitch.tv/videos/2832654234\nX　\nhttps://twitter.com/indegnasen210\nTwitch\nhttps://twitch.tv/indegnasen0706\n\n00:00　本編\n01:30:10　別ルート\n01:41:08　残りの実績解除",
-   "duration": 6436,
-   "explore": false,
-   "id": "qc16mqxSh48",
-   "pickedAt": "2026-09-18T05:06:52.556Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 2
-   },
-   "published": "2026-07-31T03:00:24Z",
+   "dropReason": "expired",
    "score": 40.76794102535477,
-   "state": "picked",
-   "title": "布団ちゃんの『八尺様がいた夏休み』実況プレイ",
-   "touched": true,
-   "type": "ambient",
-   "views": 204670,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "qcPMMt7BA8w": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -19824,6 +19475,24 @@
    "title": "アンチコメントor褒めコメント？早押しクイズ",
    "type": "focus",
    "views": 1001757,
+   "watchedAt": null
+  },
+  "r27BuJl_3AU": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCt8snO2Po2uCqteBvqBglTw",
+   "channelName": "はりーシ熱血切り抜きch",
+   "desc": "はりーシ様公認の切り抜きチャンネルです。\nチャンネル登録高評価お願いします。\n\n人狼再生リスト\nhttps://www.youtube.com/playlist?list=PLoYdw6LewWUAHrNvECb8PL91zVebSkNS9\n人狼【豪傑村】再生リスト\nhttps://youtube.com/playlist?list=PLoYdw6LewWUCiLwfTIh7sCa4qS7zvdVXd&si=I7siVt8Hefv92fwi\nVRC再生リスト\nhttps://www.youtube.com/playlist?list=PLoYdw6LewWUAvwXWUUHNynCRRT2u4",
+   "duration": 5562,
+   "explore": false,
+   "id": "r27BuJl_3AU",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T08:00:16Z",
+   "score": null,
+   "state": "fresh",
+   "title": "【人狼】怪しんでた人が確定霊能になり絶望するはりーシ【2026/10/01】",
+   "type": "focus",
+   "views": 3234,
    "watchedAt": null
   },
   "r64uYGPkk6w": {
@@ -20027,25 +19696,11 @@
   "rmLHUVp3xJU": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 285,
-   "explore": false,
-   "id": "rmLHUVp3xJU",
-   "pickedAt": "2026-09-18T06:02:13.268Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 4
-   },
-   "published": "2026-07-03T08:00:38Z",
+   "dropReason": "expired",
    "score": 53.71942548880336,
-   "state": "picked",
-   "title": "何にでも喩えるキャリアセンター",
-   "touched": true,
-   "type": "ambient",
-   "views": 134977,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "roVHGiXAQHA": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -20077,6 +19732,24 @@
    "touched": true,
    "type": "focus",
    "views": 236689,
+   "watchedAt": null
+  },
+  "rtZXLBNgqxM": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCH-lygWpHodDff3iQurnWnQ",
+   "channelName": "加藤純一切り抜き集",
+   "desc": "●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト\n→https://www.youtube.com/watch?v=RW_c2OB4i0g&list=PL_L-C2xtKNSP-lEQcaJw-K34YdjIO-aEJ\n◆2026年切り抜き再生リスト\nhttps://www.youtube.com/watch?v=acAo1zTAB5M&list=PL_L-C2xtKNSNetTL6i5wikqCh8NfDaPLg\n◆2025年切り抜き再生リスト\n→https://www.youtube.com",
+   "duration": 49,
+   "explore": false,
+   "id": "rtZXLBNgqxM",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T00:13:23Z",
+   "score": null,
+   "state": "fresh",
+   "title": "脳内再生被害",
+   "type": "focus",
+   "views": 217759,
    "watchedAt": null
   },
   "rxQ9oAXs8K0": {
@@ -20395,7 +20068,7 @@
    "pre": null,
    "published": "2026-09-29T07:00:04Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "なっしー、PVPガチ勢のカワボ女に一目ぼれして監禁→訴訟へ - マインクラフト【KUN】",
    "type": "ambient",
    "views": 149665,
@@ -20544,19 +20217,21 @@
    "added": "2026-09-18T20:11:50+00:00",
    "channelId": "UCH-lygWpHodDff3iQurnWnQ",
    "dropReason": "gaveup",
-   "score": 63.45382563158889,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 322,
+   "explore": false,
+   "pickedAt": "2026-09-19T02:28:25.195Z",
+   "post": null,
    "pre": {
     "expect": 3,
     "pull": 3
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-19T02:28:25.195Z",
-   "explore": false,
-   "touched": true
+   "score": 63.45382563158889,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 109966,
+   "watchedAt": null
   },
   "t6mZjxoLwuU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -20627,19 +20302,21 @@
    "added": "2026-09-20T20:11:07+00:00",
    "channelId": "UCoQhX2O93MVTWfgIz-8wOmg",
    "dropReason": "gaveup",
-   "score": 67.60654948671679,
-   "slim": true,
-   "state": "dropped",
-   "type": "ambient",
+   "duration": 4397,
+   "explore": false,
+   "pickedAt": "2026-09-21T04:59:20.420Z",
+   "post": null,
    "pre": {
     "expect": 3,
     "pull": 5
    },
-   "post": null,
-   "watchedAt": null,
-   "pickedAt": "2026-09-21T04:59:20.420Z",
-   "explore": false,
-   "touched": true
+   "score": 67.60654948671679,
+   "slim": true,
+   "state": "dropped",
+   "touched": true,
+   "type": "ambient",
+   "views": 230959,
+   "watchedAt": null
   },
   "tYm_ffDJU1A": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -20676,26 +20353,11 @@
   "tb3T3DdOMgo": {
    "added": "2026-09-18T20:11:50+00:00",
    "channelId": "UCRaaCxSF8nEpfG3ZHesXKxw",
-   "channelName": "ジェラードンチャンネル",
-   "desc": "映像コントです！\n\n⭐︎ジェラードン公式チャンネル\nコント動画を週３日更新！\n火・木・土（大体20時以降）\nに最新動画公開しています！\nチャンネル登録、高評価よろしくお願いいたします！\n\n\n⭐︎サブチャンネル開設しました！\nhttps://www.youtube.com/channel/UC_W2yKzQsIFJz674iPXAuLA\nこちらでは企画やトーク、プライベートなど幅広く公開していきます！\nチャンネル登録よろしくお願いいたします！\n\n\nかみちぃ\nTwitter：https://twitter.com/kamicigerrardon\nInstagram：https://www.inst",
-   "duration": 730,
-   "explore": false,
-   "id": "tb3T3DdOMgo",
-   "pickedAt": "2026-09-19T02:28:36.451Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4
-   },
-   "published": "2026-07-18T13:27:22Z",
+   "dropReason": "gaveup",
    "score": 56.841695342612944,
+   "slim": true,
    "state": "dropped",
-   "title": "一目見ただけでヤバそうな病気に罹った患者が来て、終わり悟った【ジェラードン】",
-   "touched": true,
-   "type": "ambient",
-   "views": 803296,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "tcX9JRxoCFo": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -20858,25 +20520,11 @@
   "uAStKFoBzxM": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 365,
-   "explore": false,
-   "id": "uAStKFoBzxM",
-   "pickedAt": "2026-09-18T06:02:48.791Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 3
-   },
-   "published": "2026-07-17T08:00:10Z",
+   "dropReason": "expired",
    "score": 53.518287615712815,
-   "state": "picked",
-   "title": "就活生トリアージ",
-   "touched": true,
-   "type": "ambient",
-   "views": 201048,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "uEkJmZiTGAM": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -21040,26 +20688,11 @@
   "uw99ZWwMAXs": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
-   "channelName": "ステゴロパンチャーズ",
-   "desc": "企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nメインch↓\nhttps://youtube.com/@sutegoropanch?si=iMkgLBZslakouFf3\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreoma",
-   "duration": 1824,
-   "explore": false,
-   "id": "uw99ZWwMAXs",
-   "pickedAt": "2026-09-18T06:02:59.169Z",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 5
-   },
-   "published": "2026-07-01T12:01:30Z",
+   "dropReason": "gaveup",
    "score": 58.356875759821,
+   "slim": true,
    "state": "dropped",
-   "title": "W杯代表選手を揶揄し炎上→その後謝罪方法を間違え続けるカップルYouTuber",
-   "touched": true,
-   "type": "ambient",
-   "views": 838971,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "uwUMG_fc7ns": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -21195,7 +20828,7 @@
    "pre": null,
    "published": "2026-09-29T12:01:21Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ジャンル絞ればクイズミリオネア達成イージー説。【陸上、RIZIN、プロ野球、NBA、Valorant】",
    "type": "focus",
    "views": 136601,
@@ -21411,25 +21044,11 @@
   "w5B-h3ufjfE": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 752,
-   "explore": false,
-   "id": "w5B-h3ufjfE",
-   "pickedAt": "2026-09-18T06:03:11.604Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 2
-   },
-   "published": "2026-07-21T08:00:11Z",
+   "dropReason": "expired",
    "score": 43.47791016886527,
-   "state": "picked",
-   "title": "不機嫌チェッカー",
-   "touched": true,
-   "type": "ambient",
-   "views": 166058,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "w9dqeHMIlRY": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -21450,26 +21069,11 @@
   "wC0Y6eLmkfg": {
    "added": "2026-09-19T20:11:31+00:00",
    "channelId": "UCoie3ytrtgUCfDVN3PqxIDQ",
-   "channelName": "ホッカイロレン",
-   "desc": "珍しく企画モノ動画です。ドローンのPOV視点で色々遊びました。\n\nカメラマン　動あり\nhttps://www.youtube.com/@Douari45\n\n使ったドローン　HOVERAir X1 Smart\nhttps://link.amazon/B0fBBYXA3\n\n撮影協力　みさきサバゲー\nhttps://misakisabage.com/\n\n※動画は特別な許可を得て、安全対策を行った上で撮影しています。\n\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n※リクエストは受け付けてま",
-   "duration": 1192,
-   "explore": false,
-   "id": "wC0Y6eLmkfg",
-   "pickedAt": "2026-09-21T04:53:41.987Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 3
-   },
-   "published": "2026-09-04T10:10:52Z",
+   "dropReason": "gaveup",
    "score": 58.68706766230369,
+   "slim": true,
    "state": "dropped",
-   "title": "【POV】ドローンの視界だけで迷路から脱出せよ!!!",
-   "touched": true,
-   "type": "ambient",
-   "views": 303896,
-   "watchedAt": null,
-   "dropReason": "gaveup"
+   "type": "ambient"
   },
   "wDOaf0e4ozk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -21961,25 +21565,11 @@
   "xhM2Y77Wirw": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 1395,
-   "explore": false,
-   "id": "xhM2Y77Wirw",
-   "pickedAt": "2026-09-18T06:03:40.105Z",
-   "post": null,
-   "pre": {
-    "expect": 2,
-    "pull": 3
-   },
-   "published": "2026-06-26T08:00:28Z",
+   "dropReason": "expired",
    "score": 42.80063766869464,
-   "state": "picked",
-   "title": "おさるの実験場【2/2】",
-   "touched": true,
-   "type": "ambient",
-   "views": 188303,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "ambient"
   },
   "xhVOkDqI7GQ": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -22263,25 +21853,11 @@
   "ys5nvyoV_No": {
    "added": "2026-09-18T05:19:08+00:00",
    "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "duration": 774,
-   "explore": false,
-   "id": "ys5nvyoV_No",
-   "pickedAt": "2026-09-18T06:03:58.930Z",
-   "post": null,
-   "pre": {
-    "expect": 3,
-    "pull": 4
-   },
-   "published": "2026-06-05T08:00:13Z",
+   "dropReason": "expired",
    "score": 48.159768884656906,
-   "state": "picked",
-   "title": "新入社員の処世術　～ハードル下げ～",
-   "touched": true,
-   "type": "focus",
-   "views": 202622,
-   "watchedAt": null
+   "slim": true,
+   "state": "dropped",
+   "type": "focus"
   },
   "yskEYLWFWhs": {
    "added": "2026-09-14T20:13:03+00:00",
@@ -22375,6 +21951,24 @@
    "state": "dropped",
    "type": "focus",
    "views": 69461
+  },
+  "zC1rPQ3MxB0": {
+   "added": "2026-10-02T23:35:38+00:00",
+   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
+   "channelName": "ゆゆうたパワー系切り抜き",
+   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002916\n利用許諾協力：#クリエイターサポートプログラム\nCSP（クリエイターサポートプログ",
+   "duration": 181,
+   "explore": false,
+   "id": "zC1rPQ3MxB0",
+   "post": null,
+   "pre": null,
+   "published": "2026-10-02T16:40:15Z",
+   "score": null,
+   "state": "fresh",
+   "title": "溝口と写真を撮った人が次々と捕まってる件について【2026/10/02】",
+   "type": "focus",
+   "views": 22727,
+   "watchedAt": null
   },
   "zFrb2fSFUnw": {
    "added": "2026-09-21T20:12:05+00:00",
