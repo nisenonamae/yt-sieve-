@@ -65,7 +65,7 @@
     "pull": 2
    },
    "published": "2026-08-20T13:00:09Z",
-   "score": 47.555254212182426,
+   "score": 47.39683075835253,
    "state": "picked",
    "title": "【女性必見】男性と絶対に盛り上がる話題5選を紹介！SUSURU/終わった人/ジェネワン/炒飯など必見の話題が集結！",
    "touched": true,
@@ -88,7 +88,7 @@
     "pull": 2
    },
    "published": "2026-07-19T12:01:27Z",
-   "score": 44.91366031765188,
+   "score": 44.76403695195777,
    "state": "picked",
    "title": "日本最北端のミスド『ミスタードーナツ稚内ショップ』なら並ばずにもっちゅりん食える説",
    "touched": true,
@@ -174,7 +174,7 @@
     "pull": 3
    },
    "published": "2026-05-01T08:00:00Z",
-   "score": 39.22613467187622,
+   "score": 39.3810766792564,
    "state": "picked",
    "title": "ショクえもん　～自分語りアリーナ～",
    "touched": true,
@@ -213,7 +213,7 @@
     "pull": 3
    },
    "published": "2026-08-21T11:00:21Z",
-   "score": 55.6967190570566,
+   "score": 55.51117349019571,
    "state": "picked",
    "title": "【闇深】某ヒーローの俳優を破滅寸前まで追い込んだ駄作映画『グリーン・ランタン』",
    "touched": true,
@@ -268,7 +268,7 @@
     "pull": 2
    },
    "published": "2026-08-07T12:01:13Z",
-   "score": 44.199424052327394,
+   "score": 44.05218006148634,
    "state": "picked",
    "title": "僕達が呼ばれなかったCDFを『購入』してフルで見てみた。",
    "touched": true,
@@ -432,7 +432,7 @@
     "pull": 3
    },
    "published": "2026-05-19T08:00:04Z",
-   "score": 42.14214423302984,
+   "score": 42.30860438714368,
    "state": "picked",
    "title": "インフルエンサー研修2.0【Part4】",
    "touched": true,
@@ -865,7 +865,7 @@
    "channelName": "布団ちゃん【魔神の戯れ】",
    "desc": "元配信\nhttps://www.twitch.tv/videos/2820528774\nX　\nhttps://twitter.com/indegnasen210\nTwitch\nhttps://twitch.tv/indegnasen0706\n\n00:00　ツトムの6日間\n41:24　すすむの回想\n01:13:58　決戦\n01:56:33　ピロートーク",
    "duration": 7139,
-   "explore": true,
+   "explore": false,
    "id": "1FZhBPSbTBo",
    "pickedAt": "2026-09-18T05:04:34.855Z",
    "post": null,
@@ -874,7 +874,7 @@
     "pull": 2
    },
    "published": "2026-07-18T01:00:01Z",
-   "score": 38.82688986265684,
+   "score": 38.69754369270324,
    "state": "picked",
    "title": "布団ちゃんの『醤油ラーメンFOREVER』実況プレイ",
    "touched": true,
@@ -1069,7 +1069,16 @@
    "score": 67.97081152009235,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-20T05:42:18.285Z",
+   "explore": false,
+   "touched": true
   },
   "1yjINwtIFkQ": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -1224,7 +1233,7 @@
     "pull": 3
    },
    "published": "2026-09-17T21:00:31Z",
-   "score": 46.416925605245225,
+   "score": 46.41357262489737,
    "state": "picked",
    "title": "ゆゆうた、指のケガに気付かず1時間ピアノを弾いてしまう【2026/09/17】",
    "touched": true,
@@ -1255,7 +1264,16 @@
    "score": 66.32963596680817,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-20T05:42:24.159Z",
+   "explore": false,
+   "touched": true
   },
   "2j4Bl-0IaE8": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -1431,7 +1449,7 @@
     "pull": 3
    },
    "published": "2026-07-14T08:00:37Z",
-   "score": 45.801472510875165,
+   "score": 46.087865787568376,
    "state": "picked",
    "title": "人間の口コミサイト",
    "touched": true,
@@ -1462,7 +1480,16 @@
    "score": 68.81571077355436,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-20T05:42:29.782Z",
+   "explore": false,
+   "touched": true
   },
   "3FmpSgHAhBU": {
    "added": "2026-09-30T23:31:46+00:00",
@@ -1513,7 +1540,7 @@
     "pull": 1
    },
    "published": "2026-06-02T08:00:29Z",
-   "score": 30.867547522575773,
+   "score": 31.060560050956443,
    "state": "picked",
    "title": "来年こそ早期選考やめよ？",
    "touched": true,
@@ -1809,7 +1836,7 @@
     "pull": 4
    },
    "published": "2026-08-17T22:00:37Z",
-   "score": 50.67933602888412,
+   "score": 50.51050514816422,
    "state": "picked",
    "title": "加藤純一 雑談ダイジェスト【2026/08/14,16】「体調悪すぎ内/ついに生活サイクルがかみ合った男」",
    "touched": true,
@@ -1824,7 +1851,16 @@
    "score": 64.7649761696685,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:41:16.346Z",
+   "explore": false,
+   "touched": true
   },
   "3w1449omnU8": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1833,7 +1869,16 @@
    "score": 18.206893801583018,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 1,
+    "pull": 1
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:24:16.224Z",
+   "explore": true,
+   "touched": true
   },
   "3wFgRJJURuo": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1896,19 +1941,21 @@
    "explore": false,
    "id": "3xyZm-Ea8I0",
    "pickedAt": "2026-09-18T05:24:38.296Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 3,
     "pull": 2
    },
    "published": "2026-09-13T14:25:55Z",
-   "score": 61.28778906031142,
-   "state": "picked",
+   "score": 61.27670602627941,
+   "state": "watched",
    "title": "ヘアスタイル診断シートを見るゆゆうた【2026/09/13】",
    "touched": true,
    "type": "ambient",
    "views": 110610,
-   "watchedAt": null
+   "watchedAt": "2026-10-01T07:09:27.386Z"
   },
   "452mHIInxVM": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -1925,7 +1972,7 @@
     "pull": 3
    },
    "published": "2026-07-24T08:00:22Z",
-   "score": 47.662817889624435,
+   "score": 47.96085002139311,
    "state": "picked",
    "title": "彼氏ポートフォリオ",
    "touched": true,
@@ -1948,7 +1995,7 @@
     "pull": 1
    },
    "published": "2026-08-29T16:09:39Z",
-   "score": 45.84869005671802,
+   "score": 45.69595177463559,
    "state": "picked",
    "title": "加藤純一 雑談ダイジェスト【2026/08/25,26】「雑談/椅子を新しくしマスタ」",
    "touched": true,
@@ -2027,7 +2074,16 @@
    "score": 67.14208904107882,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:41:59.100Z",
+   "explore": false,
+   "touched": true
   },
   "4TGMQlRsMus": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -2044,13 +2100,14 @@
     "pull": 3
    },
    "published": "2026-07-30T13:00:17Z",
-   "score": 60.40926928098344,
-   "state": "picked",
+   "score": 60.21151835509075,
+   "state": "dropped",
    "title": "【文句】メタルファイトベイブレード 1番下のパーツで性能が決まりすぎでは？カスタマイズ性が高いと見せかけてただのボトムの着せ替えゲームになってたじゃねぇか",
    "touched": true,
    "type": "ambient",
    "views": 198868,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "4W_pp1dxW4k": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -2263,7 +2320,7 @@
    "channelName": "布団ちゃん【魔神の戯れ】",
    "desc": "元配信\nhttps://www.twitch.tv/videos/2804913916\n\nX　\nhttps://twitter.com/indegnasen210\n\nOPENREC　\nhttps://www.openrec.tv/user/indegnasen\n\nTwitch\nhttps://twitch.tv/indegnasen0706",
    "duration": 4353,
-   "explore": true,
+   "explore": false,
    "id": "5EMxy_KqBes",
    "pickedAt": "2026-09-18T05:05:02.864Z",
    "post": null,
@@ -2272,7 +2329,7 @@
     "pull": 2
    },
    "published": "2026-06-26T02:00:35Z",
-   "score": 40.91336782185404,
+   "score": 40.777070852244094,
    "state": "picked",
    "title": "布団ちゃんの『Don't Play This』実況プレイ",
    "touched": true,
@@ -2435,7 +2492,7 @@
     "pull": 2
    },
    "published": "2026-09-05T03:00:36Z",
-   "score": 48.26583651271007,
+   "score": 48.10504585668254,
    "state": "picked",
    "title": "おにや、初めての筋トレ配信『ダイジェスト』【o-228 おにや/筋トレ】【放送日 2026/9/4】",
    "touched": true,
@@ -2813,7 +2870,16 @@
    "score": 68.87107601740928,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-24T04:11:36.621Z",
+   "explore": false,
+   "touched": true
   },
   "6cOqrumVTyY": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -2880,7 +2946,7 @@
     "pull": 4
    },
    "published": "2026-07-09T11:00:03Z",
-   "score": 55.00073572616534,
+   "score": 54.81750872714548,
    "state": "picked",
    "title": "【朗報】トイストーリーの新作、マジで傑作だった...『トイ・ストーリー５』",
    "touched": true,
@@ -2940,7 +3006,16 @@
    "score": 66.6107265763265,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:26:25.597Z",
+   "explore": false,
+   "touched": true
   },
   "6tChKo98hEU": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -2984,7 +3059,7 @@
     "pull": 1
    },
    "published": "2026-08-07T08:00:39Z",
-   "score": 40.15005246694305,
+   "score": 40.401107823238966,
    "state": "picked",
    "title": "泥の城【2/2】",
    "touched": true,
@@ -3143,7 +3218,7 @@
     "pull": 3
    },
    "published": "2026-05-08T08:00:08Z",
-   "score": 44.54186530863969,
+   "score": 44.71780428608697,
    "state": "picked",
    "title": "半額同士仲良くしよう！",
    "touched": true,
@@ -3174,7 +3249,16 @@
    "score": 64.59405685871243,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 5,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:42:46.962Z",
+   "explore": false,
+   "touched": true
   },
   "7bexcgh3lHY": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -3497,13 +3581,14 @@
     "pull": 3
    },
    "published": "2026-09-07T13:30:29Z",
-   "score": 60.95516489673177,
-   "state": "picked",
+   "score": 60.941701556625596,
+   "state": "dropped",
    "title": "おにや、ちいかわコラボで従業員による景品横領が発覚した『くら寿司』について語る【o-228 おにや/株/雑談】【放送日 2026/9/7】",
    "touched": true,
    "type": "ambient",
    "views": 85478,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "8mR7lX0ACgo": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -3722,7 +3807,7 @@
     "pull": 4
    },
    "published": "2026-04-23T10:48:44Z",
-   "score": 40.470683300710476,
+   "score": 40.335939553826954,
    "state": "picked",
    "title": "クッソ面白かったのにレビューする気にならなかった映画【５選】",
    "touched": true,
@@ -3899,7 +3984,7 @@
     "pull": 2
    },
    "published": "2026-04-21T08:00:09Z",
-   "score": 30.138478424484767,
+   "score": 30.257524473389047,
    "state": "picked",
    "title": "未来から逆算して破滅する男",
    "touched": true,
@@ -4124,7 +4209,7 @@
     "pull": 2
    },
    "published": "2026-03-24T08:00:10Z",
-   "score": 29.379905040872128,
+   "score": 29.594544695441638,
    "state": "picked",
    "title": "コンベア人生",
    "touched": true,
@@ -4357,7 +4442,16 @@
    "score": 68.87106078181026,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-24T04:11:54.147Z",
+   "explore": false,
+   "touched": true
   },
   "Aoib1UD4wn0": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -4406,13 +4500,14 @@
     "pull": 3
    },
    "published": "2026-09-19T16:15:27Z",
-   "score": 59.37415559382417,
-   "state": "picked",
+   "score": 59.37328198830548,
+   "state": "dropped",
    "title": "GATSBYで髪をセットするゆゆうた【2026/09/19】",
    "touched": true,
    "type": "ambient",
    "views": 10537,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "B43VGaWfT9c": {
    "added": "2026-09-23T20:13:06+00:00",
@@ -4458,7 +4553,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 505,
-   "explore": false,
+   "explore": true,
    "id": "B98fgVjGDgI",
    "pickedAt": "2026-09-18T05:27:30.398Z",
    "post": null,
@@ -4467,7 +4562,7 @@
     "pull": 1
    },
    "published": "2026-06-19T08:00:29Z",
-   "score": 26.00815816756595,
+   "score": 26.11088958039702,
    "state": "picked",
    "title": "もしかして就活の『普通』を知らない感じ？",
    "touched": true,
@@ -4506,13 +4601,14 @@
     "pull": 4
    },
    "published": "2026-08-07T10:59:42Z",
-   "score": 61.73617870642022,
-   "state": "picked",
+   "score": 61.726272200910415,
+   "state": "dropped",
    "title": "たった３日で世界記録を塗り替えちゃったヤバイ映画『スパイダーマン：ブランド・ニュー・デイ』",
    "touched": true,
    "type": "ambient",
    "views": 518031,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "BEsbtr9XExg": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -4520,7 +4616,7 @@
    "channelName": "りょうぼー【ゲーム企画】",
    "desc": "※戦い以外の死を避けるために難易度はピースフルです\n\n▶︎当日はこのチャンネルで配信します！21:00～\nhttps://youtube.com/channel/UCEZ1GJT-fGtt76rI9j3Mmqg\n\n【この日の参加者】\n\n▶ルイア https://www.youtube.com/@ルイア7game\n▶武村 https://www.youtube.com/@武村さん\n▶こにかん　https://www.youtube.com/channel/UCyCrm-2RKMtmAgAAAtNSqqA\n▶サク　https://www.youtube.com/@saku-gamezikkyou\n",
    "duration": 1775,
-   "explore": true,
+   "explore": false,
    "id": "BEsbtr9XExg",
    "pickedAt": "2026-09-18T05:27:43.894Z",
    "post": null,
@@ -4529,7 +4625,7 @@
     "pull": 2
    },
    "published": "2026-08-03T09:30:31Z",
-   "score": 42.18508359100952,
+   "score": 43.33772611573502,
    "state": "picked",
    "title": "殺し合い2026、序章",
    "touched": true,
@@ -4629,13 +4725,14 @@
     "pull": 4
    },
    "published": "2026-07-24T10:45:14Z",
-   "score": 58.38503695982726,
-   "state": "picked",
+   "score": 58.19059602531994,
+   "state": "dropped",
    "title": "【原作崩壊】ファンが絶望した伝説のホラーゲームの実写映画『サイレン FORBIDDEN SIREN』",
    "touched": true,
    "type": "ambient",
    "views": 461420,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "BefBSWUfks4": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -4749,7 +4846,7 @@
     "pull": 3
    },
    "published": "2026-08-02T12:01:17Z",
-   "score": 47.11932684252195,
+   "score": 46.96235561769734,
    "state": "picked",
    "title": "16歳にDMを晒された『友人』のタケヤキ翔について。",
    "touched": true,
@@ -4808,7 +4905,7 @@
     "pull": 4
    },
    "published": "2026-06-11T13:00:03Z",
-   "score": 52.74482807416597,
+   "score": 52.56911630532775,
    "state": "picked",
    "title": "【都市伝説】ランランルーが「●ね●ね消えろ」って言われてたのガチでどういうこと？ 今更この謎都市伝説を徹底考察してみよう",
    "touched": true,
@@ -5019,13 +5116,14 @@
     "pull": 3
    },
    "published": "2026-07-08T13:52:00Z",
-   "score": 55.77157115194119,
-   "state": "picked",
+   "score": 55.58577622614839,
+   "state": "dropped",
    "title": "冷たい食べ物を人生で初めて食べて、初めて頭キーンってなった人【ジェラードン】",
    "touched": true,
    "type": "ambient",
    "views": 119871,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "CgRfo7k_rBw": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -5065,7 +5163,7 @@
    "channelName": "ホッカイロレン",
    "desc": "初日にレイトショーで１プペしてきました\n\n１作目のレビュー\nhttps://www.youtube.com/watch?v=0wlGBaAO-W8\n前作『えんとつ町のプペル』\nhttps://amzn.to/4dUMNFb\n\n\"本物\"の宗教映画のレビュー\nhttps://www.youtube.com/watch?v=yAMI-N49sDY\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓",
    "duration": 836,
-   "explore": true,
+   "explore": false,
    "id": "CjpnoUvYRUI",
    "pickedAt": "2026-09-21T04:56:26.530Z",
    "post": null,
@@ -5227,13 +5325,14 @@
     "pull": 4
    },
    "published": "2026-07-11T14:47:25Z",
-   "score": 59.91271832002396,
-   "state": "picked",
+   "score": 59.71657186932512,
+   "state": "dropped",
    "title": "せっかく有給取ったのに、寂しくなって会社に顔出しに来る、ムードメーカーOL【ジェラードン】【ジェラードン】",
    "touched": true,
    "type": "ambient",
    "views": 139018,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "DT_ZKHu5OEY": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -5895,7 +5994,7 @@
     "pull": 2
    },
    "published": "2026-08-20T14:06:22Z",
-   "score": 51.037614454319844,
+   "score": 50.867590020825794,
    "state": "picked",
    "title": "生まれ変わるなら「ラクダ」か「猫」かのディベートして、お互い無しになって別れたカップル【ジェラードン】",
    "touched": true,
@@ -5945,13 +6044,14 @@
     "pull": 2
    },
    "published": "2026-09-08T06:30:34Z",
-   "score": 56.20868092894887,
-   "state": "picked",
+   "score": 56.02143186791643,
+   "state": "dropped",
    "title": "デイトレ最強の男おにや、前場だけで数十回取引を繰り返し15万を稼ぎ抜く【o-228 おにや/株/雑談】【放送日 2026/9/8】",
    "touched": true,
    "type": "ambient",
    "views": 53871,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "GDSoYtGfU5M": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -6127,7 +6227,7 @@
     "pull": 1
    },
    "published": "2026-06-09T08:00:34Z",
-   "score": 24.99246676733251,
+   "score": 25.091186230840833,
    "state": "picked",
    "title": "就活ギャンブラーの頭の中",
    "touched": true,
@@ -6157,7 +6257,7 @@
    "channelName": "ステパンかゆいとこゲームズ",
    "desc": "",
    "duration": 2261,
-   "explore": true,
+   "explore": false,
    "id": "Gg5z2ITgDak",
    "pickedAt": "2026-09-18T05:29:34.772Z",
    "post": null,
@@ -6216,7 +6316,7 @@
     "pull": 1
    },
    "published": "2026-09-13T14:26:04Z",
-   "score": 46.17117669693399,
+   "score": 46.16784146854298,
    "state": "picked",
    "title": "INMU KINGをうろ覚えで弾くゆゆうた【2026/09/13】",
    "touched": true,
@@ -6323,7 +6423,7 @@
     "pull": 4
    },
    "published": "2026-06-15T16:24:49Z",
-   "score": 50.03078351239195,
+   "score": 49.86411319061248,
    "state": "picked",
    "title": "すっげぇ微妙な評価のスターウォーズゲームやる【Star Wars Outlaws】",
    "touched": true,
@@ -6398,7 +6498,7 @@
     "pull": 4
    },
    "published": "2026-05-28T11:58:47Z",
-   "score": 46.53467124801726,
+   "score": 46.37964771877575,
    "state": "picked",
    "title": "【朗報】スターウォーズの新作映画、６年ぶりに劇場公開される『スター・ウォーズ／マンダロリアン・アンド・グローグー』",
    "touched": true,
@@ -6658,7 +6758,16 @@
    "score": 69.91556857042471,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:45:56.459Z",
+   "explore": false,
+   "touched": true
   },
   "I0g5e9pHjno": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -6857,7 +6966,7 @@
     "pull": 3
    },
    "published": "2026-06-23T08:00:14Z",
-   "score": 48.44721761455488,
+   "score": 48.638582611692,
    "state": "picked",
    "title": "おさるの実験場【1/2】",
    "touched": true,
@@ -7149,13 +7258,14 @@
     "pull": 4
    },
    "published": "2026-08-05T11:06:26Z",
-   "score": 59.79478222732748,
-   "state": "picked",
+   "score": 59.59901819912403,
+   "state": "dropped",
    "title": "〇〇分でクリアできる忍術がなさすぎる原作無視のクソゲー【NARUTO -ナルト- 忍列伝】",
    "touched": true,
    "type": "ambient",
    "views": 852237,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "JGzWh7V-X3g": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -7229,7 +7339,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 409,
-   "explore": true,
+   "explore": false,
    "id": "JfnjCqMfLdQ",
    "pickedAt": "2026-09-19T02:16:03.386Z",
    "post": null,
@@ -7238,7 +7348,7 @@
     "pull": 1
    },
    "published": "2026-04-10T08:00:16Z",
-   "score": 32.32747365681791,
+   "score": 32.638281418580675,
    "state": "picked",
    "title": "承認欲求が抑えきれなくて。",
    "touched": true,
@@ -7289,19 +7399,21 @@
    "explore": false,
    "id": "Jmr9-U1gAwg",
    "pickedAt": "2026-09-18T05:41:10.683Z",
-   "post": null,
+   "post": {
+    "score": 4
+   },
    "pre": {
     "expect": 3,
     "pull": 2
    },
    "published": "2026-09-01T03:00:20Z",
-   "score": 58.82743037228012,
-   "state": "picked",
+   "score": 59.19527611771891,
+   "state": "watched",
    "title": "【連絡】週1本投稿にします【11月末まで】",
    "touched": true,
    "type": "ambient",
    "views": 211023,
-   "watchedAt": null
+   "watchedAt": "2026-10-02T02:05:35.352Z"
   },
   "JpHEe_cILMo": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -7543,13 +7655,14 @@
     "pull": 4
    },
    "published": "2026-06-27T14:45:32Z",
-   "score": 56.66252942775634,
-   "state": "picked",
+   "score": 56.47378172410088,
+   "state": "dropped",
    "title": "ライバル店のコンビニ店員が店舗拡大を目的に、体1つの力技で乗っ取りに来た【ジェラードン】",
    "touched": true,
    "type": "ambient",
    "views": 124394,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "KMlI8QmvxRc": {
    "added": "2026-09-30T13:09:02.178Z",
@@ -7586,7 +7699,7 @@
     "pull": 4
    },
    "published": "2026-05-24T12:01:22Z",
-   "score": 48.0560418147392,
+   "score": 47.89595005941567,
    "state": "picked",
    "title": "過去一「見てください」とリクエストが来た動画を見る回",
    "touched": true,
@@ -8053,7 +8166,7 @@
    "channelName": "ホッカイロレン",
    "desc": "絵柄が「ChaO」なので略して「チャオキル」\n\n実写ハリウッド版『オール・ユー・ニード・イズ・キル』\nhttps://amzn.to/3LWjLcL\n小畑健の漫画版『All You Need Is Kill』\nhttps://amzn.to/3ZlEoSG\n原作のラノベ\nhttps://amzn.to/3YPuwAE\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\n\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gm",
    "duration": 673,
-   "explore": false,
+   "explore": true,
    "id": "M47CYljwjsU",
    "pickedAt": "2026-09-21T04:57:01.125Z",
    "post": null,
@@ -8248,7 +8361,7 @@
     "pull": 4
    },
    "published": "2026-07-02T10:43:15Z",
-   "score": 53.48572817310752,
+   "score": 53.30754820270962,
    "state": "picked",
    "title": "【驚異の大炎上】１６年ぶりなのに製作陣に侵略されちゃった悲劇の映画『新劇場版☆ケロロ軍曹　復活して速攻地球滅亡の危機であります！』",
    "touched": true,
@@ -8334,7 +8447,16 @@
    "score": 64.53774976020243,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-19T02:16:46.779Z",
+   "explore": false,
+   "touched": true
   },
   "N-SIi8yGk5U": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -8843,7 +8965,7 @@
     "pull": 4
    },
    "published": "2026-06-13T14:34:17Z",
-   "score": 49.61858686553053,
+   "score": 49.453289717284335,
    "state": "picked",
    "title": "隣のじいさんが面白くもないエピソードトークを、永遠に聞かせてくるから部屋変えたい【ジェラードン】",
    "touched": true,
@@ -8910,7 +9032,16 @@
    "score": 66.40547629599143,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-24T04:14:18.433Z",
+   "explore": false,
+   "touched": true
   },
   "Op4pBtrz2ck": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -9129,7 +9260,16 @@
    "score": 71.05618439177242,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:47:24.078Z",
+   "explore": false,
+   "touched": true
   },
   "PRXdqDNpBEY": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -9371,7 +9511,16 @@
    "score": 66.9089837168279,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:43:30.713Z",
+   "explore": false,
+   "touched": true
   },
   "QALD-fv7xNo": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -9997,7 +10146,7 @@
     "pull": 3
    },
    "published": "2026-06-16T14:54:52Z",
-   "score": 42.84770609901677,
+   "score": 42.70496516110469,
    "state": "picked",
    "title": "モテることにうんざりして、あえて角刈りにして登校してきたクラスのマドンナ【ジェラードン】",
    "touched": true,
@@ -10222,19 +10371,21 @@
    "explore": false,
    "id": "SbNBObspLPo",
    "pickedAt": "2026-09-18T05:44:08.236Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 4,
     "pull": 3
    },
    "published": "2026-07-28T08:00:02Z",
-   "score": 61.50393934066828,
-   "state": "picked",
+   "score": 61.49406394042474,
+   "state": "watched",
    "title": "大人の知識ってすげー！（笑）",
    "touched": true,
    "type": "ambient",
    "views": 134724,
-   "watchedAt": null
+   "watchedAt": "2026-10-01T07:05:18.232Z"
   },
   "SgI3bKuFEjY": {
    "added": "2026-09-30T23:31:46+00:00",
@@ -10792,7 +10943,16 @@
    "score": 63.49006954926904,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:48:52.193Z",
+   "explore": false,
+   "touched": true
   },
   "UIgIELdK2hM": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -10859,13 +11019,14 @@
     "pull": 4
    },
    "published": "2026-08-16T03:25:30Z",
-   "score": 62.39361400557664,
-   "state": "picked",
+   "score": 62.38547958399834,
+   "state": "dropped",
    "title": "「ネタバレ注意」ソードイノシシオフライン デスゲーム編 X回目【Echoes of Aincrad】",
    "touched": true,
    "type": "ambient",
    "views": 44550,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "UYYl5gHk91w": {
    "added": "2026-09-24T06:32:57+00:00",
@@ -11466,13 +11627,14 @@
     "pull": 4
    },
    "published": "2026-08-07T13:46:52Z",
-   "score": 60.29983900581038,
-   "state": "picked",
+   "score": 60.10244071549779,
+   "state": "dropped",
    "title": "邪悪な気配を感じるゲームをやる【もしかして？おばけの射的屋 for Nintendo Switch 2】",
    "touched": true,
    "type": "ambient",
    "views": 42416,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "WAoKs0UCbvU": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -11489,13 +11651,14 @@
     "pull": 4
    },
    "published": "2026-07-25T11:07:38Z",
-   "score": 57.23136422400474,
-   "state": "picked",
+   "score": 57.04075935468915,
+   "state": "dropped",
    "title": "課金圧が強すぎて「剣投資」と呼ばれた強欲なクソゲー【グラディエーターバーサス】【クソゲーオブザイヤー】",
    "touched": true,
    "type": "ambient",
    "views": 778784,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "WEdX157m-nQ": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -11613,7 +11776,16 @@
    "score": 66.96163571497642,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 5,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:49:11.446Z",
+   "explore": false,
+   "touched": true
   },
   "WZY5gYQVei8": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -11840,7 +12012,7 @@
     "pull": 5
    },
    "published": "2026-05-15T12:26:15Z",
-   "score": 49.97887727564484,
+   "score": 49.812379874285114,
    "state": "picked",
    "title": "大人の事情で削除された動画シリーズ【再アップ】",
    "touched": true,
@@ -12389,7 +12561,7 @@
     "pull": 1
    },
    "published": "2026-08-28T08:00:05Z",
-   "score": 43.65325603878857,
+   "score": 43.92621667208583,
    "state": "picked",
    "title": "エース闇バイター",
    "touched": true,
@@ -12474,19 +12646,21 @@
    "explore": false,
    "id": "Z3Q_Bv9XVM4",
    "pickedAt": "2026-09-18T05:46:01.680Z",
-   "post": null,
+   "post": {
+    "score": 4
+   },
    "pre": {
     "expect": 4,
     "pull": 3
    },
    "published": "2026-08-12T10:21:48Z",
-   "score": 60.398640786402126,
-   "state": "picked",
+   "score": 61.90041725595571,
+   "state": "watched",
    "title": "死は怖くない！",
    "touched": true,
    "type": "ambient",
    "views": 79353,
-   "watchedAt": null
+   "watchedAt": "2026-10-01T06:57:56.339Z"
   },
   "Z4VdDqDJpvI": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -12682,7 +12856,7 @@
     "pull": 4
    },
    "published": "2026-06-25T13:00:22Z",
-   "score": 55.77005409370377,
+   "score": 55.58426422433392,
    "state": "picked",
    "title": "【いい人すぎるよ展】〇〇すぎるよ展、やりすぎてるよ展を開催。あるあるの独占を狙う秘密結社に警鐘を鳴らさないといけない。",
    "touched": true,
@@ -13049,7 +13223,7 @@
     "pull": 4
    },
    "published": "2026-05-05T08:00:42Z",
-   "score": 50.448185277269985,
+   "score": 50.647454036543174,
    "state": "picked",
    "title": "1,000回目の舞台",
    "touched": true,
@@ -13123,7 +13297,16 @@
    "score": 63.47938136749111,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:51:15.083Z",
+   "explore": false,
+   "touched": true
   },
   "_xwWlAUCxSg": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -13140,7 +13323,7 @@
     "pull": 4
    },
    "published": "2026-03-31T08:00:00Z",
-   "score": 43.06613551206941,
+   "score": 43.480188565777645,
    "state": "picked",
    "title": "まさか自分が入社式に遅刻するタイプの人種とは思わなかったよね。",
    "touched": true,
@@ -13238,7 +13421,7 @@
     "pull": 4
    },
    "published": "2026-04-24T08:00:01Z",
-   "score": 44.70920086025794,
+   "score": 44.98876423968114,
    "state": "picked",
    "title": "現実の視力検査",
    "touched": true,
@@ -13596,13 +13779,14 @@
     "pull": 3
    },
    "published": "2026-09-03T11:00:29Z",
-   "score": 59.966688443877594,
-   "state": "picked",
+   "score": 59.77037118840811,
+   "state": "dropped",
    "title": "おにや、中国で開催された『ロボット運動会』が凄すぎる件について語る【o-228 おにや/株/雑談】【放送日 2026/9/3】",
    "touched": true,
    "type": "ambient",
    "views": 118948,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "b4g-8u3s9EU": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -13811,7 +13995,7 @@
     "pull": 2
    },
    "published": "2026-07-07T08:00:28Z",
-   "score": 47.10394164487609,
+   "score": 47.29000074604816,
    "state": "picked",
    "title": "迎合型AIのオッパイでも吸ってろよ",
    "touched": true,
@@ -13834,7 +14018,7 @@
     "pull": 4
    },
    "published": "2026-06-13T10:15:15Z",
-   "score": 49.5830435285941,
+   "score": 49.41786479011452,
    "state": "picked",
    "title": "【アメリカ未上映】なぜか中国で作られて話題にすらなってないトムとジェリーの映画『トムとジェリー 時をこえる魔法の羅針盤』",
    "touched": true,
@@ -14022,7 +14206,7 @@
    "channelName": "ステパンTV",
    "desc": "",
    "duration": 1862,
-   "explore": true,
+   "explore": false,
    "id": "cDAmPbzg-Ho",
    "pickedAt": "2026-09-19T02:24:13.450Z",
    "post": null,
@@ -14318,7 +14502,16 @@
    "score": 68.35808724854888,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:51:43.902Z",
+   "explore": false,
+   "touched": true
   },
   "ctXMKnbkj34": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -14467,7 +14660,7 @@
     "pull": 4
    },
    "published": "2026-06-25T12:01:12Z",
-   "score": 54.58956515519975,
+   "score": 54.40770791399822,
    "state": "picked",
    "title": "試合前「ガンガン煽ってください！盛り上げましょう👍」→試合後「謝れ！負けを認めろよ！」…え！",
    "touched": true,
@@ -14771,7 +14964,7 @@
     "pull": 4
    },
    "published": "2026-05-29T08:00:33Z",
-   "score": 51.39838830120607,
+   "score": 51.60141033280404,
    "state": "picked",
    "title": "言葉があなたに届くまで",
    "touched": true,
@@ -15068,7 +15261,7 @@
     "pull": 1
    },
    "published": "2026-06-12T08:00:09Z",
-   "score": 25.292909787429192,
+   "score": 25.392815992658345,
    "state": "picked",
    "title": "板に映る蜃気楼",
    "touched": true,
@@ -15159,7 +15352,7 @@
    "channelName": "Fラン大学就職チャンネル",
    "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/channel/UCqRV_ZIQhVKfxG1_WkNiRbg",
    "duration": 772,
-   "explore": false,
+   "explore": true,
    "id": "fQVpQxkyQVE",
    "pickedAt": "2026-09-18T05:49:11.221Z",
    "post": null,
@@ -15168,7 +15361,7 @@
     "pull": 1
    },
    "published": "2026-08-04T08:00:23Z",
-   "score": 31.23864427191647,
+   "score": 31.4339772412655,
    "state": "picked",
    "title": "泥の城【1/2】",
    "touched": true,
@@ -15259,7 +15452,7 @@
     "pull": 3
    },
    "published": "2026-04-14T08:00:42Z",
-   "score": 36.7455020830957,
+   "score": 37.01395229977022,
    "state": "picked",
    "title": "面接官「このペンを1万円で俺に売れなかったら落とす」",
    "touched": true,
@@ -15437,13 +15630,14 @@
     "pull": 4
    },
    "published": "2026-08-01T11:19:17Z",
-   "score": 58.851630159755864,
-   "state": "picked",
+   "score": 58.655653215028394,
+   "state": "dropped",
    "title": "【今年一酷評】8000円払って呪われるクソゲー【Curse Warrior（カースウォリアー）】",
    "touched": true,
    "type": "ambient",
    "views": 775345,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "g-LDoRj7ACw": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -15634,13 +15828,14 @@
     "pull": 4
    },
    "published": "2026-07-14T15:11:20Z",
-   "score": 60.63703134526014,
-   "state": "picked",
+   "score": 60.43855873656021,
+   "state": "dropped",
    "title": "メニューに無い、聞いたことない商品ばかりを注文して、通ぶってくる海外かぶれマダム【ジェラードン】",
    "touched": true,
    "type": "ambient",
    "views": 177324,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "gWOoYHWr1Qk": {
    "added": "2026-09-21T20:12:05+00:00",
@@ -15748,13 +15943,14 @@
     "pull": 4
    },
    "published": "2026-07-17T11:51:11Z",
-   "score": 56.78980684500018,
-   "state": "picked",
+   "score": 56.600641367385876,
+   "state": "dropped",
    "title": "コナンとエヴァとガンダムのスタッフが作ったのに駄作になった映画『アズワン AS ONE』",
    "touched": true,
    "type": "ambient",
    "views": 302885,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "ggsGQlVz6lE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -16087,7 +16283,7 @@
    "channelName": "ホッカイロレン",
    "desc": "オーズファン「ｳｿﾀﾞﾄﾞﾝﾄﾞｺﾄﾞｰ！」\n\n『仮面ライダーオーズ１０ｔｈ復活のコアメダル』\nhttps://amzn.to/42Gf8bA\n\nいつもの特殊造形師（鈴川）\nhttps://x.com/Bellworkshop\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube",
    "duration": 798,
-   "explore": true,
+   "explore": false,
    "id": "hnMMgYwUKLs",
    "pickedAt": "2026-09-21T04:52:16.078Z",
    "post": null,
@@ -16096,7 +16292,7 @@
     "pull": 4
    },
    "published": "2026-05-08T11:39:15Z",
-   "score": 42.9686820695248,
+   "score": 42.825538119632306,
    "state": "picked",
    "title": "【大炎上】酷過ぎて観客がファイナルベントしたクソ映画『仮面ライダーオーズ１０ｔｈ復活のコアメダル』",
    "touched": true,
@@ -16167,7 +16363,7 @@
     "pull": 2
    },
    "published": "2026-08-06T13:00:31Z",
-   "score": 44.975727967542035,
+   "score": 44.82598505215482,
    "state": "picked",
    "title": "【炎上】『ヒカルVALU事件』当時よく分かってなかったので、大人になった今ちゃんと学ぼうよ。ヒカルは悪くないのかもしれない。",
    "touched": true,
@@ -16206,7 +16402,7 @@
     "pull": 3
    },
    "published": "2026-05-26T08:00:19Z",
-   "score": 43.333861331459275,
+   "score": 43.604824812894435,
    "state": "picked",
    "title": "幸福トリミング",
    "touched": true,
@@ -16454,13 +16650,14 @@
     "pull": 4
    },
    "published": "2026-08-02T14:37:52Z",
-   "score": 59.11900801994319,
-   "state": "picked",
+   "score": 58.92215519046366,
+   "state": "dropped",
    "title": "超速で終わるらしいナルトのクソゲーやります【NARUTO-ナルト- 忍列伝】",
    "touched": true,
    "type": "ambient",
    "views": 72565,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "iWw2xZH3wNk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -16525,13 +16722,14 @@
     "pull": 4
    },
    "published": "2026-07-12T12:01:28Z",
-   "score": 58.4145360646302,
-   "state": "picked",
+   "score": 58.22000043461442,
+   "state": "dropped",
    "title": "視聴者から「絶対に見ろ」とリンクが多数送られてきた動画を見ます",
    "touched": true,
    "type": "ambient",
    "views": 460260,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "iiZDEwrCHF4": {
    "added": "2026-09-13T03:49:16+00:00",
@@ -16937,7 +17135,16 @@
    "score": 69.65892793069483,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T05:59:20.059Z",
+   "explore": false,
+   "touched": true
   },
   "jwMFD5EHW5A": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -17353,7 +17560,7 @@
    "channelName": "ホッカイロレン",
    "desc": "マジでキツかった\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 644,
-   "explore": false,
+   "explore": true,
    "id": "kw3L2nA6Fn0",
    "pickedAt": "2026-09-21T04:58:34.640Z",
    "post": null,
@@ -17695,7 +17902,7 @@
     "pull": 2
    },
    "published": "2026-06-16T09:30:21Z",
-   "score": 34.843037951249634,
+   "score": 35.79514001961885,
    "state": "picked",
    "title": "女子サッカーしませんか？",
    "touched": true,
@@ -17810,13 +18017,14 @@
     "pull": 4
    },
    "published": "2026-07-23T14:49:05Z",
-   "score": 58.192159008537615,
-   "state": "picked",
+   "score": 57.99834116872068,
+   "state": "dropped",
    "title": "坐薬を絶対に跳ね返しちゃう患者と、あの手この手でどうにか坐薬入れこみたい医者【ジェラードン】",
    "touched": true,
    "type": "ambient",
    "views": 40695,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "mEx2DIs0eCQ": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -17927,7 +18135,16 @@
    "score": 45.73935046328575,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 5,
+    "pull": 4
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:52:45.448Z",
+   "explore": true,
+   "touched": true
   },
   "mPkqbsHxsFI": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -18000,7 +18217,16 @@
    "score": 67.46589244012509,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-24T04:14:49.345Z",
+   "explore": false,
+   "touched": true
   },
   "mXqXTOUBSjk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -18073,7 +18299,16 @@
    "score": 66.63858603042875,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T06:00:14.973Z",
+   "explore": false,
+   "touched": true
   },
   "mfIiJDX-AP8": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -18237,13 +18472,14 @@
     "pull": 5
    },
    "published": "2026-07-26T09:30:31Z",
-   "score": 62.72697103383278,
-   "state": "picked",
+   "score": 64.28859858174866,
+   "state": "dropped",
    "title": "やらせてくれ",
    "touched": true,
    "type": "ambient",
    "views": 143071,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "muLfrlKHmys": {
    "added": "2026-09-29T20:13:34+00:00",
@@ -19201,7 +19437,7 @@
    "channelName": "ホッカイロレン",
    "desc": "男５人、密室、ラッコ鍋。何も起きるはずがなく…(実写)\n\nドラマ版『ゴールデンカムイ 北海道刺青囚人争奪編』\nhttps://amzn.to/4rTChlc\n実写版 『ゴールデンカムイ 』\nhttps://amzn.to/4rMUzEF\n\n1作目のレビュー\nhttps://www.youtube.com/watch?v=XZJAQ5E5Biw\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼",
    "duration": 771,
-   "explore": true,
+   "explore": false,
    "id": "q0iUG3SbHzQ",
    "pickedAt": "2026-09-21T04:59:03.910Z",
    "post": null,
@@ -19350,7 +19586,16 @@
    "score": 63.93343180892573,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 4,
+    "pull": 5
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-18T06:01:43.093Z",
+   "explore": false,
+   "touched": true
   },
   "qYXSgNKfGEE": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -19419,7 +19664,7 @@
     "pull": 2
    },
    "published": "2026-07-31T03:00:24Z",
-   "score": 40.90420747671965,
+   "score": 40.76794102535477,
    "state": "picked",
    "title": "布団ちゃんの『八尺様がいた夏休み』実況プレイ",
    "touched": true,
@@ -19483,7 +19728,7 @@
     "pull": 4
    },
    "published": "2026-04-03T08:01:01Z",
-   "score": 43.06613551206941,
+   "score": 43.380762139932735,
    "state": "picked",
    "title": "著者「昔と考え方変わった」",
    "touched": true,
@@ -19698,7 +19943,7 @@
    "channelName": "りょうぼー【ゲーム企画】",
    "desc": "▶︎生放送サブチャンネル\nhttps://youtube.com/channel/UCEZ1GJT-fGtt76rI9j3Mmqg\n\n\n■オススメ■\n\n▶︎ 個人的・面白企画ベスト15\nhttps://www.youtube.com/playlist?list=PLenA36qOf2g0edInFEHU7voZ1LLxHk4AE\n\n▶︎リッキー虐待シリーズ\nhttps://www.youtube.com/playlist?list=PLenA36qOf2g2LHDZtuNx0P-QG_p8LJXBF\n\n▶漢字縛りシリーズ\nhttps://www.youtube.com/playlist?lis",
    "duration": 522,
-   "explore": true,
+   "explore": false,
    "id": "rSsY9-Y1NmQ",
    "pickedAt": "2026-09-19T02:28:06.831Z",
    "post": null,
@@ -19707,7 +19952,7 @@
     "pull": 3
    },
    "published": "2026-06-25T09:30:39Z",
-   "score": 45.16901623377949,
+   "score": 46.4031901305552,
    "state": "picked",
    "title": "もう悩まなくていい",
    "touched": true,
@@ -19794,7 +20039,7 @@
     "pull": 4
    },
    "published": "2026-07-03T08:00:38Z",
-   "score": 53.50807027915554,
+   "score": 53.71942548880336,
    "state": "picked",
    "title": "何にでも喩えるキャリアセンター",
    "touched": true,
@@ -19936,19 +20181,21 @@
    "explore": false,
    "id": "sBXP-yfb-L8",
    "pickedAt": "2026-09-18T06:02:26.837Z",
-   "post": null,
+   "post": {
+    "score": 5
+   },
    "pre": {
     "expect": 4,
     "pull": 4
    },
    "published": "2026-07-10T08:00:14Z",
-   "score": 60.75912813799703,
-   "state": "picked",
+   "score": 61.07372263588776,
+   "state": "watched",
    "title": "戦地メンタルジャーニー",
    "touched": true,
    "type": "ambient",
    "views": 144495,
-   "watchedAt": null
+   "watchedAt": "2026-10-01T07:19:31.359Z"
   },
   "sGyiQzRSlKk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -20300,7 +20547,16 @@
    "score": 63.45382563158889,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 3,
+    "pull": 3
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-19T02:28:25.195Z",
+   "explore": false,
+   "touched": true
   },
   "t6mZjxoLwuU": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -20374,7 +20630,16 @@
    "score": 67.60654948671679,
    "slim": true,
    "state": "dropped",
-   "type": "ambient"
+   "type": "ambient",
+   "pre": {
+    "expect": 3,
+    "pull": 5
+   },
+   "post": null,
+   "watchedAt": null,
+   "pickedAt": "2026-09-21T04:59:20.420Z",
+   "explore": false,
+   "touched": true
   },
   "tYm_ffDJU1A": {
    "added": "2026-09-13T03:46:40+00:00",
@@ -20423,13 +20688,14 @@
     "pull": 4
    },
    "published": "2026-07-18T13:27:22Z",
-   "score": 57.03165918596886,
-   "state": "picked",
+   "score": 56.841695342612944,
+   "state": "dropped",
    "title": "一目見ただけでヤバそうな病気に罹った患者が来て、終わり悟った【ジェラードン】",
    "touched": true,
    "type": "ambient",
    "views": 803296,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "tcX9JRxoCFo": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -20604,7 +20870,7 @@
     "pull": 3
    },
    "published": "2026-07-17T08:00:10Z",
-   "score": 53.30772376853673,
+   "score": 53.518287615712815,
    "state": "picked",
    "title": "就活生トリアージ",
    "touched": true,
@@ -20786,13 +21052,14 @@
     "pull": 5
    },
    "published": "2026-07-01T12:01:30Z",
-   "score": 58.551858887125796,
-   "state": "picked",
+   "score": 58.356875759821,
+   "state": "dropped",
    "title": "W杯代表選手を揶揄し炎上→その後謝罪方法を間違え続けるカップルYouTuber",
    "touched": true,
    "type": "ambient",
    "views": 838971,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "uwUMG_fc7ns": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -21133,7 +21400,7 @@
     "pull": 4
    },
    "published": "2026-05-15T08:00:56Z",
-   "score": 48.610395811019245,
+   "score": 48.802405359188356,
    "state": "picked",
    "title": "カモップラー『バカキ』",
    "touched": true,
@@ -21156,7 +21423,7 @@
     "pull": 2
    },
    "published": "2026-07-21T08:00:11Z",
-   "score": 43.30684946344679,
+   "score": 43.47791016886527,
    "state": "picked",
    "title": "不機嫌チェッカー",
    "touched": true,
@@ -21195,13 +21462,14 @@
     "pull": 3
    },
    "published": "2026-09-04T10:10:52Z",
-   "score": 58.88314070849109,
-   "state": "picked",
+   "score": 58.68706766230369,
+   "state": "dropped",
    "title": "【POV】ドローンの視界だけで迷路から脱出せよ!!!",
    "touched": true,
    "type": "ambient",
    "views": 303896,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "wDOaf0e4ozk": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -21398,7 +21666,7 @@
    "channelName": "ホッカイロレン",
    "desc": "２月２０日公開の映画です。\n映画『夜勤事件』https://yakinjiken.com/\n\n公式PV　https://www.youtube.com/watch?v=RNAvXhIpHrc\n\nMOMIZizm MUSiC（もみじば）｜フリーBGM\nhttps://music.storyinvention.com/odoro-doori/\n\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\n",
    "duration": 544,
-   "explore": true,
+   "explore": false,
    "id": "wle0WrraHgY",
    "pickedAt": "2026-09-21T04:59:27.505Z",
    "post": null,
@@ -21705,7 +21973,7 @@
     "pull": 3
    },
    "published": "2026-06-26T08:00:28Z",
-   "score": 42.63224164313749,
+   "score": 42.80063766869464,
    "state": "picked",
    "title": "おさるの実験場【2/2】",
    "touched": true,
@@ -22007,7 +22275,7 @@
     "pull": 4
    },
    "published": "2026-06-05T08:00:13Z",
-   "score": 47.86050065692995,
+   "score": 48.159768884656906,
    "state": "picked",
    "title": "新入社員の処世術　～ハードル下げ～",
    "touched": true,
@@ -22046,7 +22314,7 @@
     "pull": 4
    },
    "published": "2026-06-04T11:05:13Z",
-   "score": 47.84347275079227,
+   "score": 47.6840891407704,
    "state": "picked",
    "title": "【DVDが打ち切り】パクりすぎてカレー臭いインド版スターウォーズ『アーリャマーン EPISODE１ 帝国の勇者』",
    "touched": true,
@@ -22339,7 +22607,7 @@
    "channelName": "ホッカイロレン",
    "desc": "ドゥワ！！\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 685,
-   "explore": false,
+   "explore": true,
    "id": "zxmQqQDPxn4",
    "pickedAt": "2026-09-21T04:59:33.438Z",
    "post": null,
