@@ -258,8 +258,9 @@ def main():
     default_backfill = d.get("backfill", 10)
 
     # ── 1. 判定済みを退避(切り詰めの代わり) ─────────────────
-    KEEP = ("channelId", "channelName", "title", "duration", "type",
-            "pre", "score", "post", "watchedAt", "rerun", "daily", "manual")
+    KEEP = ("channelId", "channelName", "title", "duration", "views", "type",
+            "pre", "score", "post", "watchedAt", "published", "rerun", "daily", "manual")
+    # post.bailed は post ごと持っていくので別途保持は不要
     moved_w = moved_s = 0
     for vid in list(videos):
         v = videos[vid]
@@ -267,6 +268,8 @@ def main():
         if st == "watched":
             wvid[vid] = {k: v[k] for k in KEEP if v.get(k) is not None}
             bump(stats, v.get("channelId"), "watched")
+            if (v.get("post") or {}).get("bailed"):
+                bump(stats, v.get("channelId"), "bailed")
             del videos[vid]
             moved_w += 1
         elif st in ("dropped", "seen"):
