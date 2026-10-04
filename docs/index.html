@@ -79,6 +79,9 @@ nav .badge{font-family:var(--num);font-size:11px;color:var(--muted);margin-left:
 .capbar i{display:block;height:100%;background:var(--pine)}
 .cap .num{font-size:11.5px;color:var(--muted);flex:none}
 .soon{color:var(--clay)}
+.diag td{padding:5px 4px}
+.rbar{height:5px;background:var(--rule)}
+.rbar i{display:block;height:100%;background:var(--pine)}
 .live{margin-left:auto;font-family:var(--num);font-size:22px;color:var(--pine)}
 
 /* ── ランキング ─────────────────── */
@@ -137,7 +140,19 @@ td.n{font-family:var(--num);text-align:right}
 #msg{color:var(--muted);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 dialog{border:1px solid var(--rule);background:var(--surface);padding:20px;max-width:420px;width:90%}
 dialog::backdrop{background:rgba(22,24,26,.4)}
-dialog h3{font-size:15px;margin-bottom:10px}
+dialog h3{font-size:15px;margin-bottom:10px;line-height:1.5}
+#rate p{font-size:13px;color:var(--ink);margin-bottom:12px}
+#rate p.foot{font-size:11.5px;color:var(--muted);margin:10px 0 0;text-align:center}
+.scale{display:flex;gap:6px}
+.scale button{flex:1;padding:14px 0;border:1px solid var(--rule);background:#fff;
+  font-size:17px;font-family:var(--num)}
+.scale button:active{background:var(--pine);color:#fff}
+.reasons{display:flex;flex-direction:column;gap:7px}
+.reasons button{text-align:left;border:1px solid var(--rule);background:#fff;padding:10px 12px}
+.reasons b{display:block;font-size:13.5px;font-weight:600;margin-bottom:2px}
+.reasons small{color:var(--muted);font-size:11.5px;line-height:1.5}
+#rate .cancel{display:block;width:100%;margin-top:14px;padding:9px;
+  border:1px solid var(--rule);font-size:13px;color:var(--muted)}
 dialog p{font-size:12.5px;color:var(--muted);margin-bottom:12px}
 dialog input{width:100%;padding:8px;border:1px solid var(--rule);font:inherit;font-size:13px;margin-bottom:8px;background:#fff}
 @media (prefers-reduced-motion:no-preference){.sieve{animation:in .18s ease-out}}
@@ -161,6 +176,11 @@ dialog input{width:100%;padding:8px;border:1px solid var(--rule);font:inherit;fo
   <button id="save" class="on">保存</button>
 </div></div>
 
+<dialog id="rate">
+  <div id="rateBody"></div>
+  <button class="cancel" onclick="document.getElementById('rate').close()">閉じる</button>
+</dialog>
+
 <dialog id="dlg">
   <h3>GitHubに保存する</h3>
   <p>評価の書き戻しにはトークンが要る。Fine-grained PAT を対象リポジトリだけに絞って Contents: Read and write で発行して、ここに入れる。ブラウザのlocalStorageにだけ残る。</p>
@@ -183,7 +203,7 @@ const SPATH  = "docs/data/stats.json";
 const LS = "yt-sieve";
 
 const TYPES = {focus:"しっかり", ambient:"ながら", serial:"連載"};
-let cfg = {weights:{expect:1,pull:.6,trust:.8,fresh:.5}, defaults:{halfLifeDays:30}, channels:[]};
+let cfg = {weights:{expect:1,pull:.6,trust:.8,fresh:.5,views:.4}, defaults:{halfLifeDays:30}, channels:[]};
 let stock = {videos:{}, updated:null};
 let sha = null, chSha = null;
 let tab = "sieve", filter = "focus", dirty = false, chDirty = false;
@@ -196,29 +216,71 @@ let stats = {};             // 月×チャンネルの集計
 /* ══ スコア ══════════════════════════════════ */
 const ch = id => cfg.channels.find(c => c.id === id) || {};
 
+/* 同じチャンネルでも系列で満足度が違う(配信アーカイブと切り抜き、企画と雑談)。
+   タイトル頭の 【】 や 「」 を系列の名札として使う。 */
+function seriesOf(v){
+  const t = v.title || "";
+  const m = t.match(/^\s*[【\[]([^】\]]{1,24})[】\]]/) || t.match(/^\s*「([^」]{1,24})」/);
+  return (v.channelId || "") + "/" + (m ? m[1].trim() : "");
+}
+
 let trustCache = null;
-function trustOf(cid){
+function buildTrust(){
   if (!trustCache){
     // 1回の描画で全チャンネルぶんをまとめて作る(毎回全在庫を走査しないため)
-    const acc = {};
+    const ch = {}, se = {};
     // 退避済み(watched.json)と、まだ stock に残っている当日分の両方を見る
     for (const v of [...Object.values(watched.videos||{}), ...Object.values(stock.videos)]){
       if (!v.post?.score) continue;
-      (acc[v.channelId] ||= []).push(v.post.score);
+      (ch[v.channelId] ||= []).push(v.post.score);
+      (se[seriesOf(v)] ||= []).push(v.post.score);
     }
-    trustCache = {};
-    for (const k in acc){
-      const a = acc[k];
-      trustCache[k] = ((a.reduce((x,y)=>x+y,0) + 3*3) / (a.length + 3)) / 5;
+    const mean = a => a.reduce((x,y)=>x+y,0) / a.length;
+    trustCache = {ch:{}, se:{}, n:{}};
+    for (const k in ch) trustCache.ch[k] = (mean(ch[k])*ch[k].length + 3*3) / (ch[k].length + 3) / 5;
+    for (const k in se){
+      // 系列は本数が少ないので、チャンネルの値に向かって縮める
+      const base = trustCache.ch[k.split("/")[0]] ?? 0.6;
+      trustCache.se[k] = (mean(se[k])/5*se[k].length + base*3) / (se[k].length + 3);
+      trustCache.n[k] = se[k].length;
     }
   }
-  return trustCache[cid] ?? 0.6;   // 実績なしは prior のまま
+  return null;
+}
+
+function trustOf(v){
+  if (!trustCache) buildTrust();
+  const key = typeof v === "string" ? null : seriesOf(v);
+  const cid = typeof v === "string" ? v : v.channelId;
+  if (key && trustCache.se[key] != null) return trustCache.se[key];
+  return trustCache.ch[cid] ?? 0.6;   // 実績なしは prior のまま
 }
 
 function freshOf(v){
   const hl = ch(v.channelId).halfLifeDays ?? cfg.defaults.halfLifeDays ?? 30;
-  const age = (Date.now() - Date.parse(v.published || v.added)) / 864e5;
-  return Math.pow(2, -age / hl);
+  const t = Date.parse(v.published || v.added || v.watchedAt || "");
+  if (isNaN(t)) return 0.5;        // 日付が分からないものは中立に倒す
+  return Math.pow(2, -Math.max(0, (Date.now() - t) / 864e5) / hl);
+}
+
+/* そのチャンネルの再生数の中央値。サムネ判断とは独立した「他人がもう見た結果」。 */
+let medCache = null;
+function medianViews(cid){
+  if (!medCache){
+    const by = {};
+    for (const v of [...Object.values(watched.videos||{}), ...Object.values(stock.videos)])
+      if (v.views) (by[v.channelId] ||= []).push(v.views);
+    medCache = {};
+    for (const k in by){ const a = by[k].sort((x,y)=>x-y); medCache[k] = a[a.length>>1]; }
+  }
+  return medCache[cid] || 0;
+}
+
+function viewsOf(v){
+  const med = medianViews(v.channelId);
+  if (!med || !v.views) return 0.5;          // 判断材料なし = 中立
+  const r = v.views / med;
+  return Math.min(0.95, Math.max(0.1, r / (1 + r) * 2 * 0.5 + 0.25));
 }
 
 function scoreOf(v, pre){
@@ -226,8 +288,9 @@ function scoreOf(v, pre){
   const p = {
     expect: (pre.expect ?? 3) / 5,
     pull:   (pre.pull   ?? 3) / 5,
-    trust:  trustOf(v.channelId),
+    trust:  trustOf(v),
     fresh:  freshOf(v),
+    views:  viewsOf(v),
   };
   // 重み付き幾何平均 = exp( Σwᵢ·ln pᵢ / Σwᵢ )
   let s = 0, W = 0;
@@ -249,7 +312,7 @@ const list = st => Object.values(stock.videos).filter(v => v.state === st);
 
 /* ══ 描画 ════════════════════════════════════ */
 function render(){
-  trustCache = null;
+  trustCache = null; medCache = null;
   try { draw(); }
   catch(e){
     console.error(e);
@@ -282,6 +345,8 @@ function badges(v){
   if (v.daily)  b.push(["今日の1本", "pill day"]);
   if (v.rerun)  b.push(["再放送", "pill run"]);
   if (v.expiredCount) b.push(["差し戻し", "pill back"]);
+  if (v.bailReason === "later") b.push(["今じゃなかった", "pill back"]);
+  if (v.bailReason === "long") b.push(["長すぎた", "pill back"]);
   return b.map(([t,c]) => `<span class="${c}">${t}</span>`).join(" ") + (b.length ? " ・ " : "");
 }
 
@@ -466,7 +531,8 @@ function drawRank(){
           <p class="meta">${badges(v)}${esc(v.channelName)} ・ ${hhmm(v.duration)}
             ・ <span class="${left<=3?"soon":""}">あと${left}日</span></p>
           <div class="acts">
-            <button onclick="rate('${v.id}')">見た</button>
+            <button onclick="askRate('${v.id}')">見た</button>
+            <button onclick="askBail('${v.id}')">途中でやめた</button>
             <button class="off" onclick="drop('${v.id}')">やめる</button>
           </div>
         </div>
@@ -493,14 +559,60 @@ function setCap(){
   chTouch(); render();
 }
 
-function rate(id){
-  const s = prompt("見終わった。1〜5でどうだった?\n(5 = 全部が有効時間だった)");
-  const n = parseInt(s, 10);
-  if (!(n >= 1 && n <= 5)) return;
+let rating = null;   // いま評価しようとしている動画のid
+
+function askRate(id){
+  rating = id;
   const v = stock.videos[id];
+  $("#rateBody").innerHTML = `
+    <h3>${esc(v.title).slice(0,60)}</h3>
+    <p>見終わった。どのくらい有効時間だった?</p>
+    <div class="scale">${[1,2,3,4,5].map(n =>
+      `<button onclick="setRate(${n})">${n}</button>`).join("")}</div>
+    <p class="foot">1 = 見なければよかった ／ 5 = 全部が有効時間だった</p>`;
+  $("#rate").showModal();
+}
+
+function setRate(n){
+  const v = stock.videos[rating];
   v.post = {score:n}; v.state = "watched";
   v.watchedAt = new Date().toISOString(); v.touched = true;
-  touch(); render();
+  $("#rate").close(); touch(); render();
+}
+
+/* 途中離脱は理由で意味が変わる。
+   期待外れだけが予測の失敗で、残り2つは型やタイミングのズレ。 */
+function askBail(id){
+  rating = id;
+  const v = stock.videos[id];
+  $("#rateBody").innerHTML = `
+    <h3>${esc(v.title).slice(0,60)}</h3>
+    <p>途中でやめた。なぜ?</p>
+    <div class="reasons">
+      <button onclick="setBail('miss')"><b>期待外れだった</b>
+        <small>中身が思っていたものと違った。予測が外れた分として記録する</small></button>
+      <button onclick="setBail('later')"><b>いい動画だが今じゃない</b>
+        <small>満足度には数えず、ふるいに戻して裁き直す</small></button>
+      <button onclick="setBail('long')"><b>長すぎた</b>
+        <small>型の見立てが違う。型を外してふるいに戻す</small></button>
+    </div>`;
+  $("#rate").showModal();
+}
+
+function setBail(why){
+  const v = stock.videos[rating];
+  v.touched = true;
+  if (why === "miss"){
+    v.post = {score:1, bailed:true};
+    v.state = "watched";
+    v.watchedAt = new Date().toISOString();
+  } else {
+    v.state = "pool";                 // 満足度のデータにはしない
+    v.pickedAt = null; v.pre = null; v.score = null;
+    v.bailReason = why;
+    if (why === "long") v.type = null;
+  }
+  $("#rate").close(); touch(); render();
 }
 function drop(id){
   const v = stock.videos[id];
@@ -693,6 +805,8 @@ function drawLog(){
          `裁いた${judged}本のうち採用した割合。下がってきたらチャンネルが劣化している`) +
     stat("予測ズレ率", judged ? Math.round(T.expired/judged*100)+"%" : "—",
          "採用したのに期限切れで落ちた割合。見たい気がしただけの分") +
+    stat("途中離脱率", w.length ? Math.round(w.filter(v=>v.post.bailed).length/w.length*100)+"%" : "—",
+         "見始めてから期待外れで切った割合。ここが高いなら引きに釣られている") +
     stat("枠に押し出された", T.pushed + T.full || "0",
          "他の動画に負けた数。多いなら枠が狭いか、採用が甘い") +
     `<h3 style="margin:22px 0 0;font-size:14px">拾い方べつの満足度</h3>` +
@@ -701,9 +815,55 @@ function drawLog(){
     stat("今日の1本", grp(v => v.daily), "過去動画からのランダム") +
     stat("再放送", grp(v => v.rerun), "昔5を付けたものの再評価") +
     stat("探索枠", grp(v => v.explore), "ランキングを無視して引き上げたもの") +
+    diagnose(w) +
     (rows ? `<h3 style="margin:22px 0 0;font-size:14px">チャンネル別</h3>
       <table><tr><th>チャンネル</th><th style="text-align:right">本数</th>
       <th style="text-align:right">平均</th></tr>${rows}</table>` : "");
+}
+
+/* 各パラメータが、実際に満足度を当てられていたかを見る。
+   期待と引きの相関が高ければ、2つは同じものを測っている。 */
+const corr = (a, b) => {
+  const n = a.length;
+  if (n < 6) return NaN;
+  const m = x => x.reduce((p,q)=>p+q,0)/n;
+  const ma = m(a), mb = m(b);
+  const sa = Math.sqrt(m(a.map(x=>(x-ma)**2))), sb = Math.sqrt(m(b.map(x=>(x-mb)**2)));
+  return (sa && sb) ? m(a.map((x,i)=>(x-ma)*(b[i]-mb))) / (sa*sb) : NaN;
+};
+
+function diagnose(w){
+  const have = w.filter(v => v.pre);
+  const y = have.map(v => v.post.score);
+  const col = {
+    "期待":     have.map(v => v.pre.expect ?? 3),
+    "引き":     have.map(v => v.pre.pull ?? 3),
+    "信頼度":   have.map(v => trustOf(v)),
+    "鮮度":     have.map(v => freshOf(v)),
+    "再生数比": have.map(v => viewsOf(v)),
+    "再生時間": have.map(v => v.duration || 0),
+  };
+  const dup = corr(col["期待"], col["引き"]);
+  const fmt = x => isNaN(x) ? "—" : (x >= 0 ? " " : "") + x.toFixed(2);
+
+  const rows = Object.entries(col).map(([k, xs]) => {
+    const r = corr(xs, y);
+    const bar = isNaN(r) ? "" :
+      `<i style="width:${Math.min(100, Math.abs(r)*100)}%;${r<0?"background:var(--clay)":""}"></i>`;
+    return `<tr><td>${k}</td><td class="n">${fmt(r)}</td>
+      <td style="width:45%"><div class="rbar">${bar}</div></td></tr>`;
+  }).join("");
+
+  const verdict = isNaN(dup) ? `視聴済みが ${have.length} 本。6本を超えると出る`
+    : dup >= .8 ? `期待と引きの相関は ${fmt(dup)}。<b>ほぼ同じものを測っている。</b>
+        掛け算に分けている意味がないので、引きの重みを落として他の項に回したほうがいい`
+    : dup >= .5 ? `期待と引きの相関は ${fmt(dup)}。重なりはあるが別物として機能している`
+    : `期待と引きの相関は ${fmt(dup)}。<b>独立した2つの軸として効いている。</b>この分け方は当たり`;
+
+  return `<h3 style="margin:24px 0 2px;font-size:14px">パラメータの診断</h3>
+    <p class="meta" style="margin-bottom:8px">各項と視聴後評価の相関。0に近い項は、重みを下げてよい</p>
+    <table class="diag">${rows}</table>
+    <p class="meta" style="margin-top:10px">${verdict}</p>`;
 }
 
 /* ══ 動画を手で拾う ════════════════════════════
