@@ -173,13 +173,14 @@
     "pull": 3
    },
    "published": "2026-08-21T11:00:21Z",
-   "score": 55.51117349019571,
-   "state": "picked",
+   "score": 55.013253411636484,
+   "state": "dropped",
    "title": "【闇深】某ヒーローの俳優を破滅寸前まで追い込んだ駄作映画『グリーン・ランタン』",
    "touched": true,
    "type": "ambient",
    "views": 400502,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "-WfhQasl5rA": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -2389,13 +2390,14 @@
     "pull": 2
    },
    "published": "2026-09-05T03:00:36Z",
-   "score": 48.10504585668254,
-   "state": "picked",
+   "score": 47.673537660450364,
+   "state": "dropped",
    "title": "おにや、初めての筋トレ配信『ダイジェスト』【o-228 おにや/筋トレ】【放送日 2026/9/4】",
    "touched": true,
    "type": "ambient",
    "views": 165456,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "5_zBJSrGkg8": {
    "added": "2026-09-18T20:11:50+00:00",
@@ -2833,13 +2835,14 @@
     "pull": 4
    },
    "published": "2026-07-09T11:00:03Z",
-   "score": 54.81750872714548,
-   "state": "picked",
+   "score": 54.32580096379671,
+   "state": "dropped",
    "title": "【朗報】トイストーリーの新作、マジで傑作だった...『トイ・ストーリー５』",
    "touched": true,
    "type": "ambient",
    "views": 574393,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "6p-b7fp10R8": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -3731,7 +3734,7 @@
     "pull": 4
    },
    "published": "2026-04-23T10:48:44Z",
-   "score": 40.335939553826954,
+   "score": 39.97405855564041,
    "state": "picked",
    "title": "クッソ面白かったのにレビューする気にならなかった映画【５選】",
    "touched": true,
@@ -4037,7 +4040,7 @@
    "channelName": "ホッカイロレン",
    "desc": "バイオだと思ったらデビルメイクライだった...\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 746,
-   "explore": true,
+   "explore": false,
    "id": "A02X4SDWXcE",
    "pickedAt": "2026-09-21T04:56:13.725Z",
    "post": null,
@@ -6307,13 +6310,14 @@
     "pull": 4
    },
    "published": "2026-06-15T16:24:49Z",
-   "score": 49.86411319061248,
-   "state": "picked",
+   "score": 49.416831359221,
+   "state": "dropped",
    "title": "すっげぇ微妙な評価のスターウォーズゲームやる【Star Wars Outlaws】",
    "touched": true,
    "type": "ambient",
    "views": 66938,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "GxT0TaaGw_4": {
    "added": "2026-09-18T05:01:21+00:00",
@@ -6382,7 +6386,7 @@
     "pull": 4
    },
    "published": "2026-05-28T11:58:47Z",
-   "score": 46.37964771877575,
+   "score": 45.963616554590146,
    "state": "picked",
    "title": "【朗報】スターウォーズの新作映画、６年ぶりに劇場公開される『スター・ウォーズ／マンダロリアン・アンド・グローグー』",
    "touched": true,
@@ -8028,7 +8032,7 @@
    "channelName": "ホッカイロレン",
    "desc": "絵柄が「ChaO」なので略して「チャオキル」\n\n実写ハリウッド版『オール・ユー・ニード・イズ・キル』\nhttps://amzn.to/3LWjLcL\n小畑健の漫画版『All You Need Is Kill』\nhttps://amzn.to/3ZlEoSG\n原作のラノベ\nhttps://amzn.to/3YPuwAE\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\n\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gm",
    "duration": 673,
-   "explore": true,
+   "explore": false,
    "id": "M47CYljwjsU",
    "pickedAt": "2026-09-21T04:57:01.125Z",
    "post": null,
@@ -8241,13 +8245,14 @@
     "pull": 4
    },
    "published": "2026-07-02T10:43:15Z",
-   "score": 53.30754820270962,
-   "state": "picked",
+   "score": 52.82938088114455,
+   "state": "dropped",
    "title": "【驚異の大炎上】１６年ぶりなのに製作陣に侵略されちゃった悲劇の映画『新劇場版☆ケロロ軍曹　復活して速攻地球滅亡の危機であります！』",
    "touched": true,
    "type": "ambient",
    "views": 987771,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "MmzQ26pTUzQ": {
    "added": "2026-09-18T05:19:08+00:00",
@@ -11969,13 +11974,14 @@
     "pull": 5
    },
    "published": "2026-05-15T12:26:15Z",
-   "score": 49.812379874285114,
-   "state": "picked",
+   "score": 49.36556058929531,
+   "state": "dropped",
    "title": "大人の事情で削除された動画シリーズ【再アップ】",
    "touched": true,
    "type": "ambient",
    "views": 443004,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "XJzjNhZHoL4": {
    "added": "2026-09-19T20:11:31+00:00",
@@ -13956,13 +13962,14 @@
     "pull": 4
    },
    "published": "2026-06-13T10:15:15Z",
-   "score": 49.41786479011452,
-   "state": "picked",
+   "score": 48.97458251219621,
+   "state": "dropped",
    "title": "【アメリカ未上映】なぜか中国で作られて話題にすらなってないトムとジェリーの映画『トムとジェリー 時をこえる魔法の羅針盤』",
    "touched": true,
    "type": "ambient",
    "views": 444319,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "gaveup"
   },
   "boA4EZFb_3Q": {
    "added": "2026-10-03T22:44:17+00:00",
@@ -16205,7 +16212,7 @@
     "pull": 4
    },
    "published": "2026-05-08T11:39:15Z",
-   "score": 42.825538119632306,
+   "score": 42.44138775719708,
    "state": "picked",
    "title": "【大炎上】酷過ぎて観客がファイナルベントしたクソ映画『仮面ライダーオーズ１０ｔｈ復活のコアメダル』",
    "touched": true,
@@ -17103,7 +17110,7 @@
    "channelName": "斜め270度考察",
    "desc": "※狩猟笛を使ってた人をバカにしたいわけではなく、\n『本来もっと感謝されるべき立ち位置なのに、なぜ微妙な雰囲気が流れてしまうのか考察しよう』\nというコンセプトの動画です！楽しく見てね\n\n視聴者からの投稿も募集しています！\n\n\n①あの頃怒ってたこと\nhttps://docs.google.com/forms/d/e/1FA...\n\n\n②あなたが思う過小評価されてるヒト・モノ\nhttps://forms.gle/v8mXwoWcAc4uYkVU8\n\n投稿していただいた内容は\nチャンネルで紹介する可能性があります！\nドシドシご応募ください\n\n\n放送作家/ディレクターとして活動している『井上』が思いつい",
    "duration": 961,
-   "explore": true,
+   "explore": false,
    "id": "jwMFD5EHW5A",
    "pickedAt": "2026-09-21T04:52:31.279Z",
    "post": null,
@@ -17474,7 +17481,7 @@
    "channelName": "ホッカイロレン",
    "desc": "ウェルカムトゥラクーンシティとか足元にも及ばないから...\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 820,
-   "explore": true,
+   "explore": false,
    "id": "klMIEuE1zBE",
    "pickedAt": "2026-09-21T04:58:31.556Z",
    "post": null,
@@ -17529,7 +17536,7 @@
    "channelName": "ホッカイロレン",
    "desc": "マジでキツかった\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 644,
-   "explore": true,
+   "explore": false,
    "id": "kw3L2nA6Fn0",
    "pickedAt": "2026-09-21T04:58:34.640Z",
    "post": null,
@@ -17846,7 +17853,7 @@
    "channelName": "ホッカイロレン",
    "desc": "やっぱりマグロ食ってるようなのはダメだな...\n\n『ゴジラ FINAL WARS』\nhttps://amzn.to/3LXrCad\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\n\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 730,
-   "explore": false,
+   "explore": true,
    "id": "lb1U7nJlDZA",
    "pickedAt": "2026-09-21T04:58:45.843Z",
    "post": null,
@@ -19480,7 +19487,7 @@
    "channelName": "ホッカイロレン",
    "desc": "男５人、密室、ラッコ鍋。何も起きるはずがなく…(実写)\n\nドラマ版『ゴールデンカムイ 北海道刺青囚人争奪編』\nhttps://amzn.to/4rTChlc\n実写版 『ゴールデンカムイ 』\nhttps://amzn.to/4rMUzEF\n\n1作目のレビュー\nhttps://www.youtube.com/watch?v=XZJAQ5E5Biw\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼",
    "duration": 771,
-   "explore": false,
+   "explore": true,
    "id": "q0iUG3SbHzQ",
    "pickedAt": "2026-09-21T04:59:03.910Z",
    "post": null,
@@ -21640,7 +21647,7 @@
    "channelName": "ホッカイロレン",
    "desc": "２月２０日公開の映画です。\n映画『夜勤事件』https://yakinjiken.com/\n\n公式PV　https://www.youtube.com/watch?v=RNAvXhIpHrc\n\nMOMIZizm MUSiC（もみじば）｜フリーBGM\nhttps://music.storyinvention.com/odoro-doori/\n\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\n",
    "duration": 544,
-   "explore": false,
+   "explore": true,
    "id": "wle0WrraHgY",
    "pickedAt": "2026-09-21T04:59:27.505Z",
    "post": null,
@@ -22282,7 +22289,7 @@
     "pull": 4
    },
    "published": "2026-06-04T11:05:13Z",
-   "score": 47.6840891407704,
+   "score": 47.25635697603614,
    "state": "picked",
    "title": "【DVDが打ち切り】パクりすぎてカレー臭いインド版スターウォーズ『アーリャマーン EPISODE１ 帝国の勇者』",
    "touched": true,
@@ -22593,7 +22600,7 @@
    "channelName": "ホッカイロレン",
    "desc": "ドゥワ！！\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 685,
-   "explore": true,
+   "explore": false,
    "id": "zxmQqQDPxn4",
    "pickedAt": "2026-09-21T04:59:33.438Z",
    "post": null,
