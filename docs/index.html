@@ -6,7 +6,7 @@
 <title>ふるい</title>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2e5b4e">
-<link rel="icon" href="icon.svg">
+<link rel="icon" href="icon-192.png">
 <style>
 :root{
   --bg:#edeeea; --surface:#f7f8f5; --ink:#16181a; --muted:#6b7075;
@@ -46,6 +46,9 @@ nav .badge{font-family:var(--num);font-size:11px;color:var(--muted);margin-left:
 .empty{padding:48px 8px;color:var(--muted);font-size:14px;line-height:1.9}
 .empty b{display:block;color:var(--ink);font-weight:600;margin-bottom:6px}
 .meta{font-size:12px;color:var(--muted)}
+.pill.day{border-color:var(--sand);color:var(--sand)}
+.pill.run{border-color:var(--pine);color:var(--pine)}
+.pill.back{border-color:var(--clay);color:var(--clay)}
 .pill{
   display:inline-block;padding:1px 7px;border:1px solid var(--rule);
   border-radius:2px;font-size:11px;color:var(--muted);
@@ -109,6 +112,8 @@ nav .badge{font-family:var(--num);font-size:11px;color:var(--muted);margin-left:
 .chrow .row{margin:10px 0 0}
 .chrow .row>span:first-child{width:5.6em}
 .chrow .seg button{padding:6px 0;font-size:12px}
+.addch{font-size:12.5px;color:var(--pine);border-bottom:1px solid currentColor;
+  padding-bottom:1px;text-align:left}
 
 /* ── 記録 ───────────────────────── */
 .stat{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
@@ -173,6 +178,8 @@ dialog input{width:100%;padding:8px;border:1px solid var(--rule);font:inherit;fo
 const $ = s => document.querySelector(s);
 const PATH = "docs/data/stock.json";
 const CHPATH = "docs/data/channels.json";
+const WPATH  = "docs/data/watched.json";
+const SPATH  = "docs/data/stats.json";
 const LS = "yt-sieve";
 
 const TYPES = {focus:"しっかり", ambient:"ながら", serial:"連載"};
@@ -183,6 +190,8 @@ let tab = "sieve", filter = "focus", dirty = false, chDirty = false;
 let draft = {};   // ふるい台の入力中の値
 let undo = null;  // 直前の裁きを1回だけ巻き戻すための控え
 let cfgOK = true; // channels.json を読めたか(読めないと枠が効かない)
+let watched = {videos:{}};  // 視聴済み。収集側が毎晩 stock から移してくる
+let stats = {};             // 月×チャンネルの集計
 
 /* ══ スコア ══════════════════════════════════ */
 const ch = id => cfg.channels.find(c => c.id === id) || {};
@@ -192,7 +201,8 @@ function trustOf(cid){
   if (!trustCache){
     // 1回の描画で全チャンネルぶんをまとめて作る(毎回全在庫を走査しないため)
     const acc = {};
-    for (const v of Object.values(stock.videos)){
+    // 退避済み(watched.json)と、まだ stock に残っている当日分の両方を見る
+    for (const v of [...Object.values(watched.videos||{}), ...Object.values(stock.videos)]){
       if (!v.post?.score) continue;
       (acc[v.channelId] ||= []).push(v.post.score);
     }
@@ -266,6 +276,15 @@ function draw(){
 function go(k){ tab = k; render(); window.scrollTo(0,0); }
 
 /* ── ふるい台:1本ずつ裁く ─────────────── */
+function badges(v){
+  const b = [];
+  if (v.manual) b.push(["自分で追加", "pill"]);
+  if (v.daily)  b.push(["今日の1本", "pill day"]);
+  if (v.rerun)  b.push(["再放送", "pill run"]);
+  if (v.expiredCount) b.push(["差し戻し", "pill back"]);
+  return b.map(([t,c]) => `<span class="${c}">${t}</span>`).join(" ") + (b.length ? " ・ " : "");
+}
+
 function drawSieve(){
   const box = `<div class="add" style="margin-bottom:12px">
       <input id="vq" placeholder="動画URLを貼って在庫に足す" autocapitalize="off" spellcheck="false">
@@ -292,13 +311,17 @@ function drawSieve(){
     <div class="sieve">
       <img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="" loading="lazy">
       <h2>${esc(v.title)}</h2>
-      <p class="meta">${v.manual ? "<span class=\"pill\">自分で追加</span> ・ " : ""}${esc(v.channelName)}
+      <p class="meta">${badges(v)}${esc(v.channelName)}
         ・ ${hhmm(v.duration)} ・ 公開${ago(v.published)} ・ 在庫${ago(v.added)}</p>
       <div class="row"><span>型</span>${seg("type",3,true)}</div>
       <div class="row"><span>期待</span>${seg("expect",5)}</div>
       <div class="row"><span>引き</span>${seg("pull",5)}</div>
       <div class="row"><span>見込み</span>
         <span class="live num">${ready ? scoreOf(v,d).toFixed(0) : "––"}</span></div>
+      ${v.newChan ? `<p class="meta" style="margin-top:8px">
+        <button class="addch" onclick="addChanOf('${v.id}')">
+          + ${esc(v.newChan.name || v.newChan.id)} を登録して、新着も拾う
+        </button></p>` : ""}
       <div class="verdict">
         <button class="skip" onclick="verdict('${v.id}',false)">見送る</button>
         <button class="seen" onclick="verdict('${v.id}','seen')">もう見た</button>
@@ -318,6 +341,15 @@ function gauge(type){
   const used = pickedOf(type).reduce((a,x) => a + (x.duration||0), 0);
   return `${TYPES[type]}枠 ${(used/3600).toFixed(1)}/${(cap/3600).toFixed(0)}時間`;
 }
+function addChanOf(id){
+  const c = stock.videos[id]?.newChan;
+  if (!c) return;
+  if (!cfg.channels.some(x => x.id === c.id))
+    cfg.channels.push({id:c.id, name:c.name || c.id, defaultType:"focus"});
+  for (const v of Object.values(stock.videos)) if (v.newChan?.id === c.id) delete v.newChan;
+  chTouch(); touch(); render();
+}
+
 function pick(id, key, val){ draft[id][key] = val; drawSieve(); }
 
 const capOf = t => (cfg.defaults.capacityHours?.[t] || 0) * 3600;
@@ -431,7 +463,7 @@ function drawRank(){
         <span class="rank">${v.explore ? "探" : i+1}</span>
         <div class="body">
           <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">${esc(v.title)}</a>
-          <p class="meta">${esc(v.channelName)} ・ ${hhmm(v.duration)}
+          <p class="meta">${badges(v)}${esc(v.channelName)} ・ ${hhmm(v.duration)}
             ・ <span class="${left<=3?"soon":""}">あと${left}日</span></p>
           <div class="acts">
             <button onclick="rate('${v.id}')">見た</button>
@@ -614,10 +646,21 @@ function importCsv(text){
 
 /* ── 記録 ──────────────────────────────── */
 function drawLog(){
-  const w = list("watched").filter(v => v.post?.score);
-  const dropped = list("dropped");
-  const expired = dropped.filter(v => v.dropReason === "expired");
-  const judged = w.length + dropped.length;
+  // 視聴済みは watched.json(退避済み)と stock の当日分を合わせて見る
+  const w = [...Object.values(watched.videos||{}), ...list("watched")]
+    .filter(v => v.post?.score);
+
+  // 裁いた回数は月次の集計から積み上げる。却下した動画そのものはもう残っていない
+  const T = {dropped:0, seen:0, watched:0, expired:0, pushed:0, full:0};
+  for (const month of Object.values(stats||{}))
+    for (const ch of Object.values(month))
+      for (const k in T) T[k] += ch[k] || 0;
+  for (const v of list("dropped"))
+    T[{expired:"expired", pushed:"pushed", full:"full"}[v.dropReason] || "dropped"]++;
+  for (const v of list("seen")) T.seen++;
+
+  const everPicked = T.watched + T.expired + T.pushed + T.full;
+  const judged = everPicked + T.dropped;          // 既視聴は分母に入れない
 
   const mean = a => a.reduce((x,y)=>x+y,0) / (a.length||1);
   const pre = w.map(v => v.score ?? 0), post = w.map(v => v.post.score);
@@ -629,29 +672,35 @@ function drawLog(){
     const sq = Math.sqrt(mean(post.map(x=>(x-mq)**2)));
     r = (sp && sq) ? cov/(sp*sq) : NaN;
   }
-  const ex = w.filter(v => v.explore);
+  const grp = f => { const a = w.filter(f).map(v => v.post.score);
+                     return a.length ? `${mean(a).toFixed(2)} (${a.length})` : "—"; };
 
-  const stat = (label, val, note) =>
-    `<div class="stat"><span>${label}<small>${note}</small></span><span class="v">${val}</span></div>`;
+  const stat = (l, v, note) =>
+    `<div class="stat"><span>${l}<small>${note}</small></span><span class="v">${v}</span></div>`;
 
-  // チャンネル別
   const by = {};
-  for (const v of w) (by[v.channelName] ||= []).push(v.post.score);
+  for (const v of w) (by[v.channelName || v.channelId] ||= []).push(v.post.score);
   const rows = Object.entries(by).sort((a,b)=>mean(b[1])-mean(a[1]))
     .map(([n,a]) => `<tr><td>${esc(n)}</td><td class="n">${a.length}</td>
       <td class="n">${mean(a).toFixed(1)}</td></tr>`).join("");
 
   $("#view").innerHTML =
     stat("視聴後の平均", w.length ? mean(post).toFixed(2) : "—",
-         `${w.length}本。結果を映すだけの数字。厳しくすれば上がるので、目標にはしない`) +
+         `${w.length}本。結果を映すだけの数字。厳しくすれば上がるので目標にはしない`) +
     stat("予測との相関", isNaN(r) ? "—" : r.toFixed(2),
          "視聴前スコアが満足度を当てられているか。5本以上で出る。低いなら重みが間違っている") +
-    stat("通過率", judged ? Math.round(w.length/judged*100)+"%" : "—",
-         "裁いたうちの採用。下がってきたら登録チャンネルが劣化している") +
-    stat("予測ズレ率", judged ? Math.round(expired.length/judged*100)+"%" : "—",
+    stat("通過率", judged ? Math.round(everPicked/judged*100)+"%" : "—",
+         `裁いた${judged}本のうち採用した割合。下がってきたらチャンネルが劣化している`) +
+    stat("予測ズレ率", judged ? Math.round(T.expired/judged*100)+"%" : "—",
          "採用したのに期限切れで落ちた割合。見たい気がしただけの分") +
-    stat("探索枠の平均", ex.length ? mean(ex.map(v=>v.post.score)).toFixed(2) : "—",
-         `${ex.length}本。上位平均を超えるなら、ランキングが取りこぼしている`) +
+    stat("枠に押し出された", T.pushed + T.full || "0",
+         "他の動画に負けた数。多いなら枠が狭いか、採用が甘い") +
+    `<h3 style="margin:22px 0 0;font-size:14px">拾い方べつの満足度</h3>` +
+    stat("新着から", grp(v => !v.manual && !v.daily && !v.rerun), "ふるいを流れてきたもの") +
+    stat("自分で追加", grp(v => v.manual), "共有や貼り付けで拾ったもの。自分の選球眼") +
+    stat("今日の1本", grp(v => v.daily), "過去動画からのランダム") +
+    stat("再放送", grp(v => v.rerun), "昔5を付けたものの再評価") +
+    stat("探索枠", grp(v => v.explore), "ランキングを無視して引き上げたもの") +
     (rows ? `<h3 style="margin:22px 0 0;font-size:14px">チャンネル別</h3>
       <table><tr><th>チャンネル</th><th style="text-align:right">本数</th>
       <th style="text-align:right">平均</th></tr>${rows}</table>` : "");
@@ -702,8 +751,11 @@ async function addVideo(raw, fallbackTitle){
     } catch(e){ console.warn("メタ取得できず", e); }
   }
 
+  const newChan = meta.channelId && !cfg.channels.some(c => c.id === meta.channelId)
+    ? {id: meta.channelId, name: meta.channelName} : null;
+
   stock.videos[id] = {
-    id, ...meta, desc: "",
+    id, ...meta, desc: "", newChan,
     added: new Date().toISOString(),
     state: "pool",              // 自分で選んだものは寝かせず、すぐふるいに出す
     type: ch(meta.channelId).defaultType || null,
@@ -723,17 +775,30 @@ function isoSec(s){
 
 /* 共有シートから来たとき。manifest の share_target が
    ?title=...&text=...&url=... を付けてここに飛ばしてくる。 */
+const CHAN = /youtube\.com\/(?:channel\/(UC[\w-]{22})|@([\w.\-]+)|c\/([\w.\-]+)|user\/([\w.\-]+))/;
+
 async function handleShare(){
   const q = new URLSearchParams(location.search);
-  const raw = q.get("url") || q.get("text") || "";
-  if (!videoIdFrom(raw)) return false;
+  const raw = (q.get("url") || q.get("text") || "").trim();
+  const isVideo = !!videoIdFrom(raw);
+  const isChan  = !isVideo && CHAN.test(raw);
+  if (!isVideo && !isChan) return false;
 
   history.replaceState(null, "", location.pathname);   // URLを戻して再読み込み事故を防ぐ
   try {
-    const v = await addVideo(raw, q.get("title"));
-    $("#msg").textContent = `追加: ${v.title.slice(0,24)}`;
+    if (isChan){
+      const c = await resolve(raw);                    // @ハンドルはAPIキーで解決する
+      if (cfg.channels.some(x => x.id === c.id)) throw new Error("もう登録してある");
+      cfg.channels.push({id:c.id, name:c.name || c.id, defaultType:"focus"});
+      chTouch();
+      $("#msg").textContent = `チャンネル追加: ${c.name || c.id}`;
+      tab = "chan";
+    } else {
+      const v = await addVideo(raw, q.get("title"));
+      $("#msg").textContent = `追加: ${v.title.slice(0,24)}`;
+      tab = "sieve";
+    }
     if (conn()) await $("#save").onclick();            // 取りこぼさないよう即保存
-    tab = "sieve";
   } catch(e){
     $("#msg").textContent = e.message;
   }
@@ -865,6 +930,15 @@ async function boot(){
     }
     stock = mergeLocal(remote || safeParse(localStorage.getItem(LS+":stock"), {videos:{}}));
     stock.videos ||= {};
+
+    // 参照専用。アプリはこの2つを書き換えない(収集側が毎晩更新する)
+    for (const [path, set] of [[WPATH, o => watched = o], [SPATH, o => stats = o]]){
+      try {
+        set(conn() ? (await readJson(path)).data
+                   : await (await fetch(path.replace("docs/","") + "?t=" + Date.now())).json());
+      } catch(e){ console.warn(path, e.message); }
+    }
+    watched.videos ||= {};
     dirty = Object.values(stock.videos).some(v => v.touched);
   } catch(e){
     console.error(e);
