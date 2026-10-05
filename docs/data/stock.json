@@ -773,7 +773,7 @@
     "pull": 4
    },
    "published": "2026-04-23T10:48:44Z",
-   "score": 39.97216233527171,
+   "score": 39.853521144921714,
    "state": "picked",
    "title": "クッソ面白かったのにレビューする気にならなかった映画【５選】",
    "touched": true,
@@ -1446,7 +1446,7 @@
     "pull": 4
    },
    "published": "2026-05-28T11:58:47Z",
-   "score": 45.96145515051257,
+   "score": 45.825040334966765,
    "state": "picked",
    "title": "【朗報】スターウォーズの新作映画、６年ぶりに劇場公開される『スター・ウォーズ／マンダロリアン・アンド・グローグー』",
    "touched": true,
@@ -2108,11 +2108,13 @@
    "pre": null,
    "published": "2026-09-26T12:00:21Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "布団ちゃんの雑談ダイジェスト「お久しブリーフ」【2026/9/26】",
    "type": "focus",
    "views": 45420,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "OvPOFNEg8PM": {
    "added": "2026-09-29T20:13:34+00:00",
@@ -2560,11 +2562,13 @@
    "pre": null,
    "published": "2026-09-25T23:00:34Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "加藤純一の7Days to Dieノーデスチャレンジダイジェストwithこく兄,幕末坂本,UK,布団ちゃん,蛇足【2026/09/22中編】",
    "type": "ambient",
    "views": 163405,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "T10QNtfWquw": {
    "added": "2026-10-04T22:50:12+00:00",
@@ -3991,7 +3995,7 @@
     "pull": 4
    },
    "published": "2026-05-08T11:39:15Z",
-   "score": 42.439391983247326,
+   "score": 42.31343074441553,
    "state": "picked",
    "title": "【大炎上】酷過ぎて観客がファイナルベントしたクソ映画『仮面ライダーオーズ１０ｔｈ復活のコアメダル』",
    "touched": true,
@@ -4248,7 +4252,7 @@
     "pull": 2
    },
    "published": "2026-01-08T13:01:32Z",
-   "score": 37.05056266548058,
+   "score": 37.05056266548057,
    "state": "picked",
    "title": "【考察】なぜ俺たちは『狩猟笛』に感謝する気が起きなかったのか モンハン最大の冷遇武器について悲しみの考察【モンスターハンター】",
    "touched": true,
@@ -4452,7 +4456,7 @@
    "channelName": "ホッカイロレン",
    "desc": "やっぱりマグロ食ってるようなのはダメだな...\n\n『ゴジラ FINAL WARS』\nhttps://amzn.to/3LXrCad\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\n\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 730,
-   "explore": false,
+   "explore": true,
    "id": "lb1U7nJlDZA",
    "pickedAt": "2026-09-21T04:58:45.843Z",
    "post": null,
@@ -5516,7 +5520,7 @@
    "channelName": "ホッカイロレン",
    "desc": "ドゥワ！！\n\nAIひろゆき\nVoiced by https://CoeFont.cloud\nーーーーーーーーーーーーーーーーーーーー\n映画レビューに見せかけたエンタメチャンネルです\nプロでも映画評論家でもありません、動画内容を真に受けないでください\n\n■お仕事の依頼↓\nplagabu@gmail.com\n\n稀に更新する趣味チャンネル（プラガブ）\nhttps://www.youtube.com/channel/UC2H_PHc6-o0DAwbF5ZesR9w",
    "duration": 685,
-   "explore": true,
+   "explore": false,
    "id": "zxmQqQDPxn4",
    "pickedAt": "2026-09-21T04:59:33.438Z",
    "post": null,
