@@ -1,90 +1,90 @@
 {
  "2026-10": {
   "-": {
-   "watched": 3
+   "watched": 6
   },
   "UC1xFkkJgjzVUm9oZIHQ10yQ": {
-   "dropped": 48,
+   "dropped": 94,
    "expired": 4
   },
   "UCC0FNUII8Zp2OAc7IaetICg": {
-   "dropped": 61,
-   "watched": 1
-  },
-  "UCGjV4bsC43On-YuiLZcfL0w": {
-   "dropped": 60,
+   "dropped": 94,
    "watched": 2
   },
-  "UCH-lygWpHodDff3iQurnWnQ": {
-   "dropped": 83,
-   "watched": 8
-  },
-  "UCHVbV2U9ZLucK0m7b864_0g": {
-   "dropped": 36,
-   "expired": 4,
+  "UCGjV4bsC43On-YuiLZcfL0w": {
+   "dropped": 114,
    "watched": 4
   },
+  "UCH-lygWpHodDff3iQurnWnQ": {
+   "dropped": 137,
+   "watched": 16
+  },
+  "UCHVbV2U9ZLucK0m7b864_0g": {
+   "dropped": 58,
+   "expired": 4,
+   "watched": 8
+  },
   "UCHyYUv384bv9eMOC1UoG9PQ": {
-   "dropped": 50,
-   "watched": 1
+   "dropped": 58,
+   "watched": 2
   },
   "UCKd4yNs1CvdCYIkJdARgBsw": {
-   "dropped": 49,
+   "dropped": 97,
    "expired": 2
   },
   "UCNKGn1rULbYWrQaGY-4nZDA": {
-   "dropped": 51,
+   "dropped": 93,
    "expired": 4,
-   "watched": 4
+   "watched": 8
   },
   "UCRaaCxSF8nEpfG3ZHesXKxw": {
-   "dropped": 45,
+   "dropped": 82,
    "expired": 3,
-   "watched": 3
+   "watched": 6
   },
   "UCTrckUWmmrRZcNrfu1mZDOg": {
-   "dropped": 54
+   "dropped": 84
   },
   "UCZetZElUvdElPrcstRjl9DA": {
-   "dropped": 50,
+   "dropped": 99,
    "expired": 2
   },
   "UCarvAHwttb_r2hYihGX8aXA": {
-   "dropped": 68,
+   "dropped": 117,
    "expired": 2,
-   "watched": 15
+   "watched": 30
   },
   "UCfTfI2-PkGYgcQHoVk85tCA": {
-   "dropped": 54,
-   "watched": 1
-  },
-  "UCoQhX2O93MVTWfgIz-8wOmg": {
-   "dropped": 58,
-   "full": 1,
+   "dropped": 107,
    "watched": 2
   },
+  "UCoQhX2O93MVTWfgIz-8wOmg": {
+   "dropped": 114,
+   "full": 1,
+   "watched": 4
+  },
   "UCoie3ytrtgUCfDVN3PqxIDQ": {
-   "dropped": 37
+   "dropped": 54
   },
   "UCqRV_ZIQhVKfxG1_WkNiRbg": {
-   "dropped": 13,
+   "dropped": 26,
    "expired": 30,
-   "watched": 8
+   "watched": 16
   },
   "UCrup_SUKUSAWxB4ygfs5Rbg": {
-   "dropped": 49,
+   "dropped": 97,
    "expired": 2
   },
   "UCt8snO2Po2uCqteBvqBglTw": {
-   "dropped": 63
+   "dropped": 117
   },
   "UCusnpkgavQhPV_8e_zEh_jw": {
-   "dropped": 44,
+   "dropped": 83,
    "expired": 4,
-   "watched": 4
+   "watched": 8
   },
   "UCx1nAvtVDIsaGmCMSe8ofsQ": {
-   "dropped": 50,
+   "dropped": 99,
    "expired": 1
   }
  }
