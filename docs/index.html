@@ -176,11 +176,28 @@ nav{overflow-x:auto;scrollbar-width:none}nav button{white-space:nowrap;flex:none
 #pl{position:fixed;inset:0;z-index:50;background:#000;display:flex;flex-direction:column;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 #pl[hidden]{display:none}
 .plh{display:flex;gap:10px;align-items:center;color:#fff;padding:10px 12px;font-size:13px}.plh b{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#ytp,#pl iframe{width:100%;aspect-ratio:16/9;height:auto;border:0;flex:none}
-.pla{display:flex;gap:8px;padding:12px}.pla button{flex:1;padding:12px 4px;font-weight:600;border:1px solid}
+.plh{flex:none}.plt{flex:1;min-width:0;display:flex;flex-direction:column}.plt b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.plt .num{color:#bbb;font-size:11.5px}
+.plx.stop{color:#fff;background:var(--clay);border-color:var(--clay)}
+.plv{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#ytp,#pl iframe{border:0;aspect-ratio:16/9;width:min(100vw,calc((100dvh - 140px) * 16 / 9));height:auto;max-height:calc(100dvh - 140px);flex:none}
+.pla{display:flex;gap:6px;padding:8px 10px;flex:none}.pla button{flex:1;padding:11px 4px;font-weight:600;border:1px solid;font-size:12.5px}
 .pla .seen{color:#ddd;border-color:#555}
+.plf{position:fixed;top:calc(env(safe-area-inset-top) + 64px);right:10px;z-index:60;background:rgba(0,0,0,.65);color:#fff;border:1px solid #888;padding:6px 10px;font-size:12px;border-radius:4px}
 .reasons button[aria-pressed=true]{border-color:var(--pine);background:#eef3f0}
 .se-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.5rem 0;font-size:13px}.se-btn{min-width:2.6rem;border:1px solid var(--rule);border-radius:999px;background:#fff;padding:.1rem .7rem;cursor:pointer}.se-btn[aria-pressed="true"]{background:var(--pine);color:#fff}.se-vol{display:flex;align-items:center;gap:.3rem}.se-vol input{width:8rem}
+.vgrid{display:grid;gap:2px;margin:8px 0 2px;align-items:end}
+.vcol{display:flex;flex-direction:column;align-items:center;gap:1px;min-width:0}
+.vcol .vl{font-size:10.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.vcol b{font-size:13px;color:var(--pine)}
+.vcol input[type=range]{writing-mode:vertical-lr;direction:rtl;width:30px;height:120px;margin:2px 0;accent-color:var(--pine);touch-action:none}
+.vcol input.untouched{opacity:.4}
+.vcol .auto{font-size:9px;color:var(--sand);border:1px solid var(--sand);padding:0 2px;line-height:1.3}.vcol .auto0{height:13px}
+.vhelp{font-size:11.5px;color:var(--muted);min-height:1.6em;margin:2px 0 6px}
+.sieve img{max-height:150px}
+.sieve h2{font-size:15px;margin:8px 0 2px}
+#rate{max-height:92vh;overflow:auto}
+#pl{height:100dvh;overflow:hidden}.plx{color:#fff;border:1px solid #777;padding:6px 10px;font-size:13px;flex:none}
+.pla{background:#000}
 
 </style>
 </head>
@@ -205,7 +222,7 @@ nav{overflow-x:auto;scrollbar-width:none}nav button{white-space:nowrap;flex:none
 
 <dialog id="rate">
   <div id="rateBody"></div>
-  <button class="cancel" onclick="document.getElementById('rate').close()">閉じる</button>
+  <button class="cancel" onclick="document.getElementById('rate').close();rateClosed()">閉じる(中断として残す)</button>
 </dialog>
 
 <dialog id="dlg">
@@ -941,7 +958,7 @@ function addSession(s){
 
 /* ── 損切り:その日の平均を、心への効き・もう一本見たいのどちらかが n 本続けて下回るか、「もう十分」でやめたら閉める ── */
 function stopLossCheck(){
-  const S = today().sessions.filter(x => x.effect != null || x.more != null || x.reason);
+  const S = today().sessions.filter(x => x.reason !== "pause" && (x.effect != null || x.more != null || x.reason));
   const n = +seki.settings.stopN || 2, warm = +seki.settings.warm || 3;
   if (S.length <= warm) return false;
   const sig = [];
@@ -1053,6 +1070,17 @@ const PRE_Q = [["fun", "面白そう?", "つまらなそう", "とても面白�
   ["learn", "新しく知れそう・考えられそう?", "なにも", "たくさん"], ["rest", "休まりそう?", "疲れそう", "とても休まりそう"], ["fill", "見たあと満たされそう?", "虚しそう", "とても満たされそう"]];
 const POST_Q = [["fun", "面白かった?", "つまらない", "とても面白い"], ["skip", "飛ばした?", "たくさん", "しなかった"], ["match", "期待と比べて?", "ずっと下", "ずっと上"],
   ["learn", "新しく知った・考えた?", "なにも", "たくさん"], ["rest", "見る前より休まった?", "疲れた", "とても休まった"], ["after", "後味", "虚しい", "満たされた"], ["more", "もう一本見たい?", "もう十分", "まだまだ見たい"]];
+const SHORT = { "pre:fun": "面白さ", "pre:match": "中身", "pre:learn": "学び", "pre:rest": "休まり", "pre:fill": "満足",
+  "post:fun": "面白さ", "post:skip": "飛ばし", "post:match": "期待比", "post:learn": "学び", "post:rest": "休まり", "post:after": "後味", "post:more": "もう一本",
+  "mood:calm": "焦り", "mood:body": "疲れ", "mood:self": "自分", "mood:left": "やり残し", "mood:focus": "集中", "mood:day": "一日", "mood:tmr": "明日" };
+// 縦のつまみを横に並べる。上が5(いい側)、下が1。触っている問いの全文は下の一行に出る
+function vgridHtml(prefix, Qs, vals, autos){
+  vals = vals || {}; autos = autos || {};
+  return `<div class="vgrid" style="grid-template-columns:repeat(${Qs.length},1fr)">` + Qs.map(q => { const [k, label, lo, hi] = q, v = vals[k], has = v != null;
+    return `<div class="vcol" title="${esc(label)}(1=${esc(lo)} / 5=${esc(hi)})"><span class="vl">${SHORT[prefix + ":" + k] || label}</span><b id="${prefix}-v-${k}" class="num">${has ? v.toFixed(1) : "—"}</b>
+      <input type="range" min="1" max="5" step="0.1" data-q="${prefix}:${k}" data-help="${esc(label)}  1=${esc(lo)} ↔ 5=${esc(hi)}" ${has ? `value="${v}" data-touched="1"` : `value="3" class="untouched"`}>${autos[k] ? `<small class="auto">自動</small>` : `<small class="auto0"></small>`}</div>`; }).join("") +
+    `</div><p class="vhelp" id="${prefix}-help">上が5(いい側)・下が1。触った問いの説明がここに出る</p>`;
+}
 const BAIL_Q = POST_Q.filter(q => ["fun", "after", "more"].includes(q[0]));
 // 心の余裕(一日の終わり)。平均を心の余裕とし、問いごとの値も残す
 const MOOD_Q = [["calm", "焦り・不安は?", "とても強い", "落ち着いている"], ["body", "体の疲れは?", "ぐったり", "元気"], ["self", "今日の自分を?", "責めている", "認められる"],
@@ -1088,8 +1116,11 @@ function readSliders(prefix){
   document.querySelectorAll(`[data-q^="${prefix}:"]`).forEach(el => { if (el.dataset.touched) o[el.dataset.q.split(":")[1]] = r1(+el.value); });
   return o;
 }
+const showHelp = el => { const [p] = el.dataset.q.split(":"), h = document.getElementById(p + "-help"); if (h && el.dataset.help) h.textContent = el.dataset.help; };
+document.addEventListener("focusin", e => { if (e.target.dataset && e.target.dataset.help) showHelp(e.target); });
+document.addEventListener("pointerdown", e => { if (e.target.dataset && e.target.dataset.help) showHelp(e.target); });
 document.addEventListener("input", e => {
-  const el = e.target; if (!el.dataset || !el.dataset.q) return;
+  const el = e.target; if (!el.dataset || !el.dataset.q) return; showHelp(el);
   el.dataset.touched = "1"; el.classList.remove("untouched");
   const [p, k] = el.dataset.q.split(":"), out = document.getElementById(p + "-v-" + k); if (out) out.textContent = (+el.value).toFixed(1);
   if (p === "pre") { const live = document.getElementById("pre-live"); if (live) { const it = readSliders("pre"), v = stock.videos[live.dataset.id]; if (v) live.textContent = scoreOf(v, preObj(it)).toFixed(0); } }
@@ -1118,7 +1149,7 @@ function drawGate(){
   $("#view").innerHTML = gateHtml() + extBanner() +
     `<h3 class="h3">今日見たもの</h3>` + (sess ? `<table><tr><th>動画</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">もう一本</th></tr>${sess}</table>` : `<p class="meta">まだない</p>`) +
     `<p class="meta" style="margin-top:8px">損切り:最初の${seki.settings.warm}本のあと、心への効きかもう一本見たいが今日の平均を${seki.settings.stopN}本続けて下回るか、「もう十分」でやめたら門を閉める。</p>` +
-    `<h3 class="h3">今日の心の余裕${mood.v != null ? ` <span class="num" style="color:var(--pine)">${mood.v.toFixed(1)}</span>` : ""}</h3><div class="sieve">${MOOD_Q.map(q => sliderHtml("mood", q, mood.items && mood.items[q[0]] != null ? mood.items[q[0]] : null)).join("")}
+    `<h3 class="h3">今日の心の余裕${mood.v != null ? ` <span class="num" style="color:var(--pine)">${mood.v.toFixed(1)}</span>` : ""}</h3><div class="sieve">${vgridHtml("mood", MOOD_Q, mood.items || {})}
       <div class="tags">${(seki.settings.tags || []).map(t => `<button aria-pressed="${(mood.tags || []).includes(t)}" onclick="toggleTag('${esc(t)}')">${esc(t)}</button>`).join("")}</div>
       <button class="take" style="width:100%;margin-top:10px;padding:10px" onclick="saveMood()">残す</button>
       <p class="meta" style="margin-top:6px">一日の終わりに。印は、見た時間と関係なく心の余裕を動かすもの(設定で増やせる)。</p></div>`;
@@ -1139,13 +1170,13 @@ function drawSieve(){
   $("#view").innerHTML = box + `<div class="sieve">
     <img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="" loading="lazy"><h2>${esc(v.title)}</h2>
     <p class="meta">${badges(v)}${esc(v.channelName)} ・ ${hhmm(v.duration)} ・ 公開${ago(v.published)}</p>
-    <p class="meta" style="margin-top:6px">予想は、これまでの評価から自動で入れてある。違うと思うところだけ直す。</p>
-    ${PRE_Q.map(q => sliderHtml("pre", q, pre[q[0]], true)).join("")}
+    <p class="meta" style="margin-top:4px">予想は、これまでの評価から自動で入れてある。違うと思うところだけ直す。</p>
+    ${vgridHtml("pre", PRE_Q, pre, Object.fromEntries(PRE_Q.map(q => [q[0], true])))}
     <div class="row"><span>見込み</span><span id="pre-live" data-id="${v.id}" class="live num">${scoreOf(v, preObj(pre)).toFixed(0)}</span><span class="meta" style="margin-left:6px">線 ${th}</span></div>
     ${v.newChan ? `<p class="meta" style="margin-top:8px"><button class="addch" onclick="addChanOf('${v.id}')">+ ${esc(v.newChan.name || v.newChan.id)} を登録して、新着も拾う</button></p>` : ""}
     <div class="verdict"><button class="seen" onclick="judge('${v.id}','seen')">もう見た</button><button class="take" onclick="judge('${v.id}','auto')">改める</button></div>
     <div class="foot"><button class="undo" ${undo ? "" : "disabled"} onclick="rewind()">← 1本戻す</button>
-      <span class="meta"><button class="linkb" onclick="judge('${v.id}','pass')">線に関係なく通す</button> ・ <button class="linkb" onclick="judge('${v.id}','drop')">落とす</button> ・ 残り ${pool.length} 本</span></div></div>`;
+      <span class="meta"><button class="linkb" onclick="judge('${v.id}','pass')" title="見込みが線より低くても宿場に通す">線を無視して通す</button> ・ <button class="linkb" onclick="judge('${v.id}','drop')">落とす</button> ・ 残り ${pool.length} 本</span></div></div>`;
 }
 function judge(id, how){
   const v = stock.videos[id], items = Object.assign(predictPre(v), readSliders("pre")), pre = preObj(items), score = scoreOf(v, pre), th = seki.settings.threshold;
@@ -1184,9 +1215,13 @@ function loadYT(cb){ if (window.YT && YT.Player) return cb(); window.__ytq = (wi
 function play(id){
   const g = gate(); if (!g.open) { alert("門が閉まっている:" + g.why); return; }
   const v = stock.videos[id];
-  $("#pl").innerHTML = `<div class="plh"><b>${esc(v.title).slice(0, 50)}</b><span class="num" id="pl-rem"></span></div><div id="ytp"></div>
-    <div class="pla"><button class="take" onclick="stopPlay()">やめる</button><button class="seen" onclick="toExt()">うまく動かない → YouTubeで開く</button></div>`;
+  // 上の帯と下の帯はいつも見える。動画はそのあいだの高さに収まる。右上にも「中断」を重ねる
+  $("#pl").innerHTML = `<div class="plh"><button class="plx" onclick="pausePlay()">‖ 中断</button><span class="plt"><b>${esc(v.title).slice(0, 50)}</b><span class="num" id="pl-rem"></span></span><button class="plx stop" onclick="stopPlay()">■ やめる</button></div>
+    <div class="plv"><div id="ytp"></div></div>
+    <div class="pla"><button class="seen" onclick="pausePlay()">中断(続きはあとで)</button><button class="take" onclick="stopPlay()">やめる(評価する)</button><button class="seen" onclick="toExt()">YouTubeで開く</button></div>
+    <button class="plf" onclick="pausePlay()" aria-label="中断">‖ 中断</button>`;
   $("#pl").hidden = false; kse("open");
+  try { history.pushState({ sekiPlay: 1 }, ""); } catch (e) {}       // スマホの「戻る」で中断できるように
   P = { id, start: kNow(), startPos: v.progress || 0, secs: 0, skips: 0, lastT: v.progress || 0, lastTick: kNow(), playing: false, startCum: today().watchedSec || 0 };
   loadYT(() => {
     P.player = new YT.Player("ytp", { videoId: id, playerVars: { autoplay: 1, start: Math.floor(v.progress || 0), rel: 0, playsinline: 1, modestbranding: 1 },
@@ -1205,9 +1240,20 @@ function tickPlay(){
   const [, c] = gateTimes(); if (left <= 0 || nowMinOfDay() >= hm2min(c)) { try { P.player.pauseVideo(); } catch (e) {} stopPlay(left <= 0 ? "time" : "close"); }
 }
 function curPos(){ let c = null; try { c = P.player && P.player.getCurrentTime ? P.player.getCurrentTime() : null; } catch (e) {} return c != null ? c : P.startPos + P.secs; }
-function closePlayer(){ clearInterval(window.__plT); try { P && P.player && P.player.destroy && P.player.destroy(); } catch (e) {} $("#pl").hidden = true; $("#pl").innerHTML = ""; }
+// スマホの「戻る」で中断。アプリ自身が閉じるときに戻した分は、遅れて届いても無視する
+window.addEventListener("popstate", () => { if (window.__selfBack) { window.__selfBack = false; return; } if (P) { window.__popped = true; pausePlay(); window.__popped = false; } });
+function closePlayer(){ clearInterval(window.__plT); try { if (!window.__popped && history.state && history.state.sekiPlay) { window.__selfBack = true; history.back(); } } catch (e) {} try { P && P.player && P.player.destroy && P.player.destroy(); } catch (e) {} $("#pl").hidden = true; $("#pl").innerHTML = ""; }
 function finishPlay(){ if (!P) return; const p = Object.assign({}, P, { pos: curPos() }); closePlayer(); P = null; askRateFull(p, true); }
 function stopPlay(forced){ if (!P) return; const p = Object.assign({}, P, { pos: curPos() }); closePlayer(); P = null; askBailNew(p, forced); }
+// 中断:止めて、見た時間と位置だけ残す。評価はしない。宿場に残り、次は続きから
+function savePause(p){
+  const v = stock.videos[p.id]; if (!v) return;
+  if ((p.secs || 0) >= 1) addSession({ id: p.id, start: new Date(p.start).toISOString(), end: new Date(kNow()).toISOString(), secs: Math.round(p.secs), startCum: p.startCum, effect: null, more: null, reason: "pause", part: true });
+  if (p.pos != null) v.progress = Math.round(p.pos);
+  v.touched = true; touch(); render(); autoSave();
+  $("#msg").textContent = "中断した。続きは宿場から"; kse("save");
+}
+function pausePlay(){ if (!P) return; try { P.player.pauseVideo(); } catch (e) {} const p = Object.assign({}, P, { pos: curPos() }); closePlayer(); P = null; savePause(p); }
 function toExt(){ if (!P) return; const p = P, pos = curPos(); closePlayer(); P = null; openExt(p.id, pos, p); }
 
 /* ── 見る(B):YouTubeで開く。戻ったら評価 ── */
@@ -1232,7 +1278,7 @@ function askRateFull(p, auto){
   pend = p; const v = stock.videos[p.id];
   const skipAuto = auto && p.skips != null ? Math.max(1, 5 - Math.min(4, p.skips)) : null;
   $("#rateBody").innerHTML = `<h3>${esc(v.title).slice(0, 60)}</h3><p>見終わった。感じたままの位置に。</p>` +
-    POST_Q.map(q => sliderHtml("post", q, q[0] === "skip" ? skipAuto : null, q[0] === "skip" && skipAuto != null)).join("") +
+    vgridHtml("post", POST_Q, { skip: skipAuto }, { skip: skipAuto != null }) +
     `<button class="take" style="width:100%;padding:11px;margin-top:10px" onclick="saveRate()">残す</button>`;
   $("#rate").showModal();
 }
@@ -1244,22 +1290,24 @@ function askBailNew(p, forced){
     (forced ? "" : `<div class="reasons" id="rsn">${[["miss", "つまらなくなった", "その動画の質を下げ、似た動画が通りにくくなる"], ["mismatch", "期待と違った", "予想が外れた分として記録する"],
       ["enough", "もう十分", "満たされた合図。損切りに数える。続きは宿場に残る"], ["self", "ほかのことをしたくなった", "自分から離れられたしるし。続きは宿場に残る"]].map(([k, b, s]) =>
       `<button data-rsn="${k}" onclick="pickRsn('${k}')"><b>${b}</b><small>${s}</small></button>`).join("")}</div>`) +
-    BAIL_Q.map(q => sliderHtml("post", q, null)).join("") +
+    vgridHtml("post", BAIL_Q) +
     `<button class="take" style="width:100%;padding:11px;margin-top:10px" onclick="saveBail()">残す</button>`;
   $("#rate").showModal();
 }
+document.addEventListener("DOMContentLoaded", () => {});
+function rateClosed(){ if (pend && !pend.saved) { const p = pend; pend = null; if (!p.ext && p.pos == null) return; savePause(p); } }
 function pickRsn(k){ pend.reason = k; document.querySelectorAll("[data-rsn]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.rsn === k))); }
 function saveRate(){
   const p = pend, v = stock.videos[p.id], it = readSliders("post"); if (!Object.keys(it).length) { alert("どれか一つでもつまみを動かしてください"); return; }
   const parts = postParts(it), score = kmean([parts.quality, parts.effect].filter(x => x != null));
-  v.post = Object.assign({}, it, parts, { score: isNaN(score) ? 3 : r1(score) }); v.state = "watched"; v.watchedAt = new Date(kNow()).toISOString(); v.progress = null; v.touched = true;
+  p.saved = true; v.post = Object.assign({}, it, parts, { score: isNaN(score) ? 3 : r1(score) }); v.state = "watched"; v.watchedAt = new Date(kNow()).toISOString(); v.progress = null; v.touched = true;
   addSession({ id: p.id, start: new Date(p.start).toISOString(), end: new Date(kNow()).toISOString(), secs: Math.round(p.secs), startCum: p.startCum, effect: parts.effect, more: it.more != null ? it.more : null, quality: parts.quality });
   $("#rate").close(); touch(); render(); autoSave(); kse(today().closed ? "lock" : "done");
 }
 function saveBail(){
   const p = pend, v = stock.videos[p.id], it = readSliders("post"), forced = p.forced, reason = forced ? "time" : p.reason;
   if (!forced && !reason) { alert("やめた理由を選んでください"); return; }
-  const pos = p.ext && document.getElementById("posr") ? +document.getElementById("posr").value : p.pos;
+  p.saved = true; const pos = p.ext && document.getElementById("posr") ? +document.getElementById("posr").value : p.pos;
   const parts = postParts(it), left = Math.max(0, (v.duration || 0) - pos);
   addSession({ id: p.id, start: new Date(p.start).toISOString(), end: new Date(kNow()).toISOString(), secs: Math.round(p.secs), startCum: p.startCum, effect: parts.effect, more: it.more != null ? it.more : null, quality: parts.quality, reason, part: true });
   if (reason === "miss" || reason === "mismatch" || left < 60) {
