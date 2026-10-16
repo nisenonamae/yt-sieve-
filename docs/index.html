@@ -193,11 +193,15 @@ nav{overflow-x:auto;scrollbar-width:none}nav button{white-space:nowrap;flex:none
 .vcol input.untouched{opacity:.4}
 .vcol .auto{font-size:9px;color:var(--sand);border:1px solid var(--sand);padding:0 2px;line-height:1.3}.vcol .auto0{height:13px}
 .vhelp{font-size:11.5px;color:var(--muted);min-height:1.6em;margin:2px 0 6px}
-.sieve img{max-height:150px}
+.thead{display:flex;gap:10px;align-items:flex-start}
+.thead img{width:46%;max-width:240px;flex:none;aspect-ratio:16/9;height:auto;object-fit:contain;background:#000;max-height:none}
+.thead .tt{flex:1;min-width:0}.thead h2{margin:0 0 4px;font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .sieve h2{font-size:15px;margin:8px 0 2px}
 #rate{max-height:92vh;overflow:auto}
 #pl{height:100dvh;overflow:hidden}.plx{color:#fff;border:1px solid #777;padding:6px 10px;font-size:13px;flex:none}
 .pla{background:#000}
+#judge-btn.willdrop{background:var(--clay);border-color:var(--clay)}
+.dt{display:block;font-size:14px;font-weight:600;line-height:1.45}
 
 </style>
 </head>
@@ -1123,8 +1127,11 @@ document.addEventListener("input", e => {
   const el = e.target; if (!el.dataset || !el.dataset.q) return; showHelp(el);
   el.dataset.touched = "1"; el.classList.remove("untouched");
   const [p, k] = el.dataset.q.split(":"), out = document.getElementById(p + "-v-" + k); if (out) out.textContent = (+el.value).toFixed(1);
-  if (p === "pre") { const live = document.getElementById("pre-live"); if (live) { const it = readSliders("pre"), v = stock.videos[live.dataset.id]; if (v) live.textContent = scoreOf(v, preObj(it)).toFixed(0); } }
+  if (p === "pre") { const live = document.getElementById("pre-live"); if (live) { const v = stock.videos[live.dataset.id]; if (v) { const sc = scoreOf(v, preObj(Object.assign(predictPre(v), readSliders("pre")))); live.textContent = sc.toFixed(0); judgeLabel(sc); } } }
 });
+// 「改める」のボタンに、押したらどうなるかを出す
+function judgeLabel(sc){ const b = document.getElementById("judge-btn"), th = seki.settings.threshold; if (!b) return; const pass = sc >= th;
+  b.textContent = pass ? `改める → 通る(${sc.toFixed(0)}点・線${th})` : `改める → 落ちる(${sc.toFixed(0)}点・線${th})`; b.classList.toggle("willdrop", !pass); }
 const preObj = items => { const m = kmean(Object.values(items)); return { expect: isNaN(m) ? 3 : m, pull: isNaN(m) ? 3 : m, items }; };
 
 /* ── 門(今日) ── */
@@ -1165,18 +1172,35 @@ function saveMood(){
 function drawSieve(){
   const box = `<div class="add" style="margin-bottom:12px"><input id="vq" placeholder="動画URLを貼って足す" autocapitalize="off" spellcheck="false"><button onclick="addFromBox()">足す</button></div><p class="meta" id="vmsg" style="margin:-6px 0 14px"></p>`;
   const pool = list("pool").sort((a, b) => Date.parse(a.added) - Date.parse(b.added));
-  if (!pool.length) return $("#view").innerHTML = box + `<div class="empty"><b>改めるものがない</b>寝かせ中が${list("fresh").length}本。期間が明けたらここに出てくる。</div>`;
+  if (!pool.length) return $("#view").innerHTML = box + `<div class="empty"><b>改めるものがない</b>寝かせ中が${list("fresh").length}本。期間が明けたらここに出てくる。</div>` + droppedHtml();
   const v = pool[0], pre = predictPre(v), th = seki.settings.threshold;
   $("#view").innerHTML = box + `<div class="sieve">
-    <img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="" loading="lazy"><h2>${esc(v.title)}</h2>
-    <p class="meta">${badges(v)}${esc(v.channelName)} ・ ${hhmm(v.duration)} ・ 公開${ago(v.published)}</p>
+    <div class="thead"><img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="" loading="lazy">
+      <div class="tt"><h2>${esc(v.title)}</h2><p class="meta">${badges(v)}${esc(v.channelName)} ・ ${hhmm(v.duration)} ・ 公開${ago(v.published)}</p></div></div>
     <p class="meta" style="margin-top:4px">予想は、これまでの評価から自動で入れてある。違うと思うところだけ直す。</p>
     ${vgridHtml("pre", PRE_Q, pre, Object.fromEntries(PRE_Q.map(q => [q[0], true])))}
     <div class="row"><span>見込み</span><span id="pre-live" data-id="${v.id}" class="live num">${scoreOf(v, preObj(pre)).toFixed(0)}</span><span class="meta" style="margin-left:6px">線 ${th}</span></div>
     ${v.newChan ? `<p class="meta" style="margin-top:8px"><button class="addch" onclick="addChanOf('${v.id}')">+ ${esc(v.newChan.name || v.newChan.id)} を登録して、新着も拾う</button></p>` : ""}
-    <div class="verdict"><button class="seen" onclick="judge('${v.id}','seen')">もう見た</button><button class="take" onclick="judge('${v.id}','auto')">改める</button></div>
+    <div class="verdict"><button class="seen" onclick="judge('${v.id}','seen')">もう見た</button><button class="take" id="judge-btn" onclick="judge('${v.id}','auto')">改める</button></div>
     <div class="foot"><button class="undo" ${undo ? "" : "disabled"} onclick="rewind()">← 1本戻す</button>
-      <span class="meta"><button class="linkb" onclick="judge('${v.id}','pass')" title="見込みが線より低くても宿場に通す">線を無視して通す</button> ・ <button class="linkb" onclick="judge('${v.id}','drop')">落とす</button> ・ 残り ${pool.length} 本</span></div></div>`;
+      <span class="meta"><button class="linkb" onclick="judge('${v.id}','pass')" title="見込みが線より低くても宿場に通す">線を無視して通す</button> ・ <button class="linkb" onclick="judge('${v.id}','drop')">落とす</button> ・ 残り ${pool.length} 本</span></div></div>` + droppedHtml();
+  judgeLabel(scoreOf(v, preObj(pre)));
+}
+// 落ちた動画(次の朝の収集で片付けられるまで、ここから取り戻せる)
+const DROP_WHY = { below: "線より下", skipped: "落とした", gaveup: "宿場から外した", unsubscribed: "チャンネルを外した", pushed: "押し出された", full: "枠がいっぱい", expired: "期限切れ" };
+function droppedHtml(){
+  const ds = list("dropped").sort((a, b) => (b.touched ? 1 : 0) - (a.touched ? 1 : 0)).slice(0, 20);
+  if (!ds.length) return "";
+  return `<h3 class="h3">落ちた動画<small class="meta"> 次の朝の収集で片付けられるまで、ここから取り戻せる</small></h3>` + ds.map(v => `<div class="item"><div class="body">
+      <span class="dt">${esc(v.title)}</span><p class="meta">${esc(v.channelName || "")} ・ ${DROP_WHY[v.dropReason] || "落ちた"}${v.score != null ? ` ・ ${(+v.score).toFixed(0)}点` : ""}</p>
+      <div class="acts"><button onclick="revive('${v.id}','picked')">宿場に通す</button><button onclick="revive('${v.id}','pool')">改めに戻す</button></div></div></div>`).join("");
+}
+function revive(id, to){
+  const v = stock.videos[id]; if (!v) return; snap(v);
+  v.state = to; delete v.dropReason; v.touched = true;
+  if (to === "picked") { v.pickedAt = new Date(kNow()).toISOString(); if (v.score == null) v.score = scoreOf(v); }
+  touch(); snapStock(); kTouch(); kse(to === "picked" ? "levelup" : "unlock");
+  $("#msg").textContent = to === "picked" ? "宿場に通した" : "改めに戻した"; render();
 }
 function judge(id, how){
   const v = stock.videos[id], items = Object.assign(predictPre(v), readSliders("pre")), pre = preObj(items), score = scoreOf(v, pre), th = seki.settings.threshold;
