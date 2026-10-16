@@ -4099,17 +4099,25 @@
    "pickedAt": null,
    "post": null,
    "pre": {
-    "expect": 5,
-    "pull": 4
+    "expect": 3.6599999999999993,
+    "pull": 3.6599999999999993,
+    "items": {
+     "fun": 4.1,
+     "match": 4.1,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.1
+    }
    },
    "published": "2026-03-19T13:00:54Z",
-   "score": 46.18427406559512,
-   "state": "pool",
+   "score": 40.71851793008327,
+   "state": "dropped",
    "title": "【考察】10年前に視聴者ガチで怒っていた事を紹介していこうVol.2",
    "touched": true,
    "type": "ambient",
    "views": 268020,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped"
   },
   "O3n7G57hE1s": {
    "added": "2026-10-09T00:10:44+00:00",
