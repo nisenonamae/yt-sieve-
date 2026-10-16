@@ -1,4 +1,21 @@
 {
+ "weights": {
+  "expect": 1,
+  "fresh": 0.5,
+  "pull": 0.6,
+  "trust": 0.8
+ },
+ "defaults": {
+  "backfill": 10,
+  "capacityHours": {
+   "ambient": 12,
+   "focus": 6,
+   "serial": 0
+  },
+  "coolDays": 3,
+  "expireDays": 14,
+  "halfLifeDays": 30
+ },
  "channels": [
   {
    "defaultType": "ambient",
@@ -112,38 +129,9 @@
   },
   {
    "defaultType": "focus",
-   "id": "UCHyYUv384bv9eMOC1UoG9PQ",
-   "name": "からすまa",
-   "seeded": true
-  },
-  {
-   "defaultType": "focus",
-   "id": "UCoie3ytrtgUCfDVN3PqxIDQ",
-   "name": "ホッカイロレン",
-   "seeded": true
-  },
-  {
-   "defaultType": "focus",
    "id": "UCuWdyc0Mp7zRZd6KSPguCsA",
    "name": "ララチューン",
    "seeded": true
   }
- ],
- "defaults": {
-  "backfill": 10,
-  "capacityHours": {
-   "ambient": 12,
-   "focus": 6,
-   "serial": 0
-  },
-  "coolDays": 3,
-  "expireDays": 14,
-  "halfLifeDays": 30
- },
- "weights": {
-  "expect": 1,
-  "fresh": 0.5,
-  "pull": 0.6,
-  "trust": 0.8
- }
+ ]
 }
