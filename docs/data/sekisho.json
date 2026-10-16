@@ -49,13 +49,25 @@
  },
  "days": {
   "2026-10-16": {
-   "sessions": [],
-   "watchedSec": 0,
+   "sessions": [
+    {
+     "id": "ThON3HfKXks",
+     "start": "2026-10-16T11:11:14.102Z",
+     "end": "2026-10-16T11:11:18.769Z",
+     "secs": 3,
+     "startCum": 0,
+     "effect": null,
+     "more": null,
+     "reason": "pause",
+     "part": true
+    }
+   ],
+   "watchedSec": 3,
    "stock": {
     "open": 0,
-    "high": 1011,
+    "high": 12995,
     "low": 0,
-    "close": 1011
+    "close": 12995
    },
    "threshold": 55,
    "allowance": 120
