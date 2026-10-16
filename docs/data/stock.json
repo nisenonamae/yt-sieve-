@@ -32,11 +32,13 @@
    "pre": null,
    "published": "2026-10-12T14:02:56Z",
    "score": null,
-   "state": "fresh",
+   "state": "dropped",
    "title": "今年１のクソゲーでやり残したことをやる【デジモンバトルジャンクション】",
    "type": "focus",
    "views": 83368,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "-jxW9P08h5g": {
    "added": "2026-10-15T22:55:36+00:00",
@@ -140,11 +142,13 @@
    "pre": null,
    "published": "2026-10-11T18:15:53Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "今日もゴミ拾い頑張るぞい！サ終が決まってしまった【シンデユアリティ】やる",
    "type": "focus",
    "views": 56541,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "07B5PRrYl6Y": {
    "added": "2026-10-10T23:18:29+00:00",
@@ -482,11 +486,13 @@
    "pre": null,
    "published": "2026-10-04T18:54:05Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "救いを求めてサ終が決まってしまったシンデュアリティやる【SYNDUALITY Echo of Ada】",
    "type": "focus",
    "views": 53919,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "2FASFTPHSEI": {
    "added": "2026-10-06T23:38:04+00:00",
@@ -788,11 +794,13 @@
    "pre": null,
    "published": "2026-10-03T17:38:14Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "救いを求めてサ終が決まってしまったシンデュアリティやる【SYNDUALITY Echo of Ada】",
    "type": "focus",
    "views": 79458,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "4OKVGJTpb18": {
    "added": "2026-10-13T23:37:52+00:00",
@@ -1040,11 +1048,13 @@
    "pre": null,
    "published": "2026-10-06T09:39:10Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "味がしてきたサ終が決まってしまったシンデュアリティやる【SYNDUALITY Echo of Ada】",
    "type": "focus",
    "views": 86445,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "6DVVf6CoAmg": {
    "added": "2026-10-06T01:10:52+00:00",
@@ -1112,11 +1122,13 @@
    "pre": null,
    "published": "2026-10-15T04:07:04Z",
    "score": null,
-   "state": "fresh",
+   "state": "dropped",
    "title": "ゴミを拾う(本当)この積み重ねである【シンデュアリティ】",
    "type": "focus",
    "views": 53155,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "6XZihVfljDE": {
    "added": "2026-10-04T22:50:12+00:00",
@@ -1310,11 +1322,13 @@
    "pre": null,
    "published": "2026-10-12T05:36:33Z",
    "score": null,
-   "state": "fresh",
+   "state": "dropped",
    "title": "今日もゴミ拾い頑張るぞい！サ終が決まってしまった【シンデユアリティ】やる",
    "type": "focus",
    "views": 59371,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "7FX1vEJNWKU": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -1526,11 +1540,13 @@
    "pre": null,
    "published": "2026-09-27T11:14:08Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【ドパレイバー】最新ゲームとは思えない遅すぎたクソゲー【機動警察パトレイバー the Case Files】",
    "type": "focus",
    "views": 594048,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "8HLhBfirgJ0": {
    "added": "2026-10-15T22:55:36+00:00",
@@ -1868,11 +1884,13 @@
    "pre": null,
    "published": "2026-10-02T10:45:06Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【前代未聞】史上最年少の監督が世界一有名な都市伝説を実写化したヤバすぎる映画『バックルームズ』",
    "type": "focus",
    "views": 296205,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "9WmP__OlMHM": {
    "added": "2026-09-28T20:11:21+00:00",
@@ -2053,12 +2071,13 @@
    },
    "published": "2026-02-26T11:00:15Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "画面が暗すぎてなんも見えないガンダムの映画『閃光のハサウェイ キルケーの魔女』",
    "touched": true,
    "type": "ambient",
    "views": 587012,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "A02X4SDWXcE": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -2077,12 +2096,13 @@
    },
    "published": "2026-03-17T11:00:21Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "【バイオ10】ゾンビが１体も出て来ない無法地帯すぎるパクリ映画『バイオハザードX』",
    "touched": true,
    "type": "ambient",
    "views": 434861,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "ABj3UAX8SFI": {
    "added": "2026-10-13T01:52:08+00:00",
@@ -2096,11 +2116,13 @@
    "pre": null,
    "published": "2026-10-12T14:40:39Z",
    "score": null,
-   "state": "fresh",
+   "state": "dropped",
    "title": "映画やってるしバイオやる【バイオハザード RE:2】",
    "type": "focus",
    "views": 0,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "AOowj_PqlW4": {
    "added": "2026-10-03T22:44:17+00:00",
@@ -2426,12 +2448,13 @@
    },
    "published": "2026-03-31T10:27:37Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "【着席率７％】見るに堪えないとまで言われた悲惨すぎるプペルの続編映画『えんとつ町のプペル 〜約束の時計台〜』",
    "touched": true,
    "type": "ambient",
    "views": 1071885,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "CpyBDGnvNjo": {
    "added": "2026-10-08T00:02:28+00:00",
@@ -2481,11 +2504,13 @@
    "pre": null,
    "published": "2026-10-08T16:29:19Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "味がしてきたと思ったら虚無に飲み込まれたサ終が決まってしまったシンデュアリティやる【SYNDUALITY Echo of Ada】",
    "type": "focus",
    "views": 0,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "DCBPaK4Wv6g": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -2540,12 +2565,13 @@
    },
    "published": "2026-01-13T11:05:43Z",
    "score": 33.3791422225473,
-   "state": "pool",
+   "state": "dropped",
    "title": "クソ映画なのに何故かファンに愛されてる実写化『ストリートファイター』",
    "touched": true,
    "type": "ambient",
    "views": 300514,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "DxvjXJAezJw": {
    "added": "2026-10-06T23:38:04+00:00",
@@ -3070,12 +3096,13 @@
    },
    "published": "2026-05-28T11:58:47Z",
    "score": 45.96145515051257,
-   "state": "pool",
+   "state": "dropped",
    "title": "【朗報】スターウォーズの新作映画、６年ぶりに劇場公開される『スター・ウォーズ／マンダロリアン・アンド・グローグー』",
    "touched": true,
    "type": "ambient",
    "views": 807857,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "HaZE20FlsLE": {
    "added": "2026-10-02T23:35:38+00:00",
@@ -3413,11 +3440,13 @@
    "pre": null,
    "published": "2026-09-29T11:44:27Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "エー〇コンバッ〇やります。",
    "type": "focus",
    "views": 84854,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "JuOBgpZPui0": {
    "added": "2026-10-10T23:18:29+00:00",
@@ -3726,12 +3755,13 @@
    },
    "published": "2026-01-21T11:03:02Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "【悲報】ハリウッド化された伝説のラノベ、アニメ化で絵柄が終わる『ALL YOU NEED IS KILL』",
    "touched": true,
    "type": "ambient",
    "views": 657288,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "MG0_xHqnq_Q": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -4291,11 +4321,13 @@
    "pre": null,
    "published": "2026-09-29T04:58:48Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "あの神ゲー「黒神話」のパクリクソゲーやります②",
    "type": "focus",
    "views": 55495,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "OyTIj4vzFcI": {
    "added": "2026-10-03T22:44:17+00:00",
@@ -4964,11 +4996,13 @@
    "pre": null,
    "published": "2026-10-04T09:15:20Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "救いを求めてサ終が決まってしまったシンデュアリティやる【SYNDUALITY Echo of Ada】",
    "type": "focus",
    "views": 114446,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "SadNFXeVdOo": {
    "added": "2026-10-14T23:00:58+00:00",
@@ -5333,11 +5367,13 @@
    "pre": null,
    "published": "2022-06-13T10:00:12Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "デススターに遭遇する銀河一アホなジェダイ",
    "type": "focus",
    "views": 236292,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "ULFO3YYR4Eo": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -6162,11 +6198,13 @@
    "pre": null,
    "published": "2026-10-09T10:36:52Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "事件が現場じゃなくて脚本で起っちゃった映画『踊る大捜査線 N E W  メトロポリスを駆け抜けろ！』",
    "type": "focus",
    "views": 342412,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "ZlCUthSdkeU": {
    "added": "2026-10-08T00:02:28+00:00",
@@ -6307,11 +6345,13 @@
    "pre": null,
    "published": "2026-10-03T09:55:55Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "【基本的に意味不明】クソゲーチャンネル「どうも、●●です」あいさつ集",
    "type": "focus",
    "views": 274657,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "aJihvljiGp0": {
    "added": "2026-10-09T23:51:23+00:00",
@@ -6451,11 +6491,13 @@
    "pre": null,
    "published": "2026-09-30T03:10:35Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "あの神ゲー「黒神話」のパクリクソゲーやります最終回",
    "type": "focus",
    "views": 53462,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "asjXy9GH2zI": {
    "added": "2026-10-10T23:18:29+00:00",
@@ -6469,11 +6511,13 @@
    "pre": null,
    "published": "2026-10-10T11:57:09Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "今年1番のクソゲーが決まってしまった本当につらいけど頑張るしかない【デジモン バトルジャンクション】",
    "type": "focus",
    "views": 136557,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "aumEdWTiVFI": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -6703,11 +6747,13 @@
    "pre": null,
    "published": "2026-10-14T11:09:54Z",
    "score": null,
-   "state": "fresh",
+   "state": "dropped",
    "title": "クソゲーの「究極体」プレイして具合が悪くなったシリーズの特級呪物【デジモン バトルジャンクション】",
    "type": "focus",
    "views": 423745,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "bnz39NRsS4I": {
    "added": "2026-10-04T22:50:12+00:00",
@@ -7154,11 +7200,13 @@
    "pre": null,
    "published": "2026-10-12T10:23:20Z",
    "score": null,
-   "state": "fresh",
+   "state": "dropped",
    "title": "今日もゴミ拾い頑張るぞい！サ終が決まってしまった【シンデユアリティ】やる",
    "type": "focus",
    "views": 74351,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "eakJuCs8sHo": {
    "added": "2026-10-13T01:52:08+00:00",
@@ -7681,12 +7729,13 @@
    },
    "published": "2026-05-08T11:39:15Z",
    "score": 42.439391983247326,
-   "state": "pool",
+   "state": "dropped",
    "title": "【大炎上】酷過ぎて観客がファイナルベントしたクソ映画『仮面ライダーオーズ１０ｔｈ復活のコアメダル』",
    "touched": true,
    "type": "ambient",
    "views": 449869,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "hygUP_LAdoo": {
    "added": "2026-10-11T23:28:47+00:00",
@@ -8287,12 +8336,13 @@
    },
    "published": "2026-01-29T11:01:21Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "バイオファンから叩かれ過ぎて打ち切りになった実写化『バイオハザード』",
    "touched": true,
    "type": "ambient",
    "views": 606807,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "klPJsDtmNgk": {
    "added": "2026-10-13T23:37:52+00:00",
@@ -8329,12 +8379,13 @@
    },
    "published": "2026-03-05T11:01:16Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "SNSで話題になり過ぎて劇場デビューしちゃったアニメ『超かぐや姫！』",
    "touched": true,
    "type": "ambient",
    "views": 515770,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "l-ySI_IE0k4": {
    "added": "2026-10-09T23:51:23+00:00",
@@ -8461,12 +8512,13 @@
    },
    "published": "2026-02-06T11:01:21Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "ゴジラ50周年を滅茶苦茶にしたクソ映画『ゴジラ FINAL WARS』",
    "touched": true,
    "type": "ambient",
    "views": 429504,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "lxk0LH2wbJI": {
    "added": "2026-09-27T20:12:00+00:00",
@@ -8804,11 +8856,13 @@
    "pre": null,
    "published": "2026-10-13T14:42:05Z",
    "score": null,
-   "state": "fresh",
+   "state": "dropped",
    "title": "映画やってるしバイオやる ③夜の部【バイオハザード RE:2】",
    "type": "focus",
    "views": 58382,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "nEnxtCT2tmc": {
    "added": "2026-10-04T22:50:12+00:00",
@@ -9074,11 +9128,13 @@
    "pre": null,
    "published": "2026-10-13T14:33:42Z",
    "score": null,
-   "state": "fresh",
+   "state": "dropped",
    "title": "映画やってるしバイオやる ③夜の部【バイオハザード RE:2】",
    "type": "focus",
    "views": 0,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "p0fo3ua_zxA": {
    "added": "2026-09-20T20:11:07+00:00",
@@ -9097,12 +9153,13 @@
    },
    "published": "2026-01-04T11:52:38Z",
    "score": 42.24974913511741,
-   "state": "pool",
+   "state": "dropped",
    "title": "【2025年】二度と見たくねぇ苦痛だった映画ランキング",
    "touched": true,
    "type": "ambient",
    "views": 1212413,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "p1ZZLAzgtsk": {
    "added": "2026-10-14T23:00:58+00:00",
@@ -9368,11 +9425,13 @@
    "pre": null,
    "published": "2026-10-10T20:27:23Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "今年1番のクソゲーが決まってしまった本当につらいけど頑張るしかない【デジモン バトルジャンクション】",
    "type": "focus",
    "views": 57219,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "qO4q912P-o8": {
    "added": "2026-10-03T22:44:17+00:00",
@@ -9584,11 +9643,13 @@
    "pre": null,
    "published": "2026-10-07T10:17:07Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "エースコンバットより1/100000000くらい薄い評価が墜落してるクソゲー【ネービーシーコンクリフト】",
    "type": "focus",
    "views": 487591,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "rIYVcK_7Jao": {
    "added": "2026-10-06T01:10:52+00:00",
@@ -10167,11 +10228,13 @@
    "pre": null,
    "published": "2026-10-08T07:09:26Z",
    "score": null,
-   "state": "pool",
+   "state": "dropped",
    "title": "味がしてきたと思ったら虚無に飲み込まれたサ終が決まってしまったシンデュアリティやる【SYNDUALITY Echo of Ada】",
    "type": "focus",
    "views": 66874,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed",
+   "touched": true
   },
   "v_uKtysYOT0": {
    "added": "2026-10-13T01:52:08+00:00",
@@ -10424,12 +10487,13 @@
    },
    "published": "2026-02-13T10:52:59Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "ホラゲー実況界隈で一世を風靡して実写化された映画『夜勤事件』",
    "touched": true,
    "type": "ambient",
    "views": 359896,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   },
   "wonabvpXiQ0": {
    "added": "2026-10-13T23:37:52+00:00",
@@ -10862,12 +10926,13 @@
    },
    "published": "2026-04-08T10:45:13Z",
    "score": 39.120724462604855,
-   "state": "pool",
+   "state": "dropped",
    "title": "トーマスガチ勢から黒歴史扱いされてる悲劇の映画『きかんしゃトーマス 魔法の線路』",
    "touched": true,
    "type": "ambient",
    "views": 391067,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "unsubscribed"
   }
  }
 }
