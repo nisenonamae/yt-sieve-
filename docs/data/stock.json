@@ -4367,17 +4367,25 @@
    "pickedAt": null,
    "post": null,
    "pre": {
-    "expect": 4,
-    "pull": 4
+    "expect": 3.6599999999999993,
+    "pull": 3.6599999999999993,
+    "items": {
+     "fun": 4.1,
+     "match": 4.1,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.1
+    }
    },
    "published": "2026-02-05T13:00:48Z",
-   "score": 42.763857708301,
-   "state": "pool",
+   "score": 40.71851793008327,
+   "state": "dropped",
    "title": "【考察】子ども時代にガチで怒っていた事を視聴者に聞いてみようVol.1",
    "touched": true,
    "type": "ambient",
    "views": 349427,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped"
   },
   "P5QMgdd1S2Y": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -4481,17 +4489,25 @@
    "pickedAt": null,
    "post": null,
    "pre": {
-    "expect": 5,
-    "pull": 4
+    "expect": 3.6599999999999993,
+    "pull": 3.6599999999999993,
+    "items": {
+     "fun": 4.1,
+     "match": 4.1,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.1
+    }
    },
    "published": "2026-02-26T13:00:53Z",
-   "score": 46.18427406559512,
-   "state": "pool",
+   "score": 40.71851793008327,
+   "state": "dropped",
    "title": "【激怒】1ボタン連打のズル戦法で負けたのが許せない。あの頃使われたしょうもない戦法を振り返ろう【スマブラ】",
    "touched": true,
    "type": "ambient",
    "views": 227412,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped"
   },
   "Ps6PoEdvsLM": {
    "added": "2026-10-10T23:18:29+00:00",
@@ -4808,15 +4824,22 @@
    "expiredCount": 1,
    "explore": false,
    "id": "RlG4UY6rgqA",
-   "pickedAt": null,
+   "pickedAt": "2026-10-16T10:42:53.708Z",
    "post": null,
    "pre": {
-    "expect": 4,
-    "pull": 4
+    "expect": 3.62,
+    "pull": 3.62,
+    "items": {
+     "fun": 4.5,
+     "match": 4,
+     "learn": 1.8,
+     "rest": 3.7,
+     "fill": 4.1
+    }
    },
    "published": "2026-03-06T13:00:48Z",
-   "score": 42.763857708301,
-   "state": "pool",
+   "score": 40.47238992342866,
+   "state": "picked",
    "title": "【考察】渋谷のマリオカートは打開を狙っている。いつアイテム使うのか？世紀の謎を大考察",
    "touched": true,
    "type": "ambient",
@@ -4980,17 +5003,25 @@
    "pickedAt": null,
    "post": null,
    "pre": {
-    "expect": 4,
-    "pull": 4
+    "expect": 3.6599999999999993,
+    "pull": 3.6599999999999993,
+    "items": {
+     "fun": 4.1,
+     "match": 4.1,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.1
+    }
    },
    "published": "2026-01-26T11:00:47Z",
-   "score": 42.763857708301,
-   "state": "pool",
+   "score": 40.71851793008327,
+   "state": "dropped",
    "title": "【考察】後半からロココFW→『あれ、なんか弱くね？』 ラスボスが勝手に弱くなる伝説の決勝戦を大考察【イナズマイレブン】",
    "touched": true,
    "type": "ambient",
    "views": 442426,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped"
   },
   "SUPenS9RJZk": {
    "added": "2026-10-04T22:50:12+00:00",
@@ -8153,17 +8184,25 @@
    "pickedAt": null,
    "post": null,
    "pre": {
-    "expect": 4,
-    "pull": 2
+    "expect": 3.6599999999999993,
+    "pull": 3.6599999999999993,
+    "items": {
+     "fun": 4.1,
+     "match": 4.1,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.1
+    }
    },
    "published": "2026-01-08T13:01:32Z",
-   "score": 37.05056266548058,
-   "state": "pool",
+   "score": 40.71851793008327,
+   "state": "dropped",
    "title": "【考察】なぜ俺たちは『狩猟笛』に感謝する気が起きなかったのか モンハン最大の冷遇武器について悲しみの考察【モンスターハンター】",
    "touched": true,
    "type": "ambient",
    "views": 216096,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped"
   },
   "jxCLlOz_RKQ": {
    "added": "2026-09-30T23:31:46+00:00",
@@ -9888,17 +9927,25 @@
    "pickedAt": null,
    "post": null,
    "pre": {
-    "expect": 4,
-    "pull": 4
+    "expect": 3.6599999999999993,
+    "pull": 3.6599999999999993,
+    "items": {
+     "fun": 4.1,
+     "match": 4.1,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.1
+    }
    },
    "published": "2026-03-05T13:01:37Z",
-   "score": 42.763857708301,
-   "state": "pool",
+   "score": 40.71851793008327,
+   "state": "dropped",
    "title": "【考察】イシドシュウジ⬅︎絶対に豪炎寺だろ これ気づかないやつ意味分からん【イナズマイレブンGO】",
    "touched": true,
    "type": "ambient",
    "views": 291244,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped"
   },
   "t-uGIrD5SH4": {
    "added": "2026-10-14T23:00:58+00:00",
