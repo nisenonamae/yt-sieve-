@@ -5306,20 +5306,28 @@
    "expiredCount": 1,
    "explore": false,
    "id": "ThON3HfKXks",
-   "pickedAt": null,
+   "pickedAt": "2026-10-16T11:10:13.343Z",
    "post": null,
    "pre": {
-    "expect": 4,
-    "pull": 4
+    "expect": 3,
+    "pull": 3,
+    "items": {
+     "fun": 3,
+     "match": 3,
+     "learn": 3,
+     "rest": 3,
+     "fill": 3
+    }
    },
    "published": "2026-09-20T01:00:27Z",
-   "score": 76.43948273806532,
-   "state": "pool",
+   "score": 58.977579286826234,
+   "state": "picked",
    "title": "#1布団ちゃんの『鬼武者 Way of the Sword』実況プレイPart1",
    "touched": true,
    "type": "serial",
    "views": 87010,
-   "watchedAt": null
+   "watchedAt": null,
+   "progress": 3
   },
   "TkcGuex8pGE": {
    "added": "2026-10-02T23:35:38+00:00",
