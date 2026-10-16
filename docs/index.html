@@ -422,10 +422,36 @@ function trustOf(v){
 }
 
 function freshOf(v){
-  const hl = ch(v.channelId).halfLifeDays ?? cfg.defaults.halfLifeDays ?? 30;
+  const hl = learnedHL(v.channelId);             // すべて記録から計算する(自分では決めない)
+  if (hl == null || hl >= 365) return 1;          // 旬ではない(時間では減らさない)
   const t = Date.parse(v.published || v.added || v.watchedAt || "");
-  if (isNaN(t)) return 0.5;        // 日付が分からないものは中立に倒す
+  if (isNaN(t)) return 1;
   return Math.pow(2, -Math.max(0, (Date.now() - t) / 864e5) / hl);
+}
+// 記録から学ぶ旬:出てから見るまでの日数と、見たあとの評価(予想とのずれ)を比べ、
+// 遅れるほどはっきり下がるチャンネルだけ、その下がり方から半減期を出す(6本以上・日数の幅が7日以上)
+let hlCache = null;
+function learnedHL(cid){
+  if (!hlCache){
+    hlCache = {};
+    const by = {};
+    for (const v of [...Object.values(watched.videos||{}), ...Object.values(stock.videos)]){
+      if (!v.post || v.post.score == null || !v.published || !v.watchedAt) continue;
+      const days = (Date.parse(v.watchedAt) - Date.parse(v.published)) / 864e5; if (!(days >= 0)) continue;
+      (by[v.channelId] ||= []).push({ days, gap: v.post.score - (v.pre && v.pre.expect != null ? v.pre.expect : 3), score: v.post.score });
+    }
+    for (const [k, a] of Object.entries(by)){
+      const n = a.length; if (n < 6) continue;
+      const xs = a.map(x => x.days), ys = a.map(x => x.gap); if (Math.max(...xs) - Math.min(...xs) < 7) continue;
+      const mx = xs.reduce((p,q)=>p+q,0)/n, my = ys.reduce((p,q)=>p+q,0)/n;
+      const sxy = xs.reduce((p,x,i)=>p+(x-mx)*(ys[i]-my),0), sxx = xs.reduce((p,x)=>p+(x-mx)**2,0), syy = ys.reduce((p,y)=>p+(y-my)**2,0);
+      if (!sxx || !syy) continue;
+      const slope = sxy / sxx, r = sxy / Math.sqrt(sxx * syy), t = r * Math.sqrt((n - 2) / Math.max(1e-9, 1 - r * r));
+      if (slope < 0 && t <= -2){ const base = a.reduce((p,x)=>p+x.score,0)/n; hlCache[k] = { hl: Math.max(3, Math.min(364, Math.round(base / (2 * -slope)))), n, slope }; }
+      else hlCache[k] = { hl: null, n };
+    }
+  }
+  return hlCache[cid] && hlCache[cid].hl != null ? hlCache[cid].hl : null;
 }
 
 /* そのチャンネルの再生数の中央値。サムネ判断とは独立した「他人がもう見た結果」。 */
@@ -477,7 +503,7 @@ const list = st => Object.values(stock.videos).filter(v => v.state === st);
 
 /* ══ 描画 ════════════════════════════════════ */
 function render(){
-  trustCache = null; medCache = null;
+  trustCache = null; medCache = null; hlCache = null;
   try { draw(); }
   catch(e){
     console.error(e);
@@ -571,11 +597,8 @@ function drawChans(){
       </div>
       <p class="meta">在庫${stocked}本 ・ <span class="num">${c.id}</span></p>
       <div class="row"><span>既定の型</span><div class="seg">${seg}</div></div>
-      <div class="row"><span>鮮度半減期</span>
-        <div class="seg">${[3,7,14,30,365].map(d =>
-          `<button aria-pressed="${(c.halfLifeDays??cfg.defaults.halfLifeDays)===d}"
-            onclick="setCh(${i},'halfLifeDays',${d})">${d===365?"∞":d+"日"}</button>`).join("")}</div>
-      </div>
+      <div class="row"><span>鮮度</span><span class="meta" style="margin-left:auto">${learnedHL(c.id)!=null ? `旬もの(半減期 ${learnedHL(c.id)}日)` : "旬ではない(時間では減らさない)"}</span></div>
+      <p class="meta" style="margin-top:2px">記録から自動で計算。${(hlCache[c.id]||{}).n ? `見た${hlCache[c.id].n}本から判断` : "まだ記録が足りない(6本以上・日数の幅7日以上で判断)"}</p>
     </div>`;
   }).join("");
 
