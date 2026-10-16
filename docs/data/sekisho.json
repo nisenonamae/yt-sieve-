@@ -38,7 +38,7 @@
   "gain": 1,
   "window": 3,
   "approach": 0.5,
-  "threshold": 55,
+  "threshold": 60,
   "tighten": 0,
   "natural": null,
   "tags": [
@@ -46,7 +46,7 @@
    "寝不足",
    "塾の日"
   ],
-  "lastAdjust": "2026-10-16",
+  "lastAdjust": "2026-10-17",
   "lastWeekly": null
  },
  "days": {
@@ -74,11 +74,42 @@
    "threshold": 55,
    "allowance": 120,
    "natural": 120
+  },
+  "2026-10-17": {
+   "sessions": [
+    {
+     "id": "D3w7ayhH8OQ",
+     "start": "2026-10-16T23:19:52.602Z",
+     "end": "2026-10-16T23:21:58.754Z",
+     "secs": 88,
+     "startCum": 0,
+     "effect": 4.1,
+     "more": 2.6,
+     "quality": 4
+    }
+   ],
+   "watchedSec": 88,
+   "stock": {
+    "open": 9888,
+    "high": 11611,
+    "low": 9888,
+    "close": 11523
+   },
+   "threshold": 60,
+   "allowance": 120,
+   "natural": 120
   }
  },
  "hist": {
   "allowance": [],
-  "threshold": [],
+  "threshold": [
+   {
+    "date": "2026-10-16",
+    "from": 55,
+    "to": 60,
+    "reason": "在庫が目標の275%(3日の平均)。厳しくした"
+   }
+  ],
   "settings": []
  }
 }
