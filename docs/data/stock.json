@@ -1253,14 +1253,26 @@
    "explore": false,
    "id": "7ifcis4WsZo",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 4.08,
+    "pull": 4.08,
+    "items": {
+     "fun": 4.8,
+     "match": 4.8,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.8
+    }
+   },
    "published": "2026-09-29T08:00:05Z",
-   "score": null,
-   "state": "pool",
+   "score": 88.43278942923054,
+   "state": "picked",
    "title": "サラリーモンスター　～オワハラで弱らせてゲットだぜ！～",
    "type": "focus",
    "views": 116896,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-10-16T23:19:29.946Z",
+   "touched": true
   },
   "7psUxtCygHY": {
    "added": "2026-09-29T20:13:34+00:00",
@@ -1271,14 +1283,26 @@
    "explore": false,
    "id": "7psUxtCygHY",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3.72,
+    "pull": 3.72,
+    "items": {
+     "fun": 4.2,
+     "match": 4.2,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.2
+    }
+   },
    "published": "2026-09-29T15:00:31Z",
-   "score": null,
-   "state": "pool",
+   "score": 80.77939314669537,
+   "state": "picked",
    "title": "【閲覧注意】ゆゆうた少年が口にしたことがある物【2026/09/29】",
    "type": "focus",
    "views": 20540,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-10-16T23:19:36.703Z",
+   "touched": true
   },
   "7u4IzToIEJY": {
    "added": "2026-10-11T23:28:47+00:00",
@@ -1664,7 +1688,7 @@
    "channelName": "布団ちゃん切り抜きMAX",
    "desc": "布団ちゃんのSNS\nTwitter　https://twitter.com/indegnasen210\nYouTube　https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw\nTwitch　https://twitch.tv/indegnasen0706\n\n00:00　難易度MAX\n00:17　長風呂とサウナが苦手\n01:17　レバーのこと好きなん？\n03:10　加藤さんが好む食べ物\n03:43　おにやの飲み方\n04:55　おにやは遅刻するけど天才\n08:55　ドパガキ\n10:56　スマウグを獲る理由\n13:05　DRKS運営が叩かれて",
    "duration": 3023,
-   "explore": false,
+   "explore": true,
    "id": "9fev8VLKLQ0",
    "pickedAt": "2026-10-16T14:09:07.109Z",
    "post": null,
@@ -1968,14 +1992,26 @@
    "explore": false,
    "id": "C1po-7K5O88",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3.2399999999999998,
+    "pull": 3.2399999999999998,
+    "items": {
+     "fun": 3.4,
+     "match": 3.4,
+     "learn": 3,
+     "rest": 3,
+     "fill": 3.4
+    }
+   },
    "published": "2026-09-29T04:31:45Z",
-   "score": null,
-   "state": "pool",
+   "score": 70.98246771574117,
+   "state": "dropped",
    "title": "明日はマイクロン決算。いよいよ来るんですね？最高の爆上げ大相場が！！日経平均8万円への反撃の狼煙はここから上がる！さぁ来い朝の寄り付きデイトレ株ライブ生放送！！",
    "type": "focus",
    "views": 0,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "CD_onpktbvs": {
    "added": "2026-10-02T23:35:38+00:00",
@@ -2129,15 +2165,39 @@
    "duration": 88,
    "explore": false,
    "id": "D3w7ayhH8OQ",
-   "post": null,
-   "pre": null,
+   "post": {
+    "fun": 3.7,
+    "skip": 5,
+    "match": 3.7,
+    "learn": 3.6,
+    "rest": 3.3,
+    "after": 4.8,
+    "more": 2.6,
+    "quality": 4,
+    "effect": 4.1,
+    "score": 4.1
+   },
+   "pre": {
+    "expect": 3.78,
+    "pull": 3.78,
+    "items": {
+     "fun": 4.3,
+     "match": 4.3,
+     "learn": 3,
+     "rest": 3,
+     "fill": 4.3
+    }
+   },
    "published": "2026-09-29T15:00:01Z",
-   "score": null,
-   "state": "pool",
+   "score": 82.33072356646299,
+   "state": "watched",
    "title": "視聴者の強すぎる言葉に笑うゆゆうた【2026/09/29】",
    "type": "focus",
    "views": 11394,
-   "watchedAt": null
+   "watchedAt": "2026-10-16T23:21:58.754Z",
+   "pickedAt": "2026-10-16T23:19:45.897Z",
+   "progress": null,
+   "touched": true
   },
   "DCBPaK4Wv6g": {
    "added": "2026-10-01T23:44:03+00:00",
@@ -3425,7 +3485,7 @@
     "pull": 2.9
    },
    "published": "2026-09-27T17:16:43Z",
-   "score": 65.99867401090205,
+   "score": 71.1314896023936,
    "state": "picked",
    "title": "ゆゆうた、視聴者ボカロPの楽曲を熱血批評【2026/09/27】",
    "touched": true,
@@ -4123,7 +4183,7 @@
     "pull": 3.62
    },
    "published": "2026-03-06T13:00:48Z",
-   "score": 40.47238992342866,
+   "score": 79.44831912862135,
    "state": "picked",
    "title": "【考察】渋谷のマリオカートは打開を狙っている。いつアイテム使うのか？世紀の謎を大考察",
    "touched": true,
@@ -6835,7 +6895,7 @@
     "pull": 3.3
    },
    "published": "2026-09-27T17:16:48Z",
-   "score": 70.86819132306663,
+   "score": 76.38752226218082,
    "state": "picked",
    "title": "メルトチューンのレビューを見るゆゆうた【2026/09/27】",
    "touched": true,
@@ -7980,15 +8040,26 @@
    "explore": false,
    "id": "p5iRjHn9Qvk",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3.4799999999999995,
+    "pull": 3.4799999999999995,
+    "items": {
+     "fun": 3.8,
+     "match": 3.8,
+     "learn": 3,
+     "rest": 3,
+     "fill": 3.8
+    }
+   },
    "published": "2026-09-28T09:30:37Z",
-   "score": null,
-   "state": "pool",
+   "score": 75.99733186364492,
+   "state": "picked",
    "title": "あなたを食う理由を話します",
    "touched": true,
    "type": "focus",
    "views": 43935,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-10-16T23:19:21.898Z"
   },
   "p9kKZdRa830": {
    "added": "2026-10-13T23:37:52+00:00",
@@ -8855,7 +8926,7 @@
    "channelName": "ステゴロパンチャーズ",
    "desc": "あきプロ↓\nhttps://youtube.com/@akiraproduce222?si=UyuXtk3fh6NmvE9n\n\n企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreom",
    "duration": 2233,
-   "explore": false,
+   "explore": true,
    "id": "vPZ4svelOpE",
    "pickedAt": "2026-10-16T14:04:18.636Z",
    "post": null,
