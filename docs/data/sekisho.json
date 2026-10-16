@@ -91,9 +91,9 @@
    "watchedSec": 88,
    "stock": {
     "open": 9888,
-    "high": 11611,
+    "high": 15770,
     "low": 9888,
-    "close": 11523
+    "close": 15770
    },
    "threshold": 60,
    "allowance": 120,
