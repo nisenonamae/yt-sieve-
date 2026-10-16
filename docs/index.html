@@ -180,6 +180,7 @@ nav{overflow-x:auto;scrollbar-width:none}nav button{white-space:nowrap;flex:none
 .pla{display:flex;gap:8px;padding:12px}.pla button{flex:1;padding:12px 4px;font-weight:600;border:1px solid}
 .pla .seen{color:#ddd;border-color:#555}
 .reasons button[aria-pressed=true]{border-color:var(--pine);background:#eef3f0}
+.se-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.5rem 0;font-size:13px}.se-btn{min-width:2.6rem;border:1px solid var(--rule);border-radius:999px;background:#fff;padding:.1rem .7rem;cursor:pointer}.se-btn[aria-pressed="true"]{background:var(--pine);color:#fff}.se-vol{display:flex;align-items:center;gap:.3rem}.se-vol input{width:8rem}
 
 </style>
 </head>
@@ -220,6 +221,119 @@ nav{overflow-x:auto;scrollbar-width:none}nav button{white-space:nowrap;flex:none
   </div>
 </dialog>
 
+<script id="se-core">
+
+// ───────── 効果音(ブラウザの中で音を合成。音のファイルは使わない)─────────
+// 設定(入/切・音量)は 3つのアプリで共通(localStorage の se-on / se-vol)
+const SE = (() => {
+  let ctx = null, master = null, lastTap = 0, lastErr = 0;
+  const ls = (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } };
+  let on = ls("se-on", "1") !== "0", vol = Math.max(0, Math.min(1, +ls("se-vol", "0.5")));
+  function ac(){
+    if (!on) return null;
+    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
+    if (!ctx) { ctx = new AC(); master = ctx.createGain(); master.connect(ctx.destination); }
+    if (ctx.state === "suspended") ctx.resume();
+    master.gain.value = vol * 0.9;
+    return ctx;
+  }
+  // 1つの音:周波数 f(滑らせるなら f2)、始まり t、長さ d、波の形、大きさ g
+  function note(c, f, t, d, o){
+    o = o || {};
+    const osc = c.createOscillator(), gn = c.createGain(), t0 = c.currentTime + (t || 0);
+    osc.type = o.type || "sine"; osc.frequency.setValueAtTime(f, t0);
+    if (o.f2) osc.frequency.exponentialRampToValueAtTime(o.f2, t0 + d);
+    const g = o.g == null ? 0.2 : o.g, a = o.a == null ? 0.005 : o.a;
+    gn.gain.setValueAtTime(0.0001, t0); gn.gain.exponentialRampToValueAtTime(g, t0 + a);
+    gn.gain.exponentialRampToValueAtTime(0.0001, t0 + d);
+    let last = gn;
+    if (o.lp) { const fl = c.createBiquadFilter(); fl.type = "lowpass"; fl.frequency.value = o.lp; gn.connect(fl); last = fl; }
+    osc.connect(gn); last.connect(master); osc.start(t0); osc.stop(t0 + d + 0.05);
+  }
+  // 鐘のような音(基音 + 倍音)
+  const bell = (c, f, t, d, g) => { note(c, f, t, d, { g: g }); note(c, f * 2, t, d * 0.6, { g: g * 0.35 }); note(c, f * 3.01, t, d * 0.3, { g: g * 0.12 }); };
+  // ざわめき(風・波)
+  function noise(c, t, d, o){
+    o = o || {};
+    const n = Math.floor(c.sampleRate * d), buf = c.createBuffer(1, n, c.sampleRate), ch = buf.getChannelData(0);
+    for (let i = 0; i < n; i++) ch[i] = Math.random() * 2 - 1;
+    const src = c.createBufferSource(), fl = c.createBiquadFilter(), gn = c.createGain(), t0 = c.currentTime + (t || 0);
+    src.buffer = buf; fl.type = o.type || "lowpass"; fl.Q.value = o.q || 0.7;
+    fl.frequency.setValueAtTime(o.f || 400, t0); if (o.f2) fl.frequency.exponentialRampToValueAtTime(o.f2, t0 + d * 0.8);
+    const g = o.g || 0.08;
+    gn.gain.setValueAtTime(0.0001, t0); gn.gain.exponentialRampToValueAtTime(g, t0 + d * 0.35); gn.gain.exponentialRampToValueAtTime(0.0001, t0 + d);
+    src.connect(fl); fl.connect(gn); gn.connect(master); src.start(t0); src.stop(t0 + d + 0.05);
+  }
+  const lib = {
+    tap: c => note(c, 880, 0, 0.05, { f2: 660, g: 0.05 }),
+    tab: c => { note(c, 520, 0, 0.07, { type: "triangle", g: 0.07 }); note(c, 780, 0.03, 0.06, { type: "triangle", g: 0.04 }); },
+    toggleOn: c => note(c, 600, 0, 0.08, { f2: 1150, g: 0.08 }),
+    toggleOff: c => note(c, 900, 0, 0.08, { f2: 480, g: 0.06 }),
+    done: c => { bell(c, 1046.5, 0, 0.45, 0.11); bell(c, 1318.5, 0.08, 0.6, 0.11); },
+    save: c => { bell(c, 784, 0, 0.35, 0.08); bell(c, 1174.7, 0.01, 0.4, 0.06); },
+    remove: c => note(c, 520, 0, 0.14, { f2: 240, type: "triangle", g: 0.08 }),
+    error: c => { note(c, 220, 0, 0.09, { type: "square", g: 0.05, lp: 900 }); note(c, 196, 0.12, 0.12, { type: "square", g: 0.05, lp: 900 }); },
+    open: c => noise(c, 0, 0.18, { f: 300, f2: 2400, type: "bandpass", q: 1.2, g: 0.05 }),
+    fanfare: c => { [523.25, 659.25, 783.99].forEach((f, i) => { note(c, f, i * 0.09, 0.3, { type: "triangle", g: 0.12 }); note(c, f * 2, i * 0.09, 0.2, { g: 0.03 }); });
+      bell(c, 1046.5, 0.27, 1.1, 0.13); note(c, 523.25, 0.27, 1.0, { type: "triangle", g: 0.06 });
+      [2093, 2637, 3136, 2637].forEach((f, i) => note(c, f, 0.45 + i * 0.07, 0.25, { g: 0.025 })); },
+    levelup: c => { note(c, 600, 0, 0.5, { f2: 1600, type: "triangle", g: 0.08 }); [1568, 1975.5, 2349.3, 3136].forEach((f, i) => bell(c, f, 0.35 + i * 0.06, 0.4, 0.04)); },
+    issue: c => { [392, 523.25, 659.25, 783.99].forEach((f, i) => note(c, f, i * 0.12, i === 3 ? 0.9 : 0.22, { type: "sawtooth", g: 0.07, lp: 1800, a: 0.02 }));
+      note(c, 196, 0.36, 0.9, { type: "sawtooth", g: 0.04, lp: 700, a: 0.03 }); },
+    swell: c => { noise(c, 0, 0.9, { f: 200, f2: 1400, g: 0.05 }); [440, 554.4, 659.3].forEach(f => note(c, f, 0.05, 0.9, { g: 0.035, a: 0.35 })); },
+    unswell: c => { noise(c, 0, 0.6, { f: 1200, f2: 250, g: 0.04 }); note(c, 554.4, 0, 0.5, { f2: 440, g: 0.04, a: 0.1 }); },
+    pluck: c => { note(c, 880, 0, 0.35, { type: "triangle", g: 0.09, a: 0.002 }); note(c, 1318.5, 0.05, 0.4, { type: "triangle", g: 0.06, a: 0.002 }); },
+    link: c => { note(c, 659.3, 0, 0.25, { type: "triangle", g: 0.08, a: 0.002 }); note(c, 987.8, 0.09, 0.35, { type: "triangle", g: 0.08, a: 0.002 }); },
+    lock: c => { note(c, 180, 0, 0.06, { type: "square", g: 0.05, lp: 1200 }); note(c, 120, 0.05, 0.08, { type: "square", g: 0.05, lp: 900 }); },
+    unlock: c => { note(c, 160, 0, 0.05, { type: "square", g: 0.05, lp: 1200 }); bell(c, 1318.5, 0.08, 0.45, 0.07); },
+    send: c => noise(c, 0, 0.25, { f: 2400, f2: 400, type: "bandpass", q: 1.5, g: 0.06 }),
+    down: c => { note(c, 660, 0, 0.25, { f2: 440, type: "triangle", g: 0.07 }); },
+  };
+  function play(name, opt){
+    try {
+      const c = ac(); if (!c || !lib[name]) return;
+      if (name === "tap" || name === "tab") { const now = Date.now(); if (now - lastTap < 45) return; lastTap = now; }
+      if (name === "error") { const now = Date.now(); if (now - lastErr < 500) return; lastErr = now; }
+      lib[name](c, opt);
+    } catch (e) {}
+  }
+  // 場面の見分け:アプリごとの [選び方, 音] の並び(上から順に見る)
+  let rules = [];
+  function soundFor(el){
+    for (const [sel, snd] of rules) { const hit = el.closest(sel); if (hit) return typeof snd === "function" ? snd(hit) : snd; }
+    const inp = el.closest("input");
+    if (inp && (inp.type === "checkbox" || inp.type === "radio")) return inp.checked ? "toggleOn" : "toggleOff";
+    if (el.closest("nav button, [role=tab], .tabs button")) return "tab";
+    if (el.closest("button, a[href], summary, .chip-b, [data-v]")) return "tap";
+    return null;
+  }
+  function init(appRules){
+    rules = appRules || [];
+    document.addEventListener("click", e => { const s = e.target && e.target.closest ? soundFor(e.target) : null; if (s) play(s); }, true);
+    // エラーの表示(class="err")が出たら、低い音
+    try {
+      new MutationObserver(ms => { for (const m of ms) { const el = m.target.nodeType === 1 ? m.target : m.target.parentElement; if (!el || !el.closest) continue;
+        const er = el.closest(".err"); if (er && (er.textContent || "").trim()) { play("error"); break; } } })
+        .observe(document.body, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ["class"] });
+    } catch (e) {}
+  }
+  // 設定の欄(入/切・音量)。アプリの版の表示のそばに置く
+  function mount(anchor){
+    if (!anchor || document.getElementById("se-row")) return;
+    const row = document.createElement("div"); row.id = "se-row"; row.className = "se-row";
+    row.innerHTML = '<span>効果音</span><button type="button" id="se-on" class="se-btn"></button><label class="se-vol">音量 <input id="se-vol" type="range" min="0" max="1" step="0.05"></label>';
+    anchor.parentNode.insertBefore(row, anchor.nextSibling);
+    const b = row.querySelector("#se-on"), r = row.querySelector("#se-vol");
+    const show = () => { b.textContent = on ? "入" : "切"; b.setAttribute("aria-pressed", String(on)); r.value = vol; r.disabled = !on; };
+    b.addEventListener("click", () => { on = !on; try { localStorage.setItem("se-on", on ? "1" : "0"); } catch (e) {} show(); if (on) play("toggleOn"); });
+    r.addEventListener("input", () => { vol = +r.value; try { localStorage.setItem("se-vol", String(vol)); } catch (e) {} });
+    r.addEventListener("change", () => play("done"));
+    show();
+  }
+  return { play, init, mount, soundFor, get on(){ return on; } };
+})();
+
+</script>
 <script>
 const $ = s => document.querySelector(s);
 const PATH = "docs/data/stock.json";
@@ -474,8 +588,15 @@ function renameCh(i){
   chTouch(); render();
 }
 function delCh(i){
-  if (!confirm(`${cfg.channels[i].name || cfg.channels[i].id} を外す?\n集めた在庫は残る。`)) return;
-  cfg.channels.splice(i,1); chTouch(); render();
+  const c = cfg.channels[i], nm = c.name || c.id;
+  if (!confirm(`${nm} を外す?\n次の朝から、このチャンネルの新しい動画は集まらなくなる。`)) return;
+  const mine = Object.values(stock.videos).filter(v => v.channelId === c.id), wait = mine.filter(v => v.state === "pool" || v.state === "fresh"), lodge = mine.filter(v => v.state === "picked");
+  cfg.channels.splice(i,1); chTouch();
+  if ((wait.length || lodge.length) && confirm(`${nm} の動画が、改め待ちに${wait.length}本・宿場に${lodge.length}本ある。これも外す?\n(外さなければ、そのまま残る)`)){
+    for (const v of [...wait, ...lodge]){ v.state = "dropped"; v.dropReason = "unsubscribed"; v.touched = true; }
+    touch(); snapStock(); kTouch();
+  }
+  render();
 }
 
 async function resolve(q){
@@ -936,6 +1057,7 @@ const BAIL_Q = POST_Q.filter(q => ["fun", "after", "more"].includes(q[0]));
 // 心の余裕(一日の終わり)。平均を心の余裕とし、問いごとの値も残す
 const MOOD_Q = [["calm", "焦り・不安は?", "とても強い", "落ち着いている"], ["body", "体の疲れは?", "ぐったり", "元気"], ["self", "今日の自分を?", "責めている", "認められる"],
   ["left", "やり残しの重さは?", "とても重い", "軽い"], ["focus", "今から何かに集中できそう?", "とても無理", "できる"], ["day", "今日一日は?", "虚しかった", "満たされた"], ["tmr", "明日は?", "気が重い", "楽しみ"]];
+const kse = n => { try { SE.play(n); } catch (e) {} };
 const PRE_FROM = { fun: "fun", match: "quality", learn: "learn", rest: "rest", fill: "after" };
 const r1 = x => Math.round(x * 10) / 10;
 function postParts(p){
@@ -1005,7 +1127,7 @@ function toggleTag(t){ const d = today(); d.mood = d.mood || {}; const a = d.moo
 function saveMood(){
   const items = Object.assign({}, (today().mood || {}).items || {}, readSliders("mood"));
   if (!Object.keys(items).length) { alert("どれか一つでもつまみを動かしてから残してください"); return; }
-  const d = today(); d.mood = Object.assign(d.mood || {}, { items, v: r1(kmean(Object.values(items))), at: new Date(kNow()).toISOString() }); kTouch(); autoSave(); drawGate();
+  const d = today(); d.mood = Object.assign(d.mood || {}, { items, v: r1(kmean(Object.values(items))), at: new Date(kNow()).toISOString() }); kTouch(); autoSave(); drawGate(); kse("save");
 }
 
 /* ── 改め:1本ずつ。予想を5問で付け、線を超えたら宿場へ ── */
@@ -1034,7 +1156,7 @@ function judge(id, how){
   if (pass) { v.state = "picked"; v.pickedAt = new Date(kNow()).toISOString(); }
   else { v.state = "dropped"; v.dropReason = how === "drop" ? "skipped" : "below"; }
   touch(); snapStock(); kTouch();
-  $("#msg").textContent = pass ? `通った(${score.toFixed(0)}点)` : `落ちた(${score.toFixed(0)}点 < 線 ${th})`;
+  $("#msg").textContent = pass ? `通った(${score.toFixed(0)}点)` : `落ちた(${score.toFixed(0)}点 < 線 ${th})`; kse(pass ? "levelup" : "down");
   render();
 }
 
@@ -1064,7 +1186,7 @@ function play(id){
   const v = stock.videos[id];
   $("#pl").innerHTML = `<div class="plh"><b>${esc(v.title).slice(0, 50)}</b><span class="num" id="pl-rem"></span></div><div id="ytp"></div>
     <div class="pla"><button class="take" onclick="stopPlay()">やめる</button><button class="seen" onclick="toExt()">うまく動かない → YouTubeで開く</button></div>`;
-  $("#pl").hidden = false;
+  $("#pl").hidden = false; kse("open");
   P = { id, start: kNow(), startPos: v.progress || 0, secs: 0, skips: 0, lastT: v.progress || 0, lastTick: kNow(), playing: false, startCum: today().watchedSec || 0 };
   loadYT(() => {
     P.player = new YT.Player("ytp", { videoId: id, playerVars: { autoplay: 1, start: Math.floor(v.progress || 0), rel: 0, playsinline: 1, modestbranding: 1 },
@@ -1094,7 +1216,7 @@ function openExt(id, pos, carry){
   const at = Math.floor(pos != null ? pos : (v.progress || 0));
   ext = { id, start: kNow() - (carry ? carry.secs * 1000 : 0), startPos: carry ? carry.startPos : at, startCum: carry ? carry.startCum : (today().watchedSec || 0) };
   localStorage.setItem(LS + ":ext", JSON.stringify(ext));
-  window.open(`https://www.youtube.com/watch?v=${id}&t=${at}`, "_blank", "noopener");
+  kse("send"); window.open(`https://www.youtube.com/watch?v=${id}&t=${at}`, "_blank", "noopener");
   render();
 }
 function extDone(done){
@@ -1132,7 +1254,7 @@ function saveRate(){
   const parts = postParts(it), score = kmean([parts.quality, parts.effect].filter(x => x != null));
   v.post = Object.assign({}, it, parts, { score: isNaN(score) ? 3 : r1(score) }); v.state = "watched"; v.watchedAt = new Date(kNow()).toISOString(); v.progress = null; v.touched = true;
   addSession({ id: p.id, start: new Date(p.start).toISOString(), end: new Date(kNow()).toISOString(), secs: Math.round(p.secs), startCum: p.startCum, effect: parts.effect, more: it.more != null ? it.more : null, quality: parts.quality });
-  $("#rate").close(); touch(); render(); autoSave();
+  $("#rate").close(); touch(); render(); autoSave(); kse(today().closed ? "lock" : "done");
 }
 function saveBail(){
   const p = pend, v = stock.videos[p.id], it = readSliders("post"), forced = p.forced, reason = forced ? "time" : p.reason;
@@ -1145,7 +1267,7 @@ function saveBail(){
     v.post = Object.assign({}, it, parts, { score: isNaN(score) ? (reason === "miss" ? 1 : 2) : r1(score), bailed: reason === "miss" || reason === "mismatch", reason });
     v.state = "watched"; v.watchedAt = new Date(kNow()).toISOString(); v.progress = null;
   } else { v.progress = Math.round(pos); }            // 続きは宿場に残る
-  v.touched = true; $("#rate").close(); touch(); render(); autoSave();
+  v.touched = true; $("#rate").close(); touch(); render(); autoSave(); kse(today().closed ? "lock" : "save");
 }
 function drop(id){ const v = stock.videos[id]; v.state = "dropped"; v.dropReason = "gaveup"; v.touched = true; touch(); snapStock(); kTouch(); render(); }
 
@@ -1221,7 +1343,8 @@ function drawKset(){
     `<h3 class="h3">開門・閉門</h3>` + [0, 1, 2, 3, 4, 5, 6].map(w => { const [o, c] = (s.gates || {})[w] || ["00:00", "24:00"];
       return `<div class="kf"><label>${WD[w]}曜</label><span style="display:flex;gap:6px"><input type="time" data-kg="${w}:0" value="${o === "24:00" ? "23:59" : o}"><input type="time" data-kg="${w}:1" value="${c === "24:00" ? "23:59" : c}"></span></div>`; }).join("") +
     `<h3 class="h3">心の余裕の印</h3><div class="kf"><label>印(読点で区切る)<small>見た時間と関係なく、心の余裕を動かすもの</small></label><input data-kt value="${esc((s.tags || []).join("、"))}"></div>` +
-    `<button class="take" style="width:100%;padding:11px;margin-top:14px" onclick="saveKset()">保存する</button>`;
+    `<button class="take" style="width:100%;padding:11px;margin-top:14px" onclick="saveKset()">保存する</button><p class="meta" id="se-anchor" style="margin-top:18px">効果音(ほかのアプリと共通)</p>`;
+  try { SE.mount(document.getElementById("se-anchor")); } catch (e) {}
 }
 function saveKset(){
   const s = seki.settings;
@@ -1231,7 +1354,7 @@ function saveKset(){
     s[k] = v; });
   document.querySelectorAll("[data-kg]").forEach(el => { const [w, i] = el.dataset.kg.split(":"); s.gates[w] = s.gates[w] || ["00:00", "24:00"]; s.gates[w][+i] = el.value === "23:59" && +i === 1 ? "24:00" : el.value; });
   const t = document.querySelector("[data-kt]"); if (t) s.tags = t.value.split(/[、,，]/).map(x => x.trim()).filter(Boolean);
-  snapStock(); kTouch(); autoSave(); $("#msg").textContent = "関所の値を保存した"; render();
+  snapStock(); kTouch(); autoSave(); $("#msg").textContent = "関所の値を保存した"; render(); kse("save");
 }
 function autoSave(){ if (conn()) $("#save").onclick(); }
 
@@ -1421,6 +1544,7 @@ function saveCfg(){
 }
 
 boot();
+try { SE.init([["nav button", "tab"], [".tags button", "pluck"], ["[onclick^=\"pickRsn\"]", "pluck"], [".del", "remove"], ["[onclick^=\"drop(\"]", "remove"], ["[onclick^=\"rewind\"]", "unlock"]]); } catch(e){}
 </script>
 </body>
 </html>
