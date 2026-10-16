@@ -39,6 +39,8 @@
   "window": 3,
   "approach": 0.5,
   "threshold": 55,
+  "tighten": 0,
+  "natural": null,
   "tags": [
    "テスト前",
    "寝不足",
@@ -67,14 +69,16 @@
     "open": 0,
     "high": 12995,
     "low": 0,
-    "close": 12995
+    "close": 3191
    },
    "threshold": 55,
-   "allowance": 120
+   "allowance": 120,
+   "natural": 120
   }
  },
  "hist": {
   "allowance": [],
-  "threshold": []
+  "threshold": [],
+  "settings": []
  }
 }
