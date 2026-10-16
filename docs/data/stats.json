@@ -4,28 +4,29 @@
    "watched": 6
   },
   "UC1xFkkJgjzVUm9oZIHQ10yQ": {
-   "dropped": 94,
+   "dropped": 97,
    "expired": 4
   },
   "UCC0FNUII8Zp2OAc7IaetICg": {
-   "dropped": 94,
+   "dropped": 99,
    "watched": 2
   },
   "UCGjV4bsC43On-YuiLZcfL0w": {
-   "dropped": 114,
+   "dropped": 119,
    "watched": 4
   },
   "UCH-lygWpHodDff3iQurnWnQ": {
-   "dropped": 137,
+   "dropped": 149,
+   "seen": 1,
    "watched": 16
   },
   "UCHVbV2U9ZLucK0m7b864_0g": {
-   "dropped": 58,
+   "dropped": 65,
    "expired": 4,
    "watched": 8
   },
   "UCHyYUv384bv9eMOC1UoG9PQ": {
-   "dropped": 58,
+   "dropped": 78,
    "watched": 2
   },
   "UCKd4yNs1CvdCYIkJdARgBsw": {
@@ -33,7 +34,7 @@
    "expired": 2
   },
   "UCNKGn1rULbYWrQaGY-4nZDA": {
-   "dropped": 93,
+   "dropped": 95,
    "expired": 4,
    "watched": 8
   },
@@ -43,28 +44,29 @@
    "watched": 6
   },
   "UCTrckUWmmrRZcNrfu1mZDOg": {
-   "dropped": 84
+   "dropped": 88
   },
   "UCZetZElUvdElPrcstRjl9DA": {
-   "dropped": 99,
+   "dropped": 101,
    "expired": 2
   },
   "UCarvAHwttb_r2hYihGX8aXA": {
-   "dropped": 117,
+   "dropped": 125,
    "expired": 2,
    "watched": 30
   },
   "UCfTfI2-PkGYgcQHoVk85tCA": {
-   "dropped": 107,
+   "dropped": 114,
+   "seen": 1,
    "watched": 2
   },
   "UCoQhX2O93MVTWfgIz-8wOmg": {
-   "dropped": 114,
+   "dropped": 115,
    "full": 1,
    "watched": 4
   },
   "UCoie3ytrtgUCfDVN3PqxIDQ": {
-   "dropped": 54
+   "dropped": 73
   },
   "UCqRV_ZIQhVKfxG1_WkNiRbg": {
    "dropped": 26,
@@ -76,7 +78,7 @@
    "expired": 2
   },
   "UCt8snO2Po2uCqteBvqBglTw": {
-   "dropped": 117
+   "dropped": 119
   },
   "UCusnpkgavQhPV_8e_zEh_jw": {
    "dropped": 83,
