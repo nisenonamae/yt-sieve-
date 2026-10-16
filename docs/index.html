@@ -488,16 +488,16 @@ function draw(){
   $("#warn").innerHTML = cfgOK ? "" :
     `チャンネル設定を読めていない。時間枠も既定の型も効いていない状態。
      読み込みが終わるまで裁かないほうがいい。`;
-  const n = {sieve:list("pool").length, rank:list("picked").length};
+  const n = {sieve:list("pool").length, rank:list("picked").filter(v => !(v.serial || v.type === "serial")).length};
   $("#tabs").innerHTML = [
-    ["gate","門",""],["sieve","改め",n.sieve],["rank","宿場",n.rank],
+    ["gate","門",""],["sieve","改め",n.sieve],["rank","宿場",n.rank],["serial","連載",list("picked").filter(v => v.serial || v.type === "serial").length],
     ["chart","相場表",""],["log","記録",""],["chan","チャンネル",cfg.channels.length],["kset","設定",""]
   ].map(([k,label,c]) =>
     `<button aria-selected="${tab===k}" onclick="go('${k}')">${label}${
       c ? `<span class="badge">${c}</span>` : ""}</button>`).join("");
 
   $("#stamp").textContent = stock.updated ? "収集 " + stock.updated.slice(5,10) : "";
-  ({gate:drawGate, sieve:drawSieve, rank:drawRank, chart:drawChart, log:drawLog, chan:drawChans, kset:drawKset}[tab] || drawGate)();
+  ({gate:drawGate, sieve:drawSieve, rank:drawRank, serial:drawSerialTab, chart:drawChart, log:drawLog, chan:drawChans, kset:drawKset}[tab] || drawGate)();
 }
 function go(k){ tab = k; render(); window.scrollTo(0,0); }
 
@@ -1134,7 +1134,7 @@ document.addEventListener("input", e => {
 });
 // 長期連載:少しずつ見る長い動画。宿場の一番上の棚に置き、ほかの動画の順位とは競わせない
 const isSerial = v => !!(v.serial || v.type === "serial");
-function setSerial(id, on){ const v = stock.videos[id]; if (!v) return; v.serial = !!on; if (!on && v.type === "serial") v.type = null; v.touched = true; touch(); snapStock(); kTouch(); kse(on ? "pluck" : "remove"); render(); }
+function setSerial(id, on){ const v = stock.videos[id]; if (!v) return; v.serial = !!on; if (on) v.type = "serial"; else if (v.type === "serial") v.type = null; v.touched = true; touch(); snapStock(); kTouch(); kse(on ? "pluck" : "remove"); render(); }
 // 「改める」のボタンに、押したらどうなるかを出す
 function judgeLabel(sc){ const b = document.getElementById("judge-btn"), th = seki.settings.threshold; if (!b) return; const pass = sc >= th;
   b.textContent = pass ? `改める → 通る(${sc.toFixed(0)}点・線${th})` : `改める → 落ちる(${sc.toFixed(0)}点・線${th})`; b.classList.toggle("willdrop", !pass); }
@@ -1204,6 +1204,7 @@ function droppedHtml(){
 function revive(id, to){
   const v = stock.videos[id]; if (!v) return; snap(v);
   v.state = to; delete v.dropReason; v.touched = true;
+  if (to === "pool") { v.pickedAt = null; v.serial = false; if (v.type === "serial") v.type = null; }
   if (to === "picked") { v.pickedAt = new Date(kNow()).toISOString(); if (v.score == null) v.score = scoreOf(v); }
   touch(); snapStock(); kTouch(); kse(to === "picked" ? "levelup" : "unlock");
   $("#msg").textContent = to === "picked" ? "宿場に通した" : "改めに戻した"; render();
@@ -1213,7 +1214,7 @@ function judge(id, how){
   snap(v);
   if (how === "seen") { v.state = "seen"; v.touched = true; touch(); render(); return; }
   const pass = how === "pass" || how === "serial" || (how === "auto" && score >= th);
-  if (how === "serial") v.serial = true;
+  if (how === "serial") { v.serial = true; v.type = "serial"; }
   v.pre = pre; v.score = score; v.touched = true;
   if (pass) { v.state = "picked"; v.pickedAt = new Date(kNow()).toISOString(); }
   else { v.state = "dropped"; v.dropReason = how === "drop" ? "skipped" : "below"; }
@@ -1229,17 +1230,25 @@ function drawRank(){
   const shown = [], rest = all.slice();
   while (rest.length) { if (shown.length && shown.length % 5 === 4 && rest.length > 2) { const i = Math.floor(rest.length / 2 + Math.random() * rest.length / 2), p = rest.splice(i, 1)[0]; p.explore = true; shown.push(p); } else { const t = rest.shift(); t.explore = false; shown.push(t); } }
   const g = gate(), rem = remainSec();
-  const serialHtml = serials.length ? `<h3 class="h3">連載中<small class="meta"> 少しずつ見る。ほかの動画とは競わない</small></h3>` + serials.map(v => { const pct = v.duration ? Math.round((v.progress || 0) / v.duration * 100) : 0;
+  const serialNote = serials.length ? `<p class="meta" style="margin:-4px 0 6px">連載 ${serials.length} 本は、連載のタブにある</p>` : "";
+  $("#view").innerHTML = gateHtml() + extBanner() + serialNote + `<p class="meta" style="margin:-4px 0 12px">在庫 ${kMin(stockSec())} 分 ・ 目標 ${seki.settings.allowance == null ? "—" : Math.round(seki.settings.allowance * seki.settings.target)} 分 ・ 改めの線 ${seki.settings.threshold}</p>` + rankList(shown, g, rem);
+}
+function drawSerialTab(){
+  const g = gate(), serials = list("picked").filter(isSerial).sort((a, b) => Date.parse(b.watchedPartAt || b.pickedAt || 0) - Date.parse(a.watchedPartAt || a.pickedAt || 0));
+  const serialHtml = serials.length ? `<p class="meta" style="margin:-4px 0 10px">少しずつ見る長い動画。ほかの動画とは競わない</p>` + serials.map(v => { const pct = v.duration ? Math.round((v.progress || 0) / v.duration * 100) : 0;
       return `<div class="item serial"><span class="rank">◷</span><div class="body"><a href="javascript:void 0" onclick="${g.open ? `play('${v.id}')` : ""}">${esc(v.title)}</a>
         <p class="meta">${hhmm(v.progress || 0)} / ${hhmm(v.duration)} ・ ${pct}%</p><div class="capbar" style="margin:4px 0"><i style="width:${pct}%"></i></div>
         <div class="acts">${g.open ? `<button onclick="play('${v.id}')">続きを見る</button><button onclick="openExt('${v.id}')">YouTubeで見る</button>` : `<span class="meta">${esc(g.why)}</span>`}<button class="off" onclick="setSerial('${v.id}',false)">連載から外す</button></div></div></div>`; }).join("") +
-      `<p class="meta" style="margin:4px 0 0">連載の残り ${kMin(serials.reduce((a, v) => a + Math.max(0, (v.duration || 0) - (v.progress || 0)), 0))} 分(在庫の調整には数えない)</p><h3 class="h3">宿場</h3>` : "";
-  $("#view").innerHTML = gateHtml() + extBanner() + serialHtml + `<p class="meta" style="margin:-4px 0 12px">在庫 ${kMin(stockSec())} 分 ・ 目標 ${seki.settings.allowance == null ? "—" : Math.round(seki.settings.allowance * seki.settings.target)} 分 ・ 改めの線 ${seki.settings.threshold}</p>` +
-    (shown.length || serials.length ? shown.map((v, i) => { const left = Math.max(0, (v.duration || 0) - (v.progress || 0)), fits = left <= rem;
+      `<p class="meta" style="margin:4px 0 0">連載の残り ${kMin(serials.reduce((a, v) => a + Math.max(0, (v.duration || 0) - (v.progress || 0)), 0))} 分(在庫の調整には数えない)</p>`
+    : `<div class="empty"><b>連載が空</b>改めの「連載として通す」か、宿場の「連載にする」で、少しずつ見る長い動画をここに置ける。</div>`;
+  $("#view").innerHTML = gateHtml() + extBanner() + serialHtml;
+}
+function rankList(shown, g, rem){
+  return (shown.length ? shown.map((v, i) => { const left = Math.max(0, (v.duration || 0) - (v.progress || 0)), fits = left <= rem;
       return `<div class="item ${v.explore ? "explore" : ""}"><span class="rank">${v.explore ? "探" : i + 1}</span><div class="body">
         <a href="javascript:void 0" onclick="${g.open ? `play('${v.id}')` : ""}">${esc(v.title)}</a>
-        <p class="meta">${badges(v)}${esc(v.channelName)} ・ ${hhmm(v.duration)}${v.progress ? ` ・ <b>続きから ${hhmm(v.progress)}</b>` : ""}${fits || rem === Infinity ? "" : ` ・ <span class="soon">途中で手形が切れる(続きは次に)</span>`}</p>
-        <div class="acts">${g.open ? `<button onclick="play('${v.id}')">ここで見る</button><button onclick="openExt('${v.id}')">YouTubeで見る</button>` : `<span class="meta">${esc(g.why)}</span>`}<button onclick="setSerial('${v.id}',true)">連載にする</button><button class="off" onclick="drop('${v.id}')">外す</button></div>
+        <p class="meta">${badges(v)}${esc(v.channelName)} ・ ${hhmm(v.duration)}${v.progress ? ` ・ <b>続きから ${hhmm(v.progress)}</b>` : ""}${fits || rem === Infinity ? "" : ` ・ <span class="soon">途中で手形が切れる(続きは次に)</span>`} ・ <span class="${expireIn(v) <= 3 ? "soon" : ""}">あと${expireIn(v)}日で改めに差し戻し</span></p>
+        <div class="acts">${g.open ? `<button onclick="play('${v.id}')">ここで見る</button><button onclick="openExt('${v.id}')">YouTubeで見る</button>` : `<span class="meta">${esc(g.why)}</span>`}<button onclick="setSerial('${v.id}',true)">連載にする</button><button onclick="revive('${v.id}','pool')">改めに戻す</button><button class="off" onclick="drop('${v.id}')">外す</button></div>
       </div><span class="sc">${v.score.toFixed(0)}</span></div>`; }).join("")
       : `<div class="empty"><b>宿場が空</b>改めを通った動画がまだない。合うものがないときは、見ないのが正しい。</div>`);
 }
