@@ -281,7 +281,7 @@
     }
    },
    "published": "2026-10-05T21:00:22Z",
-   "score": 77.08661776032308,
+   "score": 76.90952294352643,
    "state": "picked",
    "title": "コラボした陽キャYouTuberに「チー牛みたいで優しそう」と言われた話【2026/10/05】",
    "type": "focus",
@@ -941,7 +941,7 @@
     }
    },
    "published": "2026-10-07T21:00:16Z",
-   "score": 73.20978682820876,
+   "score": 73.0415984426919,
    "state": "picked",
    "title": "ゆゆうた、ブリジュラスに為す術無く敗北【2026/10/07】",
    "type": "focus",
@@ -1579,7 +1579,7 @@
     }
    },
    "published": "2026-10-03T21:25:22Z",
-   "score": 79.09074871619758,
+   "score": 78.90904971238665,
    "state": "picked",
    "title": "ゆゆうたの元カノが浮気してた話【2026/10/03】",
    "type": "focus",
@@ -1957,7 +1957,7 @@
     }
    },
    "published": "2026-09-29T15:00:31Z",
-   "score": 80.76062197347427,
+   "score": 80.63644403550138,
    "state": "picked",
    "title": "【閲覧注意】ゆゆうた少年が口にしたことがある物【2026/09/29】",
    "type": "focus",
@@ -3754,7 +3754,7 @@
     }
    },
    "published": "2026-09-29T15:00:27Z",
-   "score": 75.81226027709992,
+   "score": 75.63809310340895,
    "state": "picked",
    "title": "ジョジョ7部エンディング「死ぬか生きるか」の歌詞で笑ってしまうゆゆうた【2026/09/29】",
    "type": "focus",
@@ -4385,7 +4385,7 @@
     }
    },
    "published": "2026-10-05T21:00:37Z",
-   "score": 74.78010603432516,
+   "score": 74.60831007851661,
    "state": "picked",
    "title": "ゆゆうたの初体験エピソード【2026/10/05】",
    "type": "focus",
@@ -4475,7 +4475,7 @@
     }
    },
    "published": "2026-10-10T21:00:36Z",
-   "score": 71.87997542846325,
+   "score": 71.71484208301761,
    "state": "picked",
    "title": "歌だけを頼りにお題の絵を描きあげるゲーム「えかきうた大合戦」で遊ぶゆゆうた【2026/10/10】",
    "type": "focus",
@@ -4508,7 +4508,7 @@
    "channelName": "KUN",
    "desc": "🔳LINEスタンプと絵文字描いてみました！ぜひ使ってください\n\nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990526/ja \nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990",
    "duration": 878,
-   "explore": true,
+   "explore": false,
    "id": "KCwkcCdpOto",
    "post": null,
    "pre": {
@@ -4719,7 +4719,7 @@
    "channelName": "加藤純一ロードショー",
    "desc": "雑談ダイジェスト再生リスト\nhttps://www.youtube.com/playlist?list=PLc8yg_50-ooSC6YTUdxGY6qJLxQY7Oanz\n\n#加藤純一#雑談\n\n00:00 OP\n00:32 プロに必要なもの\n14:51 橋の下の覚悟\n19:42 ハイゲ不安要素\n22:30 価格破壊\n25:31 サクセスストーリー\n27:06 伊織もえの凄さ\n31:16 インフル",
    "duration": 8873,
-   "explore": false,
+   "explore": true,
    "id": "L1-ZKh_AzcU",
    "post": null,
    "pre": {
@@ -5224,7 +5224,7 @@
    "channelName": "ゆゆうたパワー系切り抜き",
    "desc": "https://youtu.be/kLGChZ-zu9I?si=sYP4xkiwEIOceukc\n\n0:00 視聴者からメール\n1:45 八月。音にして\n4:21 ゆゆうた評\n8:13 楽曲の改善点\n20:01 おまけ\n\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0",
    "duration": 1370,
-   "explore": true,
+   "explore": false,
    "id": "NMCchDoZIeA",
    "pickedAt": "2026-10-16T12:30:03.576Z",
    "post": null,
@@ -5240,7 +5240,7 @@
     "pull": 2.9
    },
    "published": "2026-09-27T17:16:43Z",
-   "score": 71.0724102508427,
+   "score": 70.90913216395343,
    "state": "picked",
    "title": "ゆゆうた、視聴者ボカロPの楽曲を熱血批評【2026/09/27】",
    "touched": true,
@@ -5646,7 +5646,18 @@
    "duration": 177,
    "explore": false,
    "id": "P5QMgdd1S2Y",
-   "post": null,
+   "post": {
+    "fun": 3.6,
+    "skip": 5,
+    "match": 3.1,
+    "learn": 1.8,
+    "rest": 2.5,
+    "after": 2.9,
+    "more": 3.1,
+    "quality": 3.4,
+    "effect": 2.7,
+    "score": 3.1
+   },
    "pre": {
     "expect": 3.88,
     "pull": 3.88,
@@ -5659,14 +5670,15 @@
     }
    },
    "published": "2026-10-01T15:58:51Z",
-   "score": 83.45600341847283,
-   "state": "picked",
+   "score": 83.26427590382265,
+   "state": "watched",
    "title": "ドナルドがロナルドに改名した件について【2026/10/01】",
    "type": "focus",
    "views": 17932,
-   "watchedAt": null,
+   "watchedAt": "2026-10-17T01:29:03.512Z",
    "pickedAt": "2026-10-16T23:33:26.238Z",
-   "touched": true
+   "touched": true,
+   "progress": null
   },
   "P5cIXYMux2o": {
    "added": "2026-10-06T01:10:52+00:00",
@@ -7140,7 +7152,7 @@
     }
    },
    "published": "2026-10-06T21:00:01Z",
-   "score": 73.99833097433498,
+   "score": 73.82833102819772,
    "state": "picked",
    "title": "みんなで推理の加藤純一軍団クイズに挑戦するゆゆうた【2026/10/06】",
    "type": "focus",
@@ -7358,7 +7370,7 @@
     }
    },
    "published": "2026-09-29T03:00:38Z",
-   "score": 78.84249871966252,
+   "score": 78.66137003258014,
    "state": "picked",
    "title": "Steamのおすすめが「変態」だらけで戸惑うゆゆうた【2026/09/28】",
    "type": "focus",
@@ -8229,7 +8241,7 @@
    "channelName": "ジェラードンチャンネル",
    "desc": "映像コントです！",
    "duration": 498,
-   "explore": true,
+   "explore": false,
    "id": "_fEXQaBNe18",
    "post": null,
    "pre": {
@@ -10247,7 +10259,7 @@
    "channelName": "加藤純一切り抜き集",
    "desc": "00:00 具体的な下ネタは好きじゃない\n01:14 ヒカルのLINEは好き\n03:56 女の子の下ネタは激キツ\n04:57 次郎系脱毛のギャル男店主\n\n\n●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト\n→https://www.youtube.com/watch?v=RW_c2OB4i0g&li",
    "duration": 647,
-   "explore": false,
+   "explore": true,
    "id": "iDyIlhpCLx4",
    "post": null,
    "pre": {
@@ -10311,7 +10323,7 @@
     "pull": 3.3
    },
    "published": "2026-09-27T17:16:48Z",
-   "score": 76.32407743195083,
+   "score": 76.14873443594585,
    "state": "picked",
    "title": "メルトチューンのレビューを見るゆゆうた【2026/09/27】",
    "touched": true,
@@ -10704,7 +10716,7 @@
    "channelName": "加藤純一切り抜き集",
    "desc": "00:00 ハイゲチケット投げ売り\n00:29 もえりん\n01:21 伊織もえの凄いところ\n03:51 俺達が性的搾取されてる\n04:42 ファンクラブから抜けられない民\n05:29 伊織もえパーフェクトきゅるんセット\n06:21 コーン茶の宣伝\n\n\n●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト",
    "duration": 448,
-   "explore": true,
+   "explore": false,
    "id": "kI2iT1wJwes",
    "post": null,
    "pre": {
@@ -11080,7 +11092,7 @@
     "pull": 3.7
    },
    "published": "2026-09-27T17:16:45Z",
-   "score": 81.29718601213861,
+   "score": 81.11041805316982,
    "state": "picked",
    "title": "ゆゆうた少年の水泳のトラウマ【2026/09/27】",
    "touched": true,
@@ -11585,7 +11597,7 @@
     }
    },
    "published": "2026-10-08T17:18:59Z",
-   "score": 76.83312101214283,
+   "score": 76.65660856569114,
    "state": "picked",
    "title": "ポケモン性格診断をやってみるゆゆうた【2026/10/08】",
    "type": "focus",
@@ -11666,7 +11678,7 @@
    "channelName": "りょうぼー【ゲーム企画】",
    "desc": "▶︎生放送サブチャンネル\nhttps://youtube.com/channel/UCEZ1GJT-fGtt76rI9j3Mmqg\n\n\n■オススメ■\n\n▶︎ 個人的・面白企画ベスト15\nhttps://www.youtube.com/playlist?list=PLenA36qOf2g0edInFEHU7voZ1LLxHk4AE\n\n▶︎リッキー虐待シリーズ\nhttps://www.youtube.",
    "duration": 869,
-   "explore": false,
+   "explore": true,
    "id": "n_Tl9JdLpio",
    "post": null,
    "pre": {
@@ -11997,7 +12009,7 @@
    "channelName": "ゆゆうたパワー系切り抜き",
    "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連情報：\n不正利用の通報：https://bit.ly/3KTtjiJ\n著作物ID：#A000000000002916\n利用許諾協力：#クリエイターサポートプログラム\nCSP（クリエイターサポートプログ",
    "duration": 63,
-   "explore": false,
+   "explore": true,
    "id": "pKS5R-mboao",
    "post": null,
    "pre": {
@@ -12012,7 +12024,7 @@
     }
    },
    "published": "2026-10-03T21:25:28Z",
-   "score": 75.2976201221892,
+   "score": 75.12463525622682,
    "state": "picked",
    "title": "布団ちゃんのケツの穴を舐められるか舐められないか問題",
    "type": "focus",
@@ -12072,7 +12084,7 @@
     }
    },
    "published": "2026-10-08T17:18:57Z",
-   "score": 75.29762012218922,
+   "score": 75.12463525622684,
    "state": "picked",
    "title": "母校「首都大学東京」の校歌をはじめて聴くゆゆうた【2026/10/08】",
    "type": "focus",
@@ -14143,7 +14155,7 @@
     }
    },
    "published": "2026-10-02T16:40:15Z",
-   "score": 81.53934503116251,
+   "score": 81.35202074856251,
    "state": "picked",
    "title": "溝口と写真を撮った人が次々と捕まってる件について【2026/10/02】",
    "type": "focus",
