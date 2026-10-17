@@ -86,14 +86,25 @@
      "effect": 4.1,
      "more": 2.6,
      "quality": 4
+    },
+    {
+     "id": "7ifcis4WsZo",
+     "start": "2026-10-17T00:33:17.193Z",
+     "end": "2026-10-17T00:43:00.784Z",
+     "secs": 135,
+     "startCum": 88,
+     "effect": null,
+     "more": null,
+     "reason": "pause",
+     "part": true
     }
    ],
-   "watchedSec": 88,
+   "watchedSec": 223,
    "stock": {
     "open": 9888,
-    "high": 49854,
+    "high": 60142,
     "low": 9888,
-    "close": 49854
+    "close": 60142
    },
    "threshold": 60,
    "allowance": 120,
