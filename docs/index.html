@@ -206,6 +206,13 @@ details.dropped{margin-top:18px;border-top:1px solid var(--rule);padding-top:8px
 .item.serial .rank{color:var(--sand)}
 .verify{border:1px solid var(--rule);background:var(--surface);padding:10px;margin:8px 0}.verify b{display:block;font-size:13.5px;margin-bottom:2px}.verify table{margin-top:6px}
 .cseg{display:flex;margin:0 0 12px;flex-wrap:nowrap;overflow-x:auto}.cseg button{flex:1;white-space:nowrap}
+.rules{border:1px solid var(--rule);border-left:4px solid var(--pine);background:var(--surface);padding:9px 11px;margin:0 0 12px;font-size:12.5px;line-height:1.7}
+#pl.withc .plv{flex:none}#pl.withc #ytp,#pl.withc iframe{width:min(100vw,calc(32dvh * 16 / 9));max-height:32dvh}
+.plc{flex:1;min-height:0;overflow:auto;background:#141414;color:#e6e6e6;padding:4px 12px 10px;font-size:13px;line-height:1.55;-webkit-overflow-scrolling:touch}
+.plc[hidden]{display:none}.cm{padding:8px 0;border-bottom:1px solid #2a2a2a}.cm.rp{margin-left:18px;font-size:12.5px}.cm b{font-size:12px;color:#fff}.cm-m{font-size:11px;color:#999}
+.cm-h{display:flex;gap:6px;position:sticky;top:0;background:#141414;padding:6px 0}.cm-h button{flex:1;border:1px solid #444;color:#ccc;padding:5px;font-size:12px}.cm-h button[aria-pressed=true]{background:#e6e6e6;color:#111}
+.cm-t{color:#7db8ff;text-decoration:underline;padding:0}.cm-more{display:block;width:100%;margin:8px 0;padding:8px;border:1px solid #444;color:#ccc;font-size:12px}.cm-more.rp{margin-left:18px;width:calc(100% - 18px)}
+.cm-note{color:#bbb;padding:12px 0}
 
 </style>
 </head>
@@ -949,7 +956,9 @@ const KDEF = {
     target: 0.5,                    // 目標の在庫 = 通行手形 × この値
     gain: 1,                        // 改めの線の反応の速さ
     window: 3,                      // 在庫の平均をとる日数
-    approach: 0.5,                  // 通行手形を境目へ近づける割合
+    approach: 0.5,                  // (前の版の値。今は使わない)
+    rate: 0.2,                      // 通行手形が、1日に目標へ近づく割合(差の2割)
+    trialOffset: null,              // 試しの日を、7日のうちどの日にするか(はじめて使うときに決まる)
     threshold: 55,                  // 改めの線(この点以上が宿場に通る)
     tighten: 0,                     // 引き締め(0〜0.5)。実際の手形 = 自然な手形 ×(1 − 引き締め)
     natural: null,                  // 自然な手形(有効時間の境目から自動で決まる値)
@@ -983,7 +992,11 @@ function gateTimes(t){ return (seki.settings.gates || {})[weekdayJST(t)] || ["00
 const naturalMin = () => seki.settings.natural != null ? seki.settings.natural : seki.settings.allowance;
 const r5 = x => Math.round(x / 5) * 5;
 function applyTighten(){ const n = naturalMin(); if (n == null) return; seki.settings.allowance = Math.max(5, r5(n * (1 - Math.min(0.5, Math.max(0, +seki.settings.tighten || 0))))); }
-function remainSec(){ const a = seki.settings.allowance; if (a == null) return Infinity; return Math.max(0, a * 60 - (today().watchedSec || 0)); }
+// 試しの日:週に1日、手形を4分の1広げて、手形の先の記録をとる
+function isTrialDay(day){ const s = seki.settings; if (s.trialOffset == null) s.trialOffset = Math.floor(Math.random() * 7);
+  const n = Math.floor(Date.parse((day || kDay()) + "T00:00:00Z") / 864e5); return ((n % 7) + 7) % 7 === s.trialOffset; }
+function todayAllowance(){ const a = seki.settings.allowance; if (a == null) return null; return isTrialDay() ? r5(a * 1.25) : a; }
+function remainSec(){ const a = todayAllowance(); if (a == null) return Infinity; return Math.max(0, a * 60 - (today().watchedSec || 0)); }
 // 閉門までの残り(秒)
 function toCloseSec(){ const [, c] = gateTimes(); return Math.max(0, (hm2min(c) - nowMinOfDay()) * 60); }
 // 今、見られるか。見られないなら理由
@@ -1032,7 +1045,7 @@ function snapStock(){
   const d = today(), s = stockSec();
   if (!d.stock) { const prev = seki.days[kAddDays(kDay(), -1)]; const o = prev && prev.stock ? prev.stock.close : s; d.stock = { open: o, high: Math.max(o, s), low: Math.min(o, s), close: s }; }
   else { d.stock.high = Math.max(d.stock.high, s); d.stock.low = Math.min(d.stock.low, s); d.stock.close = s; }
-  d.threshold = seki.settings.threshold; d.allowance = seki.settings.allowance; d.natural = naturalMin();
+  d.threshold = seki.settings.threshold; d.allowance = todayAllowance(); d.natural = naturalMin(); d.trial = isTrialDay();
 }
 function inflowSecOf(day){
   const all = [...Object.values(stock.videos), ...Object.values(watched.videos || {})];
@@ -1081,21 +1094,63 @@ function floorMin(){
 
 /* ── 自動調整(日をまたいで最初に開いたときに、前の日のぶんを) ── */
 function totalRated(){ return Object.values(seki.days).reduce((a, x) => a + (x.sessions || []).filter(s => s.effect != null).length, 0); }
+// 境目の見積もり:その日の何分目かと心への効きに、まっすぐな線を当てはめ、自分の平均を下回る時刻を出す。
+// 見積もりで増やせるのは、実際に見たことのある時刻(試しの日を含む)まで。線が下がらないときは、そこを追いかける
+function boundaryEst(){
+  const S = sessionsSince(28).filter(s => s.effect != null); if (S.length < 6) return null;
+  const xs = S.map(s => (s.startCum || 0) / 60), ys = S.map(s => s.effect), n = S.length;
+  const mx = kmean(xs), my = kmean(ys), sxx = xs.reduce((a, x) => a + (x - mx) ** 2, 0), sxy = xs.reduce((a, x, i) => a + (x - mx) * (ys[i] - my), 0);
+  const reach = Math.max(...S.map(s => ((s.startCum || 0) + (s.secs || 0)) / 60));     // 実際に見たことのあるいちばん先(分)
+  if (!sxx) return { min: reach, how: "still", reach };
+  const slope = sxy / sxx;
+  if (slope < 0) {
+    // 線は必ず平均の位置で平均と交わるので、「ふだんの散らばりの半分だけ平均より下がる時刻」を境目とする
+    const sd = Math.sqrt(ys.reduce((a, y) => a + (y - my) ** 2, 0) / Math.max(1, n - 1)), at = mx + (-sd * 0.5) / slope;
+    const est = Math.max(5, at);
+    return est > reach ? { min: reach, how: "capped", est, reach } : { min: est, how: "line", est, reach };
+  }
+  return { min: reach, how: "still", reach };
+}
+// 心の余裕の頭打ち:見た時間ごとの心の余裕(印の影響を除く)が、いちばん高い組とほぼ同じになる、いちばん短い時間
+function plateauMin(){
+  const { D } = moodRows(); if (D.length < 6) return null;
+  const bins = {}; D.forEach(x => { const b = Math.floor(x.min / 30); (bins[b] = bins[b] || []).push(x.adj); });
+  const rows = Object.keys(bins).map(Number).sort((a, b) => a - b).map(b => { const a = bins[b], m = kmean(a), sd = a.length > 1 ? Math.sqrt(a.reduce((s, v) => s + (v - m) ** 2, 0) / (a.length - 1)) : 0; return { b, n: a.length, avg: m, se: sd / Math.sqrt(a.length) }; }).filter(r => r.n >= 3);
+  if (rows.length < 2) return null;
+  const best = rows.reduce((p, r) => r.avg > p.avg ? r : p), first = rows.find(r => r.avg >= best.avg - best.se);
+  return (first.b + 1) * 30;
+}
+function nearDays(reasonDay, a){ let near = 0; for (let i = 1; i <= 7; i++) { const x = seki.days[kAddDays(reasonDay, -i + 1)]; if (x && (x.watchedSec || 0) >= a * 60 * 0.9) near++; } return near; }
 function adjustAllowance(reasonDay){
-  const a = seki.settings.allowance; if (a == null) return;
-  const nat = naturalMin(), t = Math.min(0.5, Math.max(0, +seki.settings.tighten || 0));
-  const b = boundaryMin(); if (b == null) return;
-  // 広げるのは、実際に手形の近く(9割以上)まで見た日が、ここ1週間に2日以上あるときだけ(閉門などで届いていないのに広げない)
-  if (b === "above") { let near = 0; for (let i = 1; i <= 7; i++) { const x = seki.days[kAddDays(reasonDay, -i + 1)]; if (x && (x.watchedSec || 0) >= a * 60 * 0.9) near++; } if (near < 2) return; }
-  // 自然な手形を境目へ近づけ、実際の手形はそれに引き締めをかける
-  const target = b === "above" ? nat + 30 : b;
-  const nextNat = Math.max(5, r5(nat + (target - nat) * (+seki.settings.approach || 0.5)));
-  let next = Math.max(5, r5(nextNat * (1 - t)));
-  const fl = floorMin(); if (fl != null && next < fl) next = fl;
-  seki.settings.natural = nextNat;
+  const s = seki.settings, a = s.allowance; if (a == null) return;
+  const nat = naturalMin(), rate = Math.min(1, Math.max(0.05, +s.rate || 0.2));
+  const be = boundaryEst(); if (!be) return;
+  let target, why;
+  if (be.how === "line") { target = be.est; why = "有効時間の境目の見積もり(" + Math.round(be.est) + "分)"; }
+  else if (be.how === "capped") {
+    // 見積もりが、見たことのある所より先:縮むほうは見積もりへ、広がるほうは確かめた所まで
+    if (be.est < nat) { target = be.est; why = "有効時間の境目の見積もり(" + Math.round(be.est) + "分)"; }
+    else if (be.reach > nat) { target = be.reach; why = "境目の見積もりは" + Math.round(be.est) + "分だが、確かめたのは" + Math.round(be.reach) + "分まで"; }
+    else { target = nat; why = "境目はもっと先にありそうだが、手形の先はまだ確かめていない"; }
+  } else {
+    // 線が下がらない:試しの日などで手形より先まで楽しめたら、そこを追いかける。手前までしか見ていないなら保つ
+    if (be.reach > nat) { target = be.reach; why = "遅い時刻でも楽しめていた。確かめた" + Math.round(be.reach) + "分まで"; }
+    else { target = nat; why = "楽しめなくなる所はまだ見えない(手形の手前までしか見ていない)"; }
+  }
+  // 広げるのは、手形の9割以上まで見た日が、ここ1週間に2日以上あるときだけ
+  if (target > nat && nearDays(reasonDay, a) < 2) { target = nat; why = "手形の近くまで見た日が少ないので、広げない"; }
+  // 差に比例して1回だけなまらせる(1日に手形の4分の1まで)。丸めで止まるときは5分だけ動く
+  const move = (from, to) => { const d = Math.max(-from / 4, Math.min(from / 4, (to - from) * rate)); let x = r5(from + d);
+    if (x === from && Math.abs(to - from) >= 5) x = from + (to > from ? 5 : -5); return Math.max(5, x); };
+  const nextNat = move(nat, target);
+  // 実際の手形 = 境目と心の余裕の頭打ちの短いほう。下限より下にはしない
+  const pl = plateauMin(), fl = floorMin();
+  let goal = pl != null ? Math.min(target, pl) : target; if (fl != null && goal < fl) goal = fl;
+  const next = move(a, goal);
+  s.natural = nextNat; s.tighten = 0;
   if (next !== a) {
-    seki.hist.allowance.push({ date: reasonDay, from: a, to: next, reason: (b === "above" ? "上限の近くでも心への効きが落ちていなかったので、少し広げた" : "有効時間の境目(" + b + "分)へ近づけた") + (t ? "(引き締め" + Math.round(t * 100) + "%)" : "") + (fl != null && next === fl ? "(心の余裕の下限 " + fl + "分で止めた)" : "") });
-    seki.settings.allowance = next;
+    seki.hist.allowance.push({ date: reasonDay, from: a, to: next, reason: why + "へ、差の" + Math.round(rate * 100) + "%近づけた" + (pl != null && goal === pl && pl < target ? "(心の余裕の頭打ち " + pl + "分で止めた)" : "") + (fl != null && goal === fl ? "(心の余裕の下限 " + fl + "分で止めた)" : "") });
+    s.allowance = next;
   }
 }
 function adjustThreshold(reasonDay){
@@ -1113,14 +1168,29 @@ function adjustThreshold(reasonDay){
   seki.hist.threshold.push({ date: reasonDay, from: th, to: next, reason: dev > 0 ? "在庫が目標の" + Math.round((1 + dev) * 100) + "%(" + w + "日の平均)。厳しくした" : "在庫が目標の" + Math.round((1 + dev) * 100) + "%(" + w + "日の平均)。ゆるめた" });
   seki.settings.threshold = next;
 }
+// 予約した設定の変更:次の日の朝4時から効く(その日の決まりは、朝に決まったまま変わらない)
+const KEYS_PENDING = ["stopN", "warm", "threshold", "target", "gain", "window", "rate", "gates"];
+function applyPending(force){
+  const p = seki.pending; if (!p || (!force && p.from > kDay())) return false;
+  const s = seki.settings, before = JSON.parse(JSON.stringify(s)), day = force ? kDay() : p.from;
+  for (const [key, val] of Object.entries(p.changes || {})) {
+    if (key === "allowance") { seki.hist.allowance.push({ date: day, from: s.allowance, to: val, reason: "自分で直した(予約した変更)" }); s.allowance = val; s.natural = r5(val / (1 - (+s.tighten || 0))); }
+    else if (key === "tighten") { if (s.natural == null) s.natural = s.allowance; s.tighten = val; const b0 = s.allowance; applyTighten(); if (b0 !== s.allowance) seki.hist.allowance.push({ date: day, from: b0, to: s.allowance, reason: "引き締めを" + Math.round(val * 100) + "%にした(予約した変更)" }); }
+    else if (key === "threshold") { seki.hist.threshold.push({ date: day, from: s.threshold, to: val, reason: "自分で直した(予約した変更)" }); s.threshold = val; }
+    else s[key] = JSON.parse(JSON.stringify(val));
+  }
+  seki.hist.settings = seki.hist.settings || [];
+  for (const key of KEYS_PENDING) if (JSON.stringify(before[key]) !== JSON.stringify(s[key])) seki.hist.settings.push({ date: day, at: new Date(kNow()).toISOString(), key, from: before[key], to: s[key] });
+  delete seki.pending; return true;
+}
 function autoAdjust(){
   const t = kDay(), last = seki.settings.lastAdjust;
+  if (applyPending()) { snapStock(); kTouch(); }
   if (last === t) return false;
   const prev = kAddDays(t, -1);
   adjustThreshold(prev);
-  // 評価が30本たまるまでは毎日、その後は週に1回
-  const weekly = totalRated() >= 30;
-  if (!weekly || !seki.settings.lastWeekly || kAddDays(seki.settings.lastWeekly, 7) <= t) { adjustAllowance(prev); if (weekly) seki.settings.lastWeekly = t; }
+  // 通行手形は毎日見直す(差に比例して、少しずつ動く)
+  adjustAllowance(prev);
   seki.settings.lastAdjust = t; snapStock(); kTouch();
   return true;
 }
@@ -1195,14 +1265,15 @@ const preObj = items => { const m = kmean(Object.values(items)); return { expect
 
 /* ── 門(今日) ── */
 function gateHtml(){
-  const g = gate(), d = today(), a = seki.settings.allowance, used = d.watchedSec || 0;
+  const g = gate(), d = today(), a = todayAllowance(), used = d.watchedSec || 0;
   const pct = a ? Math.min(100, used / (a * 60) * 100) : 0;
   const msg = g.open ? `開門中 ・ ${g.closeAt} に閉門` : ({ "開門前": `開門前(${g.next} に開く)`, "閉門の時刻": "閉門の時刻を過ぎた", "手形切れ": "今日の通行手形を使い切った", "損切り": "損切り。今日の門は閉めた" }[g.why] || g.why);
   const toc = toCloseSec(), shorter = g.open && a != null && toc < remainSec();
   return `<div class="gate ${g.open ? "op" : "cl"}"><b>${g.open ? "門は開いている" : "門は閉まっている"}</b><span>${esc(msg)}</span>
     <div class="capbar"><i style="width:${pct}%"></i></div>
     <span class="num">${kMin(used)} / ${a == null ? "—" : a} 分 ・ 残り ${a == null ? "—" : kMin(Math.min(remainSec(), g.open ? toc : Infinity))} 分</span>
-    ${shorter ? `<span>今日は閉門までの ${kMin(toc)} 分が上限(手形の残りは ${kMin(remainSec())} 分。持ち越しはしない)</span>` : ""}</div>`;
+    ${shorter ? `<span>今日は閉門までの ${kMin(toc)} 分が上限(手形の残りは ${kMin(remainSec())} 分。持ち越しはしない)</span>` : ""}
+    ${isTrialDay() ? `<span><b style="font-size:12.5px;color:var(--sand)">今日は試しの日</b>:手形をいつもより4分の1広げて、手形の先でも楽しめるかを確かめる日</span>` : ""}</div>`;
 }
 let ext = JSON.parse(localStorage.getItem(LS + ":ext") || "null");     // YouTubeで見ている途中のもの
 function extBanner(){
@@ -1218,7 +1289,8 @@ function drawGate(){
   const sess = (d.sessions || []).map(s => { const v = stock.videos[s.id] || (watched.videos || {})[s.id] || {};
     return `<tr><td>${esc(String(v.title || s.id || "(記録)").slice(0, 26))}</td><td class="n">${kMin(s.secs)}分</td><td class="n">${s.effect != null ? s.effect.toFixed(1) : "—"}</td><td class="n">${s.more != null ? s.more.toFixed(1) : "—"}</td></tr>`; }).join("");
   const evening = nowMinOfDay() >= 20 * 60 && mood.v == null;
-  if (gateSeg === "today") { $("#view").innerHTML = segBar([["today", "今日"], ["mood", "心の余裕" + (mood.v != null ? " ✓" : "")]], gateSeg, "setGateSeg") + gateHtml() + extBanner() +
+  const [go_, gc_] = gateTimes(), rules = `<div class="rules"><b>今日の決まり</b>(今日の朝4時に決まった。変えても明日から)<br>見てよい時間:${go_}〜${gc_ === "24:00" ? "24:00" : gc_} ・ 通行手形:${todayAllowance() == null ? "—" : todayAllowance() + "分" + (isTrialDay() ? "(試しの日)" : "")} ・ 損切り:最初の${seki.settings.warm}本のあと、${seki.settings.stopN}本続けて下回ったら閉める${seki.pending ? `<br><span class="meta">明日から変わる予約がある(設定のタブ)</span>` : ""}</div>`;
+  if (gateSeg === "today") { $("#view").innerHTML = segBar([["today", "今日"], ["mood", "心の余裕" + (mood.v != null ? " ✓" : "")]], gateSeg, "setGateSeg") + gateHtml() + rules + extBanner() +
     (evening ? `<p class="meta" style="margin:-4px 0 10px"><button class="linkb" onclick="setGateSeg('mood')">一日の終わりに、心の余裕を付ける →</button></p>` : "") +
     `<h3 class="h3">今日見たもの</h3>` + (sess ? `<table><tr><th>動画</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">もう一本</th></tr>${sess}</table>` : `<p class="meta">まだない</p>`) +
     `<p class="meta" style="margin-top:8px">損切り:最初の${seki.settings.warm}本のあと、心への効きかもう一本見たいが今日の平均を${seki.settings.stopN}本続けて下回るか、「もう十分」でやめたら門を閉める。</p>`; return; }
@@ -1338,7 +1410,8 @@ function play(id){
   // 上の帯と下の帯はいつも見える。動画はそのあいだの高さに収まる。右上にも「中断」を重ねる
   $("#pl").innerHTML = `<div class="plh"><button class="plx" onclick="pausePlay()">‖ 中断</button><span class="plt"><b>${esc(v.title).slice(0, 50)}</b><span class="num" id="pl-rem"></span></span><button class="plx stop" onclick="stopPlay()">■ やめる</button></div>
     <div class="plv"><div id="ytp"></div></div>
-    <div class="pla"><button class="seen" onclick="pausePlay()">中断(続きはあとで)</button><button class="take" onclick="stopPlay()">やめる(評価する)</button><button class="seen" onclick="toExt()">YouTubeで開く</button></div>
+    <div class="plc" id="plc" hidden></div>
+    <div class="pla"><button class="seen" onclick="pausePlay()">中断(続きはあとで)</button><button class="take" onclick="stopPlay()">やめる(評価する)</button><button class="seen" id="plc-btn" onclick="toggleComments()">コメント</button><button class="seen" onclick="toExt()">YouTubeで開く</button></div>
     <button class="plf" onclick="pausePlay()" aria-label="中断">‖ 中断</button>`;
   $("#pl").hidden = false; kse("open");
   try { history.pushState({ sekiPlay: 1 }, ""); } catch (e) {}       // スマホの「戻る」で中断できるように
@@ -1356,13 +1429,58 @@ function tickPlay(){
   const t = kNow(), dt = (t - P.lastTick) / 1000; P.lastTick = t;
   let cur = null; try { cur = P.player && P.player.getCurrentTime ? P.player.getCurrentTime() : null; } catch (e) {}
   if (P.playing) { P.secs += dt; if (cur != null) { if (cur - P.lastT > dt + 4) P.skips++; P.lastT = cur; } }
+  else if (P.cOpen) P.secs += dt;          // 動画を止めてコメントを読んでいるあいだも、見ている時間に入れる
   const left = remainSec() - P.secs, el = document.getElementById("pl-rem"); if (el) el.textContent = left === Infinity ? "" : "残り " + Math.max(0, Math.ceil(left / 60)) + " 分";
   const [, c] = gateTimes(); if (left <= 0 || nowMinOfDay() >= hm2min(c)) { try { P.player.pauseVideo(); } catch (e) {} stopPlay(left <= 0 ? "time" : "close"); }
 }
+/* ── コメント(YouTube Data API。キーはスマホの中にだけ置く) ── */
+const ytKey = () => { try { return localStorage.getItem(LS + ":ytkey") || ""; } catch (e) { return ""; } };
+let CM = null;     // { order, next, items, id }
+function toggleComments(){
+  if (!P) return; const box = $("#plc"); P.cOpen = !P.cOpen; box.hidden = !P.cOpen; $("#pl").classList.toggle("withc", P.cOpen);
+  $("#plc-btn").textContent = P.cOpen ? "コメントを閉じる" : "コメント";
+  if (P.cOpen && (!CM || CM.id !== P.id)) { CM = { id: P.id, order: "relevance", next: null, items: [] }; loadComments(); } else if (P.cOpen) drawComments();
+}
+function setCmOrder(o){ if (!CM || CM.order === o) return; CM = { id: CM.id, order: o, next: null, items: [] }; loadComments(); }
+async function ytGet(path, params){
+  const q = new URLSearchParams(Object.assign({ key: ytKey(), textFormat: "plainText" }, params)).toString();
+  const r = await fetch("https://www.googleapis.com/youtube/v3/" + path + "?" + q);
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) { const why = (j.error && j.error.errors && j.error.errors[0] && j.error.errors[0].reason) || ""; const e = new Error(why || String(r.status)); e.why = why; throw e; }
+  return j;
+}
+async function loadComments(more){
+  const box = $("#plc"); if (!CM) return;
+  if (!ytKey()) { box.innerHTML = `<p class="cm-note">コメントを出すには、YouTubeのAPIキーが要る。設定のタブの「値」のいちばん下に入れる(作り方は「手引き」にある)。</p>`; return; }
+  if (!more) box.innerHTML = `<p class="cm-note">読み込み中…</p>`;
+  try {
+    const j = await ytGet("commentThreads", Object.assign({ part: "snippet,replies", videoId: CM.id, maxResults: 50, order: CM.order }, more && CM.next ? { pageToken: CM.next } : {}));
+    CM.items = CM.items.concat(j.items || []); CM.next = j.nextPageToken || null; drawComments();
+  } catch (e) {
+    const msg = e.why === "commentsDisabled" ? "この動画は、コメントが止められている。" : /keyInvalid|badRequest/.test(e.why) ? "APIキーが正しくないみたい。設定のキーを確かめて。" : /quota/i.test(e.why) ? "今日のAPIの使える量を使い切った。明日また見られる。" : /forbidden|ipRefererBlocked|referer/i.test(e.why) ? "APIキーの制限で止められた。キーの「ウェブサイトの制限」に関所のアドレスが入っているか確かめて。" : "コメントを読み込めなかった(" + esc(e.message) + ")。";
+    box.innerHTML = `<p class="cm-note">${msg}</p>`;
+  }
+}
+// コメントの中の「1:23」「1:02:03」を押すと、その場面へ
+function linkTimes(t){ return esc(t).replace(/\b(?:(\d{1,2}):)?(\d{1,2}):(\d{2})\b/g, (m, h, mi, se) => { const sec = (+h || 0) * 3600 + (+mi) * 60 + (+se); return `<button class="cm-t" onclick="seekCm(${sec})">${m}</button>`; }).replace(/\n/g, "<br>"); }
+function seekCm(sec){ try { P && P.player && P.player.seekTo(sec, true); } catch (e) {} }
+function cmItem(c, reply){ const sn = c.snippet || {}; return `<div class="cm${reply ? " rp" : ""}"><b>${esc(sn.authorDisplayName || "")}</b><span class="cm-m"> ・ ${ago(sn.publishedAt)}${sn.likeCount ? ` ・ 👍${sn.likeCount}` : ""}</span><div>${linkTimes(sn.textDisplay || sn.textOriginal || "")}</div></div>`; }
+function drawComments(){
+  const box = $("#plc"); if (!CM) return;
+  const head = `<div class="cm-h"><button aria-pressed="${CM.order === "relevance"}" onclick="setCmOrder('relevance')">評価の高い順</button><button aria-pressed="${CM.order === "time"}" onclick="setCmOrder('time')">新しい順</button></div>`;
+  box.innerHTML = head + (CM.items.length ? CM.items.map(t => { const top = t.snippet.topLevelComment, rs = (t.replies && t.replies.comments) || [], n = t.snippet.totalReplyCount || 0;
+      return cmItem(top) + rs.map(r => cmItem(r, true)).join("") + (n > rs.length ? `<button class="cm-more rp" onclick="moreReplies('${top.id}', this)">返信をもっと見る(全部で${n}件)</button>` : ""); }).join("") : `<p class="cm-note">コメントはまだない。</p>`) +
+    (CM.next ? `<button class="cm-more" onclick="loadComments(true)">次の50件</button>` : "");
+}
+async function moreReplies(pid, btn){
+  try { const j = await ytGet("comments", { part: "snippet", parentId: pid, maxResults: 100 }); btn.outerHTML = (j.items || []).map(r => cmItem(r, true)).join(""); }
+  catch (e) { btn.textContent = "返信を読み込めなかった"; }
+}
+function saveYtKey(){ const v = (document.getElementById("ytkey") || {}).value || ""; try { v.trim() ? localStorage.setItem(LS + ":ytkey", v.trim()) : localStorage.removeItem(LS + ":ytkey"); } catch (e) {} $("#msg").textContent = v.trim() ? "APIキーを、このスマホに保存した" : "APIキーを消した"; kse("save"); drawKset(); }
 function curPos(){ let c = null; try { c = P.player && P.player.getCurrentTime ? P.player.getCurrentTime() : null; } catch (e) {} return c != null ? c : P.startPos + P.secs; }
 // スマホの「戻る」で中断。アプリ自身が閉じるときに戻した分は、遅れて届いても無視する
 window.addEventListener("popstate", () => { if (window.__selfBack) { window.__selfBack = false; return; } if (P) { window.__popped = true; pausePlay(); window.__popped = false; } });
-function closePlayer(){ clearInterval(window.__plT); try { if (!window.__popped && history.state && history.state.sekiPlay) { window.__selfBack = true; history.back(); } } catch (e) {} try { P && P.player && P.player.destroy && P.player.destroy(); } catch (e) {} $("#pl").hidden = true; $("#pl").innerHTML = ""; }
+function closePlayer(){ CM = null; $("#pl").classList.remove("withc"); clearInterval(window.__plT); try { if (!window.__popped && history.state && history.state.sekiPlay) { window.__selfBack = true; history.back(); } } catch (e) {} try { P && P.player && P.player.destroy && P.player.destroy(); } catch (e) {} $("#pl").hidden = true; $("#pl").innerHTML = ""; }
 function finishPlay(){ if (!P) return; const p = Object.assign({}, P, { pos: curPos() }); closePlayer(); P = null; askRateFull(p, true); }
 function stopPlay(forced){ if (!P) return; const p = Object.assign({}, P, { pos: curPos() }); closePlayer(); P = null; askBailNew(p, forced); }
 // 中断:止めて、見た時間と位置だけ残す。評価はしない。宿場に残り、次は続きから
@@ -1479,7 +1597,7 @@ function drawChart(){
   // 見た時間と通行手形
   const wat = D.map(d => day(d).watchedSec != null ? kMin(day(d).watchedSec) : null), alw = D.map(d => day(d).allowance != null ? day(d).allowance : null), nat = D.map(d => day(d).natural != null ? day(d).natural : null);
   const m1 = Math.max(30, ...wat.filter(x => x != null), ...alw.filter(x => x != null), ...nat.filter(x => x != null));
-  const bars = wat.map((v, i) => v == null ? "" : `<rect x="${i * (W / 30) + 1}" y="${H - v / m1 * H}" width="${W / 30 - 2}" height="${v / m1 * H}" fill="var(--pine)" opacity=".55"/>`).join("");
+  const bars = wat.map((v, i) => v == null ? "" : `<rect x="${i * (W / 30) + 1}" y="${H - v / m1 * H}" width="${W / 30 - 2}" height="${v / m1 * H}" fill="${day(D[i]).trial ? "var(--sand)" : "var(--pine)"}" opacity=".6"/>`).join("");
   // 在庫のろうそく足
   const st = D.map(d => day(d).stock || null), m2 = Math.max(60, ...st.filter(Boolean).map(s => s.high / 60)), tgt = seki.settings.allowance != null ? seki.settings.allowance * seki.settings.target : null;
   const cw = W / 30, candles = st.map((s, i) => { if (!s) return ""; const x = i * cw + cw / 2, y = v => H - (v / 60) / m2 * H, up = s.close >= s.open;
@@ -1516,14 +1634,14 @@ function drawChart(){
   // 項目ごとに分けて、一度に1つだけ出す
   const SEC = {
     verify: () => verifyHtml(),
-    time: () => chartBox("見た時間と通行手形(分)", bars + svgLine(nat, W, H, m1, "var(--sand)", true) + svgLine(alw, W, H, m1, "var(--clay)", true), `棒=見た時間、赤の点線=実際の手形、黄の点線=自然な手形(引き締め前)。最大 ${m1} 分`) +
+    time: () => chartBox("見た時間と通行手形(分)", bars + svgLine(nat, W, H, m1, "var(--sand)", true) + svgLine(alw, W, H, m1, "var(--clay)", true), `棒=見た時間(黄色の棒は試しの日)、赤の点線=実際の手形、黄の点線=境目から決まる手形(頭打ち・下限をかける前)。最大 ${m1} 分`) +
       `<h3 class="h3">時間帯(見始めた時刻・直近28日)</h3>` + (hrow ? `<table><tr><th>時間帯</th><th style="text-align:right">本</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">もう一本</th><th style="text-align:right">やめた</th><th style="text-align:right">損切り</th></tr>${hrow}</table>
         <p class="meta">赤い行=心への効きが自分の平均(${isNaN(eAll) ? "—" : eAll.toFixed(1)})を下回る時間帯(3本以上)。${cand.length ? `<b>閉門の候補:${cand.map(h => h + "時台").join("・")}</b>(自動では変えない。設定で決める)` : "閉門の候補はまだない"}</p>` : `<p class="meta">まだない</p>`) +
       `<h3 class="h3">門の閉まり方・途中でやめた理由(30日)</h3><p class="meta">${Object.entries(cl).map(([k, n]) => esc(k) + " " + n + "日").join(" ・ ") || "—"}<br>${Object.entries(bail).map(([k, n]) => (RN[k] || k) + " " + n + "回").join(" ・ ") || "—"}</p>`,
     stock: () => chartBox("宿場の在庫(ろうそく足・分)", band + candles, `赤=増えた日、緑=減った日。帯=目標の在庫(${tgt == null ? "—" : Math.round(tgt)}分の±25%)`) +
       chartBox("入ってくる速さと見た量(分/日)", ibars + svgLine(ma, W, H, m3, "var(--sand)") + svgLine(wat, W, H, m3, "var(--pine)"), "棒=その日に宿場に入った時間、黄線=7日平均、緑線=見た時間") +
       chartBox("改めの線", svgLine(th, W, H, 100, "var(--ink)"), "宿場に通す点数の線(0〜100)"),
-    effect: () => chartBox("有効時間の曲線(その日の何分目か・30分ごと)", ebars + eavg, `棒=心への効きの平均(1〜5)、数字=本数(3本未満は灰色)、点線=自分の平均。境目:${bnd == null ? "まだ出ない" : bnd === "above" ? "下がらない(手形を少し広げる)" : bnd + "分"}`),
+    effect: () => chartBox("有効時間の曲線(その日の何分目か・30分ごと)", ebars + eavg, `棒=心への効きの平均(1〜5)、数字=本数(3本未満は灰色)、点線=自分の平均。30分ごとの観察:${bnd == null ? "まだ出ない" : bnd === "above" ? "下がらない" : bnd + "分から下がる"} ・ 線の見積もり:${(() => { const be = boundaryEst(); return be == null ? "まだ出ない" : Math.round(be.min) + "分(" + (be.how === "line" ? "見積もり" : be.how === "capped" ? "確かめた所まで" : "線が下がらない") + ")"; })()}`),
     mind: () => chartBox("心の余裕", svgLine(md, W, H, 5, "var(--pine)"), `下限:${floorMin() == null ? "まだ出ない(印つきで6日以上)" : floorMin() + "分"}`) +
       `<h3 class="h3">心の余裕の問いごと</h3><table><tr><th>問い</th><th style="text-align:right">平均</th><th style="text-align:right">見た時間との結びつき</th></tr>${mrow}</table><p class="meta">結びつきは、見た時間が長い日ほどその問いが高い(+)か低い(−)か。6日以上で出る</p>`,
     log: () => `<h3 class="h3">自動で動いた記録</h3>` + (hist.map(([w, h]) => `<div class="stat"><span>${h.date.slice(5)} ${w}<small>${esc(h.reason)}</small></span><span class="v">${h.from}→${h.to}</span></div>`).join("") || `<p class="meta">まだない</p>`)
@@ -1538,27 +1656,50 @@ function drawChart(){
 const WD = "日月火水木金土";
 let ksetSeg = "vals";
 function setKsetSeg(k){ ksetSeg = k; drawKset(); }
+// 通行手形は自分では直せない。今の値と、どう決まったかだけを出す
+function passInfoHtml(){
+  const s = seki.settings, be = boundaryEst(), pl = plateauMin(), fl = floorMin(), last = seki.hist.allowance.slice(-1)[0];
+  let nt = null; for (let i = 0; i < 7; i++) { const dd = kAddDays(kDay(), i); if (isTrialDay(dd)) { nt = dd; break; } }
+  const row = (l, v, note) => `<div class="kf"><label>${l}<small>${note}</small></label><span class="num">${v}</span></div>`;
+  return row("通行手形(実際)", s.allowance == null ? "—" : s.allowance + "分", "記録だけで決まる。自分では直せない") +
+    row("有効時間の境目", be == null ? "まだ出ない" : Math.round(be.min) + "分", be == null ? "見た動画が6本たまると出る" : be.how === "line" ? "心への効きの線を伸ばした見積もり" : be.how === "capped" ? "見積もりは" + Math.round(be.est) + "分だが、確かめた" + Math.round(be.reach) + "分まで" : "遅い時刻でも楽しめている。確かめた" + Math.round(be.reach) + "分まで") +
+    row("心の余裕の頭打ち", pl == null ? "まだ出ない" : pl + "分", "これ以上見ても、心の余裕が上がらない時間(印の影響を除く)") +
+    row("心の余裕の下限", fl == null ? "まだ出ない" : fl + "分", "これより短いと、心の余裕が下がる時間") +
+    row("次の試しの日", nt ? nt.slice(5).replace("-", "/") + (nt === kDay() ? "(今日)" : "") : "—", "週に1日、手形を4分の1広げて、手形の先を確かめる") +
+    (last ? `<p class="meta" style="margin:6px 0 0">最後に動いた理由:${esc(last.reason)}</p>` : "");
+}
+function pendingHtml(){
+  const p = seki.pending; if (!p || !Object.keys(p.changes || {}).length) return "";
+  const s = seki.settings, fmt = (k, v) => k === "tighten" ? Math.round((+v || 0) * 100) + "%" : k === "gates" ? Object.keys(v).filter(w => JSON.stringify(v[w]) !== JSON.stringify((s.gates || {})[w])).map(w => WD[w] + "曜 " + v[w][0] + "〜" + v[w][1]).join("・") || "—" : v;
+  return `<div class="extb"><b>予約中の変更(${p.from.slice(5).replace("-", "/")} の朝4時から効く)</b>` +
+    Object.entries(p.changes).map(([k, v]) => `<div class="meta">・${esc(KLABEL[k] || k)}:${k === "gates" ? "" : esc(String(fmt(k, s[k]))) + " → "}${esc(String(fmt(k, v)))}</div>`).join("") +
+    `<div class="acts"><button onclick="cancelPending()">予約を取り消す</button></div></div>`;
+}
+function cancelPending(){ delete seki.pending; kTouch(); autoSave(); render(); kse("remove"); }
 function drawKset(){
   const s = seki.settings, num = (k, l, step, note) => `<div class="kf"><label>${l}<small>${note}</small></label><input type="number" step="${step}" data-ks="${k}" data-orig="${s[k] == null ? "" : s[k]}" value="${s[k] == null ? "" : s[k]}"></div>`;
-  const bar = segBar([["vals", "値"], ["gates", "門の時刻"], ["guide", "手引き"]], ksetSeg, "setKsetSeg"), saveBtn = `<button class="take" style="width:100%;padding:11px;margin-top:14px" onclick="saveKset()">保存する</button>`;
+  const bar = segBar([["vals", "値"], ["gates", "門の時刻"], ["guide", "手引き"]], ksetSeg, "setKsetSeg") + pendingHtml() + (ksetSeg === "guide" ? "" : `<p class="meta" style="margin:-4px 0 10px">変更は保存すると予約になり、<b>次の日の朝4時から</b>効く。今日の決まりは変わらない。</p>`),
+    saveBtn = `<button class="take" style="width:100%;padding:11px;margin-top:14px" onclick="saveKset()">保存する(明日の朝4時から効く)</button>`;
   if (ksetSeg === "gates") { $("#view").innerHTML = bar + `<p class="meta">曜日ごとに、見てよい時間帯。はじめは一日中開いている。閉門の候補は、相場表の「時間」に出る。</p>` + [0, 1, 2, 3, 4, 5, 6].map(w => { const [o, c] = (s.gates || {})[w] || ["00:00", "24:00"];
       return `<div class="kf"><label>${WD[w]}曜</label><span style="display:flex;gap:6px"><input type="time" data-kg="${w}:0" value="${o === "24:00" ? "23:59" : o}"><input type="time" data-kg="${w}:1" value="${c === "24:00" ? "23:59" : c}"></span></div>`; }).join("") + saveBtn; return; }
   if (ksetSeg === "guide") { $("#view").innerHTML = bar + adviceHtml() + guideHtml().replace('<details class="dropped" style="margin-top:18px"><summary>調整の手引き</summary>', '<h3 class="h3">調整の手引き</h3><div>').replace(/<\/details>$/, "</div>"); return; }
   $("#view").innerHTML = bar + `<h3 class="h3">通行手形と損切り</h3>` +
-    num("allowance", "通行手形(分)", 5, "1日に見られる総時間。最初はでたらめでいい。記録から自動で直る") +
-    `<div class="kf"><label>引き締め(%)<small>自然な手形 ${naturalMin() == null ? "—" : naturalMin()}分 → 実際の手形 ${s.allowance == null ? "—" : s.allowance}分。自動調整は止めずに、全体を控えめにする</small></label><input type="number" step="5" min="0" max="50" data-kt2 value="${Math.round((+s.tighten || 0) * 100)}"></div>` +
+    passInfoHtml() +
     num("stopN", "損切り:何本続けて", 1, "その日の平均を何本続けて下回ったら閉めるか") + num("warm", "損切り:最初の何本は閉めない", 1, "平均が定まるまで") +
     `<h3 class="h3">自動調整の値</h3>` + num("threshold", "改めの線", 1, "この点以上が宿場に通る。在庫から自動で動く") +
     num("target", "目標の在庫(手形の何倍)", 0.1, "やや少なめ。0.5なら手形の半分") + num("gain", "反応の速さ", 0.5, "在庫がずれたとき、線をどれだけ動かすか") +
-    num("window", "平均をとる日数", 1, "短いと敏感、長いと落ち着く") + num("approach", "手形の近づけ方", 0.1, "有効時間の境目へ、1回でどれだけ近づけるか") +
+    num("window", "平均をとる日数", 1, "短いと敏感、長いと落ち着く") + num("rate", "手形が1日に近づく割合", 0.05, "目標との差の何割だけ、毎日近づくか。離れているほど大きく動く") +
     `<h3 class="h3">心の余裕の印</h3><div class="kf"><label>印(読点で区切る)<small>見た時間と関係なく、心の余裕を動かすもの</small></label><input data-kt value="${esc((s.tags || []).join("、"))}"></div>` +
-    saveBtn + `<p class="meta" id="se-anchor" style="margin-top:18px">効果音(ほかのアプリと共通)</p>`;
+    saveBtn + `<h3 class="h3">コメント用のAPIキー</h3><div class="kf"><label>YouTube Data API のキー<small>このスマホの中にだけ置く(GitHubには上げない)。すぐ効く。作り方は「手引き」</small></label></div>
+      <div class="add"><input id="ytkey" type="password" autocomplete="off" placeholder="AIza…" value="${esc(ytKey())}"><button onclick="saveYtKey()">${ytKey() ? "保存" : "入れる"}</button></div>` +
+    `<p class="meta" id="se-anchor" style="margin-top:18px">効果音(ほかのアプリと共通)</p>`;
   try { SE.mount(document.getElementById("se-anchor")); } catch (e) {}
 }
-const KLABEL = { allowance: "通行手形", stopN: "損切り:何本続けて", warm: "損切り:最初の何本", threshold: "改めの線", target: "目標の在庫", gain: "反応の速さ", window: "平均をとる日数", approach: "手形の近づけ方", tighten: "引き締め", gates: "開門・閉門", tags: "心の余裕の印" };
+const KLABEL = { rate: "手形が1日に近づく割合", allowance: "通行手形", stopN: "損切り:何本続けて", warm: "損切り:最初の何本", threshold: "改めの線", target: "目標の在庫", gain: "反応の速さ", window: "平均をとる日数", approach: "手形の近づけ方", tighten: "引き締め", gates: "開門・閉門", tags: "心の余裕の印" };
 function logSetting(key, from, to){ if (JSON.stringify(from) === JSON.stringify(to)) return; seki.hist.settings = seki.hist.settings || []; seki.hist.settings.push({ date: kDay(), at: new Date(kNow()).toISOString(), key, from, to }); }
 function saveKset(){
-  const s = seki.settings, before = JSON.parse(JSON.stringify(s));
+  // 設定の変更は、すべて次の日の朝4時から効く(予約する)。今の値は変えずに、写しに書いて差を予約に入れる
+  const real = seki.settings; seki.settings = JSON.parse(JSON.stringify(real)); const s = seki.settings, before = JSON.parse(JSON.stringify(s)), _logS = seki.hist.settings ? seki.hist.settings.length : 0, _logA = seki.hist.allowance.length, _logT = seki.hist.threshold.length;
   // 引き締め
   const tEl = document.querySelector("[data-kt2]"), tNew = tEl ? Math.min(50, Math.max(0, +tEl.value || 0)) / 100 : s.tighten;
   if (tNew !== (+s.tighten || 0)) { if (s.natural == null) s.natural = s.allowance; s.tighten = tNew; const before = s.allowance; applyTighten();
@@ -1570,9 +1711,17 @@ function saveKset(){
     s[k] = v; });
   document.querySelectorAll("[data-kg]").forEach(el => { const [w, i] = el.dataset.kg.split(":"); s.gates[w] = s.gates[w] || ["00:00", "24:00"]; s.gates[w][+i] = el.value === "23:59" && +i === 1 ? "24:00" : el.value; });
   const t = document.querySelector("[data-kt]"); if (t) s.tags = t.value.split(/[、,，]/).map(x => x.trim()).filter(Boolean);
-  ["stopN", "warm", "threshold", "target", "gain", "window", "approach", "tighten", "gates", "tags"].forEach(key => logSetting(key, before[key], s[key]));
-  if (before.allowance !== s.allowance && !(before.tighten !== s.tighten)) logSetting("allowance", before.allowance, s.allowance);
-  snapStock(); kTouch(); autoSave(); $("#msg").textContent = "関所の値を保存した"; render(); kse("save");
+  // 記録への書き込みは、効いた日に行うので、ここでは取り消す
+  if (seki.hist.settings) seki.hist.settings.length = _logS; seki.hist.allowance.length = _logA; seki.hist.threshold.length = _logT;
+  const changes = Object.assign({}, (seki.pending && seki.pending.changes) || {});
+  for (const key of KEYS_PENDING) { if (key === "allowance" && before.tighten !== s.tighten) continue;
+    if (JSON.stringify(real[key]) !== JSON.stringify(s[key])) changes[key] = JSON.parse(JSON.stringify(s[key])); }
+  const tagsChanged = JSON.stringify(real.tags) !== JSON.stringify(s.tags);
+  seki.settings = real; if (tagsChanged) { logSetting("tags", real.tags, s.tags); real.tags = s.tags; }     // 印だけはすぐ
+  const n = Object.keys(changes).length;
+  if (n) seki.pending = { from: kAddDays(kDay(), 1), at: new Date(kNow()).toISOString(), changes };
+  kTouch(); autoSave(); render(); kse("save");
+  $("#msg").textContent = n ? `${n}つの変更を予約した。${kAddDays(kDay(), 1).slice(5).replace("-", "/")} の朝4時から効く` : (tagsChanged ? "印を直した" : "変更はない");
 }
 // 今の様子からのおすすめ(直近7日)
 function adviceHtml(){
@@ -1583,21 +1732,37 @@ function adviceHtml(){
   if (low >= 5) tips.push("宿場が少ない日が続いている。目標の在庫を少し上げるか、反応の速さを上げると、線が早くゆるむ");
   if (high >= 5) tips.push("宿場があふれ気味。反応の速さを上げると、線が早く厳しくなる");
   if (stops >= 5) tips.push("損切りで閉まる日が多い。楽しめる動画が少ないのかもしれない。改めの線が低すぎないか、相場表で確かめる");
-  if (outs >= 5 && !(+s.tighten)) tips.push("毎日のように手形を使い切っている。全体を控えめにしたいなら、引き締めを10%から試す");
+  if (outs >= 5) tips.push("毎日のように手形を使い切っている。手形は記録で決まるので、楽しめなくなったところで止まるよう、損切りを厳しくするのが効く");
   const th = seki.hist.threshold.filter(h => h.date >= kAddDays(kDay(), -7)).length; if (th >= 5) tips.push("改めの線がよく動いている。平均をとる日数を増やすと落ち着く");
   return `<h3 class="h3">今の様子からのおすすめ</h3>` + (tips.length ? tips.map(t => `<p class="meta" style="margin:4px 0">・${t}</p>`).join("") : `<p class="meta">今のところ、直すところはない(直近7日)</p>`);
 }
 // 調整の手引き
 function guideHtml(){
   const R = [["見る時間を減らしたい(楽しめない時間を削る)", "損切り:何本続けて 2→1、最初の何本 3→2", "楽しめなくなった日が早く閉まる", "楽しめている日は減らない"],
-    ["見る時間を、全体に控えめにしたい", "引き締め 0→10〜20%", "実際の手形が下がる。宿場に動画が残りやすくなり、改めの線が上がって、見る動画の質が上がる", "一度に大きくしない。心の余裕の下限より下にはならない"],
+    ["通行手形を自分で決めたい", "決められない(記録だけで決まる)", "有効時間の境目と心の余裕の頭打ちの短いほうへ、毎日少しずつ動く", "心の余裕を毎日付けるほど、頭打ちが正しく出る"],
     ["宿場がすぐ空になる", "目標の在庫 0.5→0.7、または反応の速さ 1→2", "改めの線が早くゆるむ", "質の低い動画も通りやすくなる"],
     ["宿場があふれる", "反応の速さ 1→2、または目標の在庫を下げる", "改めの線が早く厳しくなる", "厳しくなりすぎると、空の日が増える"],
     ["改めの線がふらふら動く", "平均をとる日数 3→5〜7", "線の動きが落ち着く", "在庫の変化への反応は遅くなる"],
-    ["手形の動きが速すぎる/遅すぎる", "手形の近づけ方 0.5→0.3(遅く)/0.7(速く)。0なら止まる", "境目への近づき方が変わる", "0にすると自動では動かない"],
+    ["手形の動きが速すぎる/遅すぎる", "手形が1日に近づく割合 0.2→0.1(遅く)/0.3(速く)", "目標への近づき方が変わる。離れているほど大きく動くのは同じ", "大きくすると、たまたまの上下にも振られやすい"],
     ["損切りで閉まりすぎる", "何本続けて 2→3、最初の何本 3→4", "閉まりにくくなる", "楽しめない時間が少し増える"]];
-  return `<details class="dropped" style="margin-top:18px"><summary>調整の手引き</summary>
-    <p class="meta" style="margin:6px 0">決まり:一度に直すのは1つだけ。直したら1週間は様子を見て、相場表で確かめる。直したことは「自動で動いた記録」に残る。</p>` +
+  const flow = [["毎朝(収集の仕組みが動く)", "新しい動画が集まり、寝かせ中に入る。寝かせ期間が明けたものと、宿場で日数がたったもの(差し戻し)が改めに出る。見た動画は記録に移る。画面の右上の「収集 ◯-◯」が、最後に集まった日"],
+    ["朝4時(一日の区切り)", "その日はじめて関所を開いたとき、予約した変更が効き、改めの線と通行手形が自動で直る(手形は目標との差の2割ずつ)。ここで決まったものが、その日の決まり"],
+    ["いつでも", "改め(見るのではないので、門が閉まっていてもできる)。保留・落ちた動画の取り戻しも"],
+    ["開門〜閉門", "宿場と連載の動画を見る。手形切れ・損切り・閉門の時刻で門が閉まる"],
+    ["見終わるたび", "評価を付ける。損切りの確かめと、予想の付け方の学びに使う"],
+    ["一日の終わり", "心の余裕を付ける(門のタブの「心の余裕」)"],
+    ["週に1日(試しの日)", "手形をいつもより4分の1広げる。手形の先でも楽しめるかを確かめ、楽しめていれば手形がそこへ近づいていく"]];
+  const keyHow = `<details class="dropped" style="margin-top:18px"><summary>コメント用のAPIキーの作り方(無料・5分ほど)</summary><ol class="meta" style="padding-left:1.3em">
+      <li>パソコンかスマホで console.cloud.google.com を開き、Googleのアカウントで入る</li>
+      <li>上の「プロジェクトを選択」→「新しいプロジェクト」。名前は「sekisho」など</li>
+      <li>左の「APIとサービス」→「ライブラリ」で「YouTube Data API v3」を探し、「有効にする」</li>
+      <li>「APIとサービス」→「認証情報」→「認証情報を作成」→「APIキー」。キーができる</li>
+      <li>できたキーの「キーを編集」で、<b>アプリケーションの制限</b>を「ウェブサイト」にし、<b>${esc(location.origin)}/*</b> を足す。<b>APIの制限</b>は「キーを制限」で「YouTube Data API v3」だけにする。保存</li>
+      <li>キー(AIzaで始まる文字列)を写して、関所の設定のタブ「値」のいちばん下に貼り、「入れる」</li></ol>
+      <p class="meta">1日に使える量は1万回ぶん。コメントを1回開くと1回ぶんなので、ふつうに使って足りなくなることはない。</p></details>`;
+  return keyHow + `<h3 class="h3">一日の流れ</h3>` + flow.map(([a, b]) => `<div class="stat" style="display:block"><b style="font-size:13px">${a}</b><small style="display:block">${b}</small></div>`).join("") +
+    `<details class="dropped" style="margin-top:18px"><summary>調整の手引き</summary>
+    <p class="meta" style="margin:6px 0">決まり:一度に直すのは1つだけ。直した値は次の日の朝4時から効く。そこから1週間は様子を見て、相場表の「検証」で確かめる。</p>` +
     R.map(([a, b, c, d]) => `<div class="stat" style="display:block"><b style="font-size:13px">${a}</b><small style="display:block">直す値:${b}</small><small style="display:block">起きること:${c}</small><small style="display:block">気をつけること:${d}</small></div>`).join("") + `</details>`;
 }
 function autoSave(){ if (conn()) $("#save").onclick(); }
