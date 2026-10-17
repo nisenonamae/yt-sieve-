@@ -213,6 +213,7 @@ details.dropped{margin-top:18px;border-top:1px solid var(--rule);padding-top:8px
 .cm-h{display:flex;gap:6px;position:sticky;top:0;background:#141414;padding:6px 0}.cm-h button{flex:1;border:1px solid #444;color:#ccc;padding:5px;font-size:12px}.cm-h button[aria-pressed=true]{background:#e6e6e6;color:#111}
 .cm-t{color:#7db8ff;text-decoration:underline;padding:0}.cm-more{display:block;width:100%;margin:8px 0;padding:8px;border:1px solid #444;color:#ccc;font-size:12px}.cm-more.rp{margin-left:18px;width:calc(100% - 18px)}
 .cm-note{color:#bbb;padding:12px 0}
+.add select{padding:0 6px;border:1px solid var(--rule);background:#fff;font:inherit;font-size:13px}
 
 </style>
 </head>
@@ -525,14 +526,14 @@ function draw(){
      読み込みが終わるまで裁かないほうがいい。`;
   const n = {sieve:list("pool").length, rank:list("picked").filter(v => !(v.serial || v.type === "serial")).length};
   $("#tabs").innerHTML = [
-    ["gate","門",""],["sieve","改め",n.sieve],["rank","宿場",n.rank],["serial","連載",list("picked").filter(v => v.serial || v.type === "serial").length],
+    ["gate","門",""],["sieve","改め",n.sieve],["rank","宿場",n.rank],["serial","連載",list("picked").filter(v => v.serial || v.type === "serial").length],["play","遊戯",""],
     ["chart","相場表",""],["log","記録",""],["chan","チャンネル",cfg.channels.length],["kset","設定",""]
   ].map(([k,label,c]) =>
     `<button aria-selected="${tab===k}" onclick="go('${k}')">${label}${
       c ? `<span class="badge">${c}</span>` : ""}</button>`).join("");
 
   $("#stamp").textContent = stock.updated ? "収集 " + stock.updated.slice(5,10) : "";
-  ({gate:drawGate, sieve:drawSieve, rank:drawRank, serial:drawSerialTab, chart:drawChart, log:drawLog, chan:drawChans, kset:drawKset}[tab] || drawGate)();
+  ({gate:drawGate, sieve:drawSieve, rank:drawRank, serial:drawSerialTab, play:drawPlay, chart:drawChart, log:drawLog, chan:drawChans, kset:drawKset}[tab] || drawGate)();
 }
 function go(k){ tab = k; render(); window.scrollTo(0,0); }
 
@@ -966,6 +967,7 @@ const KDEF = {
     lastAdjust: null, lastWeekly: null
   },
   days: {},
+  games: [],                        // 遊戯(自分で登録するゲーム)
   hist: { allowance: [], threshold: [], settings: [] }
 };
 let seki = JSON.parse(JSON.stringify(KDEF)), sekiSha = null, sekiDirty = false;
@@ -977,7 +979,7 @@ const kmean = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : NaN;
 function kNorm(o){
   const x = Object.assign(JSON.parse(JSON.stringify(KDEF)), o || {});
   x.settings = Object.assign(JSON.parse(JSON.stringify(KDEF.settings)), (o && o.settings) || {});
-  x.days = x.days || {}; x.hist = Object.assign({ allowance: [], threshold: [], settings: [] }, x.hist || {});
+  x.days = x.days || {}; x.games = x.games || []; x.hist = Object.assign({ allowance: [], threshold: [], settings: [] }, x.hist || {});
   return x;
 }
 function kTouch(){ sekiDirty = true; cache("seki", seki); _kTouch(); flag(); }
@@ -1014,7 +1016,8 @@ function closeGate(reason){ const d = today(); if (!d.closed) { d.closed = { rea
 /* ── 見たことの記録(1回の視聴=1つの区切り) ──
    s = { id, start, end, secs, startCum, effect, more, quality, reason, part } */
 function addSession(s){
-  const d = today();
+  const d = today(), remBefore = remainSec();
+  if (remBefore !== Infinity && (s.secs || 0) > remBefore + 30) { d.overSec = (d.overSec || 0) + Math.round((s.secs || 0) - remBefore); s.over = Math.round((s.secs || 0) - remBefore); }
   s.startCum = s.startCum != null ? s.startCum : (d.watchedSec || 0);
   d.sessions.push(s); d.watchedSec = (d.watchedSec || 0) + (s.secs || 0);
   snapStock(); kTouch();
@@ -1286,13 +1289,14 @@ const segBar = (segs, cur, fn) => `<div class="seg cseg">${segs.map(([k, l]) => 
 function setGateSeg(k){ gateSeg = k; drawGate(); }
 function drawGate(){
   const d = today(), mood = d.mood || {};
-  const sess = (d.sessions || []).map(s => { const v = stock.videos[s.id] || (watched.videos || {})[s.id] || {};
+  const sess = (d.sessions || []).map(s => { const v = s.kind === "game" ? { title: "🎮 " + gameOf(s.gid).name } : (stock.videos[s.id] || (watched.videos || {})[s.id] || {});
     return `<tr><td>${esc(String(v.title || s.id || "(記録)").slice(0, 26))}</td><td class="n">${kMin(s.secs)}分</td><td class="n">${s.effect != null ? s.effect.toFixed(1) : "—"}</td><td class="n">${s.more != null ? s.more.toFixed(1) : "—"}</td></tr>`; }).join("");
   const evening = nowMinOfDay() >= 20 * 60 && mood.v == null;
   const [go_, gc_] = gateTimes(), rules = `<div class="rules"><b>今日の決まり</b>(今日の朝4時に決まった。変えても明日から)<br>見てよい時間:${go_}〜${gc_ === "24:00" ? "24:00" : gc_} ・ 通行手形:${todayAllowance() == null ? "—" : todayAllowance() + "分" + (isTrialDay() ? "(試しの日)" : "")} ・ 損切り:最初の${seki.settings.warm}本のあと、${seki.settings.stopN}本続けて下回ったら閉める${seki.pending ? `<br><span class="meta">明日から変わる予約がある(設定のタブ)</span>` : ""}</div>`;
   if (gateSeg === "today") { $("#view").innerHTML = segBar([["today", "今日"], ["mood", "心の余裕" + (mood.v != null ? " ✓" : "")]], gateSeg, "setGateSeg") + gateHtml() + rules + extBanner() +
     (evening ? `<p class="meta" style="margin:-4px 0 10px"><button class="linkb" onclick="setGateSeg('mood')">一日の終わりに、心の余裕を付ける →</button></p>` : "") +
-    `<h3 class="h3">今日見たもの</h3>` + (sess ? `<table><tr><th>動画</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">もう一本</th></tr>${sess}</table>` : `<p class="meta">まだない</p>`) +
+    (d.overSec ? `<p class="meta" style="color:var(--clay);margin:-4px 0 8px">今日は手形を ${kMin(d.overSec)} 分はみ出した</p>` : "") +
+    `<h3 class="h3">今日の娯楽</h3><p class="meta" style="margin:-4px 0 6px">動画 ${kMin((d.sessions || []).filter(s => s.kind !== "game").reduce((a, s) => a + (s.secs || 0), 0))} 分 ・ ゲーム ${kMin((d.sessions || []).filter(s => s.kind === "game").reduce((a, s) => a + (s.secs || 0), 0))} 分</p>` + (sess ? `<table><tr><th>動画</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">もう一本</th></tr>${sess}</table>` : `<p class="meta">まだない</p>`) +
     `<p class="meta" style="margin-top:8px">損切り:最初の${seki.settings.warm}本のあと、心への効きかもう一本見たいが今日の平均を${seki.settings.stopN}本続けて下回るか、「もう十分」でやめたら門を閉める。</p>`; return; }
   $("#view").innerHTML = segBar([["today", "今日"], ["mood", "心の余裕" + (mood.v != null ? " ✓" : "")]], gateSeg, "setGateSeg") +
     `<h3 class="h3">今日の心の余裕${mood.v != null ? ` <span class="num" style="color:var(--pine)">${mood.v.toFixed(1)}</span>` : ""}</h3><div class="sieve">${vgridHtml("mood", MOOD_Q, mood.items || {})}
@@ -1557,6 +1561,53 @@ function saveBail(){
 }
 function drop(id){ const v = stock.videos[id]; v.state = "dropped"; v.dropReason = "gaveup"; v.touched = true; touch(); snapStock(); kTouch(); render(); }
 
+/* ── 遊戯:自分で登録したゲームを、始める/終わった か、あとから申告で記録する ── */
+const GAME_Q = [["fun", "面白かった?", "つまらない", "とても面白い"], ["match", "期待と比べて?", "ずっと下", "ずっと上"], ["rest", "始める前より休まった?", "疲れた", "とても休まった"],
+  ["after", "後味", "虚しい", "満たされた"], ["more", "もう少しやりたい?", "もう十分", "まだまだやりたい"]];
+Object.assign(SHORT, { "game:fun": "面白さ", "game:match": "期待比", "game:rest": "休まり", "game:after": "後味", "game:more": "もう少し" });
+const KINDS = ["スマホ", "Switch", "PC", "そのほか"];
+let playing = JSON.parse(localStorage.getItem(LS + ":game") || "null");
+const gameOf = id => (seki.games || []).find(g => g.id === id) || { name: "(消したゲーム)" };
+function drawPlay(){
+  const g = gate(), list_ = (seki.games || []).filter(x => !x.archived);
+  const now = playing ? `<div class="extb"><b>${esc(gameOf(playing.gid).name)} を遊んでいる</b><div class="meta">${new Date(playing.start + 9 * 3600e3).toISOString().slice(11, 16)} から ・ ${kMin((kNow() - playing.start) / 1000)} 分たった ・ 手形の残り ${remainSec() === Infinity ? "—" : kMin(Math.max(0, remainSec() - (kNow() - playing.start) / 1000)) + " 分"}</div>
+    <div class="acts"><button onclick="gameDone()">終わった</button><button class="off" onclick="gameCancel()">取り消す(遊ばなかった)</button></div></div>` : "";
+  $("#view").innerHTML = gateHtml() + now +
+    (list_.length ? list_.map(x => { const S = Object.values(seki.days).flatMap(d => (d.sessions || []).filter(s => s.gid === x.id)), mins = kMin(S.reduce((a, s) => a + (s.secs || 0), 0)), ef = kmean(S.filter(s => s.effect != null).map(s => s.effect));
+      return `<div class="item"><div class="body"><span class="dt">${esc(x.name)}</span><p class="meta">${esc(x.kind || "")} ・ これまで ${mins} 分${isNaN(ef) ? "" : " ・ 効き " + ef.toFixed(1)}</p>
+        <div class="acts">${playing ? "" : g.open ? `<button onclick="gameStart('${x.id}')">始める</button>` : `<span class="meta">${esc(g.why)}</span>`}<button onclick="gameReport('${x.id}')">あとから申告</button><button class="off" onclick="gameArchive('${x.id}')">しまう</button></div></div></div>`; }).join("")
+      : `<div class="empty"><b>ゲームがまだない</b>下で登録すると、動画と同じ門・手形・損切りの中で遊べる。</div>`) +
+    `<h3 class="h3">ゲームを登録する</h3><div class="add"><input id="gname" placeholder="ゲームの名前"><select id="gkind">${KINDS.map(k => `<option>${k}</option>`).join("")}</select><button onclick="gameAdd()">登録</button></div>
+     <p class="meta">遊ぶときは「始める」を押してからゲームへ。関所に戻って「終わった」を押すと、離れていた時間が遊んだ時間になる。押し忘れたら「あとから申告」。手形は動画と合わせて1つ。</p>`;
+}
+function gameAdd(){ const n = ($("#gname").value || "").trim(); if (!n) return; seki.games.push({ id: "g" + Date.now().toString(36), name: n, kind: $("#gkind").value, added: new Date(kNow()).toISOString() }); kTouch(); autoSave(); kse("save"); drawPlay(); }
+function gameArchive(id){ const x = seki.games.find(g => g.id === id); if (!x || !confirm(x.name + " をしまう?(記録は残る)")) return; x.archived = true; kTouch(); autoSave(); kse("remove"); drawPlay(); }
+function gameStart(id){ const g = gate(); if (!g.open) { alert("門が閉まっている:" + g.why); return; }
+  playing = { gid: id, start: kNow(), startCum: today().watchedSec || 0 }; localStorage.setItem(LS + ":game", JSON.stringify(playing)); kse("open"); render(); }
+function gameCancel(){ if (!confirm("遊ばなかったことにする?(時間は数えない)")) return; playing = null; localStorage.removeItem(LS + ":game"); render(); }
+function gameDone(){ if (!playing) return; const p = playing; playing = null; localStorage.removeItem(LS + ":game");
+  askGameRate({ gid: p.gid, start: p.start, secs: Math.max(0, (kNow() - p.start) / 1000), startCum: p.startCum }); }
+function gameReport(id){ const m = prompt(gameOf(id).name + " を何分遊んだ?", "30"); if (m == null) return; const min = Math.max(0, +m || 0); if (!min) return;
+  askGameRate({ gid: id, start: kNow() - min * 60000, secs: min * 60, startCum: today().watchedSec || 0, reported: true }); }
+function askGameRate(p){
+  pend = Object.assign(p, { game: true }); const over = remainSec() !== Infinity && p.secs > remainSec() + 30;
+  $("#rateBody").innerHTML = `<h3>${esc(gameOf(p.gid).name)}</h3><p>${kMin(p.secs)} 分遊んだ${p.reported ? "(申告)" : ""}。${over ? `<b style="color:var(--clay)">手形を ${kMin(p.secs - remainSec())} 分はみ出した。</b>` : ""}</p>` +
+    vgridHtml("game", GAME_Q) + `<button class="take" style="width:100%;padding:11px;margin-top:10px" onclick="saveGameRate()">残す</button>`;
+  $("#rate").showModal();
+}
+function saveGameRate(){
+  const p = pend, it = readSliders("game"), q = kmean(["fun", "match"].map(k => it[k]).filter(x => x != null)), e = kmean(["rest", "after"].map(k => it[k]).filter(x => x != null));
+  pend = Object.assign(p, { saved: true });
+  addSession({ kind: "game", gid: p.gid, start: new Date(p.start).toISOString(), end: new Date(p.start + p.secs * 1000).toISOString(), secs: Math.round(p.secs), startCum: p.startCum,
+    effect: isNaN(e) ? null : r1(e), more: it.more != null ? it.more : null, quality: isNaN(q) ? null : r1(q), reported: !!p.reported, items: it });
+  $("#rate").close(); render(); autoSave(); kse(today().closed ? "lock" : "done");
+}
+// 関所に戻ってきたら、遊んでいる途中のものを聞く
+document.addEventListener("visibilitychange", () => { if (document.hidden || !playing || (document.getElementById("rate") || {}).open) return;
+  $("#rateBody").innerHTML = `<h3>${esc(gameOf(playing.gid).name)}</h3><p>おかえり。${kMin((kNow() - playing.start) / 1000)} 分たった。</p>
+    <div class="verdict"><button class="seen" onclick="document.getElementById('rate').close()">まだ遊ぶ</button><button class="take" onclick="document.getElementById('rate').close();gameDone()">終わった</button></div>`;
+  $("#rate").showModal(); });
+
 /* ── 相場表 ── */
 let chartSeg = localStorage.getItem(LS + ":cseg") || "verify";
 function setChartSeg(k){ chartSeg = k; try { localStorage.setItem(LS + ":cseg", k); } catch (e) {} drawChart(); }
@@ -1637,6 +1688,9 @@ function drawChart(){
     time: () => chartBox("見た時間と通行手形(分)", bars + svgLine(nat, W, H, m1, "var(--sand)", true) + svgLine(alw, W, H, m1, "var(--clay)", true), `棒=見た時間(黄色の棒は試しの日)、赤の点線=実際の手形、黄の点線=境目から決まる手形(頭打ち・下限をかける前)。最大 ${m1} 分`) +
       `<h3 class="h3">時間帯(見始めた時刻・直近28日)</h3>` + (hrow ? `<table><tr><th>時間帯</th><th style="text-align:right">本</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">もう一本</th><th style="text-align:right">やめた</th><th style="text-align:right">損切り</th></tr>${hrow}</table>
         <p class="meta">赤い行=心への効きが自分の平均(${isNaN(eAll) ? "—" : eAll.toFixed(1)})を下回る時間帯(3本以上)。${cand.length ? `<b>閉門の候補:${cand.map(h => h + "時台").join("・")}</b>(自動では変えない。設定で決める)` : "閉門の候補はまだない"}</p>` : `<p class="meta">まだない</p>`) +
+      (() => { const S = D.flatMap(dd => (day(dd).sessions || [])), vid = S.filter(s => s.kind !== "game"), gm = S.filter(s => s.kind === "game"), ov = D.reduce((a, dd) => a + (day(dd).overSec || 0), 0);
+        const ef = a => { const m = kmean(a.filter(s => s.effect != null).map(s => s.effect)); return isNaN(m) ? "—" : m.toFixed(2); };
+        return `<h3 class="h3">動画とゲーム(30日)</h3><table><tr><th>もの</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th></tr><tr><td>動画</td><td class="n">${kMin(vid.reduce((a, s) => a + (s.secs || 0), 0))}分</td><td class="n">${ef(vid)}</td></tr><tr><td>ゲーム</td><td class="n">${kMin(gm.reduce((a, s) => a + (s.secs || 0), 0))}分</td><td class="n">${ef(gm)}</td></tr></table>${ov ? `<p class="meta" style="color:var(--clay)">手形をはみ出した時間:合わせて ${kMin(ov)} 分</p>` : ""}`; })() +
       `<h3 class="h3">門の閉まり方・途中でやめた理由(30日)</h3><p class="meta">${Object.entries(cl).map(([k, n]) => esc(k) + " " + n + "日").join(" ・ ") || "—"}<br>${Object.entries(bail).map(([k, n]) => (RN[k] || k) + " " + n + "回").join(" ・ ") || "—"}</p>`,
     stock: () => chartBox("宿場の在庫(ろうそく足・分)", band + candles, `赤=増えた日、緑=減った日。帯=目標の在庫(${tgt == null ? "—" : Math.round(tgt)}分の±25%)`) +
       chartBox("入ってくる速さと見た量(分/日)", ibars + svgLine(ma, W, H, m3, "var(--sand)") + svgLine(wat, W, H, m3, "var(--pine)"), "棒=その日に宿場に入った時間、黄線=7日平均、緑線=見た時間") +
