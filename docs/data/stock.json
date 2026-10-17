@@ -4371,7 +4371,7 @@
    "channelName": "ゆゆうたパワー系切り抜き",
    "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連",
    "duration": 168,
-   "explore": false,
+   "explore": true,
    "id": "JbbcN6FJ5WE",
    "post": null,
    "pre": {
@@ -4461,7 +4461,7 @@
    "channelName": "ゆゆうたパワー系切り抜き",
    "desc": "0:00 おえちゃんの許可\n0:43 お手本\n1:45 1曲目\n4:15 2曲目\n6:26 3曲目\n8:46 4曲目\n11:46 5曲目\n13:48 6曲目\n16:44 7曲目\n18:52 8曲目\n21:17 9曲目\n24:05 10曲目\n26:57 11曲目\n29:11 12曲目\n31:39 13曲目\n34:02 14曲目\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運",
    "duration": 2203,
-   "explore": false,
+   "explore": true,
    "id": "JuOBgpZPui0",
    "post": null,
    "pre": {
@@ -4720,7 +4720,7 @@
    "channelName": "加藤純一ロードショー",
    "desc": "雑談ダイジェスト再生リスト\nhttps://www.youtube.com/playlist?list=PLc8yg_50-ooSC6YTUdxGY6qJLxQY7Oanz\n\n#加藤純一#雑談\n\n00:00 OP\n00:32 プロに必要なもの\n14:51 橋の下の覚悟\n19:42 ハイゲ不安要素\n22:30 価格破壊\n25:31 サクセスストーリー\n27:06 伊織もえの凄さ\n31:16 インフル",
    "duration": 8873,
-   "explore": false,
+   "explore": true,
    "id": "L1-ZKh_AzcU",
    "post": null,
    "pre": {
@@ -6428,7 +6428,7 @@
    "channelName": "はりーシ熱血切り抜きch",
    "desc": "はりーシ様公認の切り抜きチャンネルです。\nチャンネル登録高評価お願いします。\n\n人狼再生リスト\nhttps://www.youtube.com/playlist?list=PLoYdw6LewWUAHrNvECb8PL91zVebSkNS9\n人狼【豪傑村】再生リスト\nhttps://youtube.com/playlist?list=PLoYdw6LewWUCiLwfTIh7sCa4qS7zvdVXd&si=I7siVt8Hefv92fwi\nVRC再生リスト\nhttps://www.youtube.com/playlist?list=PLoYdw6LewWUAvwXWUUHNynCRRT2u4",
    "duration": 2089,
-   "explore": true,
+   "explore": false,
    "id": "S5itbdSKREw",
    "post": null,
    "pre": {
@@ -10641,7 +10641,18 @@
    "duration": 1527,
    "explore": false,
    "id": "jp-nQH5J_Ps",
-   "post": null,
+   "post": {
+    "fun": 4.5,
+    "skip": 5,
+    "match": 4.1,
+    "learn": 3.8,
+    "rest": 3.5,
+    "after": 3.6,
+    "more": 2.5,
+    "quality": 4.4,
+    "effect": 3.6,
+    "score": 4
+   },
    "pre": {
     "expect": 3.8600000000000003,
     "pull": 3.8600000000000003,
@@ -10655,14 +10666,14 @@
    },
    "published": "2026-09-29T02:30:02Z",
    "score": 83.05539058356824,
-   "state": "picked",
+   "state": "watched",
    "title": "人生について",
    "type": "focus",
    "views": 71924,
-   "watchedAt": null,
+   "watchedAt": "2026-10-17T02:20:34.047Z",
    "pickedAt": "2026-10-16T23:25:37.257Z",
    "touched": true,
-   "progress": 33
+   "progress": null
   },
   "jxCLlOz_RKQ": {
    "added": "2026-09-30T23:31:46+00:00",
@@ -12071,7 +12082,7 @@
    "channelName": "ゆゆうたパワー系切り抜き",
    "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連",
    "duration": 230,
-   "explore": true,
+   "explore": false,
    "id": "pTKfTrzzgxg",
    "post": null,
    "pre": {
@@ -12527,7 +12538,7 @@
    "channelName": "加藤純一切り抜き集",
    "desc": "00:00 整形したいと思ったことある？\n00:43 女を使った0721\n02:36 賢者タイムはくろこ\n05:01 努力で膣内身寸米青障害を克服\n07:31 コンドームを付けろしか教わってない\n09:57 吉原摘発、キャバ嬢\n21:15 ピラミッドの頂点は美女\n24:31 銀行の女と区役所の女\n25:52 ネイル\n28:17 美談を横から食い散らかすラグビー部\n31:43 脱毛行ったら7分で終わ",
    "duration": 2397,
-   "explore": true,
+   "explore": false,
    "id": "rHge6wGFmL0",
    "post": null,
    "pre": {
