@@ -215,6 +215,15 @@ details.dropped{margin-top:18px;border-top:1px solid var(--rule);padding-top:8px
 .cm-note{color:#bbb;padding:12px 0}
 .add select{padding:0 6px;border:1px solid var(--rule);background:#fff;font:inherit;font-size:13px}
 .slrow td{background:#f6ebe6}
+#fusa{position:fixed;inset:0;z-index:80;background:#1d2420;color:#eef2ef;display:flex;align-items:center;justify-content:center;padding:calc(20px + env(safe-area-inset-top)) 20px 20px;overflow:auto}
+#fusa[hidden]{display:none}.fs-in{max-width:420px;width:100%;text-align:center}
+.fs-why{font-size:13px;color:#b9c6be;margin:0 0 18px}.fs-lab{font-size:12px;color:#b9c6be;margin:0}
+.fs-until{font-size:44px;font-weight:700;letter-spacing:.04em;margin:2px 0 4px;font-variant-numeric:tabular-nums}
+.fs-dur{font-size:15px;margin:0 0 18px;color:#dfe7e2}
+.fs-steps{text-align:left;display:inline-block;margin:0 0 14px;padding-left:1.4em;font-size:14px;line-height:1.9}
+.fs-cd{font-size:30px;font-weight:700;margin:4px 0 8px;font-variant-numeric:tabular-nums}
+.fs-btn{width:100%;padding:14px;font-size:16px}.fs-btn:disabled{opacity:.35}
+.fs-note{font-size:12px;color:#b9c6be;margin-top:12px}
 
 </style>
 </head>
@@ -236,6 +245,7 @@ details.dropped{margin-top:18px;border-top:1px solid var(--rule);padding-top:8px
 </div></div>
 
 <div id="pl" hidden></div>
+<div id="fusa" hidden></div>
 
 <dialog id="rate">
   <div id="rateBody"></div>
@@ -535,6 +545,7 @@ function draw(){
 
   $("#stamp").textContent = (stock.updated ? "収集 " + stock.updated.slice(5,10) + " ・ " : "") + KVER.split(" ")[1];
   ({gate:drawGate, sieve:drawSieve, rank:drawRank, serial:drawSerialTab, play:drawPlay, chart:drawChart, log:drawLog, chan:drawChans, kset:drawKset}[tab] || drawGate)();
+  try { checkFusa(); } catch(e){}
 }
 function go(k){ tab = k; render(); window.scrollTo(0,0); }
 
@@ -951,7 +962,7 @@ if ("serviceWorker" in navigator){
    門(開門・閉門の時刻)・通行手形(1日の総時間。見ると減る)・損切り(その日の評価が落ちたら閉める)・
    改めの線(宿場に通す点数。在庫から自動で動く)。記録は docs/data/sekisho.json(アプリだけが書く) */
 const KPATH = "docs/data/sekisho.json";
-const KVER = "2026-10-17 s23";      // 画面に出す版(最新になったかを確かめる)
+const KVER = "2026-10-17 s24";      // 画面に出す版(最新になったかを確かめる)
 const KDEF = {
   version: 1,
   settings: {
@@ -972,6 +983,7 @@ const KDEF = {
   },
   days: {},
   games: [],                        // 遊戯(自分で登録するゲーム)
+  fusa: [],                         // 封鎖の記録 { at, until }(閉門から次の開門まで、スマホを制限した)
   hist: { allowance: [], threshold: [], settings: [] }
 };
 let seki = JSON.parse(JSON.stringify(KDEF)), sekiSha = null, sekiDirty = false;
@@ -983,7 +995,7 @@ const kmean = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : NaN;
 function kNorm(o){
   const x = Object.assign(JSON.parse(JSON.stringify(KDEF)), o || {});
   x.settings = Object.assign(JSON.parse(JSON.stringify(KDEF.settings)), (o && o.settings) || {});
-  x.days = x.days || {}; x.games = x.games || []; x.hist = Object.assign({ allowance: [], threshold: [], settings: [] }, x.hist || {});
+  x.days = x.days || {}; x.games = x.games || []; x.fusa = x.fusa || []; x.hist = Object.assign({ allowance: [], threshold: [], settings: [] }, x.hist || {});
   return x;
 }
 function kTouch(){ sekiDirty = true; cache("seki", seki); _kTouch(); flag(); }
@@ -1024,6 +1036,16 @@ function nextOpen(){
   const tg = (pg && pg[tw]) || (seki.settings.gates || {})[tw] || ["00:00", "24:00"];
   return { when: "明日(" + "日月火水木金土"[tw] + ")", time: tg[0] === "24:00" ? "00:00" : tg[0] };
 }
+// 次の開門の日時(日本時間の時刻を、実際の時刻にする)
+function nextOpenAt(){
+  const nx = nextOpen(); if (!nx) return null;
+  const t = kNow(), j = new Date(t + 9 * 3600e3), [hh, mm] = nx.time.split(":").map(Number);
+  const base = Date.UTC(j.getUTCFullYear(), j.getUTCMonth(), j.getUTCDate()) - 9 * 3600e3 + (nx.when === "今日" ? 0 : 864e5);
+  return base + (hh * 60 + mm) * 60000;
+}
+// 封鎖:門が閉まっているのに、今を覆う封鎖の記録がなければ、封鎖が要る
+function fusaCovered(t){ t = t || kNow(); return (seki.fusa || []).some(f => Date.parse(f.at) <= t && Date.parse(f.until) > t); }
+function fusaNeeded(){ const g = gate(); return !g.open && !fusaCovered(); }
 function closeGate(reason){ const d = today(); if (!d.closed) { d.closed = { reason, at: new Date(kNow()).toISOString() }; kTouch(); } }
 
 /* ── 見たことの記録(1回の視聴=1つの区切り) ──
@@ -1639,6 +1661,35 @@ document.addEventListener("visibilitychange", () => { if (document.hidden || !pl
     <div class="verdict"><button class="seen" onclick="document.getElementById('rate').close()">まだ遊ぶ</button><button class="take" onclick="document.getElementById('rate').close();gameDone()">終わった</button></div>`;
   $("#rate").showModal(); });
 
+/* ── 封鎖:門が閉まったら、次の開門までスマホを制限する。するまで消えない ── */
+const durStr = ms => { const m = Math.max(0, Math.round(ms / 60000)); return (Math.floor(m / 60) ? Math.floor(m / 60) + "時間" : "") + (m % 60 ? (m % 60) + "分" : (Math.floor(m / 60) ? "" : "0分")); };
+let fusaTimer = null;
+function checkFusa(){
+  const box = document.getElementById("fusa"); if (!box) return;
+  if (!fusaNeeded()) { if (!box.hidden) { box.hidden = true; box.innerHTML = ""; } return; }
+  if (!box.hidden) return;
+  const until = nextOpenAt(), nx = nextOpen(), g = gate();
+  if (!until) return;
+  const why = { "開門前": "まだ開門前", "閉門の時刻": "閉門の時刻になった", "手形切れ": "今日の通行手形を使い切った", "損切り": "損切りで門を閉めた" }[g.why] || g.why;
+  box.innerHTML = `<div class="fs-in"><p class="fs-why">${esc(why)}。次の開門まで、スマホを封鎖する</p>
+    <p class="fs-lab">制限アプリに入れる、終わる時刻</p><p class="fs-until">${nx.when} ${nx.time}</p>
+    <p class="fs-dur">長さ:${durStr(until - kNow())}</p>
+    <ol class="fs-steps"><li>制限アプリを開く</li><li>終わる時刻に <b>${nx.time}</b> を入れる</li><li>確定する</li></ol>
+    <p class="fs-cd" id="fs-cd">3</p><button class="take fs-btn" id="fs-btn" disabled onclick="fusaDone()">封鎖した</button>
+    <p class="fs-note">一度かけたら解除できない。20秒だけ、ここに全部を向ける。</p></div>`;
+  box.hidden = false; kse("lock");
+  let n = 3; clearInterval(fusaTimer);
+  fusaTimer = setInterval(() => { n--; const cd = document.getElementById("fs-cd"); if (n > 0) { if (cd) cd.textContent = n; return; }
+    clearInterval(fusaTimer); if (cd) cd.textContent = "いま"; const b = document.getElementById("fs-btn"); if (b) b.disabled = false; }, 1000);
+}
+function fusaDone(){
+  const until = nextOpenAt(); if (!until) return;
+  seki.fusa = (seki.fusa || []).concat([{ at: new Date(kNow()).toISOString(), until: new Date(until).toISOString(), day: kDay() }]).slice(-90);
+  const d = today(); d.fusa = true; kTouch(); autoSave(); kse("done");
+  const box = document.getElementById("fusa"); box.hidden = true; box.innerHTML = ""; render();
+}
+setInterval(() => { try { checkFusa(); } catch (e) {} }, 30000);
+
 /* ── 相場表 ── */
 let chartSeg = localStorage.getItem(LS + ":cseg") || "verify";
 function setChartSeg(k){ chartSeg = k; try { localStorage.setItem(LS + ":cseg", k); } catch (e) {} drawChart(); }
@@ -1721,7 +1772,9 @@ function drawChart(){
         <p class="meta">赤い行=心への効きが自分の平均(${isNaN(eAll) ? "—" : eAll.toFixed(1)})を下回る時間帯(3本以上)。${cand.length ? `<b>閉門の候補:${cand.map(h => h + "時台").join("・")}</b>(自動では変えない。設定で決める)` : "閉門の候補はまだない"}</p>` : `<p class="meta">まだない</p>`) +
       (() => { const S = D.flatMap(dd => (day(dd).sessions || [])), vid = S.filter(s => s.kind !== "game"), gm = S.filter(s => s.kind === "game"), ov = D.reduce((a, dd) => a + (day(dd).overSec || 0), 0);
         const ef = a => { const m = kmean(a.filter(s => s.effect != null).map(s => s.effect)); return isNaN(m) ? "—" : m.toFixed(2); };
-        return `<h3 class="h3">動画とゲーム(30日)</h3><table><tr><th>もの</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th></tr><tr><td>動画</td><td class="n">${kMin(vid.reduce((a, s) => a + (s.secs || 0), 0))}分</td><td class="n">${ef(vid)}</td></tr><tr><td>ゲーム</td><td class="n">${kMin(gm.reduce((a, s) => a + (s.secs || 0), 0))}分</td><td class="n">${ef(gm)}</td></tr></table>${ov ? `<p class="meta" style="color:var(--clay)">手形をはみ出した時間:合わせて ${kMin(ov)} 分</p>` : ""}`; })() +
+        const closedDays = D.filter(dd => day(dd).closed).length, fusaDays = D.filter(dd => day(dd).fusa).length;
+        let streak = 0; for (let i = D.length - 1; i >= 0; i--) { const x = day(D[i]); if (x.fusa) streak++; else if (x.closed && i < D.length - 1) break; }
+        return `<h3 class="h3">封鎖(30日)</h3><p class="meta">封鎖した日 ${fusaDays}日 ・ 門が閉まった日 ${closedDays}日 ・ 続いている ${streak}日</p><h3 class="h3">動画とゲーム(30日)</h3><table><tr><th>もの</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th></tr><tr><td>動画</td><td class="n">${kMin(vid.reduce((a, s) => a + (s.secs || 0), 0))}分</td><td class="n">${ef(vid)}</td></tr><tr><td>ゲーム</td><td class="n">${kMin(gm.reduce((a, s) => a + (s.secs || 0), 0))}分</td><td class="n">${ef(gm)}</td></tr></table>${ov ? `<p class="meta" style="color:var(--clay)">手形をはみ出した時間:合わせて ${kMin(ov)} 分</p>` : ""}`; })() +
       `<h3 class="h3">門の閉まり方・途中でやめた理由(30日)</h3><p class="meta">${Object.entries(cl).map(([k, n]) => esc(k) + " " + n + "日").join(" ・ ") || "—"}<br>${Object.entries(bail).map(([k, n]) => (RN[k] || k) + " " + n + "回").join(" ・ ") || "—"}</p>`,
     stock: () => chartBox("宿場の在庫(ろうそく足・分)", band + candles, `赤=増えた日、緑=減った日。帯=目標の在庫(${tgt == null ? "—" : Math.round(tgt)}分の±25%)`) +
       chartBox("入ってくる速さと見た量(分/日)", ibars + svgLine(ma, W, H, m3, "var(--sand)") + svgLine(wat, W, H, m3, "var(--pine)"), "棒=その日に宿場に入った時間、黄線=7日平均、緑線=見た時間") +
