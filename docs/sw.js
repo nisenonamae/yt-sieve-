@@ -1,34 +1,17 @@
-// インストール可能にするための最小限のService Worker。
-// データは常に最新を取りたいので、キャッシュするのは外枠だけ。
-const SHELL = "furui-shell-v1";
-const FILES = ["./", "./index.html", "./manifest.webmanifest"];
-
-self.addEventListener("install", e => {
-  self.skipWaiting();
-  e.waitUntil(caches.open(SHELL).then(c => c.addAll(FILES)).catch(() => {}));
-});
-
+// 関所のサービスワーカー:つながるときは必ず最新を取りに行き、つながらないときだけ手元の保存を使う
+const CACHE = "sekisho-v23";
+self.addEventListener("install", e => { self.skipWaiting(); });
 self.addEventListener("activate", e => {
-  e.waitUntil(
-    caches.keys().then(ks => Promise.all(ks.filter(k => k !== SHELL).map(k => caches.delete(k))))
-      .then(() => self.clients.claim())
-  );
+  e.waitUntil((async () => {
+    for (const k of await caches.keys()) if (k !== CACHE) await caches.delete(k);   // 古い保存(前のふるいの分も)を消す
+    await self.clients.claim();
+  })());
 });
-
 self.addEventListener("fetch", e => {
-  const url = new URL(e.request.url);
-  if (e.request.method !== "GET" || url.origin !== location.origin) return;
-
-  // data/*.json と共有からの遷移は必ずネットワークを見る
-  if (url.pathname.includes("/data/") || url.search.includes("text=") || url.search.includes("url=")) return;
-
-  e.respondWith(
-    fetch(e.request)
-      .then(r => {
-        const copy = r.clone();
-        caches.open(SHELL).then(c => c.put(e.request, copy)).catch(() => {});
-        return r;
-      })
-      .catch(() => caches.match(e.request).then(r => r || caches.match("./index.html")))
-  );
+  const req = e.request; if (req.method !== "GET") return;
+  const url = new URL(req.url); if (url.origin !== location.origin) return;       // GitHubやYouTubeへの問い合わせには手を出さない
+  e.respondWith((async () => {
+    try { const res = await fetch(req, { cache: "no-store" }); const c = await caches.open(CACHE); c.put(req, res.clone()); return res; }
+    catch (err) { const hit = await caches.match(req); if (hit) return hit; throw err; }
+  })());
 });
