@@ -38,8 +38,6 @@
   "gain": 1,
   "window": 3,
   "approach": 0.5,
-  "rate": 0.2,
-  "trialOffset": 6,
   "threshold": 60,
   "tighten": 0,
   "natural": null,
@@ -49,7 +47,9 @@
    "塾の日"
   ],
   "lastAdjust": "2026-10-17",
-  "lastWeekly": null
+  "lastWeekly": null,
+  "rate": 0.2,
+  "trialOffset": 6
  },
  "days": {
   "2026-10-16": {
@@ -151,29 +151,35 @@
      "more": null,
      "reason": "pause",
      "part": true
+    },
+    {
+     "id": "jp-nQH5J_Ps",
+     "start": "2026-10-17T01:55:11.988Z",
+     "end": "2026-10-17T02:20:34.047Z",
+     "secs": 1494,
+     "startCum": 1356,
+     "effect": 3.6,
+     "more": 2.5,
+     "quality": 4.4
     }
    ],
-   "watchedSec": 1356,
+   "watchedSec": 2850,
    "stock": {
     "open": 9888,
     "high": 60142,
     "low": 9888,
-    "close": 58465
+    "close": 56971
    },
    "threshold": 60,
    "allowance": 120,
    "natural": 120,
-   "trial": false
+   "trial": false,
+   "closed": {
+    "reason": "損切り",
+    "at": "2026-10-17T02:20:34.052Z"
+   }
   }
  },
- "games": [
-  {
-   "id": "gmvbqvkjv",
-   "name": "世界の覇者4",
-   "kind": "スマホ",
-   "added": "2026-10-17T01:55:33.451Z"
-  }
- ],
  "hist": {
   "allowance": [],
   "threshold": [
