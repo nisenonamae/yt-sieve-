@@ -140,9 +140,20 @@
      "effect": 2.7,
      "more": 3.1,
      "quality": 3.4
+    },
+    {
+     "id": "jp-nQH5J_Ps",
+     "start": "2026-10-17T01:29:09.084Z",
+     "end": "2026-10-17T01:29:43.718Z",
+     "secs": 33,
+     "startCum": 1323,
+     "effect": null,
+     "more": null,
+     "reason": "pause",
+     "part": true
     }
    ],
-   "watchedSec": 1323,
+   "watchedSec": 1356,
    "stock": {
     "open": 9888,
     "high": 60142,
