@@ -38,6 +38,8 @@
   "gain": 1,
   "window": 3,
   "approach": 0.5,
+  "rate": 0.2,
+  "trialOffset": 6,
   "threshold": 60,
   "tighten": 0,
   "natural": null,
@@ -47,9 +49,7 @@
    "塾の日"
   ],
   "lastAdjust": "2026-10-17",
-  "lastWeekly": null,
-  "rate": 0.2,
-  "trialOffset": 6
+  "lastWeekly": null
  },
  "days": {
   "2026-10-16": {
@@ -166,6 +166,14 @@
    "trial": false
   }
  },
+ "games": [
+  {
+   "id": "gmvbqvkjv",
+   "name": "世界の覇者4",
+   "kind": "スマホ",
+   "added": "2026-10-17T01:55:33.451Z"
+  }
+ ],
  "hist": {
   "allowance": [],
   "threshold": [
