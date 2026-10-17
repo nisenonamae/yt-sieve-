@@ -38,8 +38,6 @@
   "gain": 1,
   "window": 3,
   "approach": 0.5,
-  "rate": 0.2,
-  "trialOffset": 6,
   "threshold": 60,
   "tighten": 0,
   "natural": null,
@@ -49,7 +47,9 @@
    "塾の日"
   ],
   "lastAdjust": "2026-10-17",
-  "lastWeekly": null
+  "lastWeekly": null,
+  "rate": 0.2,
+  "trialOffset": 6
  },
  "days": {
   "2026-10-16": {
@@ -130,14 +130,24 @@
      "effect": 3.3,
      "more": 3.5,
      "quality": 4
+    },
+    {
+     "id": "P5QMgdd1S2Y",
+     "start": "2026-10-17T01:25:44.150Z",
+     "end": "2026-10-17T01:29:03.512Z",
+     "secs": 177,
+     "startCum": 1146,
+     "effect": 2.7,
+     "more": 3.1,
+     "quality": 3.4
     }
    ],
-   "watchedSec": 1146,
+   "watchedSec": 1323,
    "stock": {
     "open": 9888,
     "high": 60142,
     "low": 9888,
-    "close": 59079
+    "close": 58902
    },
    "threshold": 60,
    "allowance": 120,
