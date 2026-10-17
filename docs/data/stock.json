@@ -926,7 +926,7 @@
    "channelName": "ゆゆうたパワー系切り抜き",
    "desc": "0:00 ポケモンの民度\n0:31 人生縛り\n0:41 ドパジジイ\n0:54 龍になるつもりか\n1:35 戦闘BGM\n4:56 顎フェチ\n5:54 Zワザ\n6:15 パワー系\n6:48 炎技なし\n10:22 当てたら落とせる\n13:46 ブリジュラス\n18:33 絶句\n20:13 ハラバリー\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆ",
    "duration": 1491,
-   "explore": false,
+   "explore": true,
    "id": "3oIPlHu_Sp0",
    "post": null,
    "pre": {
@@ -1957,7 +1957,7 @@
     }
    },
    "published": "2026-09-29T15:00:31Z",
-   "score": 80.77939314669537,
+   "score": 80.76062197347427,
    "state": "picked",
    "title": "【閲覧注意】ゆゆうた少年が口にしたことがある物【2026/09/29】",
    "type": "focus",
@@ -2495,7 +2495,7 @@
    "channelName": "布団ちゃん切り抜きMAX",
    "desc": "布団ちゃんのSNS\nTwitter　https://twitter.com/indegnasen210\nYouTube　https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw\nTwitch　https://twitch.tv/indegnasen0706\n\n00:00　難易度MAX\n00:17　長風呂とサウナが苦手\n01:17　レバーのこと好きなん？\n03:10　加藤さんが好む食べ物\n03:43　おにやの飲み方\n04:55　おにやは遅刻するけど天才\n08:55　ドパガキ\n10:56　スマウグを獲る理由\n13:05　DRKS運営が叩かれて",
    "duration": 3023,
-   "explore": true,
+   "explore": false,
    "id": "9fev8VLKLQ0",
    "pickedAt": "2026-10-16T14:09:07.109Z",
    "post": null,
@@ -2906,7 +2906,18 @@
    "duration": 407,
    "explore": false,
    "id": "BSpmsBBHozw",
-   "post": null,
+   "post": {
+    "fun": 4.1,
+    "skip": 4.9,
+    "match": 4,
+    "learn": 2.9,
+    "rest": 3.3,
+    "after": 3.3,
+    "more": 3.5,
+    "quality": 4,
+    "effect": 3.3,
+    "score": 3.7
+   },
    "pre": {
     "expect": 3.88,
     "pull": 3.88,
@@ -2920,14 +2931,14 @@
    },
    "published": "2026-10-09T17:05:16Z",
    "score": 83.45600341847283,
-   "state": "picked",
+   "state": "watched",
    "title": "ドラえもんのひみつ道具カタログを見るゆゆうた【2026/10/09】",
    "type": "focus",
    "views": 11542,
-   "watchedAt": null,
+   "watchedAt": "2026-10-17T01:05:54.278Z",
    "pickedAt": "2026-10-17T00:27:00.914Z",
    "touched": true,
-   "progress": 13
+   "progress": null
   },
   "BeXzKwYByBg": {
    "added": "2026-10-14T23:00:58+00:00",
@@ -4158,7 +4169,7 @@
     }
    },
    "published": "2026-10-06T08:00:16Z",
-   "score": 82.27881106714979,
+   "score": 81.83589800036201,
    "state": "picked",
    "title": "一流芸能人「NISAは買わない」",
    "type": "focus",
@@ -4497,7 +4508,7 @@
    "channelName": "KUN",
    "desc": "🔳LINEスタンプと絵文字描いてみました！ぜひ使ってください\n\nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990526/ja \nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990",
    "duration": 878,
-   "explore": false,
+   "explore": true,
    "id": "KCwkcCdpOto",
    "post": null,
    "pre": {
@@ -5213,7 +5224,7 @@
    "channelName": "ゆゆうたパワー系切り抜き",
    "desc": "https://youtu.be/kLGChZ-zu9I?si=sYP4xkiwEIOceukc\n\n0:00 視聴者からメール\n1:45 八月。音にして\n4:21 ゆゆうた評\n8:13 楽曲の改善点\n20:01 おまけ\n\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0",
    "duration": 1370,
-   "explore": false,
+   "explore": true,
    "id": "NMCchDoZIeA",
    "pickedAt": "2026-10-16T12:30:03.576Z",
    "post": null,
@@ -5229,7 +5240,7 @@
     "pull": 2.9
    },
    "published": "2026-09-27T17:16:43Z",
-   "score": 71.1314896023936,
+   "score": 71.0724102508427,
    "state": "picked",
    "title": "ゆゆうた、視聴者ボカロPの楽曲を熱血批評【2026/09/27】",
    "touched": true,
@@ -6404,7 +6415,7 @@
    "channelName": "はりーシ熱血切り抜きch",
    "desc": "はりーシ様公認の切り抜きチャンネルです。\nチャンネル登録高評価お願いします。\n\n人狼再生リスト\nhttps://www.youtube.com/playlist?list=PLoYdw6LewWUAHrNvECb8PL91zVebSkNS9\n人狼【豪傑村】再生リスト\nhttps://youtube.com/playlist?list=PLoYdw6LewWUCiLwfTIh7sCa4qS7zvdVXd&si=I7siVt8Hefv92fwi\nVRC再生リスト\nhttps://www.youtube.com/playlist?list=PLoYdw6LewWUAvwXWUUHNynCRRT2u4",
    "duration": 2089,
-   "explore": false,
+   "explore": true,
    "id": "S5itbdSKREw",
    "post": null,
    "pre": {
@@ -8217,7 +8228,7 @@
    "channelName": "ジェラードンチャンネル",
    "desc": "映像コントです！",
    "duration": 498,
-   "explore": false,
+   "explore": true,
    "id": "_fEXQaBNe18",
    "post": null,
    "pre": {
@@ -10299,7 +10310,7 @@
     "pull": 3.3
    },
    "published": "2026-09-27T17:16:48Z",
-   "score": 76.38752226218082,
+   "score": 76.32407743195083,
    "state": "picked",
    "title": "メルトチューンのレビューを見るゆゆうた【2026/09/27】",
    "touched": true,
@@ -10692,7 +10703,7 @@
    "channelName": "加藤純一切り抜き集",
    "desc": "00:00 ハイゲチケット投げ売り\n00:29 もえりん\n01:21 伊織もえの凄いところ\n03:51 俺達が性的搾取されてる\n04:42 ファンクラブから抜けられない民\n05:29 伊織もえパーフェクトきゅるんセット\n06:21 コーン茶の宣伝\n\n\n●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト",
    "duration": 448,
-   "explore": false,
+   "explore": true,
    "id": "kI2iT1wJwes",
    "post": null,
    "pre": {
@@ -11068,7 +11079,7 @@
     "pull": 3.7
    },
    "published": "2026-09-27T17:16:45Z",
-   "score": 81.36476476760166,
+   "score": 81.29718601213861,
    "state": "picked",
    "title": "ゆゆうた少年の水泳のトラウマ【2026/09/27】",
    "touched": true,
@@ -11654,7 +11665,7 @@
    "channelName": "りょうぼー【ゲーム企画】",
    "desc": "▶︎生放送サブチャンネル\nhttps://youtube.com/channel/UCEZ1GJT-fGtt76rI9j3Mmqg\n\n\n■オススメ■\n\n▶︎ 個人的・面白企画ベスト15\nhttps://www.youtube.com/playlist?list=PLenA36qOf2g0edInFEHU7voZ1LLxHk4AE\n\n▶︎リッキー虐待シリーズ\nhttps://www.youtube.",
    "duration": 869,
-   "explore": true,
+   "explore": false,
    "id": "n_Tl9JdLpio",
    "post": null,
    "pre": {
@@ -13246,7 +13257,7 @@
    "channelName": "ステゴロパンチャーズ",
    "desc": "あきプロ↓\nhttps://youtube.com/@akiraproduce222?si=UyuXtk3fh6NmvE9n\n\n企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61\nジュン\nhttps://www.instagram.com/oreom",
    "duration": 2233,
-   "explore": true,
+   "explore": false,
    "id": "vPZ4svelOpE",
    "pickedAt": "2026-10-16T14:04:18.636Z",
    "post": null,
