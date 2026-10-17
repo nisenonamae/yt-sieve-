@@ -38,6 +38,8 @@
   "gain": 1,
   "window": 3,
   "approach": 0.5,
+  "rate": 0.2,
+  "trialOffset": 6,
   "threshold": 60,
   "tighten": 0,
   "natural": null,
@@ -118,18 +120,29 @@
      "more": null,
      "reason": "pause",
      "part": true
+    },
+    {
+     "id": "BSpmsBBHozw",
+     "start": "2026-10-17T00:58:46.457Z",
+     "end": "2026-10-17T01:05:54.278Z",
+     "secs": 391,
+     "startCum": 755,
+     "effect": 3.3,
+     "more": 3.5,
+     "quality": 4
     }
    ],
-   "watchedSec": 755,
+   "watchedSec": 1146,
    "stock": {
     "open": 9888,
     "high": 60142,
     "low": 9888,
-    "close": 59486
+    "close": 59079
    },
    "threshold": 60,
    "allowance": 120,
-   "natural": 120
+   "natural": 120,
+   "trial": false
   }
  },
  "hist": {
