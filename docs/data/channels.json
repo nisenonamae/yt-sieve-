@@ -1,21 +1,4 @@
 {
- "weights": {
-  "expect": 1,
-  "fresh": 0.5,
-  "pull": 0.6,
-  "trust": 0.8
- },
- "defaults": {
-  "backfill": 10,
-  "capacityHours": {
-   "ambient": 12,
-   "focus": 6,
-   "serial": 0
-  },
-  "coolDays": 3,
-  "expireDays": 14,
-  "halfLifeDays": 30
- },
  "channels": [
   {
    "defaultType": "ambient",
@@ -134,9 +117,27 @@
    "seeded": true
   },
   {
+   "defaultType": "focus",
    "id": "UCMZN1sWH4-vOF45C7iEg_KA",
    "name": "尾崎千里眼",
-   "defaultType": "focus"
+   "seeded": true
   }
- ]
+ ],
+ "defaults": {
+  "backfill": 10,
+  "capacityHours": {
+   "ambient": 12,
+   "focus": 6,
+   "serial": 0
+  },
+  "coolDays": 3,
+  "expireDays": 14,
+  "halfLifeDays": 30
+ },
+ "weights": {
+  "expect": 1,
+  "fresh": 0.5,
+  "pull": 0.6,
+  "trust": 0.8
+ }
 }
