@@ -107,9 +107,20 @@
      "effect": 3.8,
      "more": 3.4,
      "quality": 4
+    },
+    {
+     "id": "BSpmsBBHozw",
+     "start": "2026-10-17T00:56:54.078Z",
+     "end": "2026-10-17T00:57:08.814Z",
+     "secs": 13,
+     "startCum": 742,
+     "effect": null,
+     "more": null,
+     "reason": "pause",
+     "part": true
     }
    ],
-   "watchedSec": 742,
+   "watchedSec": 755,
    "stock": {
     "open": 9888,
     "high": 60142,
