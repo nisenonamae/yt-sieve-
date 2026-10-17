@@ -1902,7 +1902,18 @@
    "duration": 656,
    "explore": false,
    "id": "7ifcis4WsZo",
-   "post": null,
+   "post": {
+    "fun": 4.5,
+    "skip": 5,
+    "match": 4.2,
+    "learn": 2.2,
+    "rest": 3.3,
+    "after": 4.2,
+    "more": 3.4,
+    "quality": 4,
+    "effect": 3.8,
+    "score": 3.9
+   },
    "pre": {
     "expect": 4.08,
     "pull": 4.08,
@@ -1916,14 +1927,14 @@
    },
    "published": "2026-09-29T08:00:05Z",
    "score": 88.43278942923054,
-   "state": "picked",
+   "state": "watched",
    "title": "サラリーモンスター　～オワハラで弱らせてゲットだぜ！～",
    "type": "focus",
    "views": 116896,
-   "watchedAt": null,
+   "watchedAt": "2026-10-17T00:56:51.543Z",
    "pickedAt": "2026-10-16T23:19:29.946Z",
    "touched": true,
-   "progress": 136
+   "progress": null
   },
   "7psUxtCygHY": {
    "added": "2026-09-29T20:13:34+00:00",
