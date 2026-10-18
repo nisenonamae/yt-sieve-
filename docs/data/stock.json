@@ -1,6 +1,6 @@
 {
  "lastRerun": "2026-10-04T22:50:12+00:00",
- "updated": "2026-10-17T21:59:50+00:00",
+ "updated": "2026-10-18T22:16:16+00:00",
  "videos": {
   "-jxW9P08h5g": {
    "added": "2026-10-15T22:55:36+00:00",
@@ -88,57 +88,27 @@
    "duration": 1544,
    "explore": false,
    "id": "0xwD11ghDjY",
+   "pickedAt": "2026-10-18T00:20:53.765Z",
    "post": null,
    "pre": {
     "expect": 3.44,
-    "pull": 3.44,
     "items": {
+     "fill": 4.1,
      "fun": 4,
-     "match": 3.9,
      "learn": 1.7,
-     "rest": 3.5,
-     "fill": 4.1
-    }
+     "match": 3.9,
+     "rest": 3.5
+    },
+    "pull": 3.44
    },
    "published": "2026-10-13T11:00:14Z",
    "score": 77.78985821457614,
    "state": "picked",
    "title": "５人のひまじんｖｓ１人の愛人　どっちを選ぶか真剣に考えてみた - トロッコ問題 of アルマゲドンv1.2",
+   "touched": true,
    "type": "focus",
    "views": 74453,
-   "watchedAt": null,
-   "pickedAt": "2026-10-18T00:20:53.765Z",
-   "touched": true
-  },
-  "1hiVEucZ7GM": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCC0FNUII8Zp2OAc7IaetICg",
-   "channelName": "天才おにや",
-   "desc": "本配信は、特定の銘柄・金融商品・投資手法を推奨または勧誘するものではありません。\n動画内で紹介している内容は、あくまで個人的な見解・情報共有を目的としたものであり、投資判断は必ずご自身の責任において行ってください。\n本動画の内容をもとに生じたいかなる損失についても、当チャンネルは一切の責任を負いかねます。\n\no-228おにや【メインチャンネル】\nhttps://www.youtube.com/ch",
-   "duration": 0,
-   "explore": false,
-   "id": "1hiVEucZ7GM",
-   "post": null,
-   "pre": {
-    "expect": 3.2399999999999998,
-    "pull": 3.2399999999999998,
-    "items": {
-     "fun": 3.4,
-     "match": 3.4,
-     "learn": 3,
-     "rest": 3,
-     "fill": 3.4
-    }
-   },
-   "published": "2026-10-13T04:24:21Z",
-   "score": 70.98246771574117,
-   "state": "dropped",
-   "title": "半導体メモリー大幅クラッシュどうなる。AIバブルは弾けたのか？含み損２１００万なにこれ。ASML場中決算＆アメリカCPI発表も。どうなる今日の日経平均。魂の朝の寄り付き株ライブ生放送！！",
-   "type": "focus",
-   "views": 0,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
+   "watchedAt": null
   },
   "377lB59r1Z0": {
    "added": "2026-10-15T22:55:36+00:00",
@@ -170,7 +140,7 @@
    "pre": null,
    "published": "2026-10-14T08:00:10Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "【人狼】ボスゴドラが強いと思ってる尾崎と恒例のポケモントークをするはりーシ【2026/10/13】",
    "type": "focus",
    "views": 12666,
@@ -250,27 +220,27 @@
    "duration": 267,
    "explore": false,
    "id": "4OKVGJTpb18",
+   "pickedAt": "2026-10-18T06:22:13.910Z",
    "post": null,
    "pre": {
     "expect": 3.18,
-    "pull": 3.18,
     "items": {
+     "fill": 3.6,
      "fun": 3.7,
-     "match": 3.6,
      "learn": 2,
-     "rest": 3,
-     "fill": 3.6
-    }
+     "match": 3.6,
+     "rest": 3
+    },
+    "pull": 3.18
    },
    "published": "2026-10-13T21:00:28Z",
    "score": 74.28794167803461,
    "state": "picked",
    "title": "徒歩で琵琶湖一周を計画中のゆゆうた、琵琶湖にクマが出没することを知る【2026/10/13】",
+   "touched": true,
    "type": "focus",
    "views": 3927,
-   "watchedAt": null,
-   "pickedAt": "2026-10-18T06:22:13.910Z",
-   "touched": true
+   "watchedAt": null
   },
   "4R0q9frETls": {
    "added": "2026-10-13T23:37:52+00:00",
@@ -280,27 +250,27 @@
    "duration": 860,
    "explore": false,
    "id": "4R0q9frETls",
+   "pickedAt": "2026-10-18T06:22:25.805Z",
    "post": null,
    "pre": {
     "expect": 3.9,
-    "pull": 3.9,
     "items": {
+     "fill": 4.2,
      "fun": 4.2,
-     "match": 4,
      "learn": 3.5,
-     "rest": 3.6,
-     "fill": 4.2
-    }
+     "match": 4,
+     "rest": 3.6
+    },
+    "pull": 3.9
    },
    "published": "2026-10-13T23:06:51Z",
    "score": 79.50458968530918,
    "state": "picked",
    "title": "加藤純一の動物トーーク【2026/10/13】",
+   "touched": true,
    "type": "focus",
    "views": 4349,
-   "watchedAt": null,
-   "pickedAt": "2026-10-18T06:22:25.805Z",
-   "touched": true
+   "watchedAt": null
   },
   "5TnqhJFvMqo": {
    "added": "2026-10-15T22:55:36+00:00",
@@ -386,36 +356,6 @@
    "views": 1775,
    "watchedAt": null
   },
-  "7TUOG0LTbkA": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCC0FNUII8Zp2OAc7IaetICg",
-   "channelName": "天才おにや",
-   "desc": "00:00 OP\n00:04 半導体暴落\n06:16 現在の含み損\n07:10 キオクシア掲示板\n08:09 日経平均掲示板\n09:21 繋がる\n11:25 前場引け\n\n本動画は、特定の銘柄・金融商品・投資手法を推奨または勧誘するものではありません。\n動画内で紹介している内容は、あくまで個人的な見解・情報共有を目的としたものであり、\n投資判断は必ずご自身の責任において行ってください。\n本動画の内容",
-   "duration": 909,
-   "explore": false,
-   "id": "7TUOG0LTbkA",
-   "post": null,
-   "pre": {
-    "expect": 3.1799999999999997,
-    "pull": 3.1799999999999997,
-    "items": {
-     "fun": 3.3,
-     "match": 3.3,
-     "learn": 3,
-     "rest": 3,
-     "fill": 3.3
-    }
-   },
-   "published": "2026-10-13T04:45:00Z",
-   "score": 69.17552089001188,
-   "state": "dropped",
-   "title": "【悲報】おにや、半導体クラッシュ相場の荒波が直撃し再び含み損2000万の領域へ帰還【o-228 おにや/株/雑談】【放送日 2026/10/13】",
-   "type": "focus",
-   "views": 112739,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "8HLhBfirgJ0": {
    "added": "2026-10-15T22:55:36+00:00",
    "channelId": "UCGjV4bsC43On-YuiLZcfL0w",
@@ -446,7 +386,7 @@
    "pre": null,
    "published": "2026-10-14T03:00:18Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "【人狼】悔しくて号泣するプリティにもらい泣きしそうになるはりーシ【2026/10/13】",
    "type": "focus",
    "views": 12071,
@@ -482,7 +422,7 @@
    "pre": null,
    "published": "2026-10-14T21:45:29Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ゆゆうたの「学園アイドルマスター」姫崎莉波プロデュース編＃1【2026/10/14】",
    "type": "focus",
    "views": 2836,
@@ -518,7 +458,7 @@
    "pre": null,
    "published": "2026-10-14T21:00:00Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "「自分のう○こを食べて気絶するマナティー」に爆笑するゆゆうた【2026/10/14】",
    "type": "focus",
    "views": 2366,
@@ -650,7 +590,7 @@
    "pre": null,
    "published": "2026-10-14T15:09:26Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "加藤純一のARC Raidersダイジェスト【2026/10/09】",
    "type": "ambient",
    "views": 59507,
@@ -734,7 +674,7 @@
    "pre": null,
    "published": "2026-10-14T09:30:02Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "実は狙ってる女性がいます",
    "type": "focus",
    "views": 38615,
@@ -848,36 +788,6 @@
    "views": 733664,
    "watchedAt": null
   },
-  "GZNxEfjlNFs": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "https://youtu.be/ESllKG4OBDc?si=C11z85sptAmF3BY-\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https:",
-   "duration": 341,
-   "explore": false,
-   "id": "GZNxEfjlNFs",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:00:20Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "ゆゆうた、台湾で野獣先輩展が開催されていることを知る【2026/10/13】",
-   "type": "focus",
-   "views": 8002,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "HbaOMmq6Mkk": {
    "added": "2026-10-14T23:00:58+00:00",
    "channelId": "UCH-lygWpHodDff3iQurnWnQ",
@@ -890,41 +800,11 @@
    "pre": null,
    "published": "2026-10-14T03:15:38Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "DRKSで隠れてタバコ吸ってる奴、配信者界隈の情報【2026/10/13】",
    "type": "focus",
    "views": 161611,
    "watchedAt": null
-  },
-  "IK2nH-wcRNg": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連",
-   "duration": 182,
-   "explore": false,
-   "id": "IK2nH-wcRNg",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:00:15Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "最近コメント欄に効かせ屋が増えてる件について【2026/10/13】",
-   "type": "focus",
-   "views": 5951,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
   },
   "IOxRQxNy0io": {
    "added": "2026-10-06T23:38:04+00:00",
@@ -947,6 +827,7 @@
     },
     "pull": 3.5800000000000005
    },
+   "progress": 66,
    "published": "2026-10-06T08:00:16Z",
    "score": 81.83589800036201,
    "state": "picked",
@@ -954,38 +835,7 @@
    "touched": true,
    "type": "focus",
    "views": 97735,
-   "watchedAt": null,
-   "progress": 66
-  },
-  "IUpgMNq_jmo": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCqRV_ZIQhVKfxG1_WkNiRbg",
-   "channelName": "Fラン大学就職チャンネル",
-   "desc": "動画投稿は毎週火曜日と金曜日の17時。\n\n【このチャンネルの動画】\n就活、転職、労働、ブラック企業、ビジネス、大学生活など、キャリアに関連する内容を動画にしています。\n\n【ツイッター】\nhttps://twitter.com/F_kokutiyou\nFラン大学、Fラン大生の就職活動などを中心としたキャリアの話をしています。\n\n【チャンネル登録】\nhttps://www.youtube.com/ch",
-   "duration": 808,
-   "explore": false,
-   "id": "IUpgMNq_jmo",
-   "post": null,
-   "pre": {
-    "expect": 4,
-    "pull": 4,
-    "items": {
-     "fun": 4.8,
-     "match": 4.7,
-     "learn": 2.6,
-     "rest": 3.1,
-     "fill": 4.8
-    }
-   },
-   "published": "2026-10-13T08:00:12Z",
-   "score": 87.00100044032665,
-   "state": "dropped",
-   "title": "インフルエンサー研修2.0【Part5】",
-   "type": "focus",
-   "views": 117962,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
+   "watchedAt": null
   },
   "JKXpeR0PDVU": {
    "added": "2026-10-16T22:37:30+00:00",
@@ -1077,7 +927,7 @@
    "pre": null,
    "published": "2026-10-14T15:43:05Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "【緊急株ライブ】おい。米国株大暴落でCPIクラッシュまじか。もしかして明日ヤバいですか？すまん、追証やこれ。絶望のアメリカ相場を見届ける。",
    "type": "focus",
    "views": 168065,
@@ -1174,36 +1024,6 @@
    "views": 31020,
    "watchedAt": null
   },
-  "L4m-7yJHlDQ": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連",
-   "duration": 306,
-   "explore": false,
-   "id": "L4m-7yJHlDQ",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:00:39Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "ゼネコン時代、職人さんにめちゃくちゃハゲ弄りされた話【2026/10/13】",
-   "type": "focus",
-   "views": 3544,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "NF1LLPwV6Jc": {
    "added": "2026-10-15T22:55:36+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
@@ -1260,27 +1080,27 @@
    "duration": 2562,
    "explore": false,
    "id": "Ncv3GW61Lcs",
+   "pickedAt": "2026-10-18T06:22:59.234Z",
    "post": null,
    "pre": {
     "expect": 2.8600000000000003,
-    "pull": 2.8600000000000003,
     "items": {
+     "fill": 3.7,
      "fun": 4.2,
-     "match": 2.3,
      "learn": 1,
-     "rest": 3.1,
-     "fill": 3.7
-    }
+     "match": 2.3,
+     "rest": 3.1
+    },
+    "pull": 2.8600000000000003
    },
    "published": "2026-10-13T11:00:07Z",
    "score": 63.81898284326547,
    "state": "picked",
    "title": "サーヤが作詞した「ポケモン言えるかな」",
+   "touched": true,
    "type": "focus",
    "views": 322932,
-   "watchedAt": null,
-   "pickedAt": "2026-10-18T06:22:59.234Z",
-   "touched": true
+   "watchedAt": null
   },
   "Nhf7mHaddEM": {
    "added": "2026-10-16T22:37:30+00:00",
@@ -1318,66 +1138,6 @@
    "views": 6497,
    "watchedAt": null
   },
-  "OK-82HgAPeA": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCGjV4bsC43On-YuiLZcfL0w",
-   "channelName": "KUN",
-   "desc": "🔳LINEスタンプと絵文字描いてみました！ぜひ使ってください\n\nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990526/ja \nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990",
-   "duration": 1238,
-   "explore": false,
-   "id": "OK-82HgAPeA",
-   "post": null,
-   "pre": {
-    "expect": 3.9,
-    "pull": 3.9,
-    "items": {
-     "fun": 4.4,
-     "match": 4.4,
-     "learn": 3.4,
-     "rest": 3.2,
-     "fill": 4.1
-    }
-   },
-   "published": "2026-10-13T07:00:04Z",
-   "score": 83.36722517244746,
-   "state": "dropped",
-   "title": "突然、あの古参参加勢から企画が送られてきました - マインクラフト【KUN】",
-   "type": "focus",
-   "views": 182351,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
-  "OtQ0xhP2Cpg": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "0:00 今日の麦茶\n0:43 第1話\n7:52 こすぷれ？\n10:24 第2話\n17:03 気になる様子\n19:15 第3話\n26:06 最終試験\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bi",
-   "duration": 2215,
-   "explore": false,
-   "id": "OtQ0xhP2Cpg",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:30:27Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "ゆゆうたの「学園アイドルマスター」有村麻央プロデュース編＃1【2026/10/13】",
-   "type": "focus",
-   "views": 4118,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "PO50L6nGUdw": {
    "added": "2026-10-14T23:00:58+00:00",
    "channelId": "UCH-lygWpHodDff3iQurnWnQ",
@@ -1390,7 +1150,7 @@
    "pre": null,
    "published": "2026-10-14T07:57:41Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "「80億分の1」で一度きりの人生を堪能する加藤純一【2026/10/13】",
    "type": "focus",
    "views": 310032,
@@ -1426,41 +1186,11 @@
    "pre": null,
    "published": "2026-10-14T03:58:13Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "加藤純一の7Days to Dieノーデスチャレンジダイジェストwithこく兄,幕末坂本,UK,布団ちゃん,蛇足【2026/10/12前編】",
    "type": "ambient",
    "views": 148945,
    "watchedAt": null
-  },
-  "RKOzoFnR61w": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCH-lygWpHodDff3iQurnWnQ",
-   "channelName": "加藤純一切り抜き集",
-   "desc": "00:00 80億分の1\n02:30 本能的に子どもが欲しい\n05:22 移民と日本のビザ\n08:32 ユリースとKH\n09:56 八村塁、大坂なおみ、ザイオン\n13:34 みやぞんとアントニー\n15:09 我が物顔で道を歩く移民\n16:39 外国人が多い都道府県\n18:28 国民性、日本人は慎重\n22:06 海外配信者\n\n●junchannel（本家）\n→https://www.youtube.",
-   "duration": 1421,
-   "explore": false,
-   "id": "RKOzoFnR61w",
-   "post": null,
-   "pre": {
-    "expect": 3.3600000000000003,
-    "pull": 3.3600000000000003,
-    "items": {
-     "fun": 3.6,
-     "match": 3.6,
-     "learn": 3,
-     "rest": 3,
-     "fill": 3.6
-    }
-   },
-   "published": "2026-10-13T15:28:44Z",
-   "score": 73.22875893617181,
-   "state": "dropped",
-   "title": "移民問題、一部の地域に外国人が集まり過ぎてる、日本の素晴らしさ【2026/10/13】",
-   "type": "focus",
-   "views": 61733,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
   },
   "RMCS_TNUZqM": {
    "added": "2026-10-15T22:55:36+00:00",
@@ -1571,7 +1301,7 @@
    "pre": null,
    "published": "2026-10-14T08:00:16Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "おにや、OpenAI従業員が逮捕された件があまりにもヤバすぎる件について語る【o-228 おにや/株/雑談】【放送日 2026/10/14】",
    "type": "focus",
    "views": 48502,
@@ -1607,25 +1337,6 @@
    "views": 46288,
    "watchedAt": null
   },
-  "T4I12lyeZNM": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCfTfI2-PkGYgcQHoVk85tCA",
-   "channelName": "布団ちゃん切り抜きMAX",
-   "desc": "布団ちゃんのSNS\nTwitter　https://twitter.com/indegnasen210\nYouTube　https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw\nTwitch　https://twitch.tv/indegnasen0706",
-   "duration": 303,
-   "explore": false,
-   "id": "T4I12lyeZNM",
-   "post": null,
-   "pre": null,
-   "published": "2026-10-13T16:52:49Z",
-   "score": null,
-   "state": "seen",
-   "title": "ゲーム内バグの影響でラッパーになってしまう布団ちゃん【2026/10/13】",
-   "type": "focus",
-   "views": 52425,
-   "watchedAt": null,
-   "touched": true
-  },
   "TAXEQ-Hlkgc": {
    "added": "2026-10-16T22:37:30+00:00",
    "channelId": "UCarvAHwttb_r2hYihGX8aXA",
@@ -1644,36 +1355,6 @@
    "views": 1331,
    "watchedAt": null
   },
-  "U2kUWMi1iVM": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCNKGn1rULbYWrQaGY-4nZDA",
-   "channelName": "りょうぼー【ゲーム企画】",
-   "desc": "VOICEVOX：青山龍星",
-   "duration": 52,
-   "explore": false,
-   "id": "U2kUWMi1iVM",
-   "post": null,
-   "pre": {
-    "expect": 3.4799999999999995,
-    "pull": 3.4799999999999995,
-    "items": {
-     "fun": 3.8,
-     "match": 3.8,
-     "learn": 3,
-     "rest": 3,
-     "fill": 3.8
-    }
-   },
-   "published": "2026-10-13T07:30:09Z",
-   "score": 75.99733186364492,
-   "state": "dropped",
-   "title": "逃走中、９割ドラマパートドッキリ #shorts",
-   "type": "focus",
-   "views": 35485,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "U8qyGzBvEbA": {
    "added": "2026-10-15T22:55:36+00:00",
    "channelId": "UCuWdyc0Mp7zRZd6KSPguCsA",
@@ -1691,36 +1372,6 @@
    "type": "focus",
    "views": 93518,
    "watchedAt": null
-  },
-  "UyzJiWnlFxc": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCH-lygWpHodDff3iQurnWnQ",
-   "channelName": "加藤純一切り抜き集",
-   "desc": "●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト\n→https://www.youtube.com/watch?v=RW_c2OB4i0g&list=PL_L-C2xtKNSP-lEQcaJw-K34YdjIO-aEJ\n◆2026年切り抜き再生リスト\nhttps://www.youtube.com/",
-   "duration": 67,
-   "explore": false,
-   "id": "UyzJiWnlFxc",
-   "post": null,
-   "pre": {
-    "expect": 2.84,
-    "pull": 2.84,
-    "items": {
-     "fun": 3.6,
-     "match": 3.6,
-     "learn": 3,
-     "rest": 3,
-     "fill": 1
-    }
-   },
-   "published": "2026-10-13T15:49:09Z",
-   "score": 66.74123829826372,
-   "state": "dropped",
-   "title": "立川が大会中に逐一LINEしてきた件",
-   "type": "focus",
-   "views": 26619,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
   },
   "VIk9b4iz1Xg": {
    "added": "2026-10-06T23:38:04+00:00",
@@ -1764,7 +1415,7 @@
    "pre": null,
    "published": "2026-10-14T22:00:10Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ゆゆうたの「学園アイドルマスター」藤田ことねプロデュース編＃5【2026/10/14】",
    "type": "focus",
    "views": 2022,
@@ -1830,7 +1481,7 @@
    "pre": null,
    "published": "2026-10-14T05:32:57Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "【悲報】おにや、地獄の13%暴落翌朝にリバったキオクシアが全否定されマイ転、再び迫る追証に震える【o-228 おにや/株/雑談】【放送日 2026/10/14】",
    "type": "focus",
    "views": 104051,
@@ -1884,7 +1535,7 @@
    "pre": null,
    "published": "2026-10-14T11:21:45Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "裏どりカトデッタ、助けてもらえずヴェイル化",
    "type": "focus",
    "views": 72596,
@@ -1938,36 +1589,6 @@
    "views": 52168,
    "watchedAt": null
   },
-  "ad9yJU1Xn7s": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCH-lygWpHodDff3iQurnWnQ",
-   "channelName": "加藤純一切り抜き集",
-   "desc": "00:00 人間性が変わった柿谷とダル\n01:44 大谷の膝が心配\n05:35 清原と阿部慎之助\n08:08 巨人のドラフトくじ運\n09:07 ピキッた話\n11:26 子育てはリアルサクセス\n\n\n●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト\n→https://www.youtube.com/wa",
-   "duration": 731,
-   "explore": false,
-   "id": "ad9yJU1Xn7s",
-   "post": null,
-   "pre": {
-    "expect": 3.3600000000000003,
-    "pull": 3.3600000000000003,
-    "items": {
-     "fun": 3.6,
-     "match": 3.6,
-     "learn": 3,
-     "rest": 3,
-     "fill": 3.6
-    }
-   },
-   "published": "2026-10-13T15:15:59Z",
-   "score": 73.22875893617181,
-   "state": "dropped",
-   "title": "野球大好きおじさん、大谷の不調を心配する【2026/10/13】",
-   "type": "focus",
-   "views": 76807,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "bGNP5Q6GIhQ": {
    "added": "2026-10-14T23:00:58+00:00",
    "channelId": "UCNKGn1rULbYWrQaGY-4nZDA",
@@ -1980,7 +1601,7 @@
    "pre": null,
    "published": "2026-10-14T07:30:33Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "伸びない動画を伸ばす業者 #shorts",
    "type": "focus",
    "views": 196636,
@@ -2016,36 +1637,6 @@
    "views": 17485,
    "watchedAt": null
   },
-  "bUgs5LtNmrc": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "https://youtu.be/ilGqGs9o-sA?si=bJMLnSzjYxP5vwyX\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https:",
-   "duration": 247,
-   "explore": false,
-   "id": "bUgs5LtNmrc",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:00:24Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "AIが蔓延るこの世界でノリアキ熱が再燃したゆゆうた【2026/10/13】",
-   "type": "focus",
-   "views": 3106,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "bgCRYCRmTZ0": {
    "added": "2026-10-14T23:00:58+00:00",
    "channelId": "UCTrckUWmmrRZcNrfu1mZDOg",
@@ -2058,7 +1649,7 @@
    "pre": null,
    "published": "2026-10-14T03:00:16Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "目指せ人気店！効率厨たいじのラーメン屋経営が始まる【Japanese Ramen Simulator】",
    "type": "focus",
    "views": 121508,
@@ -2094,7 +1685,7 @@
    "pre": null,
    "published": "2026-10-14T11:00:34Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ジェシカ、お前だけは許さん - 人狼ジャッジメント",
    "type": "focus",
    "views": 26863,
@@ -2226,7 +1817,7 @@
    "pre": null,
    "published": "2026-10-14T16:26:37Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "【追証寸前】おにや、CPI撃沈で今回ばかりは本当にマズい件について緊急で狼狽する【o-228 おにや/株/雑談】【放送日 2026/10/15】",
    "type": "focus",
    "views": 29254,
@@ -2292,71 +1883,11 @@
    "pre": null,
    "published": "2026-10-14T02:59:50Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "間近で見る動物たちに興奮してシャッターとトークが止まらない加藤純一【2026/10/13】",
    "type": "focus",
    "views": 115144,
    "watchedAt": null
-  },
-  "fOGo2msdBc8": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCGjV4bsC43On-YuiLZcfL0w",
-   "channelName": "KUN",
-   "desc": "🔳LINEスタンプと絵文字描いてみました！ぜひ使ってください\n\nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990526/ja \nやる気の無い犬 - LINE スタンプ | LINE STORE https://store.line.me/stickershop/product/35990",
-   "duration": 612,
-   "explore": false,
-   "id": "fOGo2msdBc8",
-   "post": null,
-   "pre": {
-    "expect": 3.9,
-    "pull": 3.9,
-    "items": {
-     "fun": 4.4,
-     "match": 4.4,
-     "learn": 3.4,
-     "rest": 3.2,
-     "fill": 4.1
-    }
-   },
-   "published": "2026-10-13T03:00:15Z",
-   "score": 83.36722517244746,
-   "state": "dropped",
-   "title": "ちぴたぱの前世が特定されました",
-   "type": "focus",
-   "views": 137466,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
-  "fRWY-AmJz_0": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCusnpkgavQhPV_8e_zEh_jw",
-   "channelName": "ステゴロパンチャーズ",
-   "desc": "企画ch↓ \nhttps://youtube.com/channel/UCrup_SUKUSAWxB4ygfs5Rbg?si=oRIdsqnrENhmoHGa\n\nゲーム実況ch↓\nhttps://www.youtube.com/channel/UCKd4yNs1CvdCYIkJdARgBsw  \n\nInstagram\nたくや\nhttps://www.instagram.com/jaytatum61",
-   "duration": 1723,
-   "explore": false,
-   "id": "fRWY-AmJz_0",
-   "post": null,
-   "pre": {
-    "expect": 3.4799999999999995,
-    "pull": 3.4799999999999995,
-    "items": {
-     "fun": 3.8,
-     "match": 3.8,
-     "learn": 3,
-     "rest": 3,
-     "fill": 3.8
-    }
-   },
-   "published": "2026-10-13T12:01:22Z",
-   "score": 75.82867449963085,
-   "state": "dropped",
-   "title": "活動休止中にヴァンビ(36)が逮捕されてた件",
-   "type": "ambient",
-   "views": 459878,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
   },
   "fXP1C2xRkDo": {
    "added": "2026-10-14T23:00:58+00:00",
@@ -2370,41 +1901,11 @@
    "pre": null,
    "published": "2026-10-14T21:00:22Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "ゆゆうた、今年一番の冷笑をかます【2026/10/14】",
    "type": "focus",
    "views": 13233,
    "watchedAt": null
-  },
-  "hIj-6Nnu29k": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連",
-   "duration": 42,
-   "explore": false,
-   "id": "hIj-6Nnu29k",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:00:34Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "DRKSの陰キャ2人【2026/10/13】",
-   "type": "focus",
-   "views": 9581,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
   },
   "i5aRW_3yL_c": {
    "added": "2026-10-06T23:38:04+00:00",
@@ -2580,41 +2081,11 @@
    "pre": null,
    "published": "2026-10-14T15:12:24Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "【初見配信】なんかクリアが近づいてないか？りのまるかわいい？小学生の時バカにしていた妖怪ウォッチをやる#5",
    "type": "focus",
    "views": 35031,
    "watchedAt": null
-  },
-  "k90zH6zBW9U": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "https://tsukuruum.pages.dev/games/moji-blade/\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://b",
-   "duration": 373,
-   "explore": false,
-   "id": "k90zH6zBW9U",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:00:24Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "入力した文字をコマにして戦う異色のベーゴマ風ゲーム『文字ブレード』で遊ぶゆゆうた【2026/10/13】",
-   "type": "focus",
-   "views": 4262,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
   },
   "kI2iT1wJwes": {
    "added": "2026-10-06T01:10:52+00:00",
@@ -2654,57 +2125,27 @@
    "duration": 140,
    "explore": false,
    "id": "kUombYozi68",
+   "pickedAt": "2026-10-18T06:24:08.355Z",
    "post": null,
    "pre": {
     "expect": 3.3200000000000003,
-    "pull": 3.3200000000000003,
     "items": {
+     "fill": 4.2,
      "fun": 4.2,
-     "match": 4.2,
      "learn": 1,
-     "rest": 3,
-     "fill": 4.2
-    }
+     "match": 4.2,
+     "rest": 3
+    },
+    "pull": 3.3200000000000003
    },
    "published": "2026-10-13T21:00:02Z",
    "score": 76.07493950784918,
    "state": "picked",
    "title": "AIもこうの配信を覗きに行くゆゆうた【2026/10/13】",
+   "touched": true,
    "type": "focus",
    "views": 3121,
-   "watchedAt": null,
-   "pickedAt": "2026-10-18T06:24:08.355Z",
-   "touched": true
-  },
-  "klPJsDtmNgk": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "0:00 世界一可愛い私1話\n4:02 リスタート\n5:01 世界一可愛い私2話\n9:36 リスタート\n11:10 第7話\n19:00 第8話\n26:02 最終試験\n32:36 第9話\n42:07 世界一可愛い私3話\n45:41 世界一可愛い\n48:10 True End\n\nこのチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhtt",
-   "duration": 3179,
-   "explore": false,
-   "id": "klPJsDtmNgk",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T22:00:34Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "ゆゆうたの「学園アイドルマスター」藤田ことねプロデュース編＃4【2026/10/13】",
-   "type": "focus",
-   "views": 2925,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
+   "watchedAt": null
   },
   "lWGe9sdPctc": {
    "added": "2026-10-16T22:37:30+00:00",
@@ -2838,7 +2279,7 @@
    "pre": null,
    "published": "2026-10-14T21:00:34Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "レペゼンと飲んでる所を有名youtuberに見られた話【2026/10/14】",
    "type": "focus",
    "views": 2688,
@@ -2856,7 +2297,7 @@
    "pre": null,
    "published": "2026-10-14T23:00:30Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "新キャラ『アルジュン』の削り性能のヤバさに驚愕するたいじ【ストリートファイター6】",
    "type": "focus",
    "views": 2,
@@ -2874,7 +2315,7 @@
    "pre": null,
    "published": "2026-10-14T21:15:04Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "“誰かの一生”を体験するブラウザゲーム『80億分の1』で遊ぶゆゆうた【2026/10/14】",
    "type": "focus",
    "views": 4926,
@@ -2940,7 +2381,7 @@
    "pre": null,
    "published": "2026-10-14T21:00:07Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "握力が強すぎてﾁｿｺが変形した話【2026/10/14】",
    "type": "focus",
    "views": 1886,
@@ -2994,36 +2435,6 @@
    "views": 33005,
    "watchedAt": null
   },
-  "oNuMggLn40Q": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCH-lygWpHodDff3iQurnWnQ",
-   "channelName": "加藤純一切り抜き集",
-   "desc": "00:00 EVO壇上の立川からLINEが来ていた件\n01:02 そこまで行ったら優勝しろよ!\n01:27 立川が10代からの付き合い\n01:57 立川の黒歴史\n02:37 立川だけは最後まで応援する\n\n\n●junchannel（本家）\n→https://www.youtube.com/c/junchannel\n\n\n◆切り抜き動画TOP300再生リスト\n→https://www.youtube.c",
-   "duration": 179,
-   "explore": false,
-   "id": "oNuMggLn40Q",
-   "post": null,
-   "pre": {
-    "expect": 3.3,
-    "pull": 3.3,
-    "items": {
-     "fun": 3.5,
-     "match": 3.5,
-     "learn": 3,
-     "rest": 3,
-     "fill": 3.5
-    }
-   },
-   "published": "2026-10-13T15:47:37Z",
-   "score": 71.80263010853395,
-   "state": "dropped",
-   "title": "【EVO2位】立川から試合のインターバル中に熱血LINE来ていた件【2026/10/13】",
-   "type": "focus",
-   "views": 39681,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "p1ZZLAzgtsk": {
    "added": "2026-10-14T23:00:58+00:00",
    "channelId": "UCGjV4bsC43On-YuiLZcfL0w",
@@ -3036,7 +2447,7 @@
    "pre": null,
    "published": "2026-10-14T11:58:43Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "SNSで1000万バズの80億分の1で中国共産党員になれる件",
    "type": "focus",
    "views": 81819,
@@ -3071,48 +2482,6 @@
    "type": "focus",
    "views": 43935,
    "watchedAt": null
-  },
-  "p9kKZdRa830": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連",
-   "duration": 102,
-   "explore": false,
-   "id": "p9kKZdRa830",
-   "post": {
-    "fun": 4,
-    "skip": 5,
-    "match": 4.2,
-    "learn": 3.3,
-    "rest": 4.2,
-    "after": 4,
-    "more": 3.5,
-    "quality": 4.1,
-    "effect": 4.1,
-    "score": 4.1
-   },
-   "pre": {
-    "expect": 3.8,
-    "pull": 3.8,
-    "items": {
-     "fun": 3.7,
-     "match": 4.1,
-     "learn": 4,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:00:37Z",
-   "score": 81.95920946014962,
-   "state": "watched",
-   "title": "声をデカくしたい視聴者の質問に答えるゆゆうた【2026/10/13】",
-   "type": "focus",
-   "views": 1278,
-   "watchedAt": "2026-10-18T06:33:58.975Z",
-   "pickedAt": "2026-10-18T06:24:43.755Z",
-   "touched": true,
-   "progress": null
   },
   "pE1Afw-B6kM": {
    "added": "2026-10-15T22:55:36+00:00",
@@ -3204,7 +2573,7 @@
    "pre": null,
    "published": "2026-10-14T22:00:33Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "「藤田ことね生誕ミニライブ2026」を見るゆゆうた【2026/10/14】",
    "type": "focus",
    "views": 2148,
@@ -3276,36 +2645,6 @@
    "views": 2549,
    "watchedAt": null
   },
-  "sJazzgMZTAI": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCarvAHwttb_r2hYihGX8aXA",
-   "channelName": "ゆゆうたパワー系切り抜き",
-   "desc": "このチャンネルは、CSP（クリエイターサポートプログラム）を利用して運営しています。\n\n◆切り抜き元：ゆゆうた押忍　\nhttps://www.twitch.tv/yuyuta0702\n\n◆「ゆゆうた」関連情報：\nYouTube：https://bit.ly/4zh8UOl\nTwitch：https://bit.ly/4fYNNZF\nX：https://bit.ly/4gd0Q8E\n\n◆切り抜き関連",
-   "duration": 80,
-   "explore": false,
-   "id": "sJazzgMZTAI",
-   "post": null,
-   "pre": {
-    "expect": 3.6799999999999997,
-    "pull": 3.6799999999999997,
-    "items": {
-     "fun": 4.2,
-     "match": 4.2,
-     "learn": 2.8,
-     "rest": 3,
-     "fill": 4.2
-    }
-   },
-   "published": "2026-10-13T21:00:27Z",
-   "score": 80.52098069400034,
-   "state": "dropped",
-   "title": "コンカフェにハイゲの抽選に落選した衛門が来てくれた話【2026/10/13】",
-   "type": "focus",
-   "views": 4022,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
-  },
   "sZZ1a4I5KZw": {
    "added": "2026-09-28T20:11:21+00:00",
    "channelId": "UCH-lygWpHodDff3iQurnWnQ",
@@ -3348,7 +2687,7 @@
    "pre": null,
    "published": "2026-10-14T21:30:32Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "二択を選んでいくホラーゲーム「丁字路」で遊ぶゆゆうた【2026/10/14】",
    "type": "focus",
    "views": 1348,
@@ -3414,7 +2753,7 @@
    "pre": null,
    "published": "2026-10-14T03:00:04Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "【謝罪】金玉一本で動画を撮ってしまった件について",
    "type": "focus",
    "views": 129636,
@@ -3450,41 +2789,11 @@
    "pre": null,
    "published": "2026-10-14T16:06:46Z",
    "score": null,
-   "state": "fresh",
+   "state": "pool",
    "title": "悲劇の相場が終わらない。追証の連鎖。場中決算TSMCの未来はいかに。またも金利と原油の地獄がループする。もう半導体メモリーはダメかもしれない。ここまでなのか俺は。久々の午後の寄り付き株ライブ生放送！！",
    "type": "focus",
    "views": 0,
    "watchedAt": null
-  },
-  "wonabvpXiQ0": {
-   "added": "2026-10-13T23:37:52+00:00",
-   "channelId": "UCfTfI2-PkGYgcQHoVk85tCA",
-   "channelName": "布団ちゃん切り抜きMAX",
-   "desc": "https://www.youtube.com/playlist?list=PL9c1ophFsdEOKlZB7Z1KfXynV-gK0-DQS\n\n布団ちゃんのSNS\nTwitter　https://twitter.com/indegnasen210\nYouTube　https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw\nTwitch　ht",
-   "duration": 2111,
-   "explore": false,
-   "id": "wonabvpXiQ0",
-   "post": null,
-   "pre": {
-    "expect": 3.54,
-    "pull": 3.54,
-    "items": {
-     "fun": 3.9,
-     "match": 3.9,
-     "learn": 3,
-     "rest": 3,
-     "fill": 3.9
-    }
-   },
-   "published": "2026-10-13T16:38:17Z",
-   "score": 77.04106309239883,
-   "state": "dropped",
-   "title": "布団ちゃんの雑談ダイジェスト「こんばんは！ヘイルメアリーを見てにっこりの男、放送！」【2026/10/13】",
-   "type": "focus",
-   "views": 31991,
-   "watchedAt": null,
-   "dropReason": "skipped",
-   "touched": true
   },
   "x0TB_NzgPaE": {
    "added": "2026-10-08T00:02:28+00:00",
