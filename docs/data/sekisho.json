@@ -190,9 +190,20 @@
      "effect": 4.1,
      "more": 3.5,
      "quality": 4.1
+    },
+    {
+     "id": "IOxRQxNy0io",
+     "start": "2026-10-18T06:34:01.425Z",
+     "end": "2026-10-18T06:35:08.978Z",
+     "secs": 66,
+     "startCum": 101,
+     "effect": null,
+     "more": null,
+     "reason": "pause",
+     "part": true
     }
    ],
-   "watchedSec": 101,
+   "watchedSec": 167,
    "stock": {
     "open": 56971,
     "high": 62446,
