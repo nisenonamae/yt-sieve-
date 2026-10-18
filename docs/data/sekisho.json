@@ -180,13 +180,24 @@
    }
   },
   "2026-10-18": {
-   "sessions": [],
-   "watchedSec": 0,
+   "sessions": [
+    {
+     "id": "p9kKZdRa830",
+     "start": "2026-10-18T06:31:35.954Z",
+     "end": "2026-10-18T06:33:58.975Z",
+     "secs": 101,
+     "startCum": 0,
+     "effect": 4.1,
+     "more": 3.5,
+     "quality": 4.1
+    }
+   ],
+   "watchedSec": 101,
    "stock": {
     "open": 56971,
     "high": 62446,
     "low": 56971,
-    "close": 62446
+    "close": 62344
    },
    "threshold": 65,
    "allowance": 120,
