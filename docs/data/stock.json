@@ -89,14 +89,26 @@
    "explore": false,
    "id": "0xwD11ghDjY",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3.44,
+    "pull": 3.44,
+    "items": {
+     "fun": 4,
+     "match": 3.9,
+     "learn": 1.7,
+     "rest": 3.5,
+     "fill": 4.1
+    }
+   },
    "published": "2026-10-13T11:00:14Z",
-   "score": null,
-   "state": "pool",
+   "score": 77.78985821457614,
+   "state": "picked",
    "title": "５人のひまじんｖｓ１人の愛人　どっちを選ぶか真剣に考えてみた - トロッコ問題 of アルマゲドンv1.2",
    "type": "focus",
    "views": 74453,
-   "watchedAt": null
+   "watchedAt": null,
+   "pickedAt": "2026-10-18T00:20:53.765Z",
+   "touched": true
   },
   "1hiVEucZ7GM": {
    "added": "2026-10-13T23:37:52+00:00",
@@ -107,14 +119,26 @@
    "explore": false,
    "id": "1hiVEucZ7GM",
    "post": null,
-   "pre": null,
+   "pre": {
+    "expect": 3.2399999999999998,
+    "pull": 3.2399999999999998,
+    "items": {
+     "fun": 3.4,
+     "match": 3.4,
+     "learn": 3,
+     "rest": 3,
+     "fill": 3.4
+    }
+   },
    "published": "2026-10-13T04:24:21Z",
-   "score": null,
-   "state": "pool",
+   "score": 70.98246771574117,
+   "state": "dropped",
    "title": "半導体メモリー大幅クラッシュどうなる。AIバブルは弾けたのか？含み損２１００万なにこれ。ASML場中決算＆アメリカCPI発表も。どうなる今日の日経平均。魂の朝の寄り付き株ライブ生放送！！",
    "type": "focus",
    "views": 0,
-   "watchedAt": null
+   "watchedAt": null,
+   "dropReason": "skipped",
+   "touched": true
   },
   "377lB59r1Z0": {
    "added": "2026-10-15T22:55:36+00:00",
