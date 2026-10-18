@@ -3079,7 +3079,18 @@
    "duration": 102,
    "explore": false,
    "id": "p9kKZdRa830",
-   "post": null,
+   "post": {
+    "fun": 4,
+    "skip": 5,
+    "match": 4.2,
+    "learn": 3.3,
+    "rest": 4.2,
+    "after": 4,
+    "more": 3.5,
+    "quality": 4.1,
+    "effect": 4.1,
+    "score": 4.1
+   },
    "pre": {
     "expect": 3.8,
     "pull": 3.8,
@@ -3093,13 +3104,14 @@
    },
    "published": "2026-10-13T21:00:37Z",
    "score": 81.95920946014962,
-   "state": "picked",
+   "state": "watched",
    "title": "声をデカくしたい視聴者の質問に答えるゆゆうた【2026/10/13】",
    "type": "focus",
    "views": 1278,
-   "watchedAt": null,
+   "watchedAt": "2026-10-18T06:33:58.975Z",
    "pickedAt": "2026-10-18T06:24:43.755Z",
-   "touched": true
+   "touched": true,
+   "progress": null
   },
   "pE1Afw-B6kM": {
    "added": "2026-10-15T22:55:36+00:00",
