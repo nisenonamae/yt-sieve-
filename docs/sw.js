@@ -1,6 +1,6 @@
 // 関所のサービスワーカー:つながるときは必ず最新を取りに行き、つながらないときだけ手元の保存を使う
 // 同じ nisenonamae.github.io のほかのアプリの保存には手を出さない(自分の場所の古い保存だけを消す)
-const CACHE = "sekisho-v24";
+const CACHE = "sekisho-v25";
 self.addEventListener("install", e => { self.skipWaiting(); });
 self.addEventListener("activate", e => {
   e.waitUntil((async () => {
