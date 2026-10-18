@@ -962,7 +962,7 @@ if ("serviceWorker" in navigator){
    門(開門・閉門の時刻)・通行手形(1日の総時間。見ると減る)・損切り(その日の評価が落ちたら閉める)・
    改めの線(宿場に通す点数。在庫から自動で動く)。記録は docs/data/sekisho.json(アプリだけが書く) */
 const KPATH = "docs/data/sekisho.json";
-const KVER = "2026-10-17 s24";      // 画面に出す版(最新になったかを確かめる)
+const KVER = "2026-10-17 s25";      // 画面に出す版(最新になったかを確かめる)
 const KDEF = {
   version: 1,
   settings: {
@@ -1060,7 +1060,7 @@ function addSession(s){
   if (remainSec() <= 0) closeGate("手形切れ");
 }
 
-/* ── 損切り:最初の数本のあと、心への効きか「もう一本見たい」が、ふだんの散らばりの半分以上
+/* ── 損切り:最初の数本のあと、心への効き(ゲームは「もう少しやりたい?」も)が、ふだんの散らばりの半分以上
    平均を下回った本が n 本続くか、「もう十分」でやめたら閉める。
    平均は、その日のそれまでの分に、直近14日の自分の平均を混ぜる(1日の最初の数本だけで決まらないように)。
    2分未満の視聴と、中断(評価なし)は数えない ── */
@@ -1254,9 +1254,9 @@ function autoAdjust(){
 const PRE_Q = [["fun", "面白そう?", "つまらなそう", "とても面白そう"], ["match", "期待どおりの中身がありそう?", "なさそう", "とてもありそう"],
   ["learn", "新しく知れそう・考えられそう?", "なにも", "たくさん"], ["rest", "休まりそう?", "疲れそう", "とても休まりそう"], ["fill", "見たあと満たされそう?", "虚しそう", "とても満たされそう"]];
 const POST_Q = [["fun", "面白かった?", "つまらない", "とても面白い"], ["skip", "飛ばした?", "たくさん", "しなかった"], ["match", "期待と比べて?", "ずっと下", "ずっと上"],
-  ["learn", "新しく知った・考えた?", "なにも", "たくさん"], ["rest", "見る前より休まった?", "疲れた", "とても休まった"], ["after", "後味", "虚しい", "満たされた"], ["more", "もう一本見たい?", "もう十分", "まだまだ見たい"]];
+  ["learn", "新しく知った・考えた?", "なにも", "たくさん"], ["rest", "見る前より休まった?", "疲れた", "とても休まった"], ["after", "後味", "虚しい", "満たされた"]];
 const SHORT = { "pre:fun": "面白さ", "pre:match": "中身", "pre:learn": "学び", "pre:rest": "休まり", "pre:fill": "満足",
-  "post:fun": "面白さ", "post:skip": "飛ばし", "post:match": "期待比", "post:learn": "学び", "post:rest": "休まり", "post:after": "後味", "post:more": "もう一本",
+  "post:fun": "面白さ", "post:skip": "飛ばし", "post:match": "期待比", "post:learn": "学び", "post:rest": "休まり", "post:after": "後味",
   "mood:calm": "焦り", "mood:body": "疲れ", "mood:self": "自分", "mood:left": "やり残し", "mood:focus": "集中", "mood:day": "一日", "mood:tmr": "明日" };
 // 縦のつまみを横に並べる。上が5(いい側)、下が1。触っている問いの全文は下の一行に出る
 function vgridHtml(prefix, Qs, vals, autos){
@@ -1266,7 +1266,7 @@ function vgridHtml(prefix, Qs, vals, autos){
       <input type="range" min="1" max="5" step="0.1" data-q="${prefix}:${k}" data-help="${esc(label)}  1=${esc(lo)} ↔ 5=${esc(hi)}" ${has ? `value="${v}" data-touched="1"` : `value="3" class="untouched"`}>${autos[k] ? `<small class="auto">自動</small>` : `<small class="auto0"></small>`}</div>`; }).join("") +
     `</div><p class="vhelp" id="${prefix}-help">上が5(いい側)・下が1。触った問いの説明がここに出る</p>`;
 }
-const BAIL_Q = POST_Q.filter(q => ["fun", "after", "more"].includes(q[0]));
+const BAIL_Q = POST_Q.filter(q => ["fun", "after"].includes(q[0]));
 // 心の余裕(一日の終わり)。平均を心の余裕とし、問いごとの値も残す
 const MOOD_Q = [["calm", "焦り・不安は?", "とても強い", "落ち着いている"], ["body", "体の疲れは?", "ぐったり", "元気"], ["self", "今日の自分を?", "責めている", "認められる"],
   ["left", "やり残しの重さは?", "とても重い", "軽い"], ["focus", "今から何かに集中できそう?", "とても無理", "できる"], ["day", "今日一日は?", "虚しかった", "満たされた"], ["tmr", "明日は?", "気が重い", "楽しみ"]];
@@ -1343,14 +1343,14 @@ function setGateSeg(k){ gateSeg = k; drawGate(); }
 function drawGate(){
   const d = today(), mood = d.mood || {};
   const sess = (d.sessions || []).map(s => { const v = s.kind === "game" ? { title: "🎮 " + gameOf(s.gid).name } : (stock.videos[s.id] || (watched.videos || {})[s.id] || {});
-    return `<tr${s.sl ? ' class="slrow"' : ""}><td>${s.sl ? "↓ " : ""}${esc(String(v.title || s.id || "(記録)").slice(0, 26))}${s.sl ? `<small style="display:block;color:var(--clay)">${esc(s.sl)}</small>` : ""}</td><td class="n">${kMin(s.secs)}分</td><td class="n">${s.effect != null ? s.effect.toFixed(1) : "—"}</td><td class="n">${s.more != null ? s.more.toFixed(1) : "—"}</td></tr>`; }).join("");
+    return `<tr${s.sl ? ' class="slrow"' : ""}><td>${s.sl ? "↓ " : ""}${esc(String(v.title || s.id || "(記録)").slice(0, 26))}${s.sl ? `<small style="display:block;color:var(--clay)">${esc(s.sl)}</small>` : ""}</td><td class="n">${kMin(s.secs)}分</td><td class="n">${s.effect != null ? s.effect.toFixed(1) : "—"}</td></tr>`; }).join("");
   const evening = nowMinOfDay() >= 20 * 60 && mood.v == null;
   const [go_, gc_] = gateTimes(), rules = `<div class="rules"><b>今日の決まり</b>(今日の朝4時に決まった。変えても明日から)<br>見てよい時間:${go_}〜${gc_ === "24:00" ? "24:00" : gc_} ・ 通行手形:${todayAllowance() == null ? "—" : todayAllowance() + "分" + (isTrialDay() ? "(試しの日)" : "")} ・ 損切り:最初の${seki.settings.warm}本のあと、はっきり下回った本が${seki.settings.stopN}本続いたら閉める${seki.pending ? `<br><span class="meta">明日から変わる予約がある(設定のタブ)</span>` : ""}</div>`;
   if (gateSeg === "today") { $("#view").innerHTML = segBar([["today", "今日"], ["mood", "心の余裕" + (mood.v != null ? " ✓" : "")]], gateSeg, "setGateSeg") + gateHtml() + rules + extBanner() +
     (evening ? `<p class="meta" style="margin:-4px 0 10px"><button class="linkb" onclick="setGateSeg('mood')">一日の終わりに、心の余裕を付ける →</button></p>` : "") +
     (d.overSec ? `<p class="meta" style="color:var(--clay);margin:-4px 0 8px">今日は手形を ${kMin(d.overSec)} 分はみ出した</p>` : "") +
-    `<h3 class="h3">今日の娯楽</h3><p class="meta" style="margin:-4px 0 6px">動画 ${kMin((d.sessions || []).filter(s => s.kind !== "game").reduce((a, s) => a + (s.secs || 0), 0))} 分 ・ ゲーム ${kMin((d.sessions || []).filter(s => s.kind === "game").reduce((a, s) => a + (s.secs || 0), 0))} 分</p>` + (sess ? `<table><tr><th>動画</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">もう一本</th></tr>${sess}</table>` : `<p class="meta">まだない</p>`) +
-    `<p class="meta" style="margin-top:8px">損切り:最初の${seki.settings.warm}本のあと、心への効きか「もう一本見たい」が、ふだんの散らばりの半分以上平均を下回った本が${seki.settings.stopN}本続くか、「もう十分」でやめたら門を閉める。平均は、今日の分に直近14日の自分の平均を混ぜたもの。2分未満の視聴と中断は数えない。</p>`; return; }
+    `<h3 class="h3">今日の娯楽</h3><p class="meta" style="margin:-4px 0 6px">動画 ${kMin((d.sessions || []).filter(s => s.kind !== "game").reduce((a, s) => a + (s.secs || 0), 0))} 分 ・ ゲーム ${kMin((d.sessions || []).filter(s => s.kind === "game").reduce((a, s) => a + (s.secs || 0), 0))} 分</p>` + (sess ? `<table><tr><th>動画</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th></tr>${sess}</table>` : `<p class="meta">まだない</p>`) +
+    `<p class="meta" style="margin-top:8px">損切り:最初の${seki.settings.warm}本のあと、心への効き(ゲームは「もう少しやりたい?」も)が、ふだんの散らばりの半分以上平均を下回った本が${seki.settings.stopN}本続くか、「もう十分」でやめたら門を閉める。平均は、今日の分に直近14日の自分の平均を混ぜたもの。2分未満の視聴と中断は数えない。</p>`; return; }
   $("#view").innerHTML = segBar([["today", "今日"], ["mood", "心の余裕" + (mood.v != null ? " ✓" : "")]], gateSeg, "setGateSeg") +
     `<h3 class="h3">今日の心の余裕${mood.v != null ? ` <span class="num" style="color:var(--pine)">${mood.v.toFixed(1)}</span>` : ""}</h3><div class="sieve">${vgridHtml("mood", MOOD_Q, mood.items || {})}
       <div class="tags">${(seki.settings.tags || []).map(t => `<button aria-pressed="${(mood.tags || []).includes(t)}" onclick="toggleTag('${esc(t)}')">${esc(t)}</button>`).join("")}</div>
@@ -1706,7 +1706,7 @@ const fmtV = (v, k) => v == null ? "—" : (k === "stop" ? Math.round(v) + "%" :
 function verifyHtml(){
   const H = (seki.hist.settings || []).slice().sort((a, b) => a.at < b.at ? 1 : -1).slice(0, 8);
   if (!H.length) return `<h3 class="h3">市場検証</h3><p class="meta">設定を変えると、変える前の7日と変えたあとの7日を、ここで自動で比べる。</p>`;
-  const ROWS = [["watch", "見た時間(1日)", -1], ["effect", "心への効き", 1], ["more", "もう一本見たい", 0], ["mood", "心の余裕", 1], ["stock", "宿場の在庫", 0], ["stop", "損切りで閉まった日", 0]];
+  const ROWS = [["watch", "見た時間(1日)", -1], ["effect", "心への効き", 1], ["mood", "心の余裕", 1], ["stock", "宿場の在庫", 0], ["stop", "損切りで閉まった日", 0]];
   const fmtS = (key, v) => key === "tighten" ? Math.round((+v || 0) * 100) + "%" : key === "gates" ? "変更" : key === "tags" ? (v || []).join("・") : v == null ? "—" : v;
   return `<h3 class="h3">市場検証<small class="meta"> 変える前の7日と、変えたあとの7日</small></h3>` + H.map(h => {
     const pre = [], post = []; for (let i = 1; i <= 7; i++) pre.push(kAddDays(h.date, -i)); for (let i = 0; i < 7; i++) { const d = kAddDays(h.date, i); if (d <= kDay()) post.push(d); }
@@ -1718,7 +1718,7 @@ function verifyHtml(){
     return `<div class="verify"><b>${h.date.slice(5)} ${esc(KLABEL[h.key] || h.key)} ${esc(String(fmtS(h.key, h.from)))} → ${esc(String(fmtS(h.key, h.to)))}</b>
       <span class="meta">${done ? "7日たったので確定" : `まだ${post.length}日分(7日たつと確定)`}${others.length ? ` ・ <span style="color:var(--clay)">この期間に、ほかの変更も混ざっている(${others.map(o => esc(KLABEL[o.key] || o.key)).join("・")})</span>` : ""}</span>
       <table><tr><th>見るもの</th><th style="text-align:right">前</th><th style="text-align:right">後</th><th style="text-align:right">差</th></tr>${rows}</table></div>`; }).join("") +
-    `<p class="meta">緑=よくなった、赤=悪くなった(見た時間は減ったら緑)。もう一本見たい・在庫・損切りは、よしあしを決めずに差だけ出す。</p>`;
+    `<p class="meta">緑=よくなった、赤=悪くなった(見た時間は減ったら緑)。在庫・損切りは、よしあしを決めずに差だけ出す。</p>`;
 }
 function lastDays(n){ const out = []; for (let i = n - 1; i >= 0; i--) out.push(kAddDays(kDay(), -i)); return out; }
 function svgLine(vals, W, H, max, color, dash){ const pts = vals.map((v, i) => v == null ? null : [i * (W / Math.max(1, vals.length - 1)), H - (v / (max || 1)) * H]);
@@ -1758,7 +1758,7 @@ function drawChart(){
   const closedH = {}; for (const [dd, x] of Object.entries(seki.days)) if (dd >= kAddDays(kDay(), -28) && x.closed && x.closed.reason === "損切り" && x.closed.at) { const h = new Date(Date.parse(x.closed.at) + 9 * 3600e3).getUTCHours(); closedH[h] = (closedH[h] || 0) + 1; }
   const eAll = kmean(S28.filter(s => s.effect != null).map(s => s.effect));
   const hrow = Object.keys(hrs).map(Number).sort((a, b) => a - b).map(h => { const r = hrs[h], e = kmean(r.e), m = kmean(r.m), low = r.e.length >= 3 && !isNaN(eAll) && e < eAll;
-    return `<tr${low ? ' style="color:var(--clay)"' : ""}><td>${h}時台</td><td class="n">${r.n}</td><td class="n">${kMin(r.sec)}分</td><td class="n">${isNaN(e) ? "—" : e.toFixed(1)}</td><td class="n">${isNaN(m) ? "—" : m.toFixed(1)}</td><td class="n">${r.bail}</td><td class="n">${closedH[h] || 0}</td></tr>`; }).join("");
+    return `<tr${low ? ' style="color:var(--clay)"' : ""}><td>${h}時台</td><td class="n">${r.n}</td><td class="n">${kMin(r.sec)}分</td><td class="n">${isNaN(e) ? "—" : e.toFixed(1)}</td><td class="n">${r.bail}</td><td class="n">${closedH[h] || 0}</td></tr>`; }).join("");
   const cand = Object.keys(hrs).map(Number).filter(h => hrs[h].e.length >= 3 && !isNaN(eAll) && kmean(hrs[h].e) < eAll).sort((a, b) => a - b);
   // 心の余裕の問いごとの、見た時間との結びつき(6日以上)
   const MD = Object.values(seki.days).filter(x => x.mood && x.mood.items), mrow = MOOD_Q.map(([k, l]) => { const xs = MD.filter(x => x.mood.items[k] != null); const r = xs.length >= 6 ? corr(xs.map(x => kMin(x.watchedSec)), xs.map(x => x.mood.items[k])) : NaN;
@@ -1768,7 +1768,7 @@ function drawChart(){
   const SEC = {
     verify: () => verifyHtml(),
     time: () => chartBox("見た時間と通行手形(分)", bars + svgLine(nat, W, H, m1, "var(--sand)", true) + svgLine(alw, W, H, m1, "var(--clay)", true), `棒=見た時間(黄色の棒は試しの日)、赤の点線=実際の手形、黄の点線=境目から決まる手形(頭打ち・下限をかける前)。最大 ${m1} 分`) +
-      `<h3 class="h3">時間帯(見始めた時刻・直近28日)</h3>` + (hrow ? `<table><tr><th>時間帯</th><th style="text-align:right">本</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">もう一本</th><th style="text-align:right">やめた</th><th style="text-align:right">損切り</th></tr>${hrow}</table>
+      `<h3 class="h3">時間帯(見始めた時刻・直近28日)</h3>` + (hrow ? `<table><tr><th>時間帯</th><th style="text-align:right">本</th><th style="text-align:right">時間</th><th style="text-align:right">効き</th><th style="text-align:right">やめた</th><th style="text-align:right">損切り</th></tr>${hrow}</table>
         <p class="meta">赤い行=心への効きが自分の平均(${isNaN(eAll) ? "—" : eAll.toFixed(1)})を下回る時間帯(3本以上)。${cand.length ? `<b>閉門の候補:${cand.map(h => h + "時台").join("・")}</b>(自動では変えない。設定で決める)` : "閉門の候補はまだない"}</p>` : `<p class="meta">まだない</p>`) +
       (() => { const S = D.flatMap(dd => (day(dd).sessions || [])), vid = S.filter(s => s.kind !== "game"), gm = S.filter(s => s.kind === "game"), ov = D.reduce((a, dd) => a + (day(dd).overSec || 0), 0);
         const ef = a => { const m = kmean(a.filter(s => s.effect != null).map(s => s.effect)); return isNaN(m) ? "—" : m.toFixed(2); };
